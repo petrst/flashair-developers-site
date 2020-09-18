@@ -1,0 +1,1266 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<!-- %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"} -->
+
+<!--Google Apps verification-->
+
+<title>FlashAir Developers - Creating the iSDIO extension command</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta property="fb:admins" content="100006082240886">
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@FlashAirDev">
+<meta property="fb:admins" content="115819238627364">
+<meta property="og:site_name" content="FlashAir Developers">
+<meta property="og:image" content="https://flashair-developers.com/images/assets/ogp.png">
+<meta property="og:url" content="https://www.flashair-developers.com/en/documents/tutorials/arduino/2/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FlashAir Developers - Creating the iSDIO extension command">
+
+<link href="..\..\..\..\..\images\flashair_favicon-1.ico" rel="shortcut icon">
+<link href="..\..\..\..\..\images\apple-touch-icon-152x152-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="152x152">
+<link href="..\..\..\..\..\images\apple-touch-icon-120x120-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="120x120">
+<link href="..\..\..\..\..\images\apple-touch-icon-114x114-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="..\..\..\..\..\images\apple-touch-icon-76x76-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="76x76">
+<link href="..\..\..\..\..\images\apple-touch-icon-72x72-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="..\..\..\..\..\images\apple-touch-icon-57x57-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="57x57">
+<!-- Web Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+<!-- Bootstrap core CSS -->
+<link href="..\..\..\..\..\css\bootstrap-1.css" rel="stylesheet">
+
+<!-- Font Awesome CSS -->
+<link href="..\..\..\..\..\css\fonts\font-awesome\css\font-awesome-1.css" rel="stylesheet">
+
+<!-- Plugins -->
+<link href="..\..\..\..\..\css\magnific-popup-1.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\settings-1.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\layers-1.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\navigation-1.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\animations-1.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\slick-1.css" rel="stylesheet">
+
+<!-- The Project's core CSS file -->
+<!-- Use css/rtl_style.css for RTL version -->
+<link href="..\..\..\..\..\css\style-1.css" rel="stylesheet">
+<!-- The Project's Typography CSS file, includes used fonts -->
+<!-- Used font for body: Roboto -->
+<!-- Used font for headings: Raleway -->
+<!-- Use css/rtl_typography-default.css for RTL version -->
+<link href="..\..\..\..\..\css\typography-default-1.css" rel="stylesheet">
+<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer) -->
+<link href="..\..\..\..\..\css\light_blue-1.css" rel="stylesheet">
+
+<!-- Custom css -->
+<link href="..\..\..\..\..\css\custom-1.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\prettify-1.css" rel="stylesheet">
+<!--[if lt IE 9]>
+	<link href="/css/bootstrap-ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+  <meta name="keywords" content="FlashAir, Arduino, software, WevDev">
+  <meta name="description" content="Tutorials for Arduino of FlashAir App Developers website. FlashAir is a SD card with embedded wireless LAN produced by Toshiba Memory Corp..">
+  <meta property="og:description" content="Tutorials for Arduino of FlashAir App Developers website. FlashAir is a SD card with embedded wireless LAN produced by Toshiba Memory Corp..">
+</head>
+
+<body class=" ">
+
+  <!-- scrollToTop -->
+  <!-- ================ -->
+  <div class="scrollToTop circle">
+    <i class="fa fa-angle-up"></i>
+  </div>
+
+  <!-- page wrapper start -->
+  <!-- ================ -->
+  <div class="page-wrapper">
+    <!-- header-container start -->
+    <div class="header-container">
+      <!-- header-top start -->
+<!-- classes:  -->
+<!-- "dark": dark version of header top e.g. class="header-top dark" -->
+<!-- "colored": colored version of header top e.g. class="header-top colored" -->
+<!-- ================ -->
+<div class="header-top dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-lg-10">
+                <div class="header-top-first clearfix">
+                    <ul class="list-inline float-right">
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\index-1.htm" id="go-to-japanese">Japanese</a>&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            English&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\..\zh\index-1.htm" id="go-to-chinese">Chinese</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-2">
+                <!-- header-top-second start -->
+                <!-- ================ -->
+                <div id="header-top-second" class="clearfix">
+                    <!-- header top dropdowns start -->
+                    <!-- ================ -->
+                    <div class="header-top-dropdown text-right">
+                        <div class="btn-group">
+                            <a href="..\..\..\..\member\index-1.htm" class="btn btn-default btn-sm">
+                                <i class="fa fa-user pr-2"></i> MyAccount</a>
+                        </div>
+                    </div>
+                    <!--  header top dropdowns end -->
+                </div>
+                <!-- header-top-second end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header-top end -->
+<!-- header start -->
+<!-- classes:  -->
+<!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+<!-- "fixed-desktop": enables fixed navigation only for desktop devices e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "fixed-all": enables fixed navigation only for all devices desktop and mobile e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+<!-- "centered": mandatory class for the centered logo layout -->
+<!-- ================ -->
+<header class="header fixed fixed-desktop clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-auto hidden-md-down pl-3">
+                <!-- header-first start -->
+                <!-- ================ -->
+                <div class="header-first clearfix">
+
+                    <!-- logo -->
+                    <div id="logo" class="logo">
+                        <a href="..\..\..\..\index-1.htm">
+                            <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2-1.png">
+                            &nbsp;FlashAir&trade; Developers
+                        </a>
+                    </div>
+
+                </div>
+                <!-- header-first end -->
+
+            </div>
+            <div class="col-lg-7 ml-lg-auto">
+
+                <!-- header-second start -->
+                <!-- ================ -->
+                <div class="header-second clearfix">
+
+                    <!-- main-navigation start -->
+                    <!-- classes: -->
+                    <!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+                    <!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+                    <!-- ================ -->
+                    <div class="main-navigation main-navigation--mega-menu  animated">
+                        <nav class="navbar navbar-expand-lg navbar-light p-0">
+                            <div class="navbar-brand clearfix hidden-lg-up">
+
+                                <!-- logo -->
+                                <div id="logo-mobile" class="logo">
+                                    <a href="..\..\..\..\index-1.htm">
+                                        <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2-1.png">
+                                        &nbsp;FlashAir&trade; Developers
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- header dropdown buttons -->
+                            <div class="header-dropdown-buttons hidden-lg-up p-0 ml-auto mr-3">
+                                <div class="btn-group">
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                                        <li>
+                                            <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse">
+                                                <div class="form-group has-feedback">
+                                                    <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                                    <input type="hidden" name="ie" value="UTF-8">
+                                                    <input type="text" name="q" size="31" class="form-control">
+                                                    <input type="submit" name="sa" value="Search">
+                                                </div>
+                                            </form>
+                                            <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- header dropdown buttons end -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                <!-- main-menu -->
+                                <ul class="navbar-nav ml-xl-auto">
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="first-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Discover</a>
+                                        <ul class="dropdown-menu" aria-labelledby="first-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\discover\overview\index-1.htm">What's FlashAir?</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\overview\w04\index-1.htm">Fourth generation FlashAir W-04</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\gettingstarted\index-1.htm">Getting Started</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\beginners\index-1.htm">Beginners Guide with FlashAir
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\usage\index-1.htm">Get started with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\app\index-1.htm">Overview of FlashAir Application
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\device\index-1.htm">Overview of using Devices with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir
+                                                    IoT Hub
+                                                    <i class="fa fa-external-link"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="second-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Application</a>
+                                        <ul class="dropdown-menu" aria-labelledby="second-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\application\iot\index-1.htm">Application to IoT</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\devices\index-1.htm">Using with Devices</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\workflow\index-1.htm">Improve efficiency of operations</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\share-documents\index-1.htm">Sharing Documents</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\users\index-1.htm">User's Projects</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\showcase\index-1.htm">App Showcase</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown active"> <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+                                        <ul class="dropdown-menu" aria-labelledby="third-dropdown">
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\..\ios\index-1.htm">iOS</a></li>
+                                                    <li><a href="..\..\android\index-1.htm">Android</a></li>
+                                                    <li><a href="..\..\web\index-1.htm">Web browser</a></li>
+                                                    <li><a href="..\..\advanced\index-1.htm">Advanced</a></li>
+                                                    <li><a href="..\..\isdio\index-1.htm">iSDIO</a></li>
+                                                    <li><a href="..\..\lua\index-1.htm">Lua</a></li>
+                                                    <li><a href="..\..\users\index-1.htm">User's Tutorials</a></li>
+                                                    <li><a href="..\..\iot-hub\index-1.htm">FlashAir IoT Hub</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">API Guide</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\..\..\api\commandcgi\index-1.htm">command.cgi</a></li>
+                                                    <li><a href="..\..\..\api\configcgi\index-1.htm">config.cgi</a></li>
+                                                    <li><a href="..\..\..\api\thumbnailcgi\index-1.htm">thumbnail.cgi</a></li>
+                                                    <li><a href="..\..\..\api\uploadcgi\index-1.htm">upload.cgi</a></li>
+                                                    <li><a href="..\..\..\api\config\index-1.htm">CONFIG</a></li>
+                                                    <li><a href="..\..\..\api\utility\index-1.htm">Browser Utility</a></li>
+                                                    <li><a href="..\..\..\api\lua\index-1.htm">Lua Scripting</a></li>
+                                                    <li><a href="..\..\..\api\isdio\index-1.htm">iSDIO</a></li>
+                                                    <li><a href="..\..\..\api\fw40003\index-1.htm">About FW 4.00.03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\resources\index-1.htm">Developer Resources</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\books\index-1.htm">Books</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\about\events\index-1.htm">Events</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="fourth-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                                        <ul class="dropdown-menu" aria-labelledby="fourth-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\support\index-1.htm">Support</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\forum\index-1.htm">Developer Forum</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\faq\index-1.htm">FAQ</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\iot-hub\index-1.htm">About FlashAir IoT Hub service end</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\developers\index-1.htm">About FlashAir Developers site closure</a>
+                                            </li>                
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!-- main-menu end -->
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- main-navigation end -->
+                </div>
+                <!-- header-second end -->
+
+            </div>
+            <div class="col-auto hidden-md-down">
+                <!-- header dropdown buttons -->
+                <div class="header-dropdown-buttons">
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                            <li>
+                                <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse" target="_blank">
+                                    <div class="form-group has-feedback">
+                                        <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                        <input type="hidden" name="ie" value="UTF-8">
+                                        <input type="text" name="q" size="31" class="form-control">
+                                        <input type="submit" name="sa" value="Search">
+                                    </div>
+                                </form>
+                                <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- header dropdown buttons end -->
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+    <!-- Google Analytics Tracking Code -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-498925-24', 'auto');
+        ga('send', 'pageview');
+    </script>
+</header>
+    </div>
+    <!-- header-container end -->
+
+    <!-- main-container start -->
+    <!-- ================ -->
+    <section class="main-container">
+
+      <div class="container">
+        <div class="row">
+
+          <!-- main start -->
+          <!-- ================ -->
+          <div class="main col-lg-9 order-lg-2 pb-5">
+
+            <!-- page-title start -->
+            <!-- ================ -->
+            <h1 class="page-title">
+              Creating the iSDIO extension command</h1>
+            <p class="small text-muted">Latest update: November 2014</p>
+            <!-- page-title end -->
+
+            <p class="mt-5">
+              <strong>This tutorial covers the creation of a routine to issue iSDIO commands, before we move on to
+                operating the
+                FlashAir card.</strong>
+            </p>
+
+            <div class="alert alert-warning" role="alert">
+              <table class="table-transparent">
+                <tr>
+                  <td>Important revision</td>
+                  <td>(Sep. 29 2014)：</td>
+                  <td>Added sending dummy data at Sd2CardExt::readExt() function.</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>(Nov. &nbsp;&nbsp;2 2017)：</td>
+                  <td>Added CMD17 usage method to Sd2CardExt::readExt () function.</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>Added CMD24 usage method to Sd2CardExt::writeExt () function.</td>
+                </tr>
+              </table>
+            </div>
+
+            <h2>About the iSDIO command</h2>
+            <div class="separator-2"></div>
+
+            <p>In order to issue commands, we'll use the Extension Command Registers
+              <strong>CMD48 (READ_EXTR_SINGLE)</strong> and
+              <strong>CMD49 (WRITE_EXTR_SINGLE)</strong>, which are defined in
+              <strong>Function Extension Commands (class 11)</strong> of SD standard(*1).</p>
+
+            <div class="alert alert-warning" role="alert">
+              Note: You can also use CMD52 and CMD53 from the SDIO standard, but this tutorial is going to stick to
+              CMD48/49.
+            </div>
+
+            <p>CMD48 and CMD49 have three modes:</p>
+
+            <ul>
+              <li>Register: Read/Write to memory with a specific address and length, used for small amounts of data
+                like status
+                updates.
+              </li>
+              <li>Data Port: Read/Write a 512 byte fixed memory block, used for large amounts of data.</li>
+              <li>Mask Writing (CMD49 only): Changes part of one specific byte, used for RESET status. </li>
+            </ul>
+
+            <p>The iSDIO Wireless LAN Simplified Addendum regulates which mode should be used where (e.g. Register mode
+              for
+              address area A, Data Port mode for address area B).</p>
+
+            <h2>Add CMD48/49 to Arduino</h2>
+            <div class="separator-2"></div>
+
+            <p>The Arduino IDE has an SD card library available by default, which consists of three modules: </p>
+
+            <ul>
+              <li>A Class that communicates with the SD card via SPI (
+                <strong>Sd2Card</strong>)</li>
+              <li>A Class that access the FAT file sysytem on the SD card (
+                <strong>SdFat</strong>)</li>
+              <li>A Class that reads/writes files to the card (combines the above) (
+                <strong>SD</strong>)</li>
+            </ul>
+
+            <p>For this tutorial we're only going to need
+              <strong>Sd2Card</strong>, however out of the box it doens't support CMD48/49. So lets add them!</p>
+
+            <h3>Making an iSDIO module</h3>
+
+            <p>When you finish installing Arduino IDE, you will see an "Arduino" folder in the Documents directory.
+              Inside that
+              is a "libraries" directory.</p>
+
+            <p>We'll be copying
+              <strong>Sd2Card</strong> here, then adding iSDIO support to create our own module.</p>
+
+            <p>The Directory Structure will look something like the following:</p>
+
+            <pre class="prettyprint nocode"><code>&lt;Document&gt;/
++-- Arduino
+    +-- libraries
+        +-- iSDIO
+            +-- iSdio.h *1
+            +-- iSdio.cpp *2
+            +-- utility
+                +-- Sd2Card.h *1
+                +-- Sd2Card.cpp *1
+                +-- Sd2CardExt.h *2
+                +-- Sd2CardExt.cpp *2
+                +-- Sd2PinMap.h *1
+                +-- SdInfo.h *1
+</code></pre>
+
+            <p>Files marked with
+              <strong>1</strong> are copied from the base version (
+              <code>Program Files (x86)\Arduino\libraries\SD\utility</code>). We'll be making a small change to
+              Sd2Card.h.</p>
+
+            <p>Files marked with
+              <strong>2</strong> are going to be created now. </p>
+
+            <h3>Making the Sd2CardExt class</h3>
+
+            <p>We're going to make an Sd2CardExt class by extending the base Sd2Card class and adding CMD48/49. We're
+              calling
+              it Sd2CardExt because CMD48/49 are technically part of the SD standard, not the iSDIO standard.</p>
+
+            <p>We're adding the CMD48/49 modes we discussed above (lines 10-14), and then two basic read/write
+              functions (lines
+              16 and 17).</p>
+
+            <h4>
+              <em>Sd2CardExt.h</em>
+            </h4>
+
+            <pre class="prettyprint linenums"><code>#ifndef Sd2CardExt_h
+#define Sd2CardExt_h
+
+#include "Sd2Card.h"
+
+class Sd2CardExt : public Sd2Card {
+ public:
+  Sd2CardExt(void) : Sd2Card() {}
+
+  uint8_t readExtDataPort(uint8_t mio, uint8_t func, uint16_t addr, uint8_t* dst);
+  uint8_t readExtMemory(uint8_t mio, uint8_t func, uint32_t addr, uint16_t count, uint8_t* dst);
+  uint8_t writeExtDataPort(uint8_t mio, uint8_t func, uint16_t addr, const uint8_t* src);
+  uint8_t writeExtMemory(uint8_t mio, uint8_t func, uint32_t addr, uint16_t count, const uint8_t* src);
+  uint8_t writeExtMask(uint8_t mio, uint8_t func, uint32_t addr, uint8_t mask, const uint8_t* src);
+ protected:
+  uint8_t readExt(uint32_t arg, uint8_t* src, uint16_t count);
+  uint8_t writeExt(uint32_t arg, const uint8_t* src, uint16_t count);
+};
+#endif  // Sd2CardExt_h
+</code></pre>
+
+            <h4>
+              <em>Sd2Card.h</em>
+            </h4>
+
+            <p>To inherit the Sd2Card class, Sd2Card.h needs to use "protected". See below.</p>
+
+            <p>Before:</p>
+
+            <pre class="prettyprint"><code> ...
+ private:
+  uint32_t block_;
+  uint8_t chipSelectPin_;
+  uint8_t errorCode_;
+ ...
+</code></pre>
+
+            <p>After:</p>
+
+            <pre class="prettyprint"><code> ...
+ protected:
+  uint32_t block_;
+  uint8_t chipSelectPin_;
+  uint8_t errorCode_;
+ ...
+</code></pre>
+
+            <h4>
+              <em>Sd2CardExt.cpp (Part 1)</em>
+            </h4>
+
+            <p>First, add constants related to CMD48/49.</p>
+
+            <pre class="prettyprint linenums"><code>#include &lt;Arduino.h&gt;
+#include "Sd2CardExt.h"
+
+uint8_t const CMD48 = 0x30;
+uint8_t const CMD49 = 0x31;
+uint8_t const SD_CARD_ERROR_CMD48 = 0x80;
+uint8_t const SD_CARD_ERROR_CMD49 = 0x81;
+</code></pre>
+
+            <p>Next, make functions to send/receive data using SPI. This will be the same as the version in the Sd2Card
+              module,
+              so we're going to use inline to copy it (because it will be used frequently).</p>
+
+            <h4>
+              <em>Sd2CardExt.cpp (Part 2)</em>
+            </h4>
+
+            <pre class="prettyprint linenums"><code>/** Send a byte to the card */
+inline void spiSend(uint8_t b) {
+  SPDR = b;
+  while (!(SPSR &amp; (1 &lt;&lt; SPIF)));
+}
+
+/** Receive a byte from the card */
+inline  uint8_t spiReceive(void) {
+  spiSend(0xFF);
+  return SPDR;
+}
+</code></pre>
+
+            <p>Next, we'll make the common
+              <code>readExt()</code> and
+              <code>writeExt()</code> functions. These will issue CMD48/49 commands using
+              <code>readData()</code> and
+              <code>writeBlock()</code>, which are functions for CMD17/24 included in the base Sd2Card class.</p>
+
+            <p>The signal read/write timing of CMD48/49 is the same as CMD17/24 for general memory access, however the
+              command
+              number and parameters are different and CMD48/49 read/writes are always in 512 byte blocks.</p>
+
+            <p>If you want to read/write less than 512 bytes you'll need to add padding.</p>
+
+            <p>In
+              <code>readExt()</code>, one byte of dummy data is sent after
+              <code>chipSelectHigh()</code>. This is to ensure that command processing starts properly.</p>
+
+            <h4>
+              <em>Sd2CardExt.cpp (part 3)</em>
+            </h4>
+
+            <pre class="prettyprint linenums"><code>/** Perform Extention Read. */
+uint8_t Sd2CardExt::readExt(uint32_t arg, uint8_t* dst, uint16_t count) {
+  uint16_t i;
+
+  // send command and argument.
+  if (cardCommand(CMD48, arg) <span class="nocode" style="color: #48484c; background-color: rgba(255, 255, 51, 0.502);">&& cardCommand(CMD17, arg)</span>) {
+    error(SD_CARD_ERROR_CMD48);
+    goto fail;
+  }
+
+  // wait for start block token.
+  if (!waitStartBlock()) {
+    goto fail;
+  }
+
+  // receive data
+  for (i = 0; i &lt; count; ++i) {
+    dst[i] = spiReceive();
+  }
+
+  // skip dummy bytes and 16-bit crc.
+  for (; i &lt; 514; ++i) {
+    spiReceive();
+  }
+
+  chipSelectHigh();
+  spiSend(0xFF); // dummy clock to force FlashAir finish the command.
+  return true;
+
+ fail:
+  chipSelectHigh();
+  return false;
+}
+
+/** Perform Extention Write. */
+uint8_t Sd2CardExt::writeExt(uint32_t arg, const uint8_t* src, uint16_t count) {
+  uint16_t i;
+  uint8_t status;
+
+  // send command and argument.
+  if (cardCommand(CMD49, arg) <span class="nocode" style="color: #48484c; background-color: rgba(255, 255, 51, 0.502);">&& cardCommand(CMD24, arg)</span>) {
+    error(SD_CARD_ERROR_CMD49);
+    goto fail;
+  }
+
+  // send start block token.
+  spiSend(DATA_START_BLOCK);
+
+  // send data
+  for (i = 0; i &lt; count; ++i) {
+    spiSend(src[i]);
+  }
+
+  // send dummy bytes until 512 bytes.
+  for (; i &lt; 512; ++i) {
+    spiSend(0xFF);
+  }
+
+  // dummy 16-bit crc
+  spiSend(0xFF);
+  spiSend(0xFF);
+
+  // wait a data response token
+  status = spiReceive();
+  if ((status &amp; DATA_RES_MASK) != DATA_RES_ACCEPTED) {
+    error(SD_CARD_ERROR_WRITE);
+    goto fail;
+  }
+
+  // wait for flash programming to complete
+  if (!waitNotBusy(SD_WRITE_TIMEOUT)) {
+    error(SD_CARD_ERROR_WRITE_TIMEOUT);
+    goto fail;
+  }
+
+  chipSelectHigh();
+  return true;
+
+ fail:
+  chipSelectHigh();
+  return false;
+}
+</code></pre>
+
+            <p>Lastly, we'll add functions to handle the three read/write modes. Make a parameter for each mode and
+              pass it
+              to
+              <code>readExt()</code> and
+              <code>writeExt()</code>, along with the data size.</p>
+
+            <p>
+              <code>mio</code> is a flag to indicate memory area or I/O area. With iSDIO, the I/O area should always be
+              flagged.</p>
+
+            <p>
+              <code>func</code> is a function number. With iSDIO, function number 0 is reserved for general
+              information, so the
+              actual function number always starts at one. For example, FlashAir's wireless LAN function is 1.</p>
+
+            <p>
+              <code>addr</code> is a memory address.</p>
+
+            <p>Address space is divided into 512 bytes "pages". In register mode, you can access individual parts of a
+              page,
+              but in data port mode the entire page is accessed at once. Also, cross-page access is not available.</p>
+
+            <p>
+              <code>count</code> is the number of byte to access. If you're in data port mode, you must set it to 0.</p>
+
+            <p>For more information, see section 5.7.2 of SD Specifications Part 1 Physical Layer Simplified
+              Specification.</p>
+
+            <h4>
+              <em>Sd2CardExt.cpp (Part 4)</em>
+            </h4>
+
+            <pre class="prettyprint linenums"><code>uint8_t Sd2CardExt::readExtDataPort(uint8_t mio, uint8_t func, 
+        uint16_t addr, uint8_t* dst) {
+  uint32_t arg = 
+      (((uint32_t)mio &amp; 0x1) &lt;&lt; 31) | 
+      (mio ? (((uint32_t)func &amp; 0x7) &lt;&lt; 28) : (((uint32_t)func &amp; 0xF) &lt;&lt; 27)) |
+      (((uint32_t)addr &amp; 0x1FE00) &lt;&lt; 9);
+
+  return readExt(arg, dst, 512);
+}
+
+uint8_t Sd2CardExt::readExtMemory(uint8_t mio, uint8_t func, 
+        uint32_t addr, uint16_t count, uint8_t* dst) {
+  uint32_t offset = addr &amp; 0x1FF;
+  if (offset + count &gt; 512) count = 512 - offset;
+
+  if (count == 0) return true;
+
+  uint32_t arg = 
+      (((uint32_t)mio &amp; 0x1) &lt;&lt; 31) | 
+      (mio ? (((uint32_t)func &amp; 0x7) &lt;&lt; 28) : (((uint32_t)func &amp; 0xF) &lt;&lt; 27)) |
+      ((addr &amp; 0x1FFFF) &lt;&lt; 9) |
+      ((count - 1) &amp; 0x1FF);
+
+  return readExt(arg, dst, count);
+}
+
+uint8_t Sd2CardExt::writeExtDataPort(uint8_t mio, uint8_t func, 
+          uint16_t addr, const uint8_t* src) {
+  uint32_t arg =
+      (((uint32_t)mio &amp; 0x1) &lt;&lt; 31) | 
+      (mio ? (((uint32_t)func &amp; 0x7) &lt;&lt; 28) : (((uint32_t)func &amp; 0xF) &lt;&lt; 27)) |
+      (((uint32_t)addr &amp; 0x1FE00) &lt;&lt; 9);
+
+  return writeExt(arg, src, 512);
+}
+
+uint8_t Sd2CardExt::writeExtMemory(uint8_t mio, uint8_t func, 
+    uint32_t addr, uint16_t count, const uint8_t* src) {
+  uint32_t arg =
+      (((uint32_t)mio &amp; 0x1) &lt;&lt; 31) | 
+      (mio ? (((uint32_t)func &amp; 0x7) &lt;&lt; 28) : (((uint32_t)func &amp; 0xF) &lt;&lt; 27)) |
+      ((addr &amp; 0x1FFFF) &lt;&lt; 9) |
+      ((count - 1) &amp; 0x1FF);
+
+  return writeExt(arg, src, count);
+}
+
+uint8_t Sd2CardExt::writeExtMask(uint8_t mio, uint8_t func, 
+    uint32_t addr, uint8_t mask, const uint8_t* src) {
+  uint32_t arg =
+      (((uint32_t)mio &amp; 0x1) &lt;&lt; 31) | 
+      (mio ? (((uint32_t)func &amp; 0x7) &lt;&lt; 28) : (((uint32_t)func &amp; 0xF) &lt;&lt; 27)) |
+      (0x1 &lt;&lt; 26) |
+      ((addr &amp; 0x1FFFF) &lt;&lt; 9) |
+      mask;
+
+  return writeExt(arg, src, 1);
+}
+</code></pre>
+
+            <h2>Helper Functions!</h2>
+            <div class="separator-2"></div>
+
+            <p>iSDIO is a command protocol, it's meant to pass content for a whole range of applications. This means
+              that unfortunately
+              it's not the easiest to use, so lets make some helper functions to keep things simple and organized!</p>
+
+            <p>
+              <code>put\_xxx()</code> writes the buffer and moves the pointer ahead by the buffer's size. It returns
+              the new pointer
+              as well.
+              <code>put\_xxx_arg()</code> is for script parameters, and writes the size of "value", "value" itself, and
+              padding
+              to fit the 4 byte border. It will also move the pointer forwards by the number of bytes written and
+              return
+              it.
+              <code>put\_command\_header()</code> and
+              <code>put\_command\_info\_header()</code> are used to make headers for the script. It will also move the
+              pointer
+              forwards by the number of bytes written and return it.
+              <code>get\_xxx()</code> reads from the buffer.</p>
+
+            <p>We will explain these functions in more detail in future tutorials.</p>
+
+            <h4>
+              <em>Helper function</em>
+            </h4>
+
+            <pre class="prettyprint"><code>uint8_t* put_u8(uint8_t* p, uint8_t value);
+uint8_t* put_u16(uint8_t* p, uint16_t value);
+uint8_t* put_u32(uint8_t* p, uint32_t value);
+uint8_t* put_str(uint8_t* p, const char* value);
+
+uint8_t* put_u8_arg(uint8_t* p, uint8_t value);
+uint8_t* put_u16_arg(uint8_t* p, uint16_t value);
+uint8_t* put_u32_arg(uint8_t* p, uint32_t value);
+uint8_t* put_str_arg(uint8_t* p, const char* value);
+
+uint8_t* put_command_header(uint8_t* p, uint8_t num_commands,
+        uint32_t command_bytes);
+uint8_t* put_command_info_header(uint8_t* p, uint16_t command_id,
+        uint32_t sequence_id, uint16_t num_args);
+
+uint8_t get_u8(uint8_t* p);
+uint16_t get_u16(uint8_t* p);
+uint32_t get_u32(uint8_t* p);
+</code></pre>
+
+            <h2>How to use</h2>
+            <div class="separator-2"></div>
+
+            <p>Start the Arduino IDE, select Sketch > Use Library > Add Library ... from the menu, then set the iSDIO
+              folder.
+              Once that is done, when select Sketch > Use Library > iSDIO should appear in the menu automatically.</p>
+
+            <h2>Execution</h2>
+            <div class="separator-2"></div>
+
+            <p>First, let's make sure the library is compiled properly.</p>
+
+            <p>Select File > New File from the menu and open new editor. Next, select Sketch > Use Library > iSDIO.</p>
+
+            <p>Make
+              <code>setup()</code> function and blank
+              <code>loop()</code> function to initialize the card.</p>
+
+            <h4>
+              <em>arduino_tutorial_02.ino</em>
+            </h4>
+
+            <pre class="prettyprint"><code>#include &lt;utility/Sd2CardExt.h&gt;
+
+const int chipSelectPin = 4;
+Sd2CardExt card;
+
+void setup() {
+  // Initialize UART for message print.
+  Serial.begin(9600);
+  while (!Serial) {
+    ;
+  }
+
+  // Initialize SD card.
+  Serial.print(F("\nInitializing SD card..."));  
+  if (card.init(SPI_HALF_SPEED, chipSelectPin)) {
+    Serial.print(F("OK"));
+  } else {
+    Serial.print(F("NG"));
+    abort();
+  }
+}
+
+void loop() {
+}
+</code></pre>
+
+            <p>Then, make sure no errors occur with Sketch > Verification/Compilation.</p>
+
+            <h2>Sample code</h2>
+            <div class="separator-2"></div>
+
+            <p>
+              <a class="btn btn-primary" href="..\..\..\..\..\files\samplecode\arduino\arduino_tutorial_02-1.zip" onclick="_gaq.push(['_trackEvent', 'Sample Code Download', 'arduino_tutorial_02.zip', 'ja', true]);">
+                <i class="fa fa-download pr-10"></i> arduino_tutorial_02.zip </a> (22KB)</p>
+
+            <p>
+              <p class="small">All sample code on this page is licensed under
+                <a href="..\..\..\..\..\ja\documents\license\index-1.htm" target="_blank">BSD 2-Clause License</a>.</p>
+            
+
+            <!-- Social Buttons -->
+            <div class="clearfix">
+	<ul class="social-links float-right">
+		<li class="twitter">
+			<!--Tweet Button-->
+			<a href="https://twitter.com/share" class="twitter-share-button" {count}="" data-via="FlashAirDev" data-related="FlashAirDev">Tweet</a>
+			<script>
+				! function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0],
+						p = /^http:/.test(d.location) ? 'http' : 'https';
+					if (!d.getElementById(id)) {
+						js = d.createElement(s);
+						js.id = id;
+						js.src = p + '://platform.twitter.com/widgets.js';
+						fjs.parentNode.insertBefore(js, fjs);
+					}
+				}(document, 'script', 'twitter-wjs');
+			</script>
+		</li>
+		<li class="facebook">
+			<!--Facebook Like Button-->
+			<div id="fb-root"></div>
+			<script>
+				(function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+			<div class="fb-like" data-href="https://www.flashair-developers.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+		</li>		
+	</ul>
+</div>
+
+            <!-- pagination start -->
+            <nav aria-label="Page navigation">
+              <ul class="pagination justify-content-between">
+                <li>
+                  <a class="btn radius-50 page-link badge-pill" href="..\1\index-1.htm" aria-label="Previous">
+                    <i class="fa fa-chevron-left pr-10"></i>
+                    Controlling FlashAir with Arduino
+                  </a>
+                </li>
+                <li>
+                  <a class="btn radius-50 page-link badge-pill" href="..\3\index-1.htm" aria-label="Next">
+                    Reading the card status
+                    <i class="fa fa-chevron-right pl-10"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- pagination end -->
+
+            <!-- Amazon bottom link -->
+            <div class="col-12">
+	<!--Amazon search result for tablet-->
+	<div class="amazon-widget-bottom mx-auto d-none d-md-block d-lg-none">
+		<!--
+<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=12&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="300" height="250" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" width="320" height="250" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+
+	<!--Amazon search result for smartphone-->
+	<div class="amazon-widget-mobile mx-auto d-md-none">
+		<!--Image-->
+		<!--
+	<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20" alt="TOSHIBA FlashAir SD card 8GB SD-WB008G"><img src="http://ws.assoc-amazon.com/widgets/q?_encoding=UTF8&ASIN=B009RGP7HY&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=flasdeve-20" style="vertical-align:middle;"/></a><br>
+-->
+		<!--Text-->
+		<!--
+<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20">Find TOSHIBA FlashAir SD card 8GB SD-WB008G on Amazon.com</a><img src="http://www.assoc-amazon.com/e/ir?t=flasdeve-20&l=as2&o=1&a=B009RGP7HY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+</div>
+
+          </div>
+          <!-- main end -->
+
+          <!-- sidebar start -->
+          <!-- ================ -->
+          <aside class="col-lg-3 col-xl-3 order-lg-1">
+            <div class="sidebar">
+  <div class="block clearfix">
+    <nav>
+      <ul class="nav flex-column">
+        <li>
+          <h3>Tutorials for Arduino software development</h3>
+        </li>
+        <li class="nav-item"> <a class="nav-link" href="..\1\index-1.htm">
+          Controlling FlashAir with Arduino
+          </a>
+        </li>
+
+        <li class="nav-item active"> <a class="nav-link active" href="index-1.htm">
+          Creating the iSDIO extension command
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\3\index-1.htm">
+          Reading card status
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\4\index-1.htm">
+          Starting in AP mode
+          </a>
+        </li>
+
+
+        <li class="nav-item"> <a class="nav-link" href="..\5\index-1.htm">
+          Starting in STA mode
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\6\index-1.htm">
+          Retieving a Web page
+          </a>
+        </li>
+        <li>
+          <h3>Tutorials for Raspberry pi app development</h3>
+        </li>
+        <li class="nav-item"> <a class="nav-link" href="..\..\raspberrypi\1\index-1.htm">Setting
+          Internet Pass-Thru Mode</a>
+        </li>
+        <li class="nav-item"> <a class="nav-link" href="..\..\raspberrypi\2\index-1.htm">API Reference</a>
+        </li>
+        <li>
+          <br>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\..\isdio\index-1.htm">
+            Back to Content List
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<!-- Amazon side link -->
+<!--Amazon search result for desktop-->
+<div class="amazon-widget-side d-none d-lg-block">
+	<!--
+	<iframe src="http://rcm-jp.amazon.co.jp/e/cm?t=flashjapan0a-22&o=9&p=14&l=st1&mode=electronics-jp&search=%E6%9D%B1%E8%8A%9D%20FlashAir&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></iframe>
+	-->
+	<div class="amazon-content" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; font-size: 14px;" scrolling="no">
+        <script type="text/javascript">amazon_ad_tag ="flashjapan0a-22"; amazon_ad_width ="160"; amazon_ad_height ="600"; amazon_ad_link_target ="new"; amazon_ad_price ="retail"; amazon_ad_discount ="remove"; amazon_ad_exclude ="マンガ;インクカートリッジ;ポイントコード;transcend;モンスターハンター"; amazon_ad_include ="flashair;arduino;lua;iot;ソフトウェア"; amazon_ad_categories ="e"; </script><script src="//ir-jp.amazon-adsystem.com/s/ads.js"></script>
+    </div>
+    
+</div>
+
+
+          </aside>
+          <!-- sidebar end -->
+
+        </div>
+      </div>
+    </section>
+    <!-- main-container end -->
+
+    <!-- footer start -->
+    <!-- ================ -->
+    <!-- footer start -->
+<!-- ================ -->
+<footer id="footer" class="clearfix ">
+
+  <!-- .footer start -->
+  <!-- ================ -->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">
+                <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2-1.png"> FlashAir&trade; Developers</h2>
+              <div class="separator-2"></div>
+              <p>
+                  A technical information website for developers of Toshiba FlashAir apps or services. FlashAir Developers is operated by Fixstars in cooperation with Toshiba Memory Corporation. To learn more about Fixstars, visit
+                <a target="_blank" href="http://www.fixstars.com">www.fixstars.com
+                  <i class="fa fa-external-link"></i>
+                </a>. ?FlashAir is a trademark of Toshiba Memory Corporation.
+              </p>
+              <ul class="social-links circle animated-effect-1" style="margin-bottom: 10px">
+                <li class="facebook">
+                  <a href="https://www.facebook.com/FlashAir-Developers-115819238627364/" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="twitter">
+                  <a href="https://twitter.com/FlashAirDev/" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+              <ul class="list-unstyled list-inline m-0">
+                <li class="list-inline-item"><a href="..\..\..\..\terms-of-use\index-1.htm">Terms of Use</a></li>
+                <li class="list-inline-item">|</li>
+                <li class="list-inline-item"><a href="..\..\..\..\privacypolicy\index-1.htm">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Twitter</h2>
+              <div class="separator-2"></div>
+              <div id="twitterWidget">
+                <a class="twitter-timeline" data-theme="light" href="https://twitter.com/FlashAirDev" data-widget-id="344743426811641856" height="230" data-chrome="nofooter noheader noborders transparent">Latest News</a>
+                <script>
+                  ! function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                      p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                      js = d.createElement(s);
+                      js.id = id;
+                      js.src = p + "://platform.twitter.com/widgets.js";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }
+                  }(document, "script", "twitter-wjs");
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Sitemap</h2>
+              <div class="separator-2"></div>
+              <nav>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\discover\overview\index-1.htm">What's FlashAir?
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\resources\index-1.htm">Developer Resources
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\index-1.htm">Tutorials
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\api\index-1.htm">API Guide
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\support\index-1.htm">Support
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\support\forum\index-1.htm">Developer Forum
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir IoTHub <i class="fa fa-external-link"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .footer end -->
+
+  <!-- .subfooter start -->
+  <!-- ================ -->
+  <div class="subfooter">
+    <div class="container">
+      <div class="subfooter-inner">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center">Copyright &copy; 2019 FlashAir Developers. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .subfooter end -->
+
+  <div id="overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 ml-auto text-white">
+          <p class="mt-3">If you write software or change the settings which are described on this site to your FlashAir device which was purchased at a mass retailer or online shop, it will not be eligible for a free replacement under the warranty policy. Please acknowledge and carry out development at your own risk.
+          </p>
+        </div>
+        <div class="col-md-2 row">
+          <div class="align-self-center">
+          <button class="btn btn-default" id="btn-agree">Accept</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- footer end -->
+
+<!-- JavaScript files placed at the end of the document so the pages load faster -->
+<!-- ================================================== -->
+<!-- Jquery and Bootstap core js files -->
+<script src="..\..\..\..\..\js\jquery.min-1.js"></script>
+<script src="..\..\..\..\..\js\bootstrap.bundle.min-1.js"></script>
+<!-- jQuery Revolution Slider  -->
+<script src="..\..\..\..\..\js\jquery.themepunch.tools.min-1.js"></script>
+<script src="..\..\..\..\..\js\jquery.themepunch.revolution.min.js imagesloaded.pkgd.min.js.pagespeed.jc.cG4Ou2l09T-1.js"></script><script>eval(mod_pagespeed_faLzhRoycV);</script>
+<!-- Isotope javascript -->
+<script>eval(mod_pagespeed_e7p3yiKri5);</script>
+<script src="..\..\..\..\..\js\isotope.pkgd.min.js jquery.magnific-popup.min.js jquery.waypoints.min.js sticky.min.js jquery.countTo.js.pagespeed.jc.cWqBgip635-1.js"></script><script>eval(mod_pagespeed_EzjKnImtZK);</script>
+<!-- Magnific Popup javascript -->
+<script>eval(mod_pagespeed_hr4XVzGccf);</script>
+<!-- Appear javascript -->
+<script>eval(mod_pagespeed_zhicDWZgIJ);</script>
+<script>eval(mod_pagespeed_MTpYywWOfL);</script>
+<!-- Count To javascript -->
+<script>eval(mod_pagespeed_dmh3ejQ5o0);</script>
+<!-- Slick carousel javascript -->
+<script src="..\..\..\..\..\js\slick.min.js pace.min.js template.js jquery.cookie.js custom.js jquery.matchHeight.js.pagespeed.jc.Y3630FlbPX-1.js"></script><script>eval(mod_pagespeed_s1mKdTeuWx);</script>
+<!-- Pace javascript -->
+<script>eval(mod_pagespeed_Zs67JgCVyk);</script>
+<!-- Initialization of Plugins -->
+<script>eval(mod_pagespeed_BIPkzwMbEw);</script>
+<!-- Custom Scripts -->
+<script>eval(mod_pagespeed_uSq_SD1Gz5);</script>
+<script>eval(mod_pagespeed_mqKjjurRp4);</script>
+<script>eval(mod_pagespeed_TteNs$c3Zl);</script>
+<script>
+  $(function () {
+    $('.matchHeight').matchHeight();
+  });
+</script>
+<script src="..\..\..\..\..\js\script.js prettify.js lang-lua.js lang-css.js.pagespeed.jc.ECF3Z77mjV-1.js"></script><script>eval(mod_pagespeed_SrZ0Yqg7MZ);</script>
+<script>eval(mod_pagespeed_RSPiDhly$4);</script>
+<script>eval(mod_pagespeed_0pGoVUEAt9);</script>
+<script>eval(mod_pagespeed_IrbA2eGHA$);</script>
+<script>
+  ! function ($) {
+    $(function () {
+      PR.prettyPrint()
+    })
+  }(window.jQuery)
+</script>
+    <!-- footer end -->
+  </div>
+  <!-- page wrapper end -->
+</body>
+
+</html>

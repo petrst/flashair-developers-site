@@ -1,0 +1,4995 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<!-- %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"} -->
+
+<!--Google Apps verification-->
+
+<title>FlashAir Developers - Lua Scripting</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta property="fb:admins" content="100006082240886">
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@FlashAirDev">
+<meta property="fb:admins" content="115819238627364">
+<meta property="og:site_name" content="FlashAir Developers">
+<meta property="og:image" content="https://flashair-developers.com/images/assets/ogp.png">
+<meta property="og:url" content="https://flashair-developers.com/en/documents/api/lua/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FlashAir Developers - Lua Scripting">
+
+<link href="..\..\..\..\images\flashair_favicon.ico" rel="shortcut icon">
+<link href="..\..\..\..\images\apple-touch-icon-152x152-precomposed.png" rel="apple-touch-icon-precomposed" sizes="152x152">
+<link href="..\..\..\..\images\apple-touch-icon-120x120-precomposed.png" rel="apple-touch-icon-precomposed" sizes="120x120">
+<link href="..\..\..\..\images\apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="..\..\..\..\images\apple-touch-icon-76x76-precomposed.png" rel="apple-touch-icon-precomposed" sizes="76x76">
+<link href="..\..\..\..\images\apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="..\..\..\..\images\apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon-precomposed" sizes="57x57">
+<!-- Web Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+<!-- Bootstrap core CSS -->
+<link href="..\..\..\..\css\bootstrap.css" rel="stylesheet">
+
+<!-- Font Awesome CSS -->
+<link href="..\..\..\..\css\fonts\font-awesome\css\font-awesome.css" rel="stylesheet">
+
+<!-- Plugins -->
+<link href="..\..\..\..\css\magnific-popup.css" rel="stylesheet">
+<link href="..\..\..\..\css\settings.css" rel="stylesheet">
+<link href="..\..\..\..\css\layers.css" rel="stylesheet">
+<link href="..\..\..\..\css\navigation.css" rel="stylesheet">
+<link href="..\..\..\..\css\animations.css" rel="stylesheet">
+<link href="..\..\..\..\css\slick.css" rel="stylesheet">
+
+<!-- The Project's core CSS file -->
+<!-- Use css/rtl_style.css for RTL version -->
+<link href="..\..\..\..\css\style.css" rel="stylesheet">
+<!-- The Project's Typography CSS file, includes used fonts -->
+<!-- Used font for body: Roboto -->
+<!-- Used font for headings: Raleway -->
+<!-- Use css/rtl_typography-default.css for RTL version -->
+<link href="..\..\..\..\css\typography-default.css" rel="stylesheet">
+<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer) -->
+<link href="..\..\..\..\css\light_blue.css" rel="stylesheet">
+
+<!-- Custom css -->
+<link href="..\..\..\..\css\custom.css" rel="stylesheet">
+<link href="..\..\..\..\css\prettify.css" rel="stylesheet">
+<!--[if lt IE 9]>
+	<link href="/css/bootstrap-ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+  <meta name="keywords" content="FlashAir, api, SDcard, Lua, script">
+  <meta name="description" content="FlashAir supports the execution of programs written in Lua, which allows a lot of advanced features. FlashAir is a SD card with embedded wireless LAN produced by Toshiba Memory Corp..">
+  <meta property="og:description" content="FlashAir supports the execution of programs written in Lua, which allows a lot of advanced features. FlashAir is a SD card with embedded wireless LAN produced by Toshiba Memory Corp..">
+</head>
+
+<body class=" ">
+
+  <!-- scrollToTop -->
+  <!-- ================ -->
+  <div class="scrollToTop circle">
+    <i class="fa fa-angle-up"></i>
+  </div>
+
+  <!-- page wrapper start -->
+  <!-- ================ -->
+  <div class="page-wrapper">
+    <!-- header-container start -->
+    <div class="header-container">
+      <!-- header-top start -->
+<!-- classes:  -->
+<!-- "dark": dark version of header top e.g. class="header-top dark" -->
+<!-- "colored": colored version of header top e.g. class="header-top colored" -->
+<!-- ================ -->
+<div class="header-top dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-lg-10">
+                <div class="header-top-first clearfix">
+                    <ul class="list-inline float-right">
+                        <li class="list-inline-item">
+                            <a href="..\..\..\index.htm" id="go-to-japanese">Japanese</a>&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            English&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\zh\index.htm" id="go-to-chinese">Chinese</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-2">
+                <!-- header-top-second start -->
+                <!-- ================ -->
+                <div id="header-top-second" class="clearfix">
+                    <!-- header top dropdowns start -->
+                    <!-- ================ -->
+                    <div class="header-top-dropdown text-right">
+                        <div class="btn-group">
+                            <a href="..\..\..\member\index.htm" class="btn btn-default btn-sm">
+                                <i class="fa fa-user pr-2"></i> MyAccount</a>
+                        </div>
+                    </div>
+                    <!--  header top dropdowns end -->
+                </div>
+                <!-- header-top-second end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header-top end -->
+<!-- header start -->
+<!-- classes:  -->
+<!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+<!-- "fixed-desktop": enables fixed navigation only for desktop devices e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "fixed-all": enables fixed navigation only for all devices desktop and mobile e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+<!-- "centered": mandatory class for the centered logo layout -->
+<!-- ================ -->
+<header class="header fixed fixed-desktop clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-auto hidden-md-down pl-3">
+                <!-- header-first start -->
+                <!-- ================ -->
+                <div class="header-first clearfix">
+
+                    <!-- logo -->
+                    <div id="logo" class="logo">
+                        <a href="..\..\..\index.htm">
+                            <img alt="FlashAir logo" src="..\..\..\..\images\assets\flashairLogo_official_small2.png">
+                            &nbsp;FlashAir&trade; Developers
+                        </a>
+                    </div>
+
+                </div>
+                <!-- header-first end -->
+
+            </div>
+            <div class="col-lg-7 ml-lg-auto">
+
+                <!-- header-second start -->
+                <!-- ================ -->
+                <div class="header-second clearfix">
+
+                    <!-- main-navigation start -->
+                    <!-- classes: -->
+                    <!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+                    <!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+                    <!-- ================ -->
+                    <div class="main-navigation main-navigation--mega-menu  animated">
+                        <nav class="navbar navbar-expand-lg navbar-light p-0">
+                            <div class="navbar-brand clearfix hidden-lg-up">
+
+                                <!-- logo -->
+                                <div id="logo-mobile" class="logo">
+                                    <a href="..\..\..\index.htm">
+                                        <img alt="FlashAir logo" src="..\..\..\..\images\assets\flashairLogo_official_small2.png">
+                                        &nbsp;FlashAir&trade; Developers
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- header dropdown buttons -->
+                            <div class="header-dropdown-buttons hidden-lg-up p-0 ml-auto mr-3">
+                                <div class="btn-group">
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                                        <li>
+                                            <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse">
+                                                <div class="form-group has-feedback">
+                                                    <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                                    <input type="hidden" name="ie" value="UTF-8">
+                                                    <input type="text" name="q" size="31" class="form-control">
+                                                    <input type="submit" name="sa" value="Search">
+                                                </div>
+                                            </form>
+                                            <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- header dropdown buttons end -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                <!-- main-menu -->
+                                <ul class="navbar-nav ml-xl-auto">
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="first-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Discover</a>
+                                        <ul class="dropdown-menu" aria-labelledby="first-dropdown">
+                                            <li>
+                                                <a href="..\..\..\discover\overview\index.htm">What's FlashAir?</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\discover\overview\w04\index.htm">Fourth generation FlashAir W-04</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\discover\gettingstarted\index.htm">Getting Started</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\discover\beginners\index.htm">Beginners Guide with FlashAir
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\discover\usage\index.htm">Get started with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\discover\app\index.htm">Overview of FlashAir Application
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\discover\device\index.htm">Overview of using Devices with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir
+                                                    IoT Hub
+                                                    <i class="fa fa-external-link"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="second-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Application</a>
+                                        <ul class="dropdown-menu" aria-labelledby="second-dropdown">
+                                            <li>
+                                                <a href="..\..\..\application\iot\index.htm">Application to IoT</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\application\devices\index.htm">Using with Devices</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\application\workflow\index.htm">Improve efficiency of operations</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\application\share-documents\index.htm">Sharing Documents</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\application\users\index.htm">User's Projects</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\application\showcase\index.htm">App Showcase</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown active"> <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+                                        <ul class="dropdown-menu" aria-labelledby="third-dropdown">
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\..\tutorials\ios\index.htm">iOS</a></li>
+                                                    <li><a href="..\..\tutorials\android\index.htm">Android</a></li>
+                                                    <li><a href="..\..\tutorials\web\index.htm">Web browser</a></li>
+                                                    <li><a href="..\..\tutorials\advanced\index.htm">Advanced</a></li>
+                                                    <li><a href="..\..\tutorials\isdio\index.htm">iSDIO</a></li>
+                                                    <li><a href="..\..\tutorials\lua\index.htm">Lua</a></li>
+                                                    <li><a href="..\..\tutorials\users\index.htm">User's Tutorials</a></li>
+                                                    <li><a href="..\..\tutorials\iot-hub\index.htm">FlashAir IoT Hub</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">API Guide</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\commandcgi\index.htm">command.cgi</a></li>
+                                                    <li><a href="..\configcgi\index.htm">config.cgi</a></li>
+                                                    <li><a href="..\thumbnailcgi\index.htm">thumbnail.cgi</a></li>
+                                                    <li><a href="..\uploadcgi\index.htm">upload.cgi</a></li>
+                                                    <li><a href="..\config\index.htm">CONFIG</a></li>
+                                                    <li><a href="..\utility\index.htm">Browser Utility</a></li>
+                                                    <li><a href="index.htm">Lua Scripting</a></li>
+                                                    <li><a href="..\isdio\index.htm">iSDIO</a></li>
+                                                    <li><a href="..\fw40003\index.htm">About FW 4.00.03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\resources\index.htm">Developer Resources</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\books\index.htm">Books</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\about\events\index.htm">Events</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="fourth-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                                        <ul class="dropdown-menu" aria-labelledby="fourth-dropdown">
+                                            <li>
+                                                <a href="..\..\..\support\index.htm">Support</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\support\forum\index.htm">Developer Forum</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\support\faq\index.htm">FAQ</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\support\iot-hub\index.htm">About FlashAir IoT Hub service end</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\support\developers\index.htm">About FlashAir Developers site closure</a>
+                                            </li>                
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!-- main-menu end -->
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- main-navigation end -->
+                </div>
+                <!-- header-second end -->
+
+            </div>
+            <div class="col-auto hidden-md-down">
+                <!-- header dropdown buttons -->
+                <div class="header-dropdown-buttons">
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                            <li>
+                                <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse" target="_blank">
+                                    <div class="form-group has-feedback">
+                                        <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                        <input type="hidden" name="ie" value="UTF-8">
+                                        <input type="text" name="q" size="31" class="form-control">
+                                        <input type="submit" name="sa" value="Search">
+                                    </div>
+                                </form>
+                                <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- header dropdown buttons end -->
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+    <!-- Google Analytics Tracking Code -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-498925-24', 'auto');
+        ga('send', 'pageview');
+    </script>
+</header>
+    </div>
+    <!-- header-container end -->
+
+    <!-- main-container start -->
+    <!-- ================ -->
+    <section class="main-container">
+
+      <div class="container">
+        <div class="row ml-2 mr-2">
+
+          <!-- main start -->
+          <!-- ================ -->
+          <div class="main col-lg-9 order-lg-2 pb-5">
+
+            <!-- page-title start -->
+            <!-- ================ -->
+            <h1 class="page-title">
+              Lua Scripting</h1>
+            <p class="small text-muted">Last update: June 2019</p>
+            <!-- page-title end -->
+
+            <div class="alert alert-warning" role="alert">
+              If you write software or change the settings which are described on this site to your FlashAir device which was
+              purchased at a mass retailer or online shop, it will not be eligible for a free replacement under the warranty policy.
+              Please acknowledge and carry out development at your own risk.
+            </div>
+        
+            <p class="mt-5">FlashAir supports the execution of programs written in Lua, which allows a lot of advanced
+              features such as:
+            </p>
+            <ul>
+              <li>
+                Uploading a file directly from FlashAir to a server.
+              </li>
+              <li>
+                Generating data files on FlashAir.
+              </li>
+              <li>
+                Dynamically generated HTML.
+              </li>
+            </ul>
+
+            <p>Lua scripting is available in Firmware Versions 3.00.00+.</p>
+            <ul class="list pb-5">
+              <li>
+                <a href="#AboutLua">
+                  <i class="fa fa-angle-right pr-2"></i>About Lua</a>
+              </li>
+              <li>
+                <a href="#AvailableFunctions">
+                  <i class="fa fa-angle-right pr-2"></i>Available Libraries</a>
+              </li>
+              <li>
+                <a href="#Limitations">
+                  <i class="fa fa-angle-right pr-2"></i>Limitations</a>
+              </li>
+              <li>
+                <a href="#reference">
+                  <i class="fa fa-angle-right pr-2"></i>Lua Function Reference</a>
+              </li>
+            </ul>
+            <section class="mb-5">
+              <h2 id="AboutLua">About Lua</h2>
+              <div class="separator-2"></div>
+              <blockquote>
+                <p class="mb-0">Lua is a powerful, fast, lightweight, embeddable scripting language.</p>
+                <p class="mb-0">Lua combines simple procedural syntax with powerful data description constructs based
+                  on associative arrays
+                  and extensible semantics. Lua is dynamically typed, runs by interpreting bytecode for a
+                  register-based
+                  virtual machine, and has automatic memory management with incremental garbage collection - making it
+                  ideal
+                  for configuration, scripting, and rapid prototyping.</p>
+                <footer class="blockquote-footer">
+                  &#8201;&#8212;&#8201;
+                  <a href="http://www.lua.org/about.html" target="_blank">Lua: about
+                    <i class="fa fa-external-link"></i>
+                  </a>
+                </footer>
+              </blockquote>
+              <p>For more about the Lua language, see:</p>
+              <ul>
+                <li>
+                  <a href="http://www.lua.org/" target="_blank">http://www.lua.org/
+                    <i class="fa fa-external-link"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Lua_(programming_language)" target="_blank">Wikipedia
+                    <i class="fa fa-external-link"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://amzn.to/1AfOT7R" target="_blank">Programming in Lua
+                    <i class="fa fa-external-link"></i>
+                  </a> (Amazon.com)
+                </li>
+              </ul>
+            </section>
+            <section class="mb-5">
+              <h2 id="AvailableFunctions">Available Libraries</h2>
+              <div class="separator-2"></div>
+              <p>The following library functions are available in FlashAir Lua scripting:</p>
+              <ul>
+                <li>
+                  Lua standard library.
+                  <ul>
+                    <li>
+                      Version: 5.2.1（
+                      <a href="http://www.lua.org/" target="_blank">http://www.lua.org/
+                        <i class="fa fa-external-link"></i>
+                      </a>）
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  LuaFileSystem
+                  <ul>
+                    <li>
+                      Version: 1.61（
+                      <a href="http://keplerproject.github.io/luafilesystem/" target="_blank">http://keplerproject.github.io/luafilesystem/
+                        <i class="fa fa-external-link"></i>
+                      </a>）
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  CJSON
+                  <ul>
+                    <li>
+                      Version: 1.0.3（
+                      <a href="http://www.kyne.com.au/~mark/software/lua-cjson.php" target="_blank">http://www.kyne.com.au/~mark/software/lua-cjson.php
+                        <i class="fa fa-external-link"></i>
+                      </a>）
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  FlashAir specific functions.
+                  <ul>
+                    <li>
+                      <a href="#reference">Lua Function Reference</a>
+                    </li>
+                    <li>
+                      <a href="#partition">Partition operation</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </section>
+            <section class="mb-5">
+              <h2 id="Limitations">Limitations</h2>
+              <div class="separator-2"></div>
+              <p>The following functions in the standard library are not available because of the memory limitations:</p>
+              <div class="alert alert-success" role="alert">
+                <span class="badge badge-success">Update</span> Mathematical functions are now available on FlashAir
+                W-04.
+              </div>
+              <ul>
+                <li>
+                  Coroutine Manipulation
+                </li>
+                <li>
+                  Operating System Facilities
+                </li>
+                <li>
+                  The Debug Library
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 id="reference">Lua Function Reference</h2>
+              <div class="separator-2"></div>
+              <div class="alert alert-warning" role="alert">
+                The contents are subject to change without notice.
+              </div>
+              <table class="table table-bordered table-hover table-nowrap">
+                <thead>
+                  <tr>
+                    <th>Function Name</th>
+                    <th>Description</th>
+                    <th>Firmware Versions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="#Bridge">Bridge</a>
+                    </td>
+                    <td>
+                      Enables Wireless LAN in Internet passthrough mode.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#Connect">Connect</a>
+                    </td>
+                    <td>
+                      Enables Wireless LAN in STA mode.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#ConnectedSTA">ConnectedSTA
+                      </a>
+                    </td>
+                    <td>
+                      Number of connected stations at AP connection.
+                    </td>
+                    <td>
+                      4.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#facontrolfioget">control(&quot;fioget&quot;)
+                      </a>
+                    </td>
+                    <td>
+                      Get wireless LAN On/Off status.
+                    </td>
+                    <td>
+                      4.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#facontrolfioset">control(&quot;fioset&quot;)
+                      </a>
+                    </td>
+                    <td>
+                      Wireless LAN On/Off.
+                    </td>
+                    <td>
+                      4.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#controlhidchangepass">control("hid_change_pass")
+                      </a>
+                    </td>
+                    <td>
+                      Changing the password set for saving to the hidden area
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#controlhidclear">control("hid_clear")
+                      </a>
+                    </td>
+                    <td>
+                      Delete all script files saved by password, API
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#controlhidget">control("hid_get")
+                      </a>
+                    </td>
+                    <td>
+                      Retrieve script saved in confidential area
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#controlhidhash">control("hid_hash")
+                      </a>
+                    </td>
+                    <td>
+                      Create a hash string from the set password and the specified character string
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#controlhidsetpass">control("hid_set_pass")
+                      </a>
+                    </td>
+                    <td>
+                      Set password for saving to hidden area
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#controlhidstore">control("hid_store")
+                      </a>
+                    </td>
+                    <td>
+                      Save script to hidden area
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#facontroltime">control(&quot;time&quot;)
+                      </a>
+                    </td>
+                    <td>
+                      Save date and time memo.
+                    </td>
+                    <td>
+                      4.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#Disconnect">Disconnect</a>
+                    </td>
+                    <td>
+                      Disables Wireless LAN.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#Establish">Establish</a>
+                    </td>
+                    <td>
+                      Enables Wireless LAN in AP mode.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#ftp">ftp</a>
+                    </td>
+                    <td>
+                      Downloads or upload a file by FTP.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#GetScanInfo">GetScanInfo</a>
+                    </td>
+                    <td>
+                      Gets results of SSID scan.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#hash">hash</a>
+                    </td>
+                    <td>
+                      Generates hash.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#HTTPGetFile">HTTPGetFile</a>
+                    </td>
+                    <td>
+                      Downloads a file by HTTP.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-success">Update</span>
+                      <a href="#i2c">i2c</a>
+                    </td>
+                    <td>
+                      I
+                      <sup>2</sup>C operation.
+                    </td>
+                    <td>
+                      4.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#ip">ip</a>
+                    </td>
+                    <td>
+                      Gets or sets IP Address.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-success">Update</span>
+                      <a href="#MailSend">MailSend</a>
+                    </td>
+                    <td>
+                      Sends email by FlashAir.
+                    </td>
+                    <td>
+                      3.00.01+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-secondary">deleted</span>
+                      <a href="#md5"> md5</a>
+                    </td>
+                    <td>
+                      Generates MD5.
+                    </td>
+                    <td>
+                      3.00.00
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#ping">ping</a>
+                    </td>
+                    <td>
+                      Issue PING to specified IP.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#pio">pio</a>
+                    </td>
+                    <td>
+                      Controls SD interface as a PIO.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-danger">New</span>
+                      <a href="#pwmduty">pwm("duty")</a>
+                    </td>
+                    <td>
+                        Set frequency and duty ratio at pwm operation
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-danger">New</span>
+                      <a href="#pwminit">pwm("init")</a>
+                    </td>
+                    <td>
+                        Enable pwm, set number of channels
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-danger">New</span>
+                      <a href="#pwmstart">pwm("start")</a>
+                    </td>
+                    <td>
+                        Operate specified channel at pwm operation
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-danger">New</span>
+                      <a href="#pwmstop">pwm("stop")</a>
+                    </td>
+                    <td>
+                        Stop specified channel at pwm operation
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#ReadStatusReg">ReadStatusReg</a>
+                    </td>
+                    <td>
+                      Gets the status register contents of the FlashAir.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#remove">remove</a>
+                    </td>
+                    <td>
+                      Removes a file.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#rename"> rename</a>
+                    </td>
+                    <td>
+                      Renames a file.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-success">Updated</span>
+                      <a href="#request">request</a>
+                    </td>
+                    <td>
+                      Issues an HTTP Request.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#Scan">Scan</a>
+                    </td>
+                    <td>
+                      Scans SSID.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#search">search</a>
+                    </td>
+                    <td>
+                      File search function.
+                    </td>
+                    <td>
+                      4.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-danger">New</span>
+                      <a href="#serialinit">serial("init")</a>
+                    </td>
+                    <td>
+                        Enable serial, set baudrate
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-danger">New</span>
+                      <a href="#serialread">serial("read")</a>
+                    </td>
+                    <td>
+                        Receive data during serial operation
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="badge badge-danger">New</span>
+                      <a href="#serialwrite">serial("write")</a>
+                    </td>
+                    <td>
+                        Send data during serial operation
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#SetCert">SetCert</a>
+                    </td>
+                    <td>
+                      Sets root certification by file.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#SetChannel">SetChannel</a>
+                    </td>
+                    <td>
+                      Sets the wireless channels.
+                    </td>
+                    <td>
+                      3.00.01+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#sharedmemory">sharedmemory</a>
+                    </td>
+                    <td>
+                      Gets data from shared memory or writes data to shared memory.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#sleep">sleep</a>
+                    </td>
+                    <td>
+                      Stops execution of the script during the specified timespan.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#spi">spi</a>
+                    </td>
+                    <td>
+                      Sets the SPI by FlashAir.
+                    </td>
+                    <td>
+                      3.00.01+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#spibit">spi("bit")</a>
+                    </td>
+                    <td>
+                      Specify the number of transfer bits
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#spics">spi("cs")</a>
+                    </td>
+                    <td>
+                      Control of chip select signal
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#spiinit">spi("init")</a>
+                    </td>
+                    <td>
+                      Initialize the interface and change the clock cycle
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#spimode">spi("mode")</a>
+                    </td>
+                    <td>
+                      SPI mode specification
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#spiread">spi("read")</a>
+                    </td>
+                    <td>
+                      Write and read
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#spiwrite">spi("write")</a>
+                    </td>
+                    <td>
+                      Write and read
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#strconvert">strconvert</a>
+                    </td>
+                    <td>
+                      Converts the string.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#watchdogevent">watchdog("event")
+                      </a>
+                    </td>
+                    <td>
+                      WatchDog timer reset
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#watchdogstart">watchdog("start")
+                      </a>
+                    </td>
+                    <td>
+                      WatchDog timer start
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#watchdogstatus">watchdog("status")
+                      </a>
+                    </td>
+                    <td>
+                      Get state of WatchDog
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#watchdogstop">watchdog("stop")
+                      </a>
+                    </td>
+                    <td>
+                      WatchDog timer stop
+                    </td>
+                    <td>
+                      4.00.03+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#websocket">websocket
+                      </a>
+                    </td>
+                    <td>
+                      WebSocket function.
+                    </td>
+                    <td>
+                      4.00.00+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#WlanLink">WlanLink</a>
+                    </td>
+                    <td>
+                      Confirms the connection.
+                    </td>
+                    <td>
+                      3.00.00+
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <!--Bridge-->
+            <section class="mb-5">
+              <h2 id="Bridge">Bridge</h2>
+              <div class="separator-2"></div>
+              <p>Enables Wireless LAN in Internet passthrough mode.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>fa.Bridge(ssid, networkkey, encmode, brgssid, brgnetworkkey)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>ssid</dt>
+                  <dd>
+                    <em>string</em>. FlashAir's SSID.
+                  </dd>
+                  <dt>networkkey</dt>
+                  <dd>
+                    <em>string</em>. The security key of FlashAir.
+                  </dd>
+                  <dt>encmode</dt>
+                  <dd>
+                    <em>string</em>. FlashAir security mode. See Notes section of
+                    <a href="#Establish">Establish</a> command.
+                  </dd>
+                  <dt>brgssid</dt>
+                  <dd>
+                    <em>string</em>. SSID of AP that the FlashAir will connects to.
+                  </dd>
+                  <dt>brgnetworkkey</dt>
+                  <dd>
+                    <em>string</em>. Security key of AP that the FlashAir will connects to.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <p>None.</p>
+              </section>
+            </section>
+            <!--Bridge-->
+            <!--Connect-->
+            <section class="mb-5">
+              <h2 id="Connect">Connect</h2>
+              <div class="separator-2"></div>
+              <p>Enables Wireless LAN in STA mode.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>fa.Connect(ssid, networkkey)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>ssid</dt>
+                  <dd>
+                    <em>string</em>. SSID of AP that the FlashAir will connect to.
+                  </dd>
+                  <dt>networkkey</dt>
+                  <dd>
+                    <em>string</em>. Security key of AP that the FlashAir will connect to.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <p>None.</p>
+              </section>
+            </section>
+            <!--Connect-->
+            <!--ConnectedSTA-->
+            <section class="mb-5">
+              <h2 id="ConnectedSTA">ConnectedSTA
+              </h2>
+              <div class="separator-2"></div>
+              <p>Returns the number of connected stations at the time of AP connection, ip, mac.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>cnt,tbl = fa.ConnectedSTA()</code></pre>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <dl>
+                  <dt>cnt</dt>
+                  <dd>Return the number of connected stations.
+                  </dd>
+                  <dt>Tbl</dt>
+                  <dd>Return the table of the acquired client. If cnt is 0, return nil.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <dl>
+                  <dd>Confirm how many units are connected when starting AP.
+                    <pre class="prettyprint lang-lua"><code>local cnt, tbl = fa.ConnectedSTA()
+print(cnt,tbl)
+for i,t in ipairs(tbl) do 
+  for k,v in pairs(t) do
+    print(k,v)
+  end
+end</code></pre>
+                  </dd>
+                  <dd>result
+                    <pre class="prettyprint lang-html"><code>　　　1       table: 856B1C
+　　　mac     40:48:0f:7b:37:92
+　　　ip      192.168.0.11</code></pre>
+
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <!--ConnectedSTA-->
+            <!--control("fioget")-->
+            <section class="mb-5">
+              <h2 id="facontrolfioget">control(&quot;fioget&quot;)
+              </h2>
+              <div class="separator-2"></div>
+              <p>Get on/off state of wireless LAN.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>result = fa.control("fioget")</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dd>The first argument "fioget" is fixed.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <dl>
+                  <dt>result</dt>
+                  <dd>
+                    <em>number</em>. The state of the current wireless LAN.
+                    <ul class="ml-3 list-unstyled">
+                      <li>
+                        1：Wireless LAN on.
+                      </li>
+                      <li>
+                        0：Wireless LAN is Off.
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <!--control("fioget")-->
+            <!--control("fioset")-->
+            <section class="mb-5">
+              <h2 id="facontrolfioset">control(&quot;fioset&quot;)
+              </h2>
+              <div class="separator-2"></div>
+              <p>Turn on / off the wireless LAN.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>result = fa.control("fioset", enable)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dd>The first argument "fioset" is fixed.
+                  </dd>
+                  <dt>enable</dt>
+                  <dd>
+                    <em>number</em>. Specify 1 or 0.
+                    <ul class="list-unstyled">
+                      <li>
+                        1：Turn on the wireless LAN. Settings such as mode and the SSID is the contents of the CONFIG
+                        file is applied.
+                      </li>
+                      <li>
+                        0：Turn off wireless LAN.
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <dl>
+                  <dt>result</dt>
+                  <dd>
+                    <em>number</em>. The state of the current wireless LAN.
+                    <ul class="ml-3 list-unstyled">
+                      <li>
+                        1：Wireless LAN on.
+                      </li>
+                      <li>
+                        0：Wireless LAN is Off.
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <!--control("fioset")-->
+            <!--watchdog("hid_change_pass")-->
+            <section class="mb-5">
+              <h2 id="controlhidchangepass">control(&quot;hid_change_pass&quot;)
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>Change the password set for the hidden area.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>ret = fa.control("hid_change_pass", old_password, new_password)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dd>First Parameters is fixed &quot;hid_change_pass&quot;.
+                  </dd>
+                  <dt>old_password</dt>
+                  <dd>
+                    <em>string</em>. The configured password.
+                  </dd>
+                  <dt>new_password</dt>
+                  <dd>
+                    <em>string</em>. New password.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <dl>
+                  <dt>ret</dt>
+                  <dd>
+                    <em>number</em>.
+                    <dl class="ml-3">
+                      <dt>
+                        <code>0</code>
+                      </dt>
+                      <dd>
+                        Successful.
+                      </dd>
+                      <dt>
+                        <code>1</code>
+                      </dt>
+                      <dd>
+                        Configuration error.
+                      </dd>
+                      <dt>
+                        <code>-1</code>
+                      </dt>
+                      <dd>
+                        Password length error.
+                      </dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <!--watchdog("hid_change_pass")-->
+            <!--watchdog("hid_clear")-->
+            <section class="mb-5">
+              <h2 id="controlhidclear">control(&quot;hid_clear&quot;)
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>Delete all script files saved by password, API.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>fa.control("hid_clear")</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dd>First Parameters is fixed &quot;hid_clear&quot;.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <p>None.</p>
+              </section>
+            </section>
+            <!--watchdog("hid_clear")-->
+            <!--watchdog("hid_get")-->
+            <section class="mb-5">
+              <h2 id="controlhidget">control(&quot;hid_get&quot;)
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>Get the script saved in the hidden area.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>fa.control("hid_get", filename , dstfilename, password)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dd>First Parameters is fixed &quot;hid_get&quot;.
+                  </dd>
+                  <dt>filename</dt>
+                  <dd>
+                    <em>string</em>. Saved script.
+                  </dd>
+                  <dt>dstfilename</dt>
+                  <dd>
+                    <em>string</em>. Name of the destination file.
+                  </dd>
+                  <dt>password</dt>
+                  <dd>
+                    <em>string</em>. Password.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <p>None.</p>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <dl>
+                  <pre class="prettyprint lang-lua"><code>fa.control("hid_get", "h:sys.lua", "tmp/option.lua", "mysecret")</code></pre>
+                </dl>
+              </section>
+              <section>
+                <h3>Notes</h3>
+                <ul>
+                  <li>
+                    You can not access files saved in confidential area from Lua script executed in the area accessible
+                    from the host.
+                  </li>
+                </ul>
+              </section>
+            </section>
+            <!--watchdog("hid_get")-->
+            <!--watchdog("hid_hash")-->
+            <section class="mb-5">
+              <h2 id="controlhidhash">control(&quot;hid_hash&quot;)
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>Create a hash string from the password set in the hidden area and the specified character string.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>ret = fa.control("hid_hash", string)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dd>First Parameters is fixed &quot;hid_change_pass&quot;.
+                  </dd>
+                  <dt>string</dt>
+                  <dd>
+                    <em>string</em>. Setting string.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <dl>
+                  <dt>ret</dt>
+                  <dd>
+                    <em>string</em>. Hash value.
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <!--watchdog("hid_hash")-->
+            <!--watchdog("hid_set_pass")-->
+            <section class="mb-5">
+              <h2 id="controlhidsetpass">control(&quot;hid_set_pass&quot;)
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>Sets the password for the preservation of the secret area.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>fa.control("hid_set_pass", password)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dd>First Parameters is fixed &quot;hid_set_pass&quot;.
+                  </dd>
+                  <dt>password</dt>
+                  <dd>
+                    <em>string</em>. Password.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <p>None.</p>
+              </section>
+            </section>
+            <!--watchdog("hid_set_pass")-->
+            <!--watchdog("hid_store")-->
+            <section class="mb-5">
+              <h2 id="controlhidstore">control(&quot;hid_store&quot;)
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>Save the script to the hidden area.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>fa.control("hid_store",　filename,　password)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dd>First Parameters is fixed &quot;hid_store&quot;.
+                  </dd>
+                  <dt>filename</dt>
+                  <dd>
+                    <em>string</em>. Script to save.
+                  </dd>
+                  <dt>password</dt>
+                  <dd>
+                    <em>string</em>. Password.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <p>None.</p>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <dl>
+                  <pre class="prettyprint lang-lua"><code>fa.control("hid_store", "test.lua", "12345678")</code></pre>
+                </dl>
+                <p>
+                  Set the saved file with CONFIG
+                </p>
+                <dl>
+                  <pre class="prettyprint lang-html"><code>LUA_RUN_SCRIPT=H:filename
+LUA_SD_EVNET=H:filename</code></pre>
+                </dl>
+              </section>
+            </section>
+            <!--watchdog("hid_store")-->
+            <!--control("time")-->
+            <section class="mb-5">
+              <h2 id="facontroltime">control(&quot;time&quot;)
+              </h2>
+              <div class="separator-2"></div>
+              <p>Saves or acquires the date and time memo.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>result = fa.control("time"[, savetime])</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>The first argument is "time" fixed.
+                  </dt>
+                  <dt>savetime</dt>
+                  <dd>
+                    <em>number</em>. Date and time to save. It is specified in FAT format.
+                    <ul>
+                      <li>
+                        savetime If there is an argument, save the specified date and time.
+                      </li>
+                      <li>
+                        savetime If there is no argument, get the saved date and time.
+                      </li>
+                      <li>
+                        About date and time in FAT format
+                        <ul>
+                          <li>
+                            It is a 32-bit integer value, the upper 16 bits are the date and the lower 16 bits are the
+                            time.
+                          </li>
+                          <li>
+                            The date and time are the same format as the value that can be obtained when
+                            <a href="..\commandcgi\index.htm#100">op = 100 of command.cgi
+                            </a>.
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <dl>
+                  <dt>result</dt>
+                  <dd>
+                    <em>number</em>. Date and time acquired.
+                    <ul>
+                      <li>
+                        If the savetime argument is given, it returns the specified date and time itself.
+                      </li>
+                      <li>
+                        savetime If there is no argument, it returns the saved date and time.
+                        <ul>
+                          <li>
+                            If the date and time are not stored, -1 is returned.
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        In case of error, it returns nil.
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+              </section>
+              <section class="mb-5">
+                <h3>Example</h3>
+                <dl>
+                  <dd>Save "2017/06/01 12:34:56".
+                    <pre class="prettyprint lang-lua"><code>result = fa.control("time", 0x4ac1645c)</code></pre>
+                  </dd>
+                </dl>
+
+                <dl>
+                  <dd>Retrieve the saved date and time.
+                    <pre class="prettyprint lang-lua"><code>result = fa.control("time")
+if result ~= nil then
+    print(string.format("time: 0x%08x", result))
+end</code></pre>
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <!--control("time")-->
+            <!--Disconnect-->
+            <section class="mb-5">
+              <h2 id="Disconnect">Disconnect</h2>
+              <div class="separator-2"></div>
+              <p>Disables Wireless LAN.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>fa.Disconnect()</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <p>None.</p>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <p>None.</p>
+              </section>
+            </section>
+            <!--Disconnect-->
+            <!--Establish-->
+            <section class="mb-5">
+              <h2 id="Establish">Establish</h2>
+              <div class="separator-2"></div>
+              <p>Enables Wireless LAN in AP mode.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>fa.Establish(ssid, networkkey, encmode)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>ssid</dt>
+                  <dd>
+                    <em>string</em>. SSID of AP that a FlashAir establishes.
+                  </dd>
+                  <dt>networkkey</dt>
+                  <dd>
+                    <em>string</em>. Security key of AP that a FlashAir establishes.
+                  </dd>
+                  <dt>encmode</dt>
+                  <dd>
+                    <em>number</em>. Encoding mode of AP that a FlashAir establishes.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <p>None.</p>
+              </section>
+              <section>
+                <h3>Notes</h3>
+                <p>Encmode must be one of the following values:</p>
+                <table class="table table-bordered table-hover">
+                  <colgroup>
+                    <col style="width: 33%;">
+                    <col style="width: 66%;">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>Value</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code>0</code>
+                      </td>
+                      <td>
+                        Open system, No encryption.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>1</code>
+                      </td>
+                      <td>
+                        Open system, WEP
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>3</code>
+                      </td>
+                      <td>
+                        WPA-PSK、TKIP
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>4</code>
+                      </td>
+                      <td>
+                        WPA-PSK、AES
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>5</code>
+                      </td>
+                      <td>
+                        WPA2-PSK、TKIP
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>6</code>
+                      </td>
+                      <td>
+                        WPA2-PSK、AES
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+            </section>
+            <!--Establish-->
+            <!--ftp-->
+            <section class="mb-5">
+              <h2 id="ftp">ftp</h2>
+              <div class="separator-2"></div>
+              <p>Download or upload a file via FTP (File Transfer Protocol).</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>result = fa.ftp(cmd, uri, filename)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>cmd</dt>
+                  <dd>
+                    <em>string</em>. FTP command.
+                    <dl class="ml-3">
+                      <dt>
+                        <code>"get"</code>
+                      </dt>
+                      <dd>
+                        Download.
+                      </dd>
+                      <dt>
+                        <code>"put"</code>
+                      </dt>
+                      <dd>
+                        Upload.
+                      </dd>
+                    </dl>
+                  </dd>
+                  <dt>url</dt>
+                  <dd>
+                    <em>string</em>. A URI of an FTP server.
+                  </dd>
+                  <dt>filename</dt>
+                  <dd>
+                    <em>string</em>. A path to a file on a FlashAir.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <dl>
+                  <dt>result</dt>
+                  <dd>
+                    <em>number</em>.
+                    <dl class="ml-3">
+                      <dt>
+                        <code>1</code>
+                      </dt>
+                      <dd>
+                        Success.
+                      </dd>
+                      <dt>
+                        <code>nil</code>
+                      </dt>
+                      <dd>
+                        Error.
+                      </dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Notes</h3>
+                <ul>
+                  <li>FlashAir's compatible data transfer mode is passive (PASV) mode only.</li>
+                  <li>If you use FTPS connection, you can do it by setting the URL to <code>ftps://</code>. Both
+                    implicit and explicit modes are available.</li>
+                  <li>For port designation, add a port number after the host name.</li>
+                </ul>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <pre class="prettyprint lang-lua"><code>result = fa.ftp("get", "ftp://user:pass@ftp.test.com:21/test.txt", "test.txt");
+result = fa.ftp("put", "ftps://user:pass@ftp.test.com:990/test.txt;implicit", "test.txt");
+result = fa.ftp("put", "ftps://user:pass@ftp.test.com:990/test.txt;explicit", "test.txt");</code></pre>
+              </section>
+            </section>
+            <!--ftp-->
+            <!--GetScanInfo-->
+            <section class="mb-5">
+              <h2 id="GetScanInfo">GetScanInfo</h2>
+              <div class="separator-2"></div>
+              <p>Gets results of SSID scan.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>ssid, other = fa.GetScanInfo(num)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>num</dt>
+                  <dd>
+                    <em>number</em>. An index of the item in the scan result.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <dl>
+                  <dt>ssid</dt>
+                  <dd>
+                    <em>string</em>. SSID.
+                  </dd>
+                  <dt>other</dt>
+                  <dd>
+                    <em>table</em>. AP information.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Notes</h3>
+                <p>This command is unavailable if the wireless LAN is enabled (by Connect, Establish, or Bridge).</p>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <pre class="prettyprint lang-lua"><code>count = fa.Scan()
+for i=0,count-1 do
+    ssid,other = fa.GetScanInfo(i)
+    for key, val in pairs(other) do
+        print(key, val)
+    end
+end</code></pre>
+
+              </section>
+            </section>
+            <!--GetScanInfo-->
+            <!--hash-->
+            <section class="mb-5">
+              <h2 id="hash">hash</h2>
+              <div class="separator-2"></div>
+              <p>Generates a hash value.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>hash=fa.hash(name, data, key)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>name</dt>
+                  <dd>
+                    <em>string</em>. select hash's type (md5, sha1, sha256, hmac-sha256).
+                  </dd>
+                  <dt>data</dt>
+                  <dd>
+                    <em>string</em>. data.
+                  </dd>
+                  <dt>key</dt>
+                  <dd>
+                    <em>string</em>. secret key（used if name was hmac-sha256).
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <dl>
+                  <dt>hash</dt>
+                  <dd>
+                    <em>string</em>. Hash value in hexadecimal notation.
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <!--hash-->
+            <!--HTTPGetFile-->
+            <section class="mb-5">
+              <h2 id="HTTPGetFile">HTTPGetFile</h2>
+              <div class="separator-2"></div>
+              <p>Downloads a file by HTTP.</p>
+              <h3>Syntax</h3>
+              <pre class="prettyprint lang-lua"><code>result = fa.HTTPGetFile(uri, filepath [, user, pass])</code></pre>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>uri</dt>
+                  <dd>
+                    <em>string</em>. The URI of the source.
+                  </dd>
+                  <dt>filepath</dt>
+                  <dd>
+                    <em>string</em>. Destination file name.
+                  </dd>
+                  <dt>user</dt>
+                  <dd>
+                    <em>string</em>. User string in Basic authentication.
+                  </dd>
+                  <dt>pass</dt>
+                  <dd>
+                    <em>string</em>. Pass string in basic authentication.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <dl>
+                  <dt>result</dt>
+                  <dd>
+                    <em>number</em>.
+                    <dl class="ml-3">
+                      <dt>
+                        <code>1</code>
+                      </dt>
+                      <dd>
+                        Success.
+                      </dd>
+                      <dt>
+                        <code>nil</code>
+                      </dt>
+                      <dd>
+                        Error.
+                      </dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>
+                  Precautions</h3>
+                <ul>
+                  <li>
+                    When executing HTTPS communication with this function, it is recommended to set the root
+                    certificate with
+                    <a href="#SetCert">fa.SetCert</a> function before execution. When HTTPS communication is executed
+                    without setting the root
+                    certificate, communication is performed without verifying the server certificate using the root
+                    certificate.
+                  </li>
+                  <li>
+                    If the validation fails as a result of verifying the server certificate using the root certificate,
+                    execution of this function
+                    will fail.
+                  </li>
+                </ul>
+              </section>
+            </section>
+            <!--HTTPGetFile-->
+            <!--i2c-->
+            <section class="mb-5">
+              <h2 id="i2c">i2c
+              </h2>
+              <div class="separator-2"></div>
+              <p>I
+                <sup>2</sup>C operation is done from FlashAir. i2c works as Master.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>res, data1, data2, data3, ... = fa.i2c(table)
+res, string = fa.i2c(table)
+res, data, ctrl = fa.i2c{mode = "getpio"}</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>table</dt>
+                  <dd>There are the following fields.
+                    <dl class="ml-3">
+                      <dt>mode</dt>
+                      <dd>
+                        <em>string</em>. Attributes of I
+                        <sup>2</sup>C operation.
+                      </dd>
+                      <dt>freq</dt>
+                      <dd>
+                        <em>number</em>. I
+                        <sup>2</sup>C clock frequency (unit: kHz). Four possible values that can be set are
+                        <code>45</code>,
+                        <code>100</code>,
+                        <code>189</code>, and
+                        <code>400</code>.
+                        <code>100</code>
+                        is set when omitted.
+                      </dd>
+                      <dt>timeout</dt>
+                      <dd>
+                        <em>number</em>. Timeout time of slave response (unit: msec). When omitted,
+                        <code>10</code>
+                        is set.
+                      </dd>
+                      <dt>address</dt>
+                      <dd>
+                        <em>number</em>. Specify the slave address of the connecting device.
+                      </dd>
+                      <dt>direction</dt>
+                      <dd>
+                        <em>string</em>. Specify the data direction. Possible values are
+                        <code>"read"</code>
+                        and
+                        <code>"write"</code>. When
+                        <code>"read"</code>
+                        is specified, data is read from the connected device. If
+                        <code>"write"</code>
+                        is specified, data is sent to the connected device.
+                      </dd>
+                      <dt>data</dt>
+                      <dd>
+                        <em>string</em>
+                        or
+                        <em>number</em>. Set transmission data. If specified in string format, send all set data. When
+                        specified
+                        in number format, you can set a value between
+                        <code>0</code>
+                        and
+                        <code>255</code>. For
+                        <code>"setpio"</code>, specify 0 or 1 to output PIO.
+                        <br>
+                        <span class="badge badge-success">4.00.03</span>
+                        Support for null characters.
+                      </dd>
+                      <dt>bytes</dt>
+                      <dd>
+                        <em>number</em>. Specify the receive data size. When type is <code>"binary"</code>, values from <code>1</code> to
+                        <code>16</code> can be specified. When type is <code>"string"</code>, the minimum value is <code>1</code> and the
+                        maximum value is memory dependent. By default, <code>1</code> is set.
+                      </dd>
+                      <dt>type</dt>
+                      <dd>
+                        <em>string</em>. Specify the receive data format. Possible values are
+                        <code>"binary"</code>
+                        and
+                        <code>"string"</code>. By default,
+                        <code>"binary"</code>
+                        is set.
+                      </dd>
+                      <dt>ctrl
+                        <span class="badge badge-success">4.00.03</span>
+                      </dt>
+                      <dd>
+                        <em>number</em>. Sets the direction of PIO. 0 is input, and 1 is output.
+                      </dd>
+                    </dl>
+                    <table class="table table-bordered table-hover table-responsive table-td-nowrap">
+                      <tr>
+                        <th></th>
+                        <th>Device initialization
+                        </th>
+                        <th>Send start condition
+                        </th>
+                        <th>Send restart condition
+                        </th>
+                        <th>Read data from connected device
+                        </th>
+                        <th>Write data to connected device
+                        </th>
+                        <th>Send a stop condition and close the connection
+                        </th>
+                        <th>
+                          <span class="badge badge-success">4.00.03</span>
+                          <br>PIO setting
+                        </th>
+                        <th>
+                          <span class="badge badge-success">4.00.03</span>
+                          <br>PIO acquisition
+                        </th>
+                      </tr>
+                      <tr>
+                        <td>mode</td>
+                        <td>
+                          <code>"init"</code>
+                        </td>
+                        <td>
+                          <code>"start"</code>
+                        </td>
+                        <td>
+                          <code>"restart"</code>
+                        </td>
+                        <td>
+                          <code>"read"</code>
+                        </td>
+                        <td>
+                          <code>"write"</code>
+                        </td>
+                        <td>
+                          <code>"stop"</code>
+                        </td>
+                        <td>
+                          <code>"setpio"</code>
+                        </td>
+                        <td>
+                          <code>"getpio"</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>freq</td>
+                        <td>Optional</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                      </tr>
+                      <tr>
+                        <td>timeout</td>
+                        <td>Optional</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                      </tr>
+                      <tr>
+                        <td>address</td>
+                        <td>Unnecessary</td>
+                        <td>Required</td>
+                        <td>Required</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                      </tr>
+                      <tr>
+                        <td>direction</td>
+                        <td>Unnecessary</td>
+                        <td>Required</td>
+                        <td>Required</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                      </tr>
+                      <tr>
+                        <td>data</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Required</td>
+                        <td>Unnecessary</td>
+                        <td>Required</td>
+                        <td>Unnecessary</td>
+                      </tr>
+                      <tr>
+                        <td>bytes</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Optional</td>
+                        <td>Optional</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                      </tr>
+                      <tr>
+                        <td>type</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Optional</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                      </tr>
+                      <tr>
+                        <td>ctrl</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Required</td>
+                        <td>Unnecessary</td>
+                      </tr>
+                    </table>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Notes</h3>
+                <dl>
+                  <dt>Bit Allocation
+                  </dt>
+                  <dd>
+                    <ul>
+                      <li>
+                        CMD: SCL
+                      </li>
+                      <li>
+                        D0: SDA
+                      </li>
+                    </ul>
+                    <p>Pull up SCL / SDA.
+                      <br>Pull down CLK.
+                      <br>
+                      <span class="badge badge-success">4.00.03</span>
+                      D1 can be used with
+                      <code>"setpio"</code>
+                      /
+                      <code>"getpio"</code>.</p>
+                  </dd>
+                  <dt>Multiple byte transmission
+                  </dt>
+                  <dd>If you want to transmit multiple bytes of binary data, by executing continue to data writing, it
+                    is possible
+                    to transmit multiple bytes.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <dl>
+                  <dt>res</dt>
+                  <dd>
+                    <em>string</em>. On success it returns
+                    <code>"OK"</code>. On failure it returns other strings.
+                  </dd>
+                  <dt>data1, data2, data3, ...
+                  </dt>
+                  <dd>
+                    <em>number</em>. Values from
+                    <code>0</code>
+                    to
+                    <code>255</code>
+                    are stored. It is used only when data is read from the connected device and
+                    <code>type = "binary"
+                    </code>
+                    is specified.
+                  </dd>
+                  <dt>string</dt>
+                  <dd>
+                    <em>string</em>. Received data is stored. It is used only when data is read out from the connected
+                    device
+                    and
+                    <code>type = "string"
+                    </code>
+                    is specified.
+                  </dd>
+                  <dt>
+                    data
+                    <span class="badge badge-success">4.00.03</span>
+                  </dt>
+                  <dd>
+                    <em>number</em>. The acquired value of PIO is stored. It is used only when
+                    <code>type = "getpio"
+                    </code>
+                    is specified.
+                  </dd>
+                  <dt>
+                    control
+                    <span class="badge badge-success">4.00.03</span>
+                  </dt>
+                  <dd>
+                    <em>number</em>. The PIO direction setting value is stored.
+                    <code>0</code>
+                    is input, and
+                    <code>1</code>
+                    is output. It is used only when
+                    <code>type = "getpio"
+                    </code>
+                    is specified.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <dl>
+                  <pre class="prettyprint lang-lua"><code>res = fa.i2c{mode = "init", freq = 100}
+res = fa.i2c{mode = "start", address = 50, direction = "write"}
+res = fa.i2c{mode = "restart", address = 50, direction = "read"}
+res, data1, data2, data3, ... = fa.i2c{mode = "read", type = "binary"}
+res, string = fa.i2c{mode = "read", type = "string"}
+res = fa.i2c{mode = "write", data = 0}
+res = fa.i2c{mode = "stop"}
+</code></pre>
+                </dl>
+                <dl>
+                  <dd>Read 5 bytes from slave at address 50
+                  </dd>
+                  <pre class="prettyprint lang-lua"><code>res = fa.i2c{mode = "init", freq = 100}
+res = fa.i2c{mode = "start", address = 50, direction = "read"}
+res, r1, r2, r3, r4, r5 = fa.i2c{mode = "read", bytes = 5, type = "binary"}
+res = fa.i2c{mode = "stop"}
+</code></pre>
+                </dl>
+                <dl>
+                  <dd>Writes 0 to the slave at address 50 and reads 1 byte
+                  </dd>
+                  <pre class="prettyprint lang-lua"><code>res = fa.i2c{mode = "init", freq = 100}
+res = fa.i2c{mode = "start", address = 50, direction = "write"}
+res = fa.i2c{mode = "write", data = 0}
+res = fa.i2c{mode = "restart", address = 50, direction = "read"}
+res, data = fa.i2c{mode = "read", bytes = 1, type = "binary"}
+fa.i2c{mode = "stop"}
+</code></pre>
+                </dl>
+                <dl>
+                  <dd>Operation of PIO
+                    <span class="badge badge-success">4.00.03</span>
+                  </dd>
+                  <pre class="prettyprint lang-lua"><code>res = fa.i2c {mode ="init", freq=100}
+res = fa.i2c {mode ="setpio", data=1, ctrl=1} -- Output High
+res = fa.i2c {mode ="setpio", data=0, ctrl=1} -- Output Low
+                               
+res = fa.i2c {mode ="setpio", data=0, ctrl=0} -- Input
+res, data, ctrl = fa.i2c {mode="getpio"}</code></pre>
+                </dl>
+              </section>
+            </section>
+            <!--i2c-->
+            <!--ip-->
+            <section class="mb-5">
+              <h2 id="ip">ip</h2>
+              <div class="separator-2"></div>
+              <p>Gets or sets IP Address of FlashAir.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>ip, mask, gw = fa.ip(ipaddress, subnetmask, gateway)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>ipaddress</dt>
+                  <dd>
+                    <em>string</em>. IP Address of FlashAir.
+                  </dd>
+                  <dt>subnetmask</dt>
+                  <dd>
+                    <em>string</em>. subnet mask.
+                  </dd>
+                  <dt>gateway</dt>
+                  <dd>
+                    <em>string</em>. IP Address of gateway.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <dl>
+                  <dt>ip</dt>
+                  <dd>
+                    <em>string</em>. IP Address.
+                  </dd>
+                  <dt>mask</dt>
+                  <dd>
+                    <em>string</em>. Subnet mask.
+                  </dd>
+                  <dt>gw</dt>
+                  <dd>
+                    <em>string</em>. Gateway.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <pre class="prettyprint lang-lua"><code>-- When getting values
+ip, mask, gw = fa.ip()
+-- When setting values
+fa.ip("192.168.11.2", "255.255.255.0", "192.168.11.1")
+</code></pre>
+              </section>
+            </section>
+            <!--ip-->
+            <!--MailSend-->
+            <section class="mb-5">
+              <h2 id="MailSend">MailSend</h2>
+              <div class="separator-2"></div>
+              <p>Sends email by FlashAir（enables to attach a file）.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>fa.MailSend(table)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>table</dt>
+                  <dd>There are the following fields.
+                    <dl class="ml-3">
+                      <dt>from</dt>
+                      <dd>
+                        <em>string</em>. Sender e-mail address.
+                      </dd>
+                      <dt>headers</dt>
+                      <dd>
+                        <em>string</em>. E-mail header.
+                      </dd>
+                      <dt>body</dt>
+                      <dd>
+                        <em>string</em>. Message body.
+                      </dd>
+                      <dt>server</dt>
+                      <dd>
+                        <em>string</em>. Mail server(smtp).
+                      </dd>
+                      <dt>user</dt>
+                      <dd>
+                        <em>string</em>. User's ID.
+                      </dd>
+                      <dt>password</dt>
+                      <dd>
+                        <em>string</em>. Password.
+                      </dd>
+                      <dt>attachment</dt>
+                      <dd>
+                        <em>string</em>. Selects the file attachment（OPTION）.
+                      </dd>
+                      <dt>ContentType</dt>
+                      <dd>
+                        <em>string</em>. Selects a type of the contents（REQUIRED only when attachment is valid）.
+                      </dd>
+                      <dt>port <span class="badge badge-success">4.00.03</span></dt>
+                      <dd>
+                        <em>number</em>. Specifies the port number. The default is 465.
+                      </dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Response</h3>
+                <p>Successful： MailSend is success.
+                  <br> Failure：
+                  <code>nil</code>(failed to send).
+                </p>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <pre class="prettyprint lang-lua"><code>from = "fromaddr@yahoo.co.jp"
+rcpt = "toaddr@gmail.com"
+a = fa.MailSend {
+  from = from,
+  headers = "To: "..rcpt.."\r\nFrom: "..from.."\r\nSubject: test",
+  body = "HELLO HELLO",
+  server = "smtp.mail.yahoo.co.jp",
+  user = "flashair",
+  password ="1234567890",
+  attachment = "FBYF.jpg",
+  ContentType = "image/jpg"
+}</code></pre>
+              </section>
+            </section>
+            <!--MailSend-->
+            <!--md5-->
+            <section class="mb-5">
+              <h2 id="md5">md5</h2>
+              <div class="separator-2"></div>
+              <p>This is obsolete. Use
+                <code>hash</code>.</p>
+            </section>
+            <!--md5-->
+            <!--ping-->
+            <section class="mb-5">
+              <h2 id="ping">ping</h2>
+              <div class="separator-2"></div>
+              <p>Issue PING to specified IP.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua">result = fa.ping(ip)</pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>ip</dt>
+                  <dd>
+                    <em>string</em>. IP Address.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Response</h3>
+                <dl>
+                  <dt>result</dt>
+                  <dd>
+                    <em>number</em>。
+                    <dl class="ml-3">
+                      <dt>
+                        <code>1</code>
+                      </dt>
+                      <dd>
+                        Success.
+                      </dd>
+                      <dt>
+                        <code>nil</code>
+                      </dt>
+                      <dd>
+                        Error.
+                      </dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <pre class="prettyprint lang-lua">result = fa.ping("192.168.130.1")</pre>
+              </section>
+            </section>
+            <!--ping-->
+            <!--pio-->
+            <section class="mb-5">
+              <h2 id="pio">pio</h2>
+              <div class="separator-2"></div>
+              <p>Controls the SD interface with PIO (Programmed Input/Output).</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>s, indata = fa.pio(ctrl, data)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>ctrl</dt>
+                  <dd>
+                    <em>number</em>. Pin input / output specification. Specify
+                    <code>0</code> for the bit corresponding to the pin to be read and
+                    <code>1</code> for the bit corresponding to the pin to be written.
+                  </dd>
+                  <dt>data</dt>
+                  <dd>
+                    <em>number</em>. Specify the output pin state. When
+                    <code>0</code> is set for each bit corresponding to the pin to be written, Low is output, and when
+                    it is set
+                    to
+                    <code>1</code> , High is output.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <dl>
+                  <dt>s</dt>
+                  <dd>
+                    <em>number</em>. State of interface control.
+                    <dl class="ml-3">
+                      <dt>
+                        <code>1</code>
+                      </dt>
+                      <dd>
+                        Success.
+                      </dd>
+                      <dt>
+                        <code>0</code>
+                      </dt>
+                      <dd>
+                        Error.
+                      </dd>
+                    </dl>
+                  </dd>
+                  <dt>indata</dt>
+                  <dd>
+                    <em>number</em>. The input.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Notes</h3>
+                <p>Bit assignment.</p>
+                <ul>
+                  <li>
+                    CMD : 0x01
+                  </li>
+                  <li>
+                    D0 : 0x02
+                  </li>
+                  <li>
+                    D1 : 0x04
+                  </li>
+                  <li>
+                    D2 : 0x08
+                  </li>
+                  <li>
+                    D3 : 0x10
+                  </li>
+                </ul>
+              </section>
+            </section>
+            <!--pio-->
+            <!--pwm("duty")-->
+            <section class="mb-5">
+              <h2 id="pwmduty">pwm("duty")
+                <span class="badge badge-success">4.00.03</span>                
+              </h2>
+              <div class="separator-2"></div>
+              <p>Set the frequency and duty ratio when doing PWM operation with FlashAir.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua">res = fa.pwm("duty", ch, freq, duty)</pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>ch</dt>
+                  <dd>
+                    <em>number</em>. Pin information to specify operation. <code>0</code>～<code>4</code> channels can be specified. 
+                  </dd>
+                  <dt>freq</dt>
+                  <dd>
+                    <em>number</em>. Frequency (in Hz). It can be specified by floating point.
+                  </dd>
+                  <dt>duty</dt>
+                  <dd>
+                    <em>number</em>. Duty ratio (0 to 100%). It can be specified by floating point.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <dl>
+                  <dt>res</dt>
+                  <dd>
+                    <em>number</em>。 
+                    <dl class="ml-3">
+                      <dt>
+                        <code>1</code>
+                      </dt>
+                      <dd>
+                        Success.
+                      </dd>
+                      <dt>
+                        <code>nil</code>
+                      </dt>
+                      <dd>
+                        Error.
+                      </dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <!--pwm("duty")-->
+            <!--pwm("init")-->
+            <section class="mb-5">
+              <h2 id="pwminit">pwm("init")
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>Enable pwm and set the number of channels when using pwm with FlashAir.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua">ret = fa.pwm("init", ch, enable)</pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>ch</dt>
+                  <dd>
+                    <em>number</em>. Specify one channel to operate pwm. <code>0</code>～<code>4</code> channels can be specified.  
+                  </dd>
+                  <dt>enable</dt>
+                  <dd>
+                    <em>number</em>. The specified channel will be in pwm mode.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <dl>
+                  <dt>res</dt>
+                  <dd>
+                    <em>number</em>。 
+                    <dl class="ml-3">
+                      <dt>
+                        <code>1</code>
+                      </dt>
+                      <dd>
+                        Success.
+                      </dd>
+                      <dt>
+                        <code>nil</code>
+                      </dt>
+                      <dd>
+                        Error.
+                      </dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Precautions</h3>
+                <ul>
+                  <li>Requires <code>IFMODE=1</code> in CONFIG.</li>
+                  <li>Bit Allocation
+                    <ul>
+                      <li>CMD: 0ch</li>                      
+                      <li>D0: 1ch</li>
+                      <li>D1: 2ch</li>
+                      <li>D2: 3ch</li>
+                      <li>D3: 4ch</li>
+                    </ul>
+                  </li>
+                </ul>                  
+              </section>
+            </section>
+            <!--pwm("init")-->
+            <!--pwm("start")-->
+            <section class="mb-5">
+              <h2 id="pwmstart">pwm("start")
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>Operates the specified channel when performing pwm operation with FlashAir. 0～4 channels can be specified.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua">res = fa.pwm("start", ch)</pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>ch</dt>
+                  <dd>
+                    <em>number</em>. Pin information to specify operation. <code>0</code>～<code>4</code> channels can be specified.  
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <dl>
+                  <dt>res</dt>
+                  <dd>
+                    <em>number</em>。 
+                    <dl class="ml-3">
+                      <dt>
+                        <code>1</code>
+                      </dt>
+                      <dd>
+                        Success.
+                      </dd>
+                      <dt>
+                        <code>nil</code>
+                      </dt>
+                      <dd>
+                        Error.
+                      </dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <!--pwm("start")-->
+            <!--pwm("stop")-->
+            <section class="mb-5">
+              <h2 id="pwmstop">pwm("stop")
+                <span class="badge badge-success">4.00.03</span>                
+              </h2>
+              <div class="separator-2"></div>
+              <p>Stop the specified channel when performing pwm operation with FlashAir. 0～4 channels can be specified.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua">res = fa.pwm("stop", ch)</pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>ch</dt>
+                  <dd>
+                    <em>number</em>. Pin information to stop and specify.<code>0</code>～<code>4</code> channels can be specified.  
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <dl>
+                  <dt>res</dt>
+                  <dd>
+                    <em>number</em>。 
+                    <dl class="ml-3">
+                      <dt>
+                        <code>1</code>
+                      </dt>
+                      <dd>
+                        Success.
+                      </dd>
+                      <dt>
+                        <code>nil</code>
+                      </dt>
+                      <dd>
+                        Error.
+                      </dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <!--pwm("stop")-->   
+            <!--ReadStatusReg-->
+            <section class="mb-5">
+              <h2 id="ReadStatusReg">ReadStatusReg</h2>
+              <div class="separator-2"></div>
+              <p>Gets the status register contents of the FlashAir.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>reg = fa.ReadStatusReg()</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <p>None.</p>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <p>Returns the wireless LAN application status register contents as a string. Refer to
+                  <a href="..\isdio\register\status\index.htm#WLANStatusRegister">Wireless LAN Application Status
+                    Register
+                  </a>
+                  for details.
+                </p>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <p>Get IP address of the card.
+                </p>
+                <pre class="prettyprint lang-lua"><code>local ipaddress = string.sub(fa.ReadStatusReg(),160,168)</code></pre>
+              </section>
+            </section>
+            <!--ReadStatusReg-->
+            <!--remove-->
+            <section class="mb-5">
+              <h2 id="remove">remove</h2>
+              <div class="separator-2"></div>
+              <p>Removes a file.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>fa.remove(filepath)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>filepath</dt>
+                  <dd>
+                    <em>string</em>. The file to be removed.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <p>None.</p>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <pre class="prettyprint lang-lua"><code>fa.remove("/DCIM/100__TSB/DSC_100.JPG")</code></pre>
+              </section>
+            </section>
+            <!--remove-->
+            <!--rename-->
+            <section class="mb-5">
+              <h2 id="rename">rename</h2>
+              <div class="separator-2"></div>
+              <p>Moves or renames a file or a directory.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>fa.rename(oldfile, newfile)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>oldfile</dt>
+                  <dd>
+                    <em>string</em>. Old file path.
+                  </dd>
+                  <dt>newfile</dt>
+                  <dd>
+                    <em>string</em>. New file path.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <p>None.</p>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <pre class="prettyprint lang-lua"><code>fa.rename("/DCIM/100__TSB/DSC_100.JPG","/DCIM/100__TSB/DSC_101.JPG")</code></pre>
+              </section>
+            </section>
+            <!--rename-->
+            <!--request-->
+            <section class="mb-5">
+              <h2 id="request">request</h2>
+              <div class="separator-2"></div>
+              <p>Issues an HTTP (Hyper Text Transfer Protocol) request.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>b, c, h = fa.request(url [, method [, headers [, file [, body [, bufsize [, redirect [, rcvbuff [, rcvfile]]]]]]]])</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>url</dt>
+                  <dd>
+                    <em>string</em>. A URL.（
+                    <span class="badge badge-success">3.00.02</span> Port can be specified: 8080）
+                  </dd>
+                  <dt>method</dt>
+                  <dd>
+                    <em>string</em>. HTTP request method.
+                    <code>"GET"</code> is used if a method not specified.
+                  </dd>
+                  <dt>headers</dt>
+                  <dd>
+                    <p>
+                      <em>table</em>. You can add header field information for HTTP requests.</p>
+                  </dd>
+                  <dt>file</dt>
+                  <dd>
+                    <p>
+                      <em>string</em>. Add the specified file to the body of the HTTP request and send it.</p>
+                  </dd>
+                  <dt>body</dt>
+                  <dd>
+                    <p>
+                      <em>string</em>. It adds the specified character string to the body of the HTTP request and sends
+                      it. When
+                      used in conjunction with the file option, it replaces the character string inside the body
+                      <code>&lt;!--WLANSDFILE--&gt;</code> with a file and sends it. If body is not specified, just
+                      file will be
+                      sent.
+                    </p>
+                  </dd>
+                  <dt>bufsize</dt>
+                  <dd>
+                    <p>
+                      <em>number</em>. Transmit buffer size of HTTP request. When sending to flickr server, set this
+                      value to
+                      1460 * 10.</p>
+                  </dd>
+                  <dt>redirect</dt>
+                  <dd>
+                    <p>
+                      <em>boolean</em>. Controls validity / invalidity of redirect operation of HTTP. If you omit it is
+                      assumed
+                      to be specified
+                      <code>true</code>.</p>
+                  </dd>
+                  <dt>rcvbuff
+                    <span class="badge badge-success">4.00.03</span>
+                  </dt>
+                  <dd>
+                    <p>
+                      <em>string</em>. Secure memory on Lua's stack and save the received data in secured memory.
+                    </p>
+                  </dd>
+                  <dt>rcvfile
+                    <span class="badge badge-success">4.00.03</span>
+                  </dt>
+                  <dd>
+                    <p>
+                      <em>string</em>. It saves the received HTTP response data to the specified file.
+                    </p>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <dl>
+                  <dt>b</dt>
+                  <dd>
+                    <em>string</em>. HTTP response body.
+                  </dd>
+                  <dt>c</dt>
+                  <dd>
+                    <em>number</em>. HTTP status code.
+                  </dd>
+                  <dt>h</dt>
+                  <dd>
+                    <em>string</em>. HTTP response header.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <pre class="prettyprint lang-lua"><code>boundary = "--61141483716826"
+contenttype = "multipart/form-data; boundary=" .. boundary
+filepath = "sample.txt"
+mes = "--".. boundary .. "¥r¥n"
+ .."Content-Disposition: form-data; name=¥"file¥"; filename=¥""..file .."¥"¥r¥n"
+ .."Content-Type: text/plain¥r¥n"
+ .."¥r¥n"
+ .."&lt;!--WLANSDFILE--&gt;¥r¥n"
+ .."--" .. boundary .. "--¥r¥n"
+
+blen = lfs.attributes(file,"size") + string.len(mes) - 17
+b,c,h = fa.request{url = "http://192.168.0.1/upload.cgi:<span class="text-success">8080</span>",
+ method = "POST",
+ headers = {["Content-Length"] = tostring(blen),
+ ["Content-Type"] = contenttype},
+ file = filepath,
+ body = mes
+ }</code></pre>
+              </section>
+              <section>
+                <h3>Notes</h3>
+                <ul>
+                  <li>
+                    The maximum payload size of an HTTP request is 3KB.
+                  </li>
+                  <li>
+                    A request may be canceled by TCP reset - especially when uploading a file to Flickr. Try to reduce
+                    the sending buffer size
+                    by setting bufsize to 1460 * 10 to avoid this issue.
+                  </li>
+                </ul>
+              </section>
+              <section>
+                <h3>
+                  Precautions</h3>
+                <ul>
+                  <li>
+                    When executing HTTPS communication with this function, it is recommended to set the root
+                    certificate with
+                    <a href="#SetCert">fa.SetCert</a> function before execution. When HTTPS communication is executed
+                    without setting the root
+                    certificate, communication is performed without verifying the server certificate using the root
+                    certificate.
+                  </li>
+                  <li>
+                    If the validation fails as a result of verifying the server certificate using the root certificate,
+                    execution of this function
+                    will fail.
+                  </li>
+                </ul>
+              </section>
+            </section>
+            <!--request-->
+            <!--Scan-->
+            <section class="mb-5">
+              <h2 id="Scan">Scan</h2>
+              <div class="separator-2"></div>
+              <p>Scans SSID. Call GetScanInfo() to retrieve scan results.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>count = fa.Scan([ssid])</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>ssid</dt>
+                  <dd>
+                    <em>string</em>. Scan the specified SSID. Or, find nearby SSIDs if none specified.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <dl>
+                  <dt>count</dt>
+                  <dd>
+                    <em>number</em>. The number of APs found in the scan.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Notes</h3>
+                <p>This command is unavailable if the wireless LAN is enabled (by Connect, Establish, or Bridge).</p>
+              </section>
+            </section>
+            <!--Scan-->
+            <!--search-->
+            <section class="mb-5">
+              <h2 id="search">search
+              </h2>
+              <div class="separator-2"></div>
+              <p>It searches for files based on the updated date and time in the specified directory. It is possible to
+                search
+                for a file whose with the latest date and time, or to search for a file with the update date specified
+                by
+                argument.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>result, filelist, time = fa.search(type, path, searchtime)
+</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>type</dt>
+                  <dd>
+                    <em>string</em>. Search type. Fixed file.
+                    <ul class="ml-3 list-unstyled">
+                      <li>
+                        file：Search files
+                      </li>
+                    </ul>
+                  </dd>
+                  <dt>path</dt>
+                  <dd>
+                    <em>string</em>. Search target directory.
+                  </dd>
+                  <dt>searchtime</dt>
+                  <dd>
+                    <em>number</em>. Update target date and time. -1 or FAT format date and time.
+                    <ul class="ml-3 list-unstyled">
+                      <li>
+                        When -1 is specified, the file with the latest date and time is searched.
+                      </li>
+                      <li>
+                        If a value other than -1 is specified, both of the following are searched.
+                        <ul>
+                          <li>
+                            Files that match the specified update date and time
+                          </li>
+                          <li>
+                            The oldest file of the specified update date and time than the new file (the next in a new
+                            file with the specified date and
+                            time)
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        About date and time in FAT format
+                        <ul>
+                          <li>
+                            It is a 32-bit integer value, the upper 16 bits are the date and the lower 16 bits are the
+                            time
+                          </li>
+                          <li>
+                            The date and time are the same format as the value that can be obtained when
+                            <a href="..\commandcgi\index.htm#100">op = 100 of command.cgi
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <dl>
+                  <dt>result</dt>
+                  <dd>
+                    <em>number</em>. Status.
+                    <table class="table table-bordered table-hover ml-3">
+                      <tbody>
+                        <tr>
+                          <th>1</th>
+                          <td>Successful</td>
+                        </tr>
+                        <tr>
+                          <th>-1</th>
+                          <td>Overflow when creating file list
+                            <ul>
+                              <li>
+                                If you specify -1 to searchtime, the string buffer in the list of "update date and time
+                                is the latest file" overflow
+                              </li>
+                              <li>
+                                If you specify searchtime other than -1, the string buffer overflows in list creation
+                                of "the oldest file out of the specified
+                                update date and time"
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>-2</th>
+                          <td>Overflow at creation of file list (There is a possibility of returning it only when
+                            specifying
+                            -1 for searchtime)
+                            <ul>
+                              <li>
+                                Overflow of the string buffer in the list of "file that matches the specified update
+                                date and time"
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>-3</th>
+                          <td>Directory open error
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>-4</th>
+                          <td>Directory read error
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>filelist</dt>
+                  <dd>
+                    <em>string</em>. Comma separated list of files.
+                    <ul>
+                      <li>
+                        Return a list of files matching the conditions as a comma-delimited string.
+                      </li>
+                      <li>
+                        If searchtime is other than -1, it returns a string concatenating the list of "files matching
+                        the specified update date and
+                        time" and the "list of the oldest files out of the specified update date and time".
+                      </li>
+                      <li>
+                        If there is no such file, &quot;&quot; (empty string) is returned.
+                      </li>
+                      <li>
+                        In the case of error other than the overflow returns nil.
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+
+                <dl>
+                  <dt>time</dt>
+                  <dd>
+                    <em>number</em>. Search result date and time.
+                    <ul>
+                      <li>
+                        If -1 is specified for searchtime, the update date and time of "file with latest update time"
+                        is returned.
+                      </li>
+                      <li>
+                        If searchtime is other than -1, it returns the update date and time of "the oldest file out of
+                        the specified update date
+                        and time".
+                      </li>
+                      <li>
+                        If there is no file matching the condition, 0 is returned.
+                      </li>
+                      <li>
+                        In the case of error other than the overflow returns nil.
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+
+                <dl>
+                  <dt>Notes</dt>
+                  <dd>
+                    <ul>
+                      <li>
+                        If it exceeds 512 characters when creating the file list, a buffer overflow occurs and the list
+                        is aborted halfway.
+                      </li>
+                      <li>
+                        Search directory depth is up to 3 levels.
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <dl>
+                  <dd>Search for the latest file from &quot;/DCIM&quot;.
+                    <pre class="prettyprint lang-lua"><code>local result, filelist, time = fa.search("file", "/DCIM", -1)
+if result ~= 1 then
+    print("error: ", result)
+end
+if filelist ~= nil then
+    for f in string.gmatch(filelist, '(.-),') do
+        print(f)
+    end
+end
+if time ~= nil then
+    print(string.format("time: 0x%08x", time))
+end</code></pre>
+                  </dd>
+                </dl>
+
+                <dl>
+                  <dd>Search from "DCIM" for the file whose update date and time is 2017/06/01 12:34:56 and the oldest
+                    file among
+                    those newer than that date / time.
+                    <pre class="prettyprint lang-lua"><code>local result, filelist, time = fa.search("file", "/DCIM", 0x4ac1645c)
+if result ~= 1 then
+    print("error: ", result)
+end
+if filelist ~= nil then
+    for f in string.gmatch(filelist, '(.-),') do
+        print(f)
+    end
+end
+if time ~= nil then
+    print(string.format("time: 0x%08x", time))
+end</code></pre>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Notes</h3>
+                <dl>
+                  <dt>Example of date and time conversion in FAT format
+                  </dt>
+                  <dd>Convert the date and time of the string to FAT format
+                    <pre class="prettyprint lang-lua"><code>local function StringToFatDateTime(datetime_str)
+    local pattern = '(%d+)/(%d+)/(%d+)%s+(%d+):(%d+):(%d+)'
+    local year,month,day,hour,min,sec = string.match(datetime_str, pattern)
+    year = year - 1980
+    sec = bit32.rshift(sec, 1)
+    local date_fat = bit32.bor(bit32.lshift(year, 9),
+                               bit32.lshift(month, 5),
+                               day)
+    local time_fat = bit32.bor(bit32.lshift(hour, 11),
+                               bit32.lshift(min, 5),
+                               sec)
+    local datetime_fat = bit32.bor(bit32.lshift(date_fat, 16),
+                                   time_fat)
+    return datetime_fat
+end</code></pre>
+                  </dd>
+                  <dd>Convert date and time in FAT format to character string
+                    <pre class="prettyprint lang-lua"><code>local function FatDateTimeToString(datetime_fat)
+    local function getbits(x, from, to)
+        local mask = bit32.lshift(1, to - from + 1) - 1
+        local shifted = bit32.rshift(x, from)
+        return bit32.band(shifted, mask)
+    end
+    local fatdate = bit32.rshift(datetime_fat, 16)
+    local day = getbits(fatdate, 0, 4)
+    local month = getbits(fatdate, 5, 8)
+    local year = getbits(fatdate, 9, 15) + 1980
+
+    local fattime = getbits(datetime_fat, 0, 15)
+    local sec = getbits(fattime, 0, 4) * 2
+    local min = getbits(fattime, 5, 10)
+    local hour = getbits(fattime, 11, 15)
+
+    return string.format('%02d/%02d/%02d %02d:%02d:%02d', year, month, day, hour, min, sec)
+end</code></pre>
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <!--search-->
+            <!--serial("init")-->
+            <section class="mb-5">
+              <h2 id="serialinit">serial("init")
+                  <span class="badge badge-success">4.00.03</span>              
+              </h2>
+              <div class="separator-2"></div>
+              <p>Set serial enable and baudrate when using serial operation with FlashAir.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua">fa.serial("init", [boudrate])</pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>boudrate</dt>
+                  <dd>
+                    <em>number</em>. BaudRate (115,200 baud when not set).
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <p>None</p>
+              </section>
+              <section>
+                <h3>Precautions</h3>
+                <ul>
+                  <li>Requires <code>IFMODE=1</code> in CONFIG.</li>
+                  <li>Bit Allocation
+                    <ul>
+                      <li>CMD: RX</li>
+                      <li>D0: TX</li>
+                      <li>GND: GND</li>
+                    </ul>
+                  </li>
+                  <li>There is no flow control function.</li>
+                </ul>
+              </section>
+            </section>
+            <!--serial("init")-->
+            <!--serial("read")-->
+            <section class="mb-5">
+              <h2 id="serialread">serial("read")
+                  <span class="badge badge-success">4.00.03</span>              
+              </h2>
+              <div class="separator-2"></div>
+              <p>Receive data when performing serial operation with FlashAir.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua">data = fa.serial("read")</pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <p>None</p>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <dl>
+                  <dt>data</dt>
+                  <dd>
+                      <em>number</em>. Acquired data. Data is acquired in 1byte, number format.
+                      If the receive buffer is empty, <code>nil</code> is returned.                        
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <!--serial("read")-->
+            <!--serial("write")-->
+            <section class="mb-5">
+              <h2 id="serialwrite">serial("write")
+                  <span class="badge badge-success">4.00.03</span>              
+              </h2>
+              <div class="separator-2"></div>
+              <p>Send data when using performing serial operation with FlashAir.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua">fa.serial("write", data)</pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>data</dt>
+                  <dd>
+                      <em>string</em> or <em>number</em>(0～255) or <em>table</em>. Send data.                      
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <p>None</p>
+              </section>
+            </section>
+            <!--serial("write")-->
+            <!--SetCert-->
+            <section class="mb-5">
+              <h2 id="SetCert">SetCert</h2>
+              <div class="separator-2"></div>
+              <p>Sets or clears root certification by file（X.509 binary encode with DER).
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>fa.SetCert(filename)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>filename</dt>
+                  <dd>
+                    <em>string</em>. Specify the DER file path and file name. Clears the certificate when an empty string is specified.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <dl>
+                  <dt>result</dt>
+                  <dd>
+                    <em>number</em>.
+                    <dl class="ml-3">
+                      <dt>
+                        <code>1</code>
+                      </dt>
+                      <dd>
+                        Successful.
+                      </dd>
+                      <dt>
+                        <code>nil</code>
+                      </dt>
+                      <dd>
+                        Failure.
+                      </dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <pre class="prettyprint lang-lua"><code>-- Certificate registration
+res = fa.SetCert("DerSha256.cer")
+if res == nil then
+    print("certificate registration error")
+end
+
+-- Clear certificate
+res = fa.SetCert("")
+if res == nil then
+    print("certificate clear error")
+end</code></pre>
+              </section>
+            </section>
+            <!--SetCert-->
+            <!--SetChannel-->
+            <section class="mb-5">
+              <h2 id="SetChannel">SetChannel</h2>
+              <div class="separator-2"></div>
+              <p>Sets the wireless channels.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>fa.SetChannel(channelNo)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>channelNo</dt>
+                  <dd>
+                    <em>number</em>. Channel（0～11 or 0x0～0xb,　specify 0 is AUTO）.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <p>None.</p>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <pre class="prettyprint lang-lua"><code>fa.Disconnect()
+fa.SetChannel("0xB")
+fa.Establish("flashair3", "12345678", "6")</code></pre>
+              </section>
+            </section>
+            <!--SetChannel-->
+            <!--sharedmemory-->
+            <section class="mb-5">
+              <h2 id="sharedmemory">sharedmemory</h2>
+              <div class="separator-2"></div>
+              <p>Gets data from shared memory or writes data to shared memory.<br>
+                <span class="badge badge-success mr-1">4.00.03</span> Added support for write and read null characters.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>fa.sharedmemory(command, addr, len, wdata)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>command</dt>
+                  <dd>
+                    <em>string</em>. Execution command(write, read).
+                  </dd>
+                  <dt>addr</dt>
+                  <dd>
+                    <em>number</em>. Address（0～511）（0～2047）.
+                  </dd>
+                  <dt>len</dt>
+                  <dd>
+                    <em>number</em>. Data length（0～512）（1～2048）.
+                  </dd>
+                  <dt>wdata</dt>
+                  <dd>
+                    <em>string</em>. The string of written data（Enabled by write command）.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Response</h3>
+                <p>write　⇒　　Failure：
+                  <code>nil</code>　　Successful：
+                  <code>1</code>
+                  <br> read　 ⇒　　Failure：
+                  <code>nil</code>　　Successful： the string of read data</p>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <pre class="prettyprint lang-lua"><code>res1 = fa.sharedmemory("write", 0, 8, "12345678")
+res2 = fa.sharedmemory("read", 1, 4, 0)
+print("res=",res2)
+　　
+　Result：res=2345</code></pre>
+              </section>
+            </section>
+            <!--sharedmemory-->
+            <!--sleep-->
+            <section class="mb-5">
+              <h2 id="sleep">sleep</h2>
+              <div class="separator-2"></div>
+              <p>Stops execution of the script during the specified timespan.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>sleep(msec)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>msec</dt>
+                  <dd>
+                    <em>number</em>. Duration to sleep between 0～(2
+                    <sup>32</sup> - 1) in millisecond.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values</h3>
+                <p>None.</p>
+              </section>
+            </section>
+            <!--sleep-->
+            <!--spi-->
+            <section class="mb-5">
+              <h2 id="spi">spi</h2>
+              <div class="separator-2"></div>
+              <p>Sets the SPI by FlashAir.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>fa.spi(command,data)</code></pre>
+              </section>
+              <section>
+                <h3>command</h3>
+                <dl>
+                  <dt>init</dt>
+                  <dd>
+                    Changes the clock period（default：1000）.
+                    <p>Bit Allocation</p>
+                    <ul>
+                      <li>
+                        D0 : CLK
+                      </li>
+                      <li>
+                        D1 : CS
+                      </li>
+                      <li>
+                        D2 : MISO
+                      </li>
+                      <li>
+                        CMD : MOSI
+                      </li>
+                    </ul>
+                  </dd>
+                  <dt>mode</dt>
+                  <dd>
+                    Select the mode of the SPI（value：0～3. default：3）.
+                  </dd>
+                  <dt>bit</dt>
+                  <dd>
+                    The number of assigned bits for transmit（default：8）.
+                  </dd>
+                  <dt>write</dt>
+                  <dd>
+                    Write command.
+                  </dd>
+                  <dt>read</dt>
+                  <dd>
+                    Read command.
+                  </dd>
+                  <dt>cs</dt>
+                  <dd>
+                    Controls the signals of Chip Select（CS＝ON if 1, CS=OFF if 0）.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Response</h3>
+                <table>
+                  <tr>
+                    <td>write </td>
+                    <td>：The received data when
+                      <code>write</code>
+                      command was issued.</td>
+                  </tr>
+                  <tr>
+                    <td>read </td>
+                    <td>：The read data when
+                      <code>read</code>
+                      command was issued.</td>
+                  </tr>
+                  <tr>
+                    <td>otherwise</td>
+                    <td>：Any status.</td>
+                  </tr>
+                </table>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <pre class="prettyprint lang-lua"><code>fa.spi("init", 1001)</code></pre>
+              </section>
+            </section>
+            <!--spi-->
+            <!--spi("bit")-->
+            <section class="mb-5">
+              <h2 id="spibit">spi("bit")
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>Sets the number of transfer bits. (Default value: 8)
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>res = fa.spi("bit", bit)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>bit</dt>
+                  <dd>
+                    <em>number</em>. Range
+                    <code>1</code>
+                    ～
+                    <code>32</code>
+                    . Number of transfer bits.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Response</h3>
+                <dl>
+                  <dt>res</dt>
+                  <dd>
+                    <em>number</em>.
+                    <dl class="ml-3">
+                      <dt>
+                        <code>1</code>
+                      </dt>
+                      <dd>
+                        Successful.
+                      </dd>
+                      <dt>
+                        <code>0</code>
+                      </dt>
+                      <dd>
+                        Failure.
+                      </dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Notes</h3>
+                <p>
+                  When specifying a character string with
+                  <a href="#spiwrite">spi("write")</a>, it can not be used with bit specification.
+                </p>
+              </section>
+            </section>
+            <!--spi("bit")-->
+            <!--spi("cs")-->
+            <section class="mb-5">
+              <h2 id="spics">spi("cs")
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>Controls the chip select signal.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>fa.spi("cs", cs_level)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>cs_level</dt>
+                  <dd>
+                    <em>number</em>. 1: High, 0: Low.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <pre class="prettyprint lang-lua"><code>local CS_ASSERT=0
+local CS_NEGATE=1
+fa.spi("mode", 2)
+fa.spi("init", 1000)
+fa.spi("cs", CS_ASSERT)
+fa.spi("write", "hello", 5)
+fa.spi("cs", CS_NEGATE)</code></pre>
+              </section>
+            </section>
+            <!--spi("cs")-->
+            <!--spi("init")-->
+            <section class="mb-5">
+              <h2 id="spiinit">spi("init")
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>Initialize the interface and change the clock cycle (default value: 1000). CS becomes High.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>res = fa.spi("init"[, period])</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>period</dt>
+                  <dd>
+                    <em>number</em>. Optional. Clock period.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Response</h3>
+                <dl>
+                  <dt>res</dt>
+                  <dd>
+                    <em>number</em>.
+                    <dl class="ml-3">
+                      <dt>
+                        <code>1</code>
+                      </dt>
+                      <dd>
+                        Successful.
+                      </dd>
+                      <dt>
+                        <code>0</code>
+                      </dt>
+                      <dd>
+                        Failure.
+                      </dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <!--spi("init")-->
+            <!--spi("mode")-->
+            <section class="mb-5">
+              <h2 id="spimode">spi("mode")
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>Sets the SPI mode. (Default value: 3)
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>res = fa.spi("mode", mode)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>mode</dt>
+                  <dd>
+                    <em>number</em>. Range
+                    <code>0</code>
+                    ～
+                    <code>3</code>
+                    . SPI mode.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Response</h3>
+                <dl>
+                  <dt>res</dt>
+                  <dd>
+                    <em>number</em>.
+                    <dl class="ml-3">
+                      <dt>
+                        <code>1</code>
+                      </dt>
+                      <dd>
+                        Successful.
+                      </dd>
+                      <dt>
+                        <code>0</code>
+                      </dt>
+                      <dd>
+                        Failure.
+                      </dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Notes</h3>
+                <p>
+                  Execute spi("mode") before executing
+                  <a href="#spiinit">spi("init")</a>.</p>
+              </section>
+            </section>
+            <!--spi("mode")-->
+            <!--spi("read")-->
+            <section class="mb-5">
+              <h2 id="spiread">spi("read")
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>Write and read. It can rotate multiple times and get all lead results. Transmission data transmits fixed value repeatedly.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>res_num = fa.spi("read")
+res_tbl = fa.spi("read", xfer_num, data_num)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>xfer_num</dt>
+                  <dd>
+                    <em>number</em>. Number of transfers.
+                  </dd>
+                  <dt>data_num</dt>
+                  <dd>
+                    <em>number</em>. Transmission data.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Response</h3>
+                <dl>
+                  <dt>res_num</dt>
+                  <dd>
+                    <em>number</em>. Leaded value.
+                  </dd>
+                  <dt>res_tbl</dt>
+                  <dd>
+                    <em>table</em>. Array of read values.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>About transmission data
+                </h3>
+                <p>In Syntax of fa.spi("read"), all 0s are transmitted.
+                </p>
+                <p>In Syntax of fa.spi("read", xfer_num, data_num), data_num is sent repeatedly.
+                </p>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <pre class="prettyprint lang-lua"><code>res_num = fa.spi("read")
+print(res_num)
+res_tbl = fa.spi("read", 10, 0xff)
+for i, v in ipairs(res_tbl) do
+  print(i, v)
+end</code></pre>
+              </section>
+            </section>
+            <!--spi("read")-->
+            <!--spi("write")-->
+            <section class="mb-5">
+              <h2 id="spiwrite">spi("write")
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>Write and read. Although it can be transferred more than once, the read result can be acquired only
+                once last.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>res = fa.spi("write", data_num)
+res = fa.spi("write", data_str, xfer_num)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>data_num</dt>
+                  <dd>
+                    <em>number</em>. Transmission data.
+                  </dd>
+                  <dt>data_str</dt>
+                  <dd>
+                    <em>string</em>. Specify transmission data as a character string. It is transferred in multiple
+                    bytes each
+                    byte.
+                  </dd>
+                  <dt>xfer_num</dt>
+                  <dd>
+                    <em>number</em>. Number of bytes transmitted. When the character string length of data_str is
+                    exceeded, the
+                    transmission data is 0x00.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Response</h3>
+                <dl>
+                  <dt>res</dt>
+                  <dd>
+                    <em>number</em>. Leaded value. (If data was transferred multiple times with one function call, the
+                    last read
+                    value)
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <pre class="prettyprint lang-lua"><code>res = fa.spi("write", 0x12)
+result = fa.spi("write", "hello", 8)</code></pre>
+              </section>
+              <section>
+                <h3>Notes</h3>
+                <p>
+                  When data_str is used, it can not be used with bit specification.</p>
+              </section>
+            </section>
+            <!--spi("write")-->
+            <!--strconvert-->
+            <section class="mb-5">
+              <h2 id="strconvert">strconvert</h2>
+              <div class="separator-2"></div>
+              <p>Converts the SJIS characters to UTF-8 , and the utf8 characters to SJIS.</p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>fa.strconvert(format, orgstr)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>format</dt>
+                  <dd>
+                    <em>string</em>. Converts the SJIS characters to UTF-8 if specify 「sjis2utf8」, and converts the
+                    UTF-8 characters
+                    to SJIS if specify 「utf82sjis」.
+                  </dd>
+                  <dt>orgstr</dt>
+                  <dd>
+                    <em>string</em>. The original data before convert.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Response</h3>
+                <p>Successful： Converted strings.
+                  <br> Failure：
+                  <code>nil</code>
+                </p>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <pre class="prettyprint lang-lua"><code>str = "あかさたなはまやらわ"
+print("testStr=", str)
+a = fa.strconvert("sjis2utf8", str )
+print("toUTF8=", a)
+b = fa.strconvert("utf82sjis", a)
+print("toSJIS=", b)</code></pre>
+              </section>
+            </section>
+            <!--strconvert-->
+            <!--watchdog("event")-->
+            <section class="mb-5">
+              <h2 id="watchdogevent">watchdog(&quot;event&quot;)
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>Reset the timer of WatchDog.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>result = fa.watchdog("event")</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dd>First Parameters is fixed "event".
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <dl>
+                  <dt>result</dt>
+                  <dd>
+                    <em>number</em>.
+                    <dl class="ml-3">
+                      <dt>
+                        <code>1</code>
+                      </dt>
+                      <dd>
+                        Timer restart.
+                      </dd>
+                      <dt>
+                        <code>0</code>
+                      </dt>
+                      <dd>
+                        You have not started watchdog (timer waiting time not set).
+                      </dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <!--watchdog("event")-->
+            <!--watchdog("start")-->
+            <section class="mb-5">
+              <h2 id="watchdogstart">watchdog(&quot;start&quot;)
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>Start the timer of WatchDog. FlashAir restarts when it times out.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>result = fa.watchdog("start", cycle)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dd>First Parameters is fixed "start".
+                  </dd>
+                  <dt>cycle</dt>
+                  <dd>
+                    <em>number</em>. Specify watchdog issue in seconds.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <dl>
+                  <dt>result</dt>
+                  <dd>
+                    <em>number</em>.
+                    <dl class="ml-3">
+                      <dt>
+                        <code>1</code>
+                      </dt>
+                      <dd>
+                        Timer started.
+                      </dd>
+                      <dt>
+                        <code>0</code>
+                      </dt>
+                      <dd>
+                        Timer waiting time not set yet.
+                      </dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Notes</h3>
+                <p>
+                  <strong>WatchDog</strong>
+                  is a timer to ensure that the system will continue to function correctly. If an abnormal situation
+                  occurs in the system after
+                  starting the WatchDog timer and it is not able to be reset, restarting FlashAir is the proper course
+                  of
+                  action.
+                </p>
+                <p>Example</p>
+                <div class="card card-body">
+                  <ol>
+                    <li>Add
+                      <code>LUA_RUN_SCRIPT=/HelloWorld.lua</code>
+                      to the CONFIG file. Save
+                      <code>HelloWorld.lua</code>
+                      used in
+                      <a href="..\..\..\..\ja\documents\tutorials\lua\2\index.htm">this</a>
+                      tutorial on the FlashAir route. If you already have Hello.txt on the route please rename or
+                      delete it.
+                    </li>
+                    <li>Save the following code on the FlashAir route.
+                      <br>
+                      <strong>/WatchDog.lua</strong>
+                      <pre class="prettyprint lang-lua"><code>fa.watchdog("start", 10)
+print("watchdog start")
+for i = 1, 30 do
+  result = fa.watchdog("status")
+  print("watchdog status:"..result)
+end
+result, filelist, time = fa.search("file", "/DCIM", -1)
+if filelist ~= nill then
+  result = fa.watchdog("event")
+  print("watchdog restart")
+else
+  fa.watchdog("stop")    
+  print("watchdog stop")                    
+end
+while 0 ~= fa.watchdog("status") do
+  result = fa.watchdog("status")
+  print("watchdog status:"..result)
+end</code></pre>This script starts the Watchdog timer at 10 second intervals, checks the Watchdog status several
+                      times,
+                      restarts the Watchdog timer when there is
+                      <code>/DCIM</code>, and also continues printing until the Watchdog status is 0.
+                    </li>
+                    <li>Pull out the FlashAir.
+                    </li>
+                    <li>
+                      Check the Hello.txt file created by
+                      <code>HelloWorld.lua</code>. (Hello There! Should be displayed on one line)
+                    </li>
+                    <li>Run
+                      <code>WatchDog.lua</code>
+                      from your browser.
+                    </li>
+                    <li>When the content output by the print statement is displayed in the browser, check the Hello.txt
+                      file
+                      <strong>without inserting / removing it
+                      </strong>. (There should be two rows of Hello There!)
+                      <br>You can check that FlashAir has restarted and that the
+                      <code>LUA_RUN_SCRIPT</code>
+                      is running.
+                    </li>
+                  </ol>
+                </div>
+              </section>
+            </section>
+            <!--watchdog("start")-->
+            <!--watchdog("status")-->
+            <section class="mb-5">
+              <h2 id="watchdogstatus">watchdog(&quot;status&quot;)
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>Get the state of WatchDog.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>result = fa.watchdog("status")</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dd>First Parameters is fixed "status".
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <dl>
+                  <dt>result</dt>
+                  <dd>
+                    <em>number</em>.
+                    <dl class="ml-3">
+                      <dt>
+                        <code>0</code>
+                        or more
+                      </dt>
+                      <dd>
+                        watchdog Time remaining until the timer is activated.
+                      </dd>
+                      <dt>
+                        <code>0</code>
+                      </dt>
+                      <dd>
+                        The remaining time until activation is less than 1 second.
+                      </dd>
+                      <dt>
+                        <code>-1</code>
+                      </dt>
+                      <dd>
+                        Watchdog timer waiting.
+                      </dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <!--watchdog("status")-->
+            <!--watchdog("stop")-->
+            <section class="mb-5">
+              <h2 id="watchdogstop">watchdog(&quot;stop&quot;)
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>Stop the WatchDog timer.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>result = fa.watchdog("stop")</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dd>First Parameters is fixed "stop".
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <dl>
+                  <dt>result</dt>
+                  <dd>
+                    <em>number</em>.
+                    <dl class="ml-3">
+                      <dt>
+                        <code>0</code>
+                      </dt>
+                      <dd>
+                        Timer stop.
+                      </dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <!--watchdog("stop")-->
+            <!--websocket-->
+            <section class="mb-5">
+              <h2 id="websocket">websocket
+              </h2>
+              <div class="separator-2"></div>
+              <p>WebSocket communication.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>res, type, payload = fa.websocket(table)</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <dl>
+                  <dt>table</dt>
+                  <dd>There are the following fields.
+                    <dl class="ml-3">
+                      <dt>
+                        mode
+                      </dt>
+                      <dd>
+                        <em>string</em>. Attributes of WebSocket connection.
+                      </dd>
+                      <dt>
+                        address
+                      </dt>
+                      <dd>
+                        <em>string</em>. The server address of the connection destination.
+                      </dd>
+                      <dt>
+                        payload
+                      </dt>
+                      <dd>
+                        <em>string</em>
+                        or
+                        <em>table</em>. Message content (character string, array).
+                      </dd>
+                      <dt>
+                        type
+                      </dt>
+                      <dd>
+                        <em>number</em>. Message type (text =
+                        <code>1</code>, binary =
+                        <code>2</code>, PING =
+                        <code>9</code>, default = automatic determination).
+                      </dd>
+                      <dt>
+                        length
+                      </dt>
+                      <dd>
+                        <em>number</em>. Message length (default = payload object length).
+                      </dd>
+                      <dt>
+                        tout
+                      </dt>
+                      <dd>
+                        <em>number</em>. Timeout time (unit: msec).
+                      </dd>
+                    </dl>
+                    <table class="table table-bordered table-hover">
+                      <tr>
+                        <th></th>
+                        <th>open</th>
+                        <th>Send Messege
+                        </th>
+                        <th>Receive message
+                        </th>
+                        <th>Close</th>
+                      </tr>
+                      <tr>
+                        <td>mode</td>
+                        <td>
+                          <code>"open"</code>
+                        </td>
+                        <td>
+                          <code>"send"</code>
+                        </td>
+                        <td>
+                          <code>"recv"</code>
+                        </td>
+                        <td>
+                          <code>"close"</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>address</td>
+                        <td>Required</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                      </tr>
+                      <tr>
+                        <td>payload</td>
+                        <td>Unnecessary</td>
+                        <td>Required</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                      </tr>
+                      <tr>
+                        <td>type</td>
+                        <td>Unnecessary</td>
+                        <td>Optional</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                      </tr>
+                      <tr>
+                        <td>length</td>
+                        <td>Unnecessary</td>
+                        <td>Optional</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                      </tr>
+                      <tr>
+                        <td>tout</td>
+                        <td>Unnecessary</td>
+                        <td>Unnecessary</td>
+                        <td>Optional</td>
+                        <td>Unnecessary</td>
+                      </tr>
+                    </table>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <dl>
+                  <dt>
+                    res
+                  </dt>
+                  <dd>
+                    <em>number</em>. When reception is successful,
+                    <code>0</code>
+                    or positive number is returned. When reception fails, it returns a negative number.
+                  </dd>
+                  <dt>
+                    type
+                  </dt>
+                  <dd>
+                    <em>number</em>. Message type (text =
+                    <code>1</code>, binary =
+                    <code>2</code>). It is used only when receiving a message.
+                  </dd>
+                  <dt>
+                    payload
+                  </dt>
+                  <dd>
+                    <em>string</em>
+                    or
+                    <em>table</em>. Received message. When reception fails,
+                    <code>nil</code>
+                    is returned. It is used only when receiving a message.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <pre class="prettyprint lang-lua"><code>res = fa.websocket{mode = "open", address = "ws://localhost/socket"}
+res = fa.websocket{mode = "send", payload = "hello!", type = 1}
+res, type, payload = fa.websocket{mode = "recv", tout = 5000}
+fa.websocket{mode = "close"}</code></pre>
+
+              </section>
+            </section>
+            <!--websocket-->
+            <!--WlanLink-->
+            <section class="mb-5">
+              <h2 id="WlanLink">WlanLink</h2>
+              <div class="separator-2"></div>
+              <p>Confirms the FlashAir is wirelessly connected to the network.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-lua"><code>result = fa.WlanLink()</code></pre>
+              </section>
+              <section>
+                <h3>Parameters</h3>
+                <p>None.</p>
+              </section>
+              <section>
+                <h3>Return values
+                </h3>
+                <dl>
+                  <dt>result</dt>
+                  <dd>
+                    <em>number</em>.
+                    <dl class="ml-3">
+                      <dt>
+                        <code>1</code>
+                      </dt>
+                      <dd>
+                        Connected.
+                      </dd>
+                      <dt>
+                        <code>0</code>
+                      </dt>
+                      <dd>
+                        Disconnected.
+                      </dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <!--WlanLink-->
+
+            <!--Partition operation-->
+            <section>
+              <h2 id="partition">Partition operation
+                <span class="badge badge-success">4.00.03</span>
+              </h2>
+              <div class="separator-2"></div>
+              <p>You can access the second partition. The second partition is an area where Lua's internal logs are
+                saved and
+                there is no effect from file access from the host device.
+                <br>It is possible to specify the partition by the drive letter.
+              </p>
+              <section>
+                <h3>Syntax</h3>
+                <pre class="prettyprint lang-html"><code>"p" --1st partition (omitted)
+"s" --2nd Partition
+"h" --Secret area</code></pre>
+              </section>
+              <section>
+                <h3>Other</h3>
+                <p>Partition creation can be divided using host equipment such as Linux, Win10.
+                </p>
+              </section>
+              <section>
+                <h3>Example</h3>
+                <dl>
+                  <pre class="prettyprint lang-lua"><code>local file = io.open("s:\flashair.log", "a")</code></pre>
+                </dl>
+              </section>
+            </section>
+            <!--Partition operation-->
+
+            <!-- Social Buttons -->
+            <div class="clearfix">
+	<ul class="social-links float-right">
+		<li class="twitter">
+			<!--Tweet Button-->
+			<a href="https://twitter.com/share" class="twitter-share-button" {count}="" data-via="FlashAirDev" data-related="FlashAirDev">Tweet</a>
+			<script>
+				! function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0],
+						p = /^http:/.test(d.location) ? 'http' : 'https';
+					if (!d.getElementById(id)) {
+						js = d.createElement(s);
+						js.id = id;
+						js.src = p + '://platform.twitter.com/widgets.js';
+						fjs.parentNode.insertBefore(js, fjs);
+					}
+				}(document, 'script', 'twitter-wjs');
+			</script>
+		</li>
+		<li class="facebook">
+			<!--Facebook Like Button-->
+			<div id="fb-root"></div>
+			<script>
+				(function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+			<div class="fb-like" data-href="https://www.flashair-developers.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+		</li>		
+	</ul>
+</div>
+
+            <!-- Amazon bottom link -->
+            <div class="col-12">
+	<!--Amazon search result for tablet-->
+	<div class="amazon-widget-bottom mx-auto d-none d-md-block d-lg-none">
+		<!--
+<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=12&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="300" height="250" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" width="320" height="250" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+
+	<!--Amazon search result for smartphone-->
+	<div class="amazon-widget-mobile mx-auto d-md-none">
+		<!--Image-->
+		<!--
+	<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20" alt="TOSHIBA FlashAir SD card 8GB SD-WB008G"><img src="http://ws.assoc-amazon.com/widgets/q?_encoding=UTF8&ASIN=B009RGP7HY&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=flasdeve-20" style="vertical-align:middle;"/></a><br>
+-->
+		<!--Text-->
+		<!--
+<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20">Find TOSHIBA FlashAir SD card 8GB SD-WB008G on Amazon.com</a><img src="http://www.assoc-amazon.com/e/ir?t=flasdeve-20&l=as2&o=1&a=B009RGP7HY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+</div>
+
+          </div>
+          <!-- main end -->
+
+          <!-- sidebar start -->
+          <!-- ================ -->
+          <aside class="col-lg-3 col-xl-3 order-lg-1">
+            <div class="sidebar">
+  <div class="block clearfix">
+    <nav>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="..\commandcgi\index.htm">
+            command.cgi
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\configcgi\index.htm">
+            config.cgi
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\thumbnailcgi\index.htm">
+            thumbnail.cgi
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\uploadcgi\index.htm">
+            upload.cgi
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\config\index.htm">
+            CONFIG
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\utility\index.htm">
+            Browser Utility
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link active" href="index.htm">
+            Lua Scripting
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\isdio\index.htm">
+            iSDIO
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\fw40003\index.htm">
+            About FW 4.00.03
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Amazon side link -->
+  <!--Amazon search result for desktop-->
+<div class="amazon-widget-side d-none d-lg-block">
+	<!--
+	<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=14&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></iframe>
+	-->
+	<div class="amazon-content" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></div>
+</div>
+          </div></aside>
+          <!-- sidebar end -->
+        </div>
+      </div>
+    </section>
+    <!-- main-container end -->
+
+    <!-- footer start -->
+    <!-- ================ -->
+    <!-- footer start -->
+<!-- ================ -->
+<footer id="footer" class="clearfix ">
+
+  <!-- .footer start -->
+  <!-- ================ -->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">
+                <img alt="FlashAir logo" src="..\..\..\..\images\assets\flashairLogo_official_small2.png"> FlashAir&trade; Developers</h2>
+              <div class="separator-2"></div>
+              <p>
+                  A technical information website for developers of Toshiba FlashAir apps or services. FlashAir Developers is operated by Fixstars in cooperation with Toshiba Memory Corporation. To learn more about Fixstars, visit
+                <a target="_blank" href="http://www.fixstars.com">www.fixstars.com
+                  <i class="fa fa-external-link"></i>
+                </a>. ?FlashAir is a trademark of Toshiba Memory Corporation.
+              </p>
+              <ul class="social-links circle animated-effect-1" style="margin-bottom: 10px">
+                <li class="facebook">
+                  <a href="https://www.facebook.com/FlashAir-Developers-115819238627364/" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="twitter">
+                  <a href="https://twitter.com/FlashAirDev/" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+              <ul class="list-unstyled list-inline m-0">
+                <li class="list-inline-item"><a href="..\..\..\terms-of-use\index.htm">Terms of Use</a></li>
+                <li class="list-inline-item">|</li>
+                <li class="list-inline-item"><a href="..\..\..\privacypolicy\index.htm">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Twitter</h2>
+              <div class="separator-2"></div>
+              <div id="twitterWidget">
+                <a class="twitter-timeline" data-theme="light" href="https://twitter.com/FlashAirDev" data-widget-id="344743426811641856" height="230" data-chrome="nofooter noheader noborders transparent">Latest News</a>
+                <script>
+                  ! function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                      p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                      js = d.createElement(s);
+                      js.id = id;
+                      js.src = p + "://platform.twitter.com/widgets.js";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }
+                  }(document, "script", "twitter-wjs");
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Sitemap</h2>
+              <div class="separator-2"></div>
+              <nav>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\discover\overview\index.htm">What's FlashAir?
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\resources\index.htm">Developer Resources
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\tutorials\index.htm">Tutorials
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\index.htm">API Guide
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\support\index.htm">Support
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\support\forum\index.htm">Developer Forum
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir IoTHub <i class="fa fa-external-link"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .footer end -->
+
+  <!-- .subfooter start -->
+  <!-- ================ -->
+  <div class="subfooter">
+    <div class="container">
+      <div class="subfooter-inner">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center">Copyright &copy; 2019 FlashAir Developers. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .subfooter end -->
+
+  <div id="overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 ml-auto text-white">
+          <p class="mt-3">If you write software or change the settings which are described on this site to your FlashAir device which was purchased at a mass retailer or online shop, it will not be eligible for a free replacement under the warranty policy. Please acknowledge and carry out development at your own risk.
+          </p>
+        </div>
+        <div class="col-md-2 row">
+          <div class="align-self-center">
+          <button class="btn btn-default" id="btn-agree">Accept</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- footer end -->
+
+<!-- JavaScript files placed at the end of the document so the pages load faster -->
+<!-- ================================================== -->
+<!-- Jquery and Bootstap core js files -->
+<script src="..\..\..\..\js\jquery.min.js"></script>
+<script src="..\..\..\..\js\bootstrap.bundle.min.js"></script>
+<!-- jQuery Revolution Slider  -->
+<script src="..\..\..\..\js\jquery.themepunch.tools.min.js"></script>
+<script src="..\..\..\..\js\jquery.themepunch.revolution.min.js imagesloaded.pkgd.min.js.pagespeed.jc.cG4Ou2l09T.js"></script><script>eval(mod_pagespeed_faLzhRoycV);</script>
+<!-- Isotope javascript -->
+<script>eval(mod_pagespeed_e7p3yiKri5);</script>
+<script src="..\..\..\..\js\isotope.pkgd.min.js jquery.magnific-popup.min.js jquery.waypoints.min.js sticky.min.js jquery.countTo.js.pagespeed.jc.cWqBgip635.js"></script><script>eval(mod_pagespeed_EzjKnImtZK);</script>
+<!-- Magnific Popup javascript -->
+<script>eval(mod_pagespeed_hr4XVzGccf);</script>
+<!-- Appear javascript -->
+<script>eval(mod_pagespeed_zhicDWZgIJ);</script>
+<script>eval(mod_pagespeed_MTpYywWOfL);</script>
+<!-- Count To javascript -->
+<script>eval(mod_pagespeed_dmh3ejQ5o0);</script>
+<!-- Slick carousel javascript -->
+<script src="..\..\..\..\js\slick.min.js pace.min.js template.js jquery.cookie.js custom.js jquery.matchHeight.js.pagespeed.jc.Y3630FlbPX.js"></script><script>eval(mod_pagespeed_s1mKdTeuWx);</script>
+<!-- Pace javascript -->
+<script>eval(mod_pagespeed_Zs67JgCVyk);</script>
+<!-- Initialization of Plugins -->
+<script>eval(mod_pagespeed_BIPkzwMbEw);</script>
+<!-- Custom Scripts -->
+<script>eval(mod_pagespeed_uSq_SD1Gz5);</script>
+<script>eval(mod_pagespeed_mqKjjurRp4);</script>
+<script>eval(mod_pagespeed_TteNs$c3Zl);</script>
+<script>
+  $(function () {
+    $('.matchHeight').matchHeight();
+  });
+</script>
+<script src="..\..\..\..\js\script.js prettify.js lang-lua.js lang-css.js.pagespeed.jc.ECF3Z77mjV.js"></script><script>eval(mod_pagespeed_SrZ0Yqg7MZ);</script>
+<script>eval(mod_pagespeed_RSPiDhly$4);</script>
+<script>eval(mod_pagespeed_0pGoVUEAt9);</script>
+<script>eval(mod_pagespeed_IrbA2eGHA$);</script>
+<script>
+  ! function ($) {
+    $(function () {
+      PR.prettyPrint()
+    })
+  }(window.jQuery)
+</script>
+    <!-- footer end -->
+  </div>
+  <!-- page wrapper end -->
+
+</body>
+
+</html>

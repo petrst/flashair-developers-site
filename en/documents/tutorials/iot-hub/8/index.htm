@@ -1,0 +1,1213 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+<!-- %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"} -->
+
+<!--Google Apps verification-->
+
+<title>FlashAir Developers - Cooperation between FlashAir IoT Hub and IFTTT</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta property="fb:admins" content="100006082240886">
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@FlashAirDev">
+<meta property="fb:admins" content="115819238627364">
+<meta property="og:site_name" content="FlashAir Developers">
+<meta property="og:image" content="https://flashair-developers.com/images/assets/ogp.png">
+<meta property="og:url" content="https://flashair-developers.com/en/documents/tutorials/iot-hub/8/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FlashAir Developers - Cooperation between FlashAir IoT Hub and IFTTT">
+
+<link href="..\..\..\..\..\images\flashair_favicon.ico" rel="shortcut icon">
+<link href="..\..\..\..\..\images\apple-touch-icon-152x152-precomposed.png" rel="apple-touch-icon-precomposed" sizes="152x152">
+<link href="..\..\..\..\..\images\apple-touch-icon-120x120-precomposed.png" rel="apple-touch-icon-precomposed" sizes="120x120">
+<link href="..\..\..\..\..\images\apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="..\..\..\..\..\images\apple-touch-icon-76x76-precomposed.png" rel="apple-touch-icon-precomposed" sizes="76x76">
+<link href="..\..\..\..\..\images\apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="..\..\..\..\..\images\apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon-precomposed" sizes="57x57">
+<!-- Web Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+<!-- Bootstrap core CSS -->
+<link href="..\..\..\..\..\css\bootstrap.css" rel="stylesheet">
+
+<!-- Font Awesome CSS -->
+<link href="..\..\..\..\..\css\fonts\font-awesome\css\font-awesome.css" rel="stylesheet">
+
+<!-- Plugins -->
+<link href="..\..\..\..\..\css\magnific-popup.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\settings.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\layers.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\navigation.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\animations.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\slick.css" rel="stylesheet">
+
+<!-- The Project's core CSS file -->
+<!-- Use css/rtl_style.css for RTL version -->
+<link href="..\..\..\..\..\css\style.css" rel="stylesheet">
+<!-- The Project's Typography CSS file, includes used fonts -->
+<!-- Used font for body: Roboto -->
+<!-- Used font for headings: Raleway -->
+<!-- Use css/rtl_typography-default.css for RTL version -->
+<link href="..\..\..\..\..\css\typography-default.css" rel="stylesheet">
+<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer) -->
+<link href="..\..\..\..\..\css\light_blue.css" rel="stylesheet">
+
+<!-- Custom css -->
+<link href="..\..\..\..\..\css\custom.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\prettify.css" rel="stylesheet">
+<!--[if lt IE 9]>
+	<link href="/css/bootstrap-ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+	<meta name="keywords" content="FlashAir, IoT, IFTTT, Webhook">
+	<meta name="description" content="Tutorial introducing the IFTTT linkage function of FlashAir IoT Hub. FlashAir is a SD card with embedded wireless LAN produced by Toshiba Memory Corp..">
+	<meta property="og:description" content="Tutorial introducing the IFTTT linkage function of FlashAir IoT Hub. FlashAir is a SD card with embedded wireless LAN produced by Toshiba Memory Corp..">
+</head>
+
+<body class=" ">
+
+	<!-- scrollToTop -->
+	<!-- ================ -->
+	<div class="scrollToTop circle">
+		<i class="fa fa-angle-up"></i>
+	</div>
+
+	<!-- page wrapper start -->
+	<!-- ================ -->
+	<div class="page-wrapper">
+		<!-- header-container start -->
+		<div class="header-container">
+			<!-- header-top start -->
+<!-- classes:  -->
+<!-- "dark": dark version of header top e.g. class="header-top dark" -->
+<!-- "colored": colored version of header top e.g. class="header-top colored" -->
+<!-- ================ -->
+<div class="header-top dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-lg-10">
+                <div class="header-top-first clearfix">
+                    <ul class="list-inline float-right">
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\index.htm" id="go-to-japanese">Japanese</a>&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            English&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\..\zh\index.htm" id="go-to-chinese">Chinese</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-2">
+                <!-- header-top-second start -->
+                <!-- ================ -->
+                <div id="header-top-second" class="clearfix">
+                    <!-- header top dropdowns start -->
+                    <!-- ================ -->
+                    <div class="header-top-dropdown text-right">
+                        <div class="btn-group">
+                            <a href="..\..\..\..\member\index.htm" class="btn btn-default btn-sm">
+                                <i class="fa fa-user pr-2"></i> MyAccount</a>
+                        </div>
+                    </div>
+                    <!--  header top dropdowns end -->
+                </div>
+                <!-- header-top-second end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header-top end -->
+<!-- header start -->
+<!-- classes:  -->
+<!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+<!-- "fixed-desktop": enables fixed navigation only for desktop devices e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "fixed-all": enables fixed navigation only for all devices desktop and mobile e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+<!-- "centered": mandatory class for the centered logo layout -->
+<!-- ================ -->
+<header class="header fixed fixed-desktop clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-auto hidden-md-down pl-3">
+                <!-- header-first start -->
+                <!-- ================ -->
+                <div class="header-first clearfix">
+
+                    <!-- logo -->
+                    <div id="logo" class="logo">
+                        <a href="..\..\..\..\index.htm">
+                            <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2.png">
+                            &nbsp;FlashAir&trade; Developers
+                        </a>
+                    </div>
+
+                </div>
+                <!-- header-first end -->
+
+            </div>
+            <div class="col-lg-7 ml-lg-auto">
+
+                <!-- header-second start -->
+                <!-- ================ -->
+                <div class="header-second clearfix">
+
+                    <!-- main-navigation start -->
+                    <!-- classes: -->
+                    <!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+                    <!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+                    <!-- ================ -->
+                    <div class="main-navigation main-navigation--mega-menu  animated">
+                        <nav class="navbar navbar-expand-lg navbar-light p-0">
+                            <div class="navbar-brand clearfix hidden-lg-up">
+
+                                <!-- logo -->
+                                <div id="logo-mobile" class="logo">
+                                    <a href="..\..\..\..\index.htm">
+                                        <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2.png">
+                                        &nbsp;FlashAir&trade; Developers
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- header dropdown buttons -->
+                            <div class="header-dropdown-buttons hidden-lg-up p-0 ml-auto mr-3">
+                                <div class="btn-group">
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                                        <li>
+                                            <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse">
+                                                <div class="form-group has-feedback">
+                                                    <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                                    <input type="hidden" name="ie" value="UTF-8">
+                                                    <input type="text" name="q" size="31" class="form-control">
+                                                    <input type="submit" name="sa" value="Search">
+                                                </div>
+                                            </form>
+                                            <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- header dropdown buttons end -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                <!-- main-menu -->
+                                <ul class="navbar-nav ml-xl-auto">
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="first-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Discover</a>
+                                        <ul class="dropdown-menu" aria-labelledby="first-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\discover\overview\index.htm">What's FlashAir?</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\overview\w04\index.htm">Fourth generation FlashAir W-04</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\gettingstarted\index.htm">Getting Started</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\beginners\index.htm">Beginners Guide with FlashAir
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\usage\index.htm">Get started with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\app\index.htm">Overview of FlashAir Application
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\device\index.htm">Overview of using Devices with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir
+                                                    IoT Hub
+                                                    <i class="fa fa-external-link"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="second-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Application</a>
+                                        <ul class="dropdown-menu" aria-labelledby="second-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\application\iot\index.htm">Application to IoT</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\devices\index.htm">Using with Devices</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\workflow\index.htm">Improve efficiency of operations</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\share-documents\index.htm">Sharing Documents</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\users\index.htm">User's Projects</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\showcase\index.htm">App Showcase</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown active"> <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+                                        <ul class="dropdown-menu" aria-labelledby="third-dropdown">
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\..\ios\index.htm">iOS</a></li>
+                                                    <li><a href="..\..\android\index.htm">Android</a></li>
+                                                    <li><a href="..\..\web\index.htm">Web browser</a></li>
+                                                    <li><a href="..\..\advanced\index.htm">Advanced</a></li>
+                                                    <li><a href="..\..\isdio\index.htm">iSDIO</a></li>
+                                                    <li><a href="..\..\lua\index.htm">Lua</a></li>
+                                                    <li><a href="..\..\users\index.htm">User's Tutorials</a></li>
+                                                    <li><a href="..\index.htm">FlashAir IoT Hub</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">API Guide</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\..\..\api\commandcgi\index.htm">command.cgi</a></li>
+                                                    <li><a href="..\..\..\api\configcgi\index.htm">config.cgi</a></li>
+                                                    <li><a href="..\..\..\api\thumbnailcgi\index.htm">thumbnail.cgi</a></li>
+                                                    <li><a href="..\..\..\api\uploadcgi\index.htm">upload.cgi</a></li>
+                                                    <li><a href="..\..\..\api\config\index.htm">CONFIG</a></li>
+                                                    <li><a href="..\..\..\api\utility\index.htm">Browser Utility</a></li>
+                                                    <li><a href="..\..\..\api\lua\index.htm">Lua Scripting</a></li>
+                                                    <li><a href="..\..\..\api\isdio\index.htm">iSDIO</a></li>
+                                                    <li><a href="..\..\..\api\fw40003\index.htm">About FW 4.00.03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\resources\index.htm">Developer Resources</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\books\index.htm">Books</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\about\events\index.htm">Events</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="fourth-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                                        <ul class="dropdown-menu" aria-labelledby="fourth-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\support\index.htm">Support</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\forum\index.htm">Developer Forum</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\faq\index.htm">FAQ</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\iot-hub\index.htm">About FlashAir IoT Hub service end</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\developers\index.htm">About FlashAir Developers site closure</a>
+                                            </li>                
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!-- main-menu end -->
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- main-navigation end -->
+                </div>
+                <!-- header-second end -->
+
+            </div>
+            <div class="col-auto hidden-md-down">
+                <!-- header dropdown buttons -->
+                <div class="header-dropdown-buttons">
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                            <li>
+                                <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse" target="_blank">
+                                    <div class="form-group has-feedback">
+                                        <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                        <input type="hidden" name="ie" value="UTF-8">
+                                        <input type="text" name="q" size="31" class="form-control">
+                                        <input type="submit" name="sa" value="Search">
+                                    </div>
+                                </form>
+                                <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- header dropdown buttons end -->
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+    <!-- Google Analytics Tracking Code -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-498925-24', 'auto');
+        ga('send', 'pageview');
+    </script>
+</header>
+		</div>
+		<!-- header-container end -->
+
+		<!-- main-container start -->
+		<!-- ================ -->
+		<section class="main-container">
+
+			<div class="container">
+				<div class="row">
+
+					<!-- main start -->
+					<!-- ================ -->
+					<div class="main col-lg-9 order-lg-2 pb-5">
+
+						<!-- page-title start -->
+						<!-- ================ -->
+						<h1 class="page-title">
+							Cooperation between FlashAir IoT Hub and IFTTT（Trigger）</h1>
+						<p class="small text-muted">Latest update: September 2017</p>
+						<!-- page-title end -->
+						<div class="alert alert-icon alert-danger" role="alert">
+							<i class="fa fa-warning"></i>
+							FlashAir IoT Hub will end its service on July 31, 2019 at 10:00(JST). Please see <a class="alert-link" href="..\..\..\..\support\iot-hub\index.htm">here</a> for details.
+						</div>
+
+						<h2>Overview</h2>
+						<div class="separator-2"></div>
+						<p>This tutorial will explain the IFTTT linkage function of FlashAir IoT Hub.
+							<br> First IFTTT is described. If you are already familiar with IFTTT, you can skip it.</p>
+
+						<ul>
+							<li>
+								<a href="#whatis_ifttt">What is IFTTT</a>
+							</li>
+							<li>
+								<a href="#ifttt_measurement">IFTTT linkage of measured values</a>
+							</li>
+							<li>
+								<a href="#ifttt_image">IFTTT linkage of images</a>
+							</li>
+						</ul>
+
+						<h2 id="whatis_ifttt" class="mt-1">What is IFTTT</h2>
+						<div class="separator-2"></div>
+						<p>
+							<a href="https://ifttt.com" target="_blank">IFTTT
+								<i class="fa fa-external-link"></i>
+							</a> is an abbreviation for IF This Then That, a web service that can combine various web services.</p>
+						<p>With IFTTT, you can make a combination of the Web service (this) that will become the trigger (then) and what
+							to do
+							with the Web service (that) and publish the combination. For example, using IFTTT you can create the following
+							combinations.</p>
+						<ul>
+							<li>Tweet to Twitter, post the same to Facebook.</li>
+							<li>Transfer the image uploaded to Instagram to Dropbox as well.</li>
+							<li>Send the value of temperature sensor connected to Raspberry PI by e-mail.</li>
+						</ul>
+						<p>IFTTT can be combined with your own devices as long as it can send and receive HTTP requests in addition to
+							Web services.
+							It's compatible with FlashAir that can handle HTTP requests.</p>
+						<p>To use IFTTT you need to register an account. To try this tutorial, please make an account of IFTTT with your
+							email
+							address or log in with your Google account or Facebook account.</p>
+						<p>The following terms are used in IFTTT. I will explain in detail how to use it in this tutorial.</p>
+						<ul>
+							<li>trigger</li>
+							<ul>
+								<li>A Web service that triggered it. For example, when using Webhooks, call action for each access to the
+									specified URL.
+								</li>
+							</ul>
+							<li>action</li>
+							<ul>
+								<li>Process that trigger calls. For example, if you use e-mail, you send it by e-mail every time there is a
+									notification
+									from trigger.</li>
+							</ul>
+							<li>Applet</li>
+							<ul>
+								<li>A combination of trigger and action. You can also publish your own Applet on IFTTT's site.</li>
+							</ul>
+							<li>Webhooks</li>
+							<ul>
+								<li>One of the services of IFTTT which uses Webhook (a mechanism and way of thinking to notify an event by an
+									HTTP request)
+									and also transmits and receives trigger and action even for devices other than Web services.</li>
+							</ul>
+							<li>Event Name</li>
+							<ul>
+								<li>A name to identify the Applet in Webhooks.</li>
+							</ul>
+							<li>key</li>
+							<ul>
+								<li>An ID for identifying a user in the Webhooks Applet.</li>
+							</ul>
+						</ul>
+
+						<h2>Cooperation between FlashAir IoT Hub and IFTTT</h2>
+						<div class="separator-2"></div>
+						<p>FlashAir IoT Hub makes it easy to link with IFTTT. This tutorial introduces the following IFTTT linkage
+							function.</p>
+						<ul>
+							<li>
+								<a href="#ifttt_measurement">IFTTT linkage of measured values</a>
+							</li>
+							<li>
+								<a href="#ifttt_image">IFTTT linkage of images</a>
+							</li>
+						</ul>
+
+						<h2 id="ifttt_measurement" class="mt-1">IFTTT linkage of measured values</h2>
+						<div class="separator-2"></div>
+						<p>By sending measured values from FlashAir, you can notify other web services via IFTTT.</p>
+						<p>In addition, you can specify the condition of the value to be notified (when it becomes less than the
+							specified numerical
+							value or less) and the timing to notify (how long you want to re-notify). By setting conditions and timing, for
+							example,
+							when the temperature sensor value sent by FlashAir becomes 30 ℃ or more, you can notify by email once a day.</p>
+						<p>Let's try to set the value to be sent by e-mail once a minute when the measured value is 30 or more in
+							cooperation
+							with IFTTT as an example. FlashAir IoT Hub and IFTTT make the following settings.</p>
+						<ul>
+							<li>
+								<strong>FlashAir IoT Hub</strong>
+								<br>
+								<a href="#add_webhook_measure">Make a Webhook</a> to notify when the measured value is 30 or more.
+							</li>
+							<li>
+								<strong>IFTTT</strong>
+								<br> When notified by Webhook,
+								<a href="#add_applet_measure">make an Applet</a> send an email.
+							</li>
+						</ul>
+
+						<h3 id="confirm_key">Confirm key</h3>
+						<p>IFTTT can send and receive notifications by using Webhooks.
+							<br> FlashAir IoT Hub allows you to set up a Webhook that supports IFTTT.</p>
+						<p>To set up Webhook you need the key value to identify your account on IFTTT. Please confirm with the following
+							procedure.</p>
+						<br>
+						<p>Log in to IFTTT, open the
+							<a href="https://ifttt.com/maker_webhooks" target="_blank">Webhooks
+								<i class="fa fa-external-link"></i>
+							</a> page and click "Documentation".</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt01.jpg" alt="Webhooks">
+						</div>
+						<p>Please note the value of the key displayed on the page. It is used for making Webhook.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt02.jpg" alt="IFTTT key">
+						</div>
+
+						<h3 id="add_webhook_measure">Make a Webhook (measured value)</h3>
+						<p>Configure Webhook on FlashAir IoT Hub.</p>
+						<p>Trigger of FlashAir IoT Hub &gt; Click "Set WebHook" at the measurement value.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt25-en.png" alt="Webhook setting (measured value)">
+						</div>
+						<p>Enter the following values in the displayed dialog.</p>
+						<ul>
+							<li>
+								<strong>event</strong>
+								<br> Please enter any name that uniquely identifies Webhook.
+							</li>
+							<li>
+								<strong>key</strong>
+								<br> Please copy and paste the value of the confirmed key with
+								<a href="#confirm_key">confirm key</a> and input it.
+							</li>
+							<li>
+								<strong>Notification</strong>
+								<br>
+								<ul>
+									<li>
+										<strong>Do not re-notify until the next time elapses</strong>
+										<br> The time from notification once to the next notification (default value: 1 minute). Even if an event to
+										notify
+										continuously (measurement value, image upload, etc.) occurs, it will not be notified until this time after
+										notifying
+										once.
+									</li>
+								</ul>
+							</li>
+							<li>
+								<strong>Conditions</strong>
+								<br>
+								<ul>
+									<li>
+										<strong>Measured value</strong>
+										<br> The name of the measurement value linked to IFTTT. Please select one of five measurement values.
+									</li>
+									<li>
+										<strong>Comparison condition</strong>
+										<br> Condition to notify measurement value. Please select whether it is larger or smaller than the threshold
+										value.
+									</li>
+									<li>
+										<strong>Threshold</strong>
+										<br> Numeric value to be compared with measured value. Please enter condition value in combination with
+										comparison
+										condition.
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt03-en.png" alt="Webhook settings dialog">
+						</div>
+						<p>As an example, "1 minute" to not re-notify until the next time elapses, "value 1 (1st measurement value)" to
+							the measurement
+							value, "&gt; (greater than the threshold value) &quot; as the comparison condition, please input "30" as the
+							threshold
+							value.
+						</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt04-en.png" alt="Enter Webhook settings for measurements">
+						</div>
+						<p>When you click the register button, FlashAir IoT Hub setting is complete.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt05-en.png" alt="Register Webhook setting of measured value">
+						</div>
+
+						<h3 id="add_applet_measure">Make an Applet (Measured Value)</h3>
+						<p>Next, let's create an Applet that sends mail when notified from FlashAir IoT Hub on the IFTTT
+							<a href="https://ifttt.com/my_applets" target="_blank">My Applets
+								<i class="fa fa-external-link"></i>
+							</a> page.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt06.jpg" alt="My Applets Page">
+						</div>
+						<p>Click "New Applet" and click "this" part.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt07.jpg" alt="Select this">
+						</div>
+						<p>Search "Webhooks" and click the icon.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt08.jpg" alt="Select Webhooks">
+						</div>
+						<p>Click "Receive a web request".</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt09.jpg" alt="Select trigger">
+						</div>
+						<p>Enter Event Name to identify Webhook and click "Create trigger".
+							<br> This Event Name is matched with "event" of Webhook created by FlashAir IoT Hub.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt10.jpg" alt="triggerを作成">
+						</div>
+						<p>Then click "that" part.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt11.jpg" alt="thatを選択">
+						</div>
+						<p>Search "Email" and click the icon.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt12.jpg" alt="Emailを選択">
+						</div>
+						<p>Click "Send me an email".</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt13.jpg" alt="Emailのaction選択">
+						</div>
+						<p>Enter the subject and body of the email to be sent, and click "Create action".</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt14.jpg" alt="Emailの設定">
+						</div>
+						<p>By default, the Event Name and the date and time that the trigger was called etc are entered. Mail is sent to
+							the e-mail
+							address specified at the time of IFTTT registration, or to the e-mail address associated with that account if
+							linked
+							with a Google or Facebook account.</p>
+						<p>When you click "Finish", IFTTT setting is completed.</p>
+						<div class="row grid-space-10 mb-3">
+							<div class="col-md-4 offset-md-2">
+								<img class="img-thumbnail" src="..\..\..\..\..\images\tutorials\iothub_ifttt15.jpg" alt="Appletの確認画面">
+							</div>
+							<div class="col-md-4">
+								<img class="img-thumbnail" src="..\..\..\..\..\images\tutorials\iothub_ifttt16.jpg" alt="Applet設定完了">
+							</div>
+						</div>
+
+						<h3>Link measured values with IFTTT</h3>
+						<p>Next, edit the sample script on FlashAir as follows, so that the measured value goes up and down between 10
+							and 40.</p>
+						<h4 id="src_main">/bootscript.lua</h4>
+						<pre class="prettyprint linenums lang-lua"><code>local iothub = require("iothub")
+
+-- iothub.startPioUpload(0x03)
+-- iothub.stopPioUpload()
+
+local cnt = 0
+while(1) do
+  iothub.runJob()
+  iothub.addMeasurement({cnt})
+  cnt = cnt + 10
+  if (cnt &gt; 40) then
+    cnt = 10
+  end
+  sleep(10000)
+  collectgarbage("collect")
+end</code></pre>
+						<p>Once you have saved the sample script in FlashAir, place FlashAir in a card reader etc. where you can connect
+							to the
+							access point and wait for a while.
+							<br> It will be successful if the following kind of mail arrives.</p>
+						<pre>
+What: flashair
+When: June 1, 2017 at 10:00AM
+Extra Data: , , ,
+
+If maker Event "flashair", then send me an email at &lt;mail address&gt;
+
+IFTTT</pre>
+						<p>The event name set in IFTTT is written in the mail.</p>
+
+						<h2 id="ifttt_image" class="mt-1">IFTTT linkage of images</h2>
+						<div class="separator-2"></div>
+						<p>Let's set as an example of IFTTT linkage of the image to save images in FlashAir to Google Drive via IFTTT.
+							<br> ※ IFTTT can be linked with Webhook only image files. Please note that uploading files other than images
+							will not
+							be notified.
+							<br> FlashAir IoT Hub and IFTTT make the following settings.</p>
+						<ul>
+							<li>
+								<strong>FlashAir IoT Hub</strong>
+								<br>
+								<a href="#add_webhook_image">Make a Webhook</a> to notify when images are uploaded.
+							</li>
+							<li>
+								<strong>IFTTT</strong>
+								<br> When Webhook is notified of image uploading,
+								<a href="#add_applet_image">make an Applet</a> that saves the image in Google Drive.
+							</li>
+						</ul>
+
+						<h3 id="add_webhook_image">Make a Webhook (image)</h3>
+						<p>As with measured values, IFTTT's webhooks key value is required. Please check the value of key in advance
+							referring
+							to
+							<a href="#confirm_key">confirm key</a>.</p>
+						<p>Let's click "Set WebHook" at the FlashAir IoT Hub file.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt26-en.png" alt="Webhook設定（イメージ）">
+						</div>
+						<p>Enter the following values in the displayed dialog.</p>
+						<ul>
+							<li>
+								<strong>event</strong>
+								<br> Please enter any name that uniquely identifies Webhook.
+							</li>
+							<li>
+								<strong>key</strong>
+								<br> Please copy and paste the value of the confirmed key with
+								<a href="#confirm_key">confirm key</a> and input it.
+							</li>
+						</ul>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt17-en.png" alt="Enter Webhook settings for the image">
+						</div>
+						<p>When you click the register button, FlashAir IoT Hub setting is complete.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt18-en.png" alt="Register Webhook settings for images">
+						</div>
+
+						<h3 id="add_applet_image">Make an Applet (Image)</h3>
+						<p>Next, when the image is uploaded to FlashAir IoT Hub on the IFTTT
+							<a href="https://ifttt.com/my_applets" target="_blank">My Applets
+								<i class="fa fa-external-link"></i>
+							</a> page, let's make an Applet to transfer the image to Google Drive.
+							<br> IFTTT's Webhooks can notify any value with the name of Value 1, Value 2, Value 3. The image Webhook
+							assigns the following
+							values.
+						</p>
+						<ul>
+							<li>
+								<strong>value1</strong>
+								<br> Image URL
+							</li>
+							<li>
+								<strong>value2</strong>
+								<br> Image file name
+							</li>
+							<li>
+								<strong>value3</strong>
+								<br> Unused
+							</li>
+						</ul>
+						<p>You can upload images to web services other than FlashAir IoT Hub by specifying these values for each
+							parameter of
+							the action web service. (The parameters are different for each Web service.)</p>
+						<p>Let's make an applet with IFTTT.</p>
+						<p>Click "New Applet" and click "this" part.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt07.jpg" alt="Select this">
+						</div>
+						<p>Search "Webhooks" and click the icon.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt08.jpg" alt="Select Webhooks">
+						</div>
+						<p>Click "Receive a web request".</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt09.jpg" alt="Select trigger">
+						</div>
+						<p>Enter Event Name to identify Webhook and click "Create trigger".
+							<br> This Event Name needs to be matched with "evnet" of Webhook created by FlashAir IoT Hub.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt19.jpg" alt="Create trigger">
+						</div>
+						<p>Then click "that" part.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt11.jpg" alt="Select the that">
+						</div>
+						<p>Search "Google Drive" and click the icon.</p>
+						<p>Note: When you first create Google Applet's Applet, you need to allow access after logging in with the
+							associated Google
+							Account.
+						</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt20.jpg" alt="Select Google Drive">
+						</div>
+						<p>Click "Upload file from URL".</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt21.jpg" alt="Select Google Drive action">
+						</div>
+						<p>Enter values and click "Create action".</p>
+						<ul>
+							<li>
+								<strong>File URL</strong>
+								<br> Please select
+								<code>Value1</code> (image URL) from Add ingredient.
+							</li>
+							<li>
+								<strong>File name</strong>
+								<br> Please select
+								<code>Value2</code> (image file name) from Add ingredient. By default
+								<code>OccurredAt</code> (event occurrence time) is selected.
+							</li>
+							<li>
+								<strong>Google Drive folder path</strong>
+								<br> Please enter the path of the image save destination folder.
+							</li>
+						</ul>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt22.jpg" alt="Google Drive settings">
+						</div>
+						<p>When you click "Finish", IFTTT setting is completed.</p>
+						<div class="row grid-space-10 mb-3">
+							<div class="col-md-4 offset-md-2">
+								<img class="img-thumbnail" src="..\..\..\..\..\images\tutorials\iothub_ifttt23.jpg" alt="Applet confirmation screen">
+							</div>
+							<div class="col-md-4">
+								<img class="img-thumbnail" src="..\..\..\..\..\images\tutorials\iothub_ifttt24.jpg" alt="Created Applet">
+							</div>
+						</div>
+						<p>This completes the setting.</p>
+
+						<h3>IFTTT link images</h3>
+						<p>Edit CONFIG and let the photo uploaded to FlashAir IoT Hub when the photo is saved in FlashAir. Please refer
+							to
+							<a href="/en/documents/tutorials/iot-hub/3#image-upload">uploading images</a> for setting.
+							<br> Please note that when you try uploading images with a camera other than your main camera, the files
+							uploaded are
+							the latest files in the folder under the
+							<code>DCIM</code> folder on FlashAir.</p>
+						<p>Let's take a picture with the camera that inserted FlashAir.
+							<br> ※ When shooting, please go in a place where FlashAir can connect to the access point.</p>
+						<p>When you confirm that the photo was uploaded in FlashAir IoT Hub file, let's see Google Drive.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block offset-md-2 w-75" src="..\..\..\..\..\images\tutorials\iothub_ifttt27.jpg" alt="Upload to Google Drive">
+						</div>
+						<p>The same photo was uploaded to Google Drive.</p>
+
+						<h2 id="conclusion" class="mt-1">Summary</h2>
+						<div class="separator-2"></div>
+						<p>Using FlashAir IoT Hub and IFTTT, I was able to link the data on FlashAir with the Web service.
+							<br> Since IFTTTT supports various Web services besides those introduced in this tutorial, how about trying a
+							new combination
+							of FlashAir and Web service?</p>
+
+						<!-- Social Buttons -->
+						<div class="clearfix">
+	<ul class="social-links float-right">
+		<li class="twitter">
+			<!--Tweet Button-->
+			<a href="https://twitter.com/share" class="twitter-share-button" {count}="" data-via="FlashAirDev" data-related="FlashAirDev">Tweet</a>
+			<script>
+				! function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0],
+						p = /^http:/.test(d.location) ? 'http' : 'https';
+					if (!d.getElementById(id)) {
+						js = d.createElement(s);
+						js.id = id;
+						js.src = p + '://platform.twitter.com/widgets.js';
+						fjs.parentNode.insertBefore(js, fjs);
+					}
+				}(document, 'script', 'twitter-wjs');
+			</script>
+		</li>
+		<li class="facebook">
+			<!--Facebook Like Button-->
+			<div id="fb-root"></div>
+			<script>
+				(function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+			<div class="fb-like" data-href="https://www.flashair-developers.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+		</li>		
+	</ul>
+</div>
+
+						<!-- pagination start -->
+						<nav aria-label="Page navigation">
+							<ul class="pagination justify-content-between">
+								<li>
+									<a class="btn radius-50 page-link badge-pill" href="..\7\index.htm" aria-label="Previous">
+										<i class="fa fa-chevron-left pr-10"></i>
+										FlashAir IoT Hub API usage example（server-side Web application）
+									</a>
+								</li>
+								<li>
+									<a class="btn radius-50 page-link badge-pill" href="..\9\index.htm" aria-label="Next">
+										FlashAir File Manager
+										<i class="fa fa-chevron-right pl-10"></i>
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<!-- pagination end -->
+
+						<!-- Amazon bottom link -->
+						<div class="col-12">
+	<!--Amazon search result for tablet-->
+	<div class="amazon-widget-bottom mx-auto d-none d-md-block d-lg-none">
+		<!--
+<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=12&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="300" height="250" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" width="320" height="250" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+
+	<!--Amazon search result for smartphone-->
+	<div class="amazon-widget-mobile mx-auto d-md-none">
+		<!--Image-->
+		<!--
+	<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20" alt="TOSHIBA FlashAir SD card 8GB SD-WB008G"><img src="http://ws.assoc-amazon.com/widgets/q?_encoding=UTF8&ASIN=B009RGP7HY&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=flasdeve-20" style="vertical-align:middle;"/></a><br>
+-->
+		<!--Text-->
+		<!--
+<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20">Find TOSHIBA FlashAir SD card 8GB SD-WB008G on Amazon.com</a><img src="http://www.assoc-amazon.com/e/ir?t=flasdeve-20&l=as2&o=1&a=B009RGP7HY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+</div>
+					</div>
+					<!-- main end -->
+
+					<!-- sidebar start -->
+					<!-- ================ -->
+					<aside class="col-lg-3 col-xl-3 order-lg-1">
+						<div class="sidebar">
+	<div class="block clearfix">
+		<nav>
+			<ul class="nav flex-column">
+				<li class="nav-item"> <a class="nav-link" href="..\1\index.htm">
+					Flow of using FlashAir IoT Hub
+					</a>
+				</li>
+				<li class="nav-item"> <a class="nav-link" href="..\2\index.htm">
+					Display a graph of measured values
+					</a>
+				</li>
+				<li class="nav-item"> <a class="nav-link" href="..\3\index.htm">
+					Uploading files
+					</a>
+				</li>
+				<li class="nav-item"> <a class="nav-link" href="..\4\index.htm">
+					Application example of GPIO function
+					</a>
+				</li>
+				<li class="nav-item"> <a class="nav-link" href="..\5\index.htm">
+					Run Lua script
+					</a>
+				</li>
+				<li class="nav-item"> <a class="nav-link" href="..\6\index.htm">
+					How to use FlashAir IoT Hub API
+					</a>
+				</li>
+				<li class="nav-item"> <a class="nav-link" href="..\7\index.htm">
+					FlashAir IoT Hub API usage example
+					<br> (server-side Web application)
+					</a>
+				</li>
+				<li class="nav-item active"> <a class="nav-link active" href="index.htm">
+					Cooperation between
+					<br> FlashAir IoT Hub and IFTTT（Trigger）
+					</a>
+				</li>
+				<li class="nav-item"> <a class="nav-link" href="..\9\index.htm">
+					FlashAir File Manager
+					</a>
+				</li>
+				<li class="nav-item"> <a class="nav-link" href="..\10\index.htm">
+					Upload CSV of measurements
+					</a>
+				</li>
+				<li class="nav-item"> <a class="nav-link" href="..\11\index.htm">
+					Cooperation between
+					<br> FlashAir IoT Hub and IFTTT（Action）
+					</a>
+				</li>
+				<li>
+					<br>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="..\index.htm">
+						Back to Content List
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+
+<!-- Amazon side link -->
+<!--Amazon search result for desktop-->
+<div class="amazon-widget-side d-none d-lg-block">
+	<!--
+	<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=14&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></iframe>
+	-->
+	<div class="amazon-content" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></div>
+</div>
+					</aside>
+					<!-- sidebar end -->
+
+				</div>
+			</div>
+		</section>
+		<!-- main-container end -->
+
+		<!-- footer start -->
+		<!-- ================ -->
+		<!-- footer start -->
+<!-- ================ -->
+<footer id="footer" class="clearfix ">
+
+  <!-- .footer start -->
+  <!-- ================ -->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">
+                <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2.png"> FlashAir&trade; Developers</h2>
+              <div class="separator-2"></div>
+              <p>
+                  A technical information website for developers of Toshiba FlashAir apps or services. FlashAir Developers is operated by Fixstars in cooperation with Toshiba Memory Corporation. To learn more about Fixstars, visit
+                <a target="_blank" href="http://www.fixstars.com">www.fixstars.com
+                  <i class="fa fa-external-link"></i>
+                </a>. ?FlashAir is a trademark of Toshiba Memory Corporation.
+              </p>
+              <ul class="social-links circle animated-effect-1" style="margin-bottom: 10px">
+                <li class="facebook">
+                  <a href="https://www.facebook.com/FlashAir-Developers-115819238627364/" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="twitter">
+                  <a href="https://twitter.com/FlashAirDev/" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+              <ul class="list-unstyled list-inline m-0">
+                <li class="list-inline-item"><a href="..\..\..\..\terms-of-use\index.htm">Terms of Use</a></li>
+                <li class="list-inline-item">|</li>
+                <li class="list-inline-item"><a href="..\..\..\..\privacypolicy\index.htm">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Twitter</h2>
+              <div class="separator-2"></div>
+              <div id="twitterWidget">
+                <a class="twitter-timeline" data-theme="light" href="https://twitter.com/FlashAirDev" data-widget-id="344743426811641856" height="230" data-chrome="nofooter noheader noborders transparent">Latest News</a>
+                <script>
+                  ! function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                      p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                      js = d.createElement(s);
+                      js.id = id;
+                      js.src = p + "://platform.twitter.com/widgets.js";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }
+                  }(document, "script", "twitter-wjs");
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Sitemap</h2>
+              <div class="separator-2"></div>
+              <nav>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\discover\overview\index.htm">What's FlashAir?
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\resources\index.htm">Developer Resources
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\index.htm">Tutorials
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\api\index.htm">API Guide
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\support\index.htm">Support
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\support\forum\index.htm">Developer Forum
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir IoTHub <i class="fa fa-external-link"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .footer end -->
+
+  <!-- .subfooter start -->
+  <!-- ================ -->
+  <div class="subfooter">
+    <div class="container">
+      <div class="subfooter-inner">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center">Copyright &copy; 2019 FlashAir Developers. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .subfooter end -->
+
+  <div id="overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 ml-auto text-white">
+          <p class="mt-3">If you write software or change the settings which are described on this site to your FlashAir device which was purchased at a mass retailer or online shop, it will not be eligible for a free replacement under the warranty policy. Please acknowledge and carry out development at your own risk.
+          </p>
+        </div>
+        <div class="col-md-2 row">
+          <div class="align-self-center">
+          <button class="btn btn-default" id="btn-agree">Accept</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- footer end -->
+
+<!-- JavaScript files placed at the end of the document so the pages load faster -->
+<!-- ================================================== -->
+<!-- Jquery and Bootstap core js files -->
+<script src="..\..\..\..\..\js\jquery.min.js"></script>
+<script src="..\..\..\..\..\js\bootstrap.bundle.min.js"></script>
+<!-- jQuery Revolution Slider  -->
+<script src="..\..\..\..\..\js\jquery.themepunch.tools.min.js"></script>
+<script src="..\..\..\..\..\js\jquery.themepunch.revolution.min.js imagesloaded.pkgd.min.js.pagespeed.jc.cG4Ou2l09T.js"></script><script>eval(mod_pagespeed_faLzhRoycV);</script>
+<!-- Isotope javascript -->
+<script>eval(mod_pagespeed_e7p3yiKri5);</script>
+<script src="..\..\..\..\..\js\isotope.pkgd.min.js jquery.magnific-popup.min.js jquery.waypoints.min.js sticky.min.js jquery.countTo.js.pagespeed.jc.cWqBgip635.js"></script><script>eval(mod_pagespeed_EzjKnImtZK);</script>
+<!-- Magnific Popup javascript -->
+<script>eval(mod_pagespeed_hr4XVzGccf);</script>
+<!-- Appear javascript -->
+<script>eval(mod_pagespeed_zhicDWZgIJ);</script>
+<script>eval(mod_pagespeed_MTpYywWOfL);</script>
+<!-- Count To javascript -->
+<script>eval(mod_pagespeed_dmh3ejQ5o0);</script>
+<!-- Slick carousel javascript -->
+<script src="..\..\..\..\..\js\slick.min.js pace.min.js template.js jquery.cookie.js custom.js jquery.matchHeight.js.pagespeed.jc.Y3630FlbPX.js"></script><script>eval(mod_pagespeed_s1mKdTeuWx);</script>
+<!-- Pace javascript -->
+<script>eval(mod_pagespeed_Zs67JgCVyk);</script>
+<!-- Initialization of Plugins -->
+<script>eval(mod_pagespeed_BIPkzwMbEw);</script>
+<!-- Custom Scripts -->
+<script>eval(mod_pagespeed_uSq_SD1Gz5);</script>
+<script>eval(mod_pagespeed_mqKjjurRp4);</script>
+<script>eval(mod_pagespeed_TteNs$c3Zl);</script>
+<script>
+  $(function () {
+    $('.matchHeight').matchHeight();
+  });
+</script>
+<script src="..\..\..\..\..\js\script.js prettify.js lang-lua.js lang-css.js.pagespeed.jc.ECF3Z77mjV.js"></script><script>eval(mod_pagespeed_SrZ0Yqg7MZ);</script>
+<script>eval(mod_pagespeed_RSPiDhly$4);</script>
+<script>eval(mod_pagespeed_0pGoVUEAt9);</script>
+<script>eval(mod_pagespeed_IrbA2eGHA$);</script>
+<script>
+  ! function ($) {
+    $(function () {
+      PR.prettyPrint()
+    })
+  }(window.jQuery)
+</script>
+		<!-- footer end -->
+	</div>
+	<!-- page wrapper end -->
+</body>
+
+</html>

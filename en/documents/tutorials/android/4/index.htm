@@ -1,0 +1,1301 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+<!-- %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"} -->
+
+<!--Google Apps verification-->
+
+<title>FlashAir Developers - Displaying Image Thumbnails</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta property="fb:admins" content="100006082240886">
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@FlashAirDev">
+<meta property="fb:admins" content="115819238627364">
+<meta property="og:site_name" content="FlashAir Developers">
+<meta property="og:image" content="https://flashair-developers.com/images/assets/ogp.png">
+<meta property="og:url" content="https://flashair-developers.com/en/documents/tutorials/android/4/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FlashAir Developers - Displaying Image Thumbnails">
+
+<link href="..\..\..\..\..\images\flashair_favicon.ico" rel="shortcut icon">
+<link href="..\..\..\..\..\images\apple-touch-icon-152x152-precomposed.png" rel="apple-touch-icon-precomposed" sizes="152x152">
+<link href="..\..\..\..\..\images\apple-touch-icon-120x120-precomposed.png" rel="apple-touch-icon-precomposed" sizes="120x120">
+<link href="..\..\..\..\..\images\apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="..\..\..\..\..\images\apple-touch-icon-76x76-precomposed.png" rel="apple-touch-icon-precomposed" sizes="76x76">
+<link href="..\..\..\..\..\images\apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="..\..\..\..\..\images\apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon-precomposed" sizes="57x57">
+<!-- Web Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+<!-- Bootstrap core CSS -->
+<link href="..\..\..\..\..\css\bootstrap.css" rel="stylesheet">
+
+<!-- Font Awesome CSS -->
+<link href="..\..\..\..\..\css\fonts\font-awesome\css\font-awesome.css" rel="stylesheet">
+
+<!-- Plugins -->
+<link href="..\..\..\..\..\css\magnific-popup.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\settings.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\layers.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\navigation.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\animations.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\slick.css" rel="stylesheet">
+
+<!-- The Project's core CSS file -->
+<!-- Use css/rtl_style.css for RTL version -->
+<link href="..\..\..\..\..\css\style.css" rel="stylesheet">
+<!-- The Project's Typography CSS file, includes used fonts -->
+<!-- Used font for body: Roboto -->
+<!-- Used font for headings: Raleway -->
+<!-- Use css/rtl_typography-default.css for RTL version -->
+<link href="..\..\..\..\..\css\typography-default.css" rel="stylesheet">
+<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer) -->
+<link href="..\..\..\..\..\css\light_blue.css" rel="stylesheet">
+
+<!-- Custom css -->
+<link href="..\..\..\..\..\css\custom.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\prettify.css" rel="stylesheet">
+<!--[if lt IE 9]>
+	<link href="/css/bootstrap-ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <meta name="keywords" content="FlashAir, Android, app, application, WevDev">
+    <meta name="description" content="Tutorials for Android application. FlashAir is a SD card with embedded wireless LAN produced by Toshiba Memory Corp..">
+    <meta property="og:description" content="Tutorials for Android application. FlashAir is a SD card with embedded wireless LAN produced by Toshiba Memory Corp..">
+</head>
+
+<body class=" ">
+
+    <!-- scrollToTop -->
+    <!-- ================ -->
+    <div class="scrollToTop circle">
+        <i class="fa fa-angle-up"></i>
+    </div>
+
+    <!-- page wrapper start -->
+    <!-- ================ -->
+    <div class="page-wrapper">
+        <!-- header-container start -->
+        <div class="header-container">
+            <!-- header-top start -->
+<!-- classes:  -->
+<!-- "dark": dark version of header top e.g. class="header-top dark" -->
+<!-- "colored": colored version of header top e.g. class="header-top colored" -->
+<!-- ================ -->
+<div class="header-top dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-lg-10">
+                <div class="header-top-first clearfix">
+                    <ul class="list-inline float-right">
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\index.htm" id="go-to-japanese">Japanese</a>&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            English&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\..\zh\index.htm" id="go-to-chinese">Chinese</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-2">
+                <!-- header-top-second start -->
+                <!-- ================ -->
+                <div id="header-top-second" class="clearfix">
+                    <!-- header top dropdowns start -->
+                    <!-- ================ -->
+                    <div class="header-top-dropdown text-right">
+                        <div class="btn-group">
+                            <a href="..\..\..\..\member\index.htm" class="btn btn-default btn-sm">
+                                <i class="fa fa-user pr-2"></i> MyAccount</a>
+                        </div>
+                    </div>
+                    <!--  header top dropdowns end -->
+                </div>
+                <!-- header-top-second end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header-top end -->
+<!-- header start -->
+<!-- classes:  -->
+<!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+<!-- "fixed-desktop": enables fixed navigation only for desktop devices e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "fixed-all": enables fixed navigation only for all devices desktop and mobile e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+<!-- "centered": mandatory class for the centered logo layout -->
+<!-- ================ -->
+<header class="header fixed fixed-desktop clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-auto hidden-md-down pl-3">
+                <!-- header-first start -->
+                <!-- ================ -->
+                <div class="header-first clearfix">
+
+                    <!-- logo -->
+                    <div id="logo" class="logo">
+                        <a href="..\..\..\..\index.htm">
+                            <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2.png">
+                            &nbsp;FlashAir&trade; Developers
+                        </a>
+                    </div>
+
+                </div>
+                <!-- header-first end -->
+
+            </div>
+            <div class="col-lg-7 ml-lg-auto">
+
+                <!-- header-second start -->
+                <!-- ================ -->
+                <div class="header-second clearfix">
+
+                    <!-- main-navigation start -->
+                    <!-- classes: -->
+                    <!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+                    <!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+                    <!-- ================ -->
+                    <div class="main-navigation main-navigation--mega-menu  animated">
+                        <nav class="navbar navbar-expand-lg navbar-light p-0">
+                            <div class="navbar-brand clearfix hidden-lg-up">
+
+                                <!-- logo -->
+                                <div id="logo-mobile" class="logo">
+                                    <a href="..\..\..\..\index.htm">
+                                        <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2.png">
+                                        &nbsp;FlashAir&trade; Developers
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- header dropdown buttons -->
+                            <div class="header-dropdown-buttons hidden-lg-up p-0 ml-auto mr-3">
+                                <div class="btn-group">
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                                        <li>
+                                            <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse">
+                                                <div class="form-group has-feedback">
+                                                    <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                                    <input type="hidden" name="ie" value="UTF-8">
+                                                    <input type="text" name="q" size="31" class="form-control">
+                                                    <input type="submit" name="sa" value="Search">
+                                                </div>
+                                            </form>
+                                            <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- header dropdown buttons end -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                <!-- main-menu -->
+                                <ul class="navbar-nav ml-xl-auto">
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="first-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Discover</a>
+                                        <ul class="dropdown-menu" aria-labelledby="first-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\discover\overview\index.htm">What's FlashAir?</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\overview\w04\index.htm">Fourth generation FlashAir W-04</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\gettingstarted\index.htm">Getting Started</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\beginners\index.htm">Beginners Guide with FlashAir
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\usage\index.htm">Get started with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\app\index.htm">Overview of FlashAir Application
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\device\index.htm">Overview of using Devices with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir
+                                                    IoT Hub
+                                                    <i class="fa fa-external-link"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="second-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Application</a>
+                                        <ul class="dropdown-menu" aria-labelledby="second-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\application\iot\index.htm">Application to IoT</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\devices\index.htm">Using with Devices</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\workflow\index.htm">Improve efficiency of operations</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\share-documents\index.htm">Sharing Documents</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\users\index.htm">User's Projects</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\showcase\index.htm">App Showcase</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown active"> <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+                                        <ul class="dropdown-menu" aria-labelledby="third-dropdown">
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\..\ios\index.htm">iOS</a></li>
+                                                    <li><a href="..\index.htm">Android</a></li>
+                                                    <li><a href="..\..\web\index.htm">Web browser</a></li>
+                                                    <li><a href="..\..\advanced\index.htm">Advanced</a></li>
+                                                    <li><a href="..\..\isdio\index.htm">iSDIO</a></li>
+                                                    <li><a href="..\..\lua\index.htm">Lua</a></li>
+                                                    <li><a href="..\..\users\index.htm">User's Tutorials</a></li>
+                                                    <li><a href="..\..\iot-hub\index.htm">FlashAir IoT Hub</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">API Guide</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\..\..\api\commandcgi\index.htm">command.cgi</a></li>
+                                                    <li><a href="..\..\..\api\configcgi\index.htm">config.cgi</a></li>
+                                                    <li><a href="..\..\..\api\thumbnailcgi\index.htm">thumbnail.cgi</a></li>
+                                                    <li><a href="..\..\..\api\uploadcgi\index.htm">upload.cgi</a></li>
+                                                    <li><a href="..\..\..\api\config\index.htm">CONFIG</a></li>
+                                                    <li><a href="..\..\..\api\utility\index.htm">Browser Utility</a></li>
+                                                    <li><a href="..\..\..\api\lua\index.htm">Lua Scripting</a></li>
+                                                    <li><a href="..\..\..\api\isdio\index.htm">iSDIO</a></li>
+                                                    <li><a href="..\..\..\api\fw40003\index.htm">About FW 4.00.03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\resources\index.htm">Developer Resources</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\books\index.htm">Books</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\about\events\index.htm">Events</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="fourth-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                                        <ul class="dropdown-menu" aria-labelledby="fourth-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\support\index.htm">Support</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\forum\index.htm">Developer Forum</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\faq\index.htm">FAQ</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\iot-hub\index.htm">About FlashAir IoT Hub service end</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\developers\index.htm">About FlashAir Developers site closure</a>
+                                            </li>                
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!-- main-menu end -->
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- main-navigation end -->
+                </div>
+                <!-- header-second end -->
+
+            </div>
+            <div class="col-auto hidden-md-down">
+                <!-- header dropdown buttons -->
+                <div class="header-dropdown-buttons">
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                            <li>
+                                <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse" target="_blank">
+                                    <div class="form-group has-feedback">
+                                        <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                        <input type="hidden" name="ie" value="UTF-8">
+                                        <input type="text" name="q" size="31" class="form-control">
+                                        <input type="submit" name="sa" value="Search">
+                                    </div>
+                                </form>
+                                <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- header dropdown buttons end -->
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+    <!-- Google Analytics Tracking Code -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-498925-24', 'auto');
+        ga('send', 'pageview');
+    </script>
+</header>
+        </div>
+        <!-- header-container end -->
+
+        <!-- main-container start -->
+        <!-- ================ -->
+        <section class="main-container">
+
+            <div class="container">
+                <div class="row">
+
+                    <!-- main start -->
+                    <!-- ================ -->
+                    <div class="main col-lg-9 order-lg-2 pb-5">
+
+                        <!-- page-title start -->
+                        <!-- ================ -->
+                        <h1 class="page-title">
+                            Displaying Image Thumbnails</h1>
+                        <p class="small text-muted">Latest update: August 2013</p>
+                        <!-- page-title end -->
+
+                        <p class="mt-5">
+                            <strong>In this tutorial, we will show you how to get thumbnail images of files on your
+                                FlashAir. We
+                                will use
+                                <a href="..\..\..\api\thumbnailcgi\index.htm">thumbnail.cgi</a> and
+                                <a href="..\..\..\api\commandcgi\index.htm">command.cgi</a> to do this. This tutorial
+                                builds off of
+                                <a href="..\3\index.htm">Android Tutorial 3: Downloading Content</a>.</strong>
+                        </p>
+
+                        <p>We will pair file names with their corresponding thumbnail images and show them in an
+                            interactive
+                            content list. Upon starting the application, the root directory will be displayed. The list
+                            will
+                            look like this: </p>
+
+                        <div class="m-3">
+                            <img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\android_tutorial_04_1.png" alt="This image shows a content list of the root directory" title="">
+                        </div>
+
+                        <p>If you click an image file in the content list, it should display the image in another
+                            screen: </p>
+
+                        <div class="m-3">
+                            <img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\android_tutorial_04_2.png" alt="This image shows image view" title="">
+                        </div>
+
+                        <p>Upon clicking on a directory in the content list, that child directory will open and display
+                            its
+                            contents: </p>
+
+                        <div class="m-3">
+                            <img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\android_tutorial_04_3.png" alt="This image shows a content list of a child directory" title="">
+                        </div>
+
+                        <p>If you click an image file in the child directory, it should display the image in another
+                            screen:
+                        </p>
+
+                        <div class="m-3">
+                            <img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\android_tutorial_04_4.png" alt="This image shows image view" title="">
+                        </div>
+
+                        <p>As you are viewing the image, the image file will download to your Android device. </p>
+
+                        <p>This tutorial will take some of the commands learned in previous tutorials and use them to
+                            obtain
+                            or display data. </p>
+
+                        <p>We will need to create the following files in order to write this application: </p>
+
+                        <ul>
+                            <li>
+                                <em>MainActivity.java</em>
+                            </li>
+                            <li>
+                                <em>activity_main.xml</em>
+                            </li>
+                            <li>
+                                <em>ImageViewActivity.java</em>
+                            </li>
+                            <li>
+                                <em>activity_image_view.xml</em>
+                            </li>
+                        </ul>
+
+                        <p>
+                            <span class="badge badge-danger">Important:</span> Please note that your project contains a
+                            file called
+                            <em>AndroidManifest.xml</em>. This file gives your application particular permissions. By
+                            default,
+                            applications are not permitted to access the internet. The path to this file should look
+                            something
+                            like:
+                            <em>[Project_Folder]/AndroidManifest.xml</em>
+                            <br> You will need to add the following lines of code into your
+                            <em>AndroidManifest.xml</em> in order for this application to work: </p>
+
+                        <pre class="prettyprint linenums"><code>&lt;uses-permission android:name="android.permission.INTERNET" /&gt;
+</code></pre>
+
+                        <h2>
+                            Creating the List Layout
+                        </h2>
+                        <div class="separator-2"></div>
+
+                        <p>First, we will write the
+                            <em>activity_main.xml</em> file that determines the layout of our Android App. This can be
+                            found
+                            in your layout folder. The path to this file should look something like:
+                            <em>[Project_Folder]/res/layout/activity_main.xml</em>
+                        </p>
+
+                        <p>This file will be identical to the
+                            <em>activity_main.xml</em> file from
+                            <a href="..\3\index.htm">Android Tutorial 3: Downloading Content</a>.
+                            Please refer to that tutorial for an explanation
+                            of the implementation. </p>
+
+                        <h2>
+                            Creating the Image Viewing Layout
+                        </h2>
+                        <div class="separator-2"></div>
+
+                        <p>Next, we will create the
+                            <em>activity_image_view.xml</em> file that determines the layout of our image viewing
+                            screen. This
+                            can also be found in your layout folder. The path to this file should look something like:
+                            <em>[Project_Folder]/res/layout/activity_image_view.xml</em>
+                        </p>
+
+                        <p>This file will be identical to the
+                            <em>activity_image_view.xml</em> file from
+                            <a href="..\3\index.htm">Android Tutorial 3: Downloading Contents</a>.
+                            Please refer to that tutorial for an explanation
+                            of the implementation. </p>
+
+                        <h2>
+                            Creating the Content List
+                        </h2>
+                        <div class="separator-2"></div>
+
+                        <p>Now we will modify the
+                            <em>MainActivity.java</em> file. We will start by getting a list of the file names in the
+                            desired
+                            directory of your FlashAir device (see
+                            <a href="..\3\index.htm">Android Tutorial 3: Downloading Contents</a>
+                            for a detailed explanation). Then we will get a
+                            thumbnail image for each file in the list and will set the list to display both the file
+                            name
+                            and thumbnail pair in a
+                            <code>ListView</code> format. We will then establish the click behavior of the list. </p>
+
+                        <h3>
+                            Initialization
+                        </h3>
+
+                        <p>The content list should not only be clickable, but specifically be able to recognize which
+                            element
+                            in the list is being clicked and subsequently have that item display itself. We will have
+                            to
+                            implement our own version of the
+                            <code>onItemClick()</code> function to do this, so we will start by modifying the class
+                            declaration.
+                            We want our content list to appear when the application opens, so we will also modify the
+                            <code>onCreate(Bundle savedInstanceState)</code> function that initializes the
+                            <code>Activity</code> class. </p>
+
+                        <p>Although this code is very similar to that in previous tutorials, there are some critical
+                            differences.
+                            If you are reusing code from the previous tutorial, please be sure to check that your
+                            variable
+                            types and function calls match this new tutorial code. We will write the reason using
+                            <code>SimpleAdapter</code> for this function later in this tutorial. </p>
+
+                        <h4>
+                            <em>MainActivity.java</em> (1)</h4>
+
+                        <pre class="prettyprint linenums"><code>public class MainActivity extends Activity implements AdapterView.OnItemClickListener {
+
+    ListView listView;
+    ImageView imageView;
+    TextView currentDirText;
+    TextView numFilesText;
+    Button backButton;
+    String rootDir = "DCIM";
+    String directoryName = rootDir; // Initialize to rootDirectory
+    SimpleAdapter listAdapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        try {
+            // Set buttons
+            getWindow().setTitleColor(Color.rgb(65, 183, 216));
+            backButton = (Button)findViewById(R.id.button1);
+            backButton.getBackground().setColorFilter(Color.rgb(65, 183, 216), PorterDuff.Mode.SRC_IN);
+            backButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(directoryName.equals(rootDir)) {
+                        listRootDirectory();
+                    }
+                    else {
+                        int index = directoryName.lastIndexOf("/");
+                        directoryName = directoryName.substring(0, index);
+                        listDirectory(directoryName);
+                    }
+                }
+            });
+            backButton.setEnabled(false); // Disable in root directory
+            listRootDirectory();
+        }
+        catch(Exception e) {
+            Log.e("ERROR", "ERROR: " + e.toString());
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+</code></pre>
+
+                        <h3>
+                            Creating a ViewBinder
+                        </h3>
+
+                        <p>We are using a
+                            <code>ListView</code> to view our thumbnail and file name pairs. However, since we are
+                            fetching each
+                            image from the FlashAir device, and do not have it as a static
+                            <code>Drawable</code> in our project folder, our application will have to process each
+                            thumbnail image
+                            at runtime. We will have to use an
+                            <code>Adapter</code> to handle the thumbnail images. Since we need the thumbnail images to
+                            be associated
+                            with particular file names, we have chosen to use a
+                            <code>SimpleAdapter</code>, which is declared above. We need to create a custom
+                            <code>ViewBinder</code> so that the
+                            <code>SimpleAdapter</code> will correctly map the thumbnails and file names to their
+                            respective views.
+                        </p>
+
+                        <h4>
+                            <em>MainActivity.java</em> (2)</h4>
+
+                        <pre class="prettyprint linenums"><code>    class CustomViewBinder implements ViewBinder {
+        @Override
+        public boolean setViewValue(View view, Object obj, String text) {
+            if((view instanceof ImageView) &amp;&amp; (obj instanceof Drawable)) {
+                ImageView imageView = (ImageView) view;
+                BitmapDrawable thumbnail = (BitmapDrawable) obj;
+                imageView.setImageDrawable((Drawable)thumbnail);
+                return true;
+            }
+            return false;
+        }
+    }
+</code></pre>
+
+                        <h3>
+                            Making a Content List for a Directory
+                        </h3>
+
+                        <p>We will use the following CGI command to get the number of items in each directory: </p>
+
+                        <ul>
+                            <li>
+                                <code>command.cgi</code> with
+                                <code>op=101</code> and the directory as a parameter
+                                <ul>
+                                    <li>
+                                        The command will look like this:
+                                        <code>http://flashair/command.cgi?op=101&amp;DIR=/DCIM</code>
+                                    </li>
+                                    <li>
+                                        The command will return the following information about the directory:
+                                        <code>&lt;NumberofItems&gt;</code>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <p>We will use the following command to retrieve a list of contents from the FlashAir device:</p>
+
+                        <ul>
+                            <li>
+                                <code>command.cgi</code> with
+                                <code>op=100</code> and the directory as a parameter
+                                <ul>
+                                    <li>
+                                        The command will look like this:
+                                        <code>http://flashair/command.cgi?op=100&amp;DIR=/DCIM</code>
+                                    </li>
+                                    <li>
+                                        The command will return the following information about each item in the
+                                        directory:
+                                        <code>&lt;Directory&gt;,&lt;Filename&gt;,&lt;Size&gt;,&lt;Attribute&gt;,&lt;Date&gt;,&lt;Time&gt;</code>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <p>We will use the following CGI command to get the thumbnail of each image file: </p>
+
+                        <ul>
+                            <li>
+                                <code>thumbnail.cgi</code> with the file path as a parameter
+                                <ul>
+                                    <li>
+                                        The command will look like this:
+                                        <code>http://flashair/thumbnail.cgi?directoryPath/fileName</code>
+                                    </li>
+                                    <li>
+                                        The command will return the following data:
+                                        <code>&lt;EXIF_thumbnail_image&gt;</code>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <p>We will set each thumbnail to be a value for key
+                            <code>"thmb"</code> and each file name to be a value for key
+                            <code>"fname"</code>in a
+                            <code>Map</code>. This
+                            <code>Map</code> will be added to an
+                            <code>ArrayList</code>, which will be used by the
+                            <code>SimpleAdapter</code> above. We will read the file into a
+                            <code>Bitmap</code> object.</p>
+
+                        <p>To execute this CGI command, we will reuse the
+                            <em>FlashAirRequest.java</em> file from
+                            <a href="..\3\index.htm">Android Tutorial 3: Downloading Contents</a>:
+                        </p>
+
+                        <p>The
+                            <code>listRootDirectory()</code> and
+                            <code>listDirectory(directoryName)</code> functions called in the
+                            <code>onCreate(Bundle savedInstanceState)</code> function are the functions that handle
+                            requesting
+                            and fetching content data from the FlashAir device and displaying it to the screen. The
+                            implementation
+                            for these functions are explained in
+                            <a href="..\3\index.htm">Android Tutorial 3: Downloading Contents</a>.
+                            Please refer to that tutorial for additional detail.
+                        </p>
+
+                        <h4>
+                            <em>MainActivity.java</em> (3)</h4>
+
+                        <pre class="prettyprint linenums"><code>    public void listRootDirectory() {
+        directoryName = rootDir;
+        listDirectory(directoryName);
+    }
+
+    public void listDirectory(String dir) {
+        // Prepare command directory path
+        if(dir.equals(rootDir)) {
+            backButton.setEnabled(false);
+        }
+        else {
+            backButton.setEnabled(true);
+        }
+        currentDirText = (TextView)findViewById(R.id.textView1);
+        currentDirText.setText(dir + "/");
+        dir = "/" + dir;
+        ArrayList &lt;NameValuePair&gt; httpParams = new  ArrayList &lt;NameValuePair&gt; ();
+        httpParams.add(new BasicNameValuePair("DIR", dir));
+        dir = URLEncodedUtils.format (httpParams, "UTF-8" );
+        numFilesText = (TextView)findViewById(R.id.textView2);                
+        // Fetch number of items in directory and display in a TextView
+        new AsyncTask&lt;String, Void, String&gt;(){
+            @Override
+            protected String doInBackground(String... params) {
+                String dir = params[0];
+                String fileCount =  FlashAirRequest.getString("http://flashair/command.cgi?op=101&amp;" + dir);                
+
+                return fileCount;
+            }
+            @Override
+            protected void onPostExecute(String fileCount) {
+                numFilesText.setText("Items Found: " + fileCount);                
+            }
+        }.execute(dir);    
+        // Fetch list of items in directory and display in a ListView
+        new AsyncTask&lt;String, Void, ListAdapter&gt;(){
+            @Override
+            protected ListAdapter doInBackground(String... params) {
+                String dir = params[0];
+                ArrayList &lt;String&gt; fileNames = new ArrayList &lt;String&gt;();                
+                String files = FlashAirRequest.getString("http://flashair/command.cgi?op=100&amp;" + dir);
+                String[] allFiles = files.split("([,\n])"); // split by newline or comma
+                for(int i = 2; i &lt; allFiles.length; i= i + 6) {
+                    if(allFiles[i].contains(".")) {
+                        // File
+                        fileNames.add(allFiles[i]);
+                    }
+                    else { // Directory, append "/"
+                        fileNames.add(allFiles[i] + "/");
+                    }
+                }                    
+
+                // Get thumbnails
+                ArrayList&lt;Map&lt;String, Object&gt;&gt; data = new ArrayList&lt;Map&lt;String, Object&gt;&gt;();
+                for(int i = 0; i &lt; fileNames.size(); i++) {
+                    String fileName = "";
+                    fileName = "http://flashair/thumbnail.cgi?" + directoryName + "/" + fileNames.get(i);
+                    Map&lt;String, Object&gt; entry = new HashMap&lt;String, Object&gt;();
+                    BitmapDrawable drawnIcon = null;
+                    if( (fileName.toLowerCase(Locale.getDefault()).endsWith(".jpg")) || (fileName.toLowerCase(Locale.getDefault()).endsWith(".jpeg")) ) {
+                        Bitmap thumbnail = FlashAirRequest.getBitmap(fileName);
+                        drawnIcon = new BitmapDrawable(getResources(), thumbnail);
+                    }
+                    if(drawnIcon == null) {
+                        entry.put("thmb", R.drawable.ic_launcher);
+                    }
+                    else {
+                        entry.put("thmb", drawnIcon);
+                    }
+                    entry.put("fname", fileNames.get(i)); // Put file name onto the map
+                    data.add(entry);
+                }
+
+                // Set the file list to a widget
+                listAdapter = new SimpleAdapter(MainActivity.this,
+                        data,
+                        android.R.layout.activity_list_item,
+                        new String[]{"thmb", "fname"},
+                        new int[]{android.R.id.icon, android.R.id.text1});
+            listAdapter.setViewBinder(new CustomViewBinder());
+
+                return listAdapter;
+            }
+            @Override
+            protected void onPostExecute(ListAdapter listAdapter) {
+                listView = (ListView)findViewById(R.id.listView1);
+                ColorDrawable divcolor = new ColorDrawable(Color.rgb(17, 19, 58));
+                listView.setDivider(divcolor);
+                listView.setDividerHeight(1);
+                listView.setAdapter(listAdapter);
+                listView.setOnItemClickListener(MainActivity.this);                
+            }
+    }.execute(dir);    
+
+}
+</code></pre>
+
+                        <p>Note that the
+                            <code>thumbnail.cgi</code> command works exclusively on JPEG files that have EXIF data. </p>
+
+                        <ul>
+                            <li>Line 60:
+                                <br> We check each file to determine whether it is a JPEG.
+                                <br>Once a file is determined to be a JPEG, we check for the presence of EXIF data
+                                (line 30).
+                                We determine the presence of EXIF data by testing if the
+                                <code>BitmapDrawable</code> that we saved the thumbnail to is
+                                <code>null</code>. If this test returns
+                                <code>null</code>, we assume that the JPEG did not have EXIF data.</li>
+                            <li>Lines 64-66:
+                                <br> We set non-JPEG files and JPEG files that do not contain EXIF data to display the
+                                Android
+                                icon (provided in your default Android Application Project) as their associated
+                                thumbnail
+                                image.
+                            </li>
+                            <li>Lines 86-91:
+                                <br> Set up the new
+                                <code>ListView</code>. This is where the thumbnail and file name data are bound to
+                                their respective
+                                views. This code also identifies the particular layout elements that the data needs to
+                                be
+                                sent to.
+                            </li>
+                            <li>Lines 75-80:
+                                <br> We instantiate our new
+                                <code>Adapter</code> and
+                                <code>CustomViewBinder</code>. These are bound to the
+                                <code>ListView</code> in lines 90.</li>
+                        </ul>
+
+                        <h3>
+                            Setting the Item Click Listener
+                        </h3>
+
+                        <p>We will set the list behavior to be the same as it was in
+                            <a href="..\3\index.htm">Android Tutorial 3: Downloading Contents</a>:</p>
+
+                        <ul>
+                            <li>
+                                If the item clicked is the name of a folder, the next screen will display the contents
+                                of the folder.
+                            </li>
+                            <li>
+                                If the item clicked is the name of an image file, that file will be downloaded, and the
+                                next screen will display its image.
+                            </li>
+                        </ul>
+
+                        <p>Although the behavior of the list will remain the same, the list has been formatted
+                            differently.
+                            (The
+                            <code>Adapter</code> we use for the
+                            <code>ListView</code> is now composed of a list of
+                            <code>Map</code> objects.) </p>
+
+                        <p>We will override the original
+                            <code>onItemClick()</code> function to account for this change:</p>
+
+                        <h4>
+                            <em>MainActivity.java</em> (4)</h4>
+
+                        <pre class="prettyprint linenums"><code>    @Override
+    public void onItemClick(AdapterView&lt;?&gt; l, View v, int position, long id) {
+        Object item = l.getItemAtPosition(position); // Get item at clicked position in list of files
+        if(item instanceof Map&lt;?, ?&gt;) {
+            Map&lt;String, Object&gt; mapItem = (Map&lt;String, Object&gt;) item;
+            Object downloadFile = mapItem.get("fname");
+            if(downloadFile.toString().endsWith("/")) {
+                // Directory, remove "/" and show content list
+                String dirName = downloadFile.toString().substring(0, downloadFile.toString().length()-1); // All but the "/"
+                directoryName = directoryName + "/" + dirName;
+                listDirectory(directoryName);
+            }
+            else if( (downloadFile.toString().toLowerCase(Locale.getDefault()).endsWith(".jpg")) || (downloadFile.toString().toLowerCase(Locale.getDefault()).endsWith(".jpeg"))
+                    || (downloadFile.toString().toLowerCase(Locale.getDefault()).endsWith(".jpe")) || (downloadFile.toString().toLowerCase(Locale.getDefault()).endsWith(".png")) ) {
+                // Image file, download using ImageViewActivity
+                Intent viewImageIntent = new Intent(this, ImageViewActivity.class);
+                viewImageIntent.putExtra("downloadFile", downloadFile.toString());
+                viewImageIntent.putExtra("directoryName", directoryName);
+                MainActivity.this.startActivity(viewImageIntent);
+            }
+        }
+    }
+} // End MainActivity class
+</code></pre>
+
+                        <h2>
+                            Creating the Image Viewing Screen
+                        </h2>
+                        <div class="separator-2"></div>
+
+                        <p>This file will be identical to the
+                            <code>class ImageViewActivity</code> from
+                            <a href="..\3\index.htm">Android Tutorial 3: Downloading Contents</a>.
+                            Please refer to that tutorial for an explanation
+                            of the implementation. </p>
+
+                        <h2>Sample Code</h2>
+                        <div class="separator-2"></div>
+
+                        <p>
+                            <a class="btn btn-primary" href="..\..\..\..\..\files\samplecode\android\android_tutorial_04.zip" onclick="_gaq.push(['_trackEvent', 'Sample Code Download', 'android_tutorial_04.zip', 'en', true ]);">
+                                <i class="fa fa-download pr-10"></i> android_tutorial_04.zip</a> (533KB)</p>
+
+                        <p>
+                            <p class="small">All sample code on this page is licensed under
+                                <a href="..\..\..\license\index.htm" target="_blank">BSD 2-Clause License</a>
+                            </p>
+                        
+
+                        <!-- Social Buttons -->
+                        <div class="clearfix">
+	<ul class="social-links float-right">
+		<li class="twitter">
+			<!--Tweet Button-->
+			<a href="https://twitter.com/share" class="twitter-share-button" {count}="" data-via="FlashAirDev" data-related="FlashAirDev">Tweet</a>
+			<script>
+				! function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0],
+						p = /^http:/.test(d.location) ? 'http' : 'https';
+					if (!d.getElementById(id)) {
+						js = d.createElement(s);
+						js.id = id;
+						js.src = p + '://platform.twitter.com/widgets.js';
+						fjs.parentNode.insertBefore(js, fjs);
+					}
+				}(document, 'script', 'twitter-wjs');
+			</script>
+		</li>
+		<li class="facebook">
+			<!--Facebook Like Button-->
+			<div id="fb-root"></div>
+			<script>
+				(function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+			<div class="fb-like" data-href="https://www.flashair-developers.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+		</li>		
+	</ul>
+</div>
+
+                        <!-- pagination start -->
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-between">
+                                <li>
+                                    <a class="btn radius-50 page-link badge-pill" href="..\3\index.htm" aria-label="Previous">
+                                        <i class="fa fa-chevron-left pr-10"></i>
+                                        Downloading Content
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="btn radius-50 page-link badge-pill" href="..\5\index.htm" aria-label="Next">
+                                        Auto-Refreshing Content List
+                                        <i class="fa fa-chevron-right pl-10"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- pagination end -->
+
+                        <!-- Amazon bottom link -->
+                        <div class="col-12">
+	<!--Amazon search result for tablet-->
+	<div class="amazon-widget-bottom mx-auto d-none d-md-block d-lg-none">
+		<!--
+<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=12&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="300" height="250" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" width="320" height="250" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+
+	<!--Amazon search result for smartphone-->
+	<div class="amazon-widget-mobile mx-auto d-md-none">
+		<!--Image-->
+		<!--
+	<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20" alt="TOSHIBA FlashAir SD card 8GB SD-WB008G"><img src="http://ws.assoc-amazon.com/widgets/q?_encoding=UTF8&ASIN=B009RGP7HY&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=flasdeve-20" style="vertical-align:middle;"/></a><br>
+-->
+		<!--Text-->
+		<!--
+<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20">Find TOSHIBA FlashAir SD card 8GB SD-WB008G on Amazon.com</a><img src="http://www.assoc-amazon.com/e/ir?t=flasdeve-20&l=as2&o=1&a=B009RGP7HY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+</div>
+
+                    </div>
+                    <!-- main end -->
+
+                    <!-- sidebar start -->
+                    <!-- ================ -->
+                    <aside class="col-lg-3 col-xl-3 order-lg-1">
+                        <div class="sidebar">
+  <div class="block clearfix">
+    <nav>
+      <ul class="nav flex-column">
+        <li class="nav-item"> <a class="nav-link" href="..\1\index.htm">
+          Overview of FlashAir App Development for Android
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\2\index.htm">
+          Getting A List of Contents
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\3\index.htm">
+          Downloading Content
+          </a>
+        </li>
+
+        <li class="nav-item active"> <a class="nav-link active" href="index.htm">
+          Displaying Image Thumbnails
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\5\index.htm">
+          Auto-Refreshing Content List
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\6\index.htm">
+          Changing SSID and Network Password
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\7\index.htm">
+          Uploading to FlashAir
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\8\index.htm">
+          Photo Share
+          </a>
+        </li>
+        <li>
+          <br>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\index.htm">
+            Back to Content List
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <p>
+    <a href="..\index.htm">
+      <img alt="flashair android" src="..\..\..\..\..\images\assets\flashair-android-side.png">
+    </a>
+  </p>
+
+  <!-- Amazon side link -->
+  <!--Amazon search result for desktop-->
+<div class="amazon-widget-side d-none d-lg-block">
+	<!--
+	<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=14&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></iframe>
+	-->
+	<div class="amazon-content" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></div>
+</div>
+                    </div></aside>
+                    <!-- sidebar end -->
+
+                </div>
+            </div>
+        </section>
+        <!-- main-container end -->
+
+        <!-- footer start -->
+        <!-- ================ -->
+        <!-- footer start -->
+<!-- ================ -->
+<footer id="footer" class="clearfix ">
+
+  <!-- .footer start -->
+  <!-- ================ -->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">
+                <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2.png"> FlashAir&trade; Developers</h2>
+              <div class="separator-2"></div>
+              <p>
+                  A technical information website for developers of Toshiba FlashAir apps or services. FlashAir Developers is operated by Fixstars in cooperation with Toshiba Memory Corporation. To learn more about Fixstars, visit
+                <a target="_blank" href="http://www.fixstars.com">www.fixstars.com
+                  <i class="fa fa-external-link"></i>
+                </a>. ?FlashAir is a trademark of Toshiba Memory Corporation.
+              </p>
+              <ul class="social-links circle animated-effect-1" style="margin-bottom: 10px">
+                <li class="facebook">
+                  <a href="https://www.facebook.com/FlashAir-Developers-115819238627364/" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="twitter">
+                  <a href="https://twitter.com/FlashAirDev/" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+              <ul class="list-unstyled list-inline m-0">
+                <li class="list-inline-item"><a href="..\..\..\..\terms-of-use\index.htm">Terms of Use</a></li>
+                <li class="list-inline-item">|</li>
+                <li class="list-inline-item"><a href="..\..\..\..\privacypolicy\index.htm">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Twitter</h2>
+              <div class="separator-2"></div>
+              <div id="twitterWidget">
+                <a class="twitter-timeline" data-theme="light" href="https://twitter.com/FlashAirDev" data-widget-id="344743426811641856" height="230" data-chrome="nofooter noheader noborders transparent">Latest News</a>
+                <script>
+                  ! function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                      p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                      js = d.createElement(s);
+                      js.id = id;
+                      js.src = p + "://platform.twitter.com/widgets.js";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }
+                  }(document, "script", "twitter-wjs");
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Sitemap</h2>
+              <div class="separator-2"></div>
+              <nav>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\discover\overview\index.htm">What's FlashAir?
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\resources\index.htm">Developer Resources
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\index.htm">Tutorials
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\api\index.htm">API Guide
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\support\index.htm">Support
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\support\forum\index.htm">Developer Forum
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir IoTHub <i class="fa fa-external-link"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .footer end -->
+
+  <!-- .subfooter start -->
+  <!-- ================ -->
+  <div class="subfooter">
+    <div class="container">
+      <div class="subfooter-inner">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center">Copyright &copy; 2019 FlashAir Developers. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .subfooter end -->
+
+  <div id="overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 ml-auto text-white">
+          <p class="mt-3">If you write software or change the settings which are described on this site to your FlashAir device which was purchased at a mass retailer or online shop, it will not be eligible for a free replacement under the warranty policy. Please acknowledge and carry out development at your own risk.
+          </p>
+        </div>
+        <div class="col-md-2 row">
+          <div class="align-self-center">
+          <button class="btn btn-default" id="btn-agree">Accept</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- footer end -->
+
+<!-- JavaScript files placed at the end of the document so the pages load faster -->
+<!-- ================================================== -->
+<!-- Jquery and Bootstap core js files -->
+<script src="..\..\..\..\..\js\jquery.min.js"></script>
+<script src="..\..\..\..\..\js\bootstrap.bundle.min.js"></script>
+<!-- jQuery Revolution Slider  -->
+<script src="..\..\..\..\..\js\jquery.themepunch.tools.min.js"></script>
+<script src="..\..\..\..\..\js\jquery.themepunch.revolution.min.js imagesloaded.pkgd.min.js.pagespeed.jc.cG4Ou2l09T.js"></script><script>eval(mod_pagespeed_faLzhRoycV);</script>
+<!-- Isotope javascript -->
+<script>eval(mod_pagespeed_e7p3yiKri5);</script>
+<script src="..\..\..\..\..\js\isotope.pkgd.min.js jquery.magnific-popup.min.js jquery.waypoints.min.js sticky.min.js jquery.countTo.js.pagespeed.jc.cWqBgip635.js"></script><script>eval(mod_pagespeed_EzjKnImtZK);</script>
+<!-- Magnific Popup javascript -->
+<script>eval(mod_pagespeed_hr4XVzGccf);</script>
+<!-- Appear javascript -->
+<script>eval(mod_pagespeed_zhicDWZgIJ);</script>
+<script>eval(mod_pagespeed_MTpYywWOfL);</script>
+<!-- Count To javascript -->
+<script>eval(mod_pagespeed_dmh3ejQ5o0);</script>
+<!-- Slick carousel javascript -->
+<script src="..\..\..\..\..\js\slick.min.js pace.min.js template.js jquery.cookie.js custom.js jquery.matchHeight.js.pagespeed.jc.Y3630FlbPX.js"></script><script>eval(mod_pagespeed_s1mKdTeuWx);</script>
+<!-- Pace javascript -->
+<script>eval(mod_pagespeed_Zs67JgCVyk);</script>
+<!-- Initialization of Plugins -->
+<script>eval(mod_pagespeed_BIPkzwMbEw);</script>
+<!-- Custom Scripts -->
+<script>eval(mod_pagespeed_uSq_SD1Gz5);</script>
+<script>eval(mod_pagespeed_mqKjjurRp4);</script>
+<script>eval(mod_pagespeed_TteNs$c3Zl);</script>
+<script>
+  $(function () {
+    $('.matchHeight').matchHeight();
+  });
+</script>
+<script src="..\..\..\..\..\js\script.js prettify.js lang-lua.js lang-css.js.pagespeed.jc.ECF3Z77mjV.js"></script><script>eval(mod_pagespeed_SrZ0Yqg7MZ);</script>
+<script>eval(mod_pagespeed_RSPiDhly$4);</script>
+<script>eval(mod_pagespeed_0pGoVUEAt9);</script>
+<script>eval(mod_pagespeed_IrbA2eGHA$);</script>
+<script>
+  ! function ($) {
+    $(function () {
+      PR.prettyPrint()
+    })
+  }(window.jQuery)
+</script>
+        <!-- footer end -->
+    </div>
+    <!-- page wrapper end -->
+</body>
+
+</html>

@@ -1,0 +1,1153 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+<!-- %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"} -->
+
+<!--Google Apps verification-->
+
+<title>FlashAir Developers - Connecting from FlashAir to Amazon AWS 2 (Execution)</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta property="fb:admins" content="100006082240886">
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@FlashAirDev">
+<meta property="fb:admins" content="115819238627364">
+<meta property="og:site_name" content="FlashAir Developers">
+<meta property="og:image" content="https://flashair-developers.com/images/assets/ogp.png">
+<meta property="og:url" content="https://www.flashair-developers.com/en/documents/tutorials/advanced/8/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FlashAir Developers - Connecting from FlashAir to Amazon AWS 2 (Execution)">
+
+<link href="..\..\..\..\..\images\flashair_favicon-1.ico" rel="shortcut icon">
+<link href="..\..\..\..\..\images\apple-touch-icon-152x152-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="152x152">
+<link href="..\..\..\..\..\images\apple-touch-icon-120x120-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="120x120">
+<link href="..\..\..\..\..\images\apple-touch-icon-114x114-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="..\..\..\..\..\images\apple-touch-icon-76x76-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="76x76">
+<link href="..\..\..\..\..\images\apple-touch-icon-72x72-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="..\..\..\..\..\images\apple-touch-icon-57x57-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="57x57">
+<!-- Web Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+<!-- Bootstrap core CSS -->
+<link href="..\..\..\..\..\css\bootstrap-1.css" rel="stylesheet">
+
+<!-- Font Awesome CSS -->
+<link href="..\..\..\..\..\css\fonts\font-awesome\css\font-awesome-1.css" rel="stylesheet">
+
+<!-- Plugins -->
+<link href="..\..\..\..\..\css\magnific-popup-1.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\settings-1.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\layers-1.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\navigation-1.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\animations-1.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\slick-1.css" rel="stylesheet">
+
+<!-- The Project's core CSS file -->
+<!-- Use css/rtl_style.css for RTL version -->
+<link href="..\..\..\..\..\css\style-1.css" rel="stylesheet">
+<!-- The Project's Typography CSS file, includes used fonts -->
+<!-- Used font for body: Roboto -->
+<!-- Used font for headings: Raleway -->
+<!-- Use css/rtl_typography-default.css for RTL version -->
+<link href="..\..\..\..\..\css\typography-default-1.css" rel="stylesheet">
+<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer) -->
+<link href="..\..\..\..\..\css\light_blue-1.css" rel="stylesheet">
+
+<!-- Custom css -->
+<link href="..\..\..\..\..\css\custom-1.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\prettify-1.css" rel="stylesheet">
+<!--[if lt IE 9]>
+	<link href="/css/bootstrap-ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+	<meta name="keywords" content="FlashAir, Amazon AWS">
+	<meta name="description" content="Tutorial about how to connect from FlashAir to Amazon AWS. FlashAir is a SD card with embedded wireless LAN produced by Toshiba Memory Corp..">
+	<meta property="og:description" content="Tutorial about how to connect from FlashAir to Amazon AWS. FlashAir is a SD card with embedded wireless LAN produced by Toshiba Memory Corp..">
+</head>
+
+<body class=" ">
+
+	<!-- scrollToTop -->
+	<!-- ================ -->
+	<div class="scrollToTop circle">
+		<i class="fa fa-angle-up"></i>
+	</div>
+
+	<!-- page wrapper start -->
+	<!-- ================ -->
+	<div class="page-wrapper">
+		<!-- header-container start -->
+		<div class="header-container">
+			<!-- header-top start -->
+<!-- classes:  -->
+<!-- "dark": dark version of header top e.g. class="header-top dark" -->
+<!-- "colored": colored version of header top e.g. class="header-top colored" -->
+<!-- ================ -->
+<div class="header-top dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-lg-10">
+                <div class="header-top-first clearfix">
+                    <ul class="list-inline float-right">
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\index-1.htm" id="go-to-japanese">Japanese</a>&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            English&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\..\zh\index-1.htm" id="go-to-chinese">Chinese</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-2">
+                <!-- header-top-second start -->
+                <!-- ================ -->
+                <div id="header-top-second" class="clearfix">
+                    <!-- header top dropdowns start -->
+                    <!-- ================ -->
+                    <div class="header-top-dropdown text-right">
+                        <div class="btn-group">
+                            <a href="..\..\..\..\member\index-1.htm" class="btn btn-default btn-sm">
+                                <i class="fa fa-user pr-2"></i> MyAccount</a>
+                        </div>
+                    </div>
+                    <!--  header top dropdowns end -->
+                </div>
+                <!-- header-top-second end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header-top end -->
+<!-- header start -->
+<!-- classes:  -->
+<!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+<!-- "fixed-desktop": enables fixed navigation only for desktop devices e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "fixed-all": enables fixed navigation only for all devices desktop and mobile e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+<!-- "centered": mandatory class for the centered logo layout -->
+<!-- ================ -->
+<header class="header fixed fixed-desktop clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-auto hidden-md-down pl-3">
+                <!-- header-first start -->
+                <!-- ================ -->
+                <div class="header-first clearfix">
+
+                    <!-- logo -->
+                    <div id="logo" class="logo">
+                        <a href="..\..\..\..\index-1.htm">
+                            <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2-1.png">
+                            &nbsp;FlashAir&trade; Developers
+                        </a>
+                    </div>
+
+                </div>
+                <!-- header-first end -->
+
+            </div>
+            <div class="col-lg-7 ml-lg-auto">
+
+                <!-- header-second start -->
+                <!-- ================ -->
+                <div class="header-second clearfix">
+
+                    <!-- main-navigation start -->
+                    <!-- classes: -->
+                    <!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+                    <!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+                    <!-- ================ -->
+                    <div class="main-navigation main-navigation--mega-menu  animated">
+                        <nav class="navbar navbar-expand-lg navbar-light p-0">
+                            <div class="navbar-brand clearfix hidden-lg-up">
+
+                                <!-- logo -->
+                                <div id="logo-mobile" class="logo">
+                                    <a href="..\..\..\..\index-1.htm">
+                                        <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2-1.png">
+                                        &nbsp;FlashAir&trade; Developers
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- header dropdown buttons -->
+                            <div class="header-dropdown-buttons hidden-lg-up p-0 ml-auto mr-3">
+                                <div class="btn-group">
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                                        <li>
+                                            <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse">
+                                                <div class="form-group has-feedback">
+                                                    <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                                    <input type="hidden" name="ie" value="UTF-8">
+                                                    <input type="text" name="q" size="31" class="form-control">
+                                                    <input type="submit" name="sa" value="Search">
+                                                </div>
+                                            </form>
+                                            <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- header dropdown buttons end -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                <!-- main-menu -->
+                                <ul class="navbar-nav ml-xl-auto">
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="first-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Discover</a>
+                                        <ul class="dropdown-menu" aria-labelledby="first-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\discover\overview\index-1.htm">What's FlashAir?</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\overview\w04\index-1.htm">Fourth generation FlashAir W-04</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\gettingstarted\index-1.htm">Getting Started</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\beginners\index-1.htm">Beginners Guide with FlashAir
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\usage\index-1.htm">Get started with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\app\index-1.htm">Overview of FlashAir Application
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\device\index-1.htm">Overview of using Devices with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir
+                                                    IoT Hub
+                                                    <i class="fa fa-external-link"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="second-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Application</a>
+                                        <ul class="dropdown-menu" aria-labelledby="second-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\application\iot\index-1.htm">Application to IoT</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\devices\index-1.htm">Using with Devices</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\workflow\index-1.htm">Improve efficiency of operations</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\share-documents\index-1.htm">Sharing Documents</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\users\index-1.htm">User's Projects</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\showcase\index-1.htm">App Showcase</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown active"> <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+                                        <ul class="dropdown-menu" aria-labelledby="third-dropdown">
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\..\ios\index-1.htm">iOS</a></li>
+                                                    <li><a href="..\..\android\index-1.htm">Android</a></li>
+                                                    <li><a href="..\..\web\index-1.htm">Web browser</a></li>
+                                                    <li><a href="..\index-1.htm">Advanced</a></li>
+                                                    <li><a href="..\..\isdio\index-1.htm">iSDIO</a></li>
+                                                    <li><a href="..\..\lua\index-1.htm">Lua</a></li>
+                                                    <li><a href="..\..\users\index-1.htm">User's Tutorials</a></li>
+                                                    <li><a href="..\..\iot-hub\index-1.htm">FlashAir IoT Hub</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">API Guide</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\..\..\api\commandcgi\index-1.htm">command.cgi</a></li>
+                                                    <li><a href="..\..\..\api\configcgi\index-1.htm">config.cgi</a></li>
+                                                    <li><a href="..\..\..\api\thumbnailcgi\index-1.htm">thumbnail.cgi</a></li>
+                                                    <li><a href="..\..\..\api\uploadcgi\index-1.htm">upload.cgi</a></li>
+                                                    <li><a href="..\..\..\api\config\index-1.htm">CONFIG</a></li>
+                                                    <li><a href="..\..\..\api\utility\index-1.htm">Browser Utility</a></li>
+                                                    <li><a href="..\..\..\api\lua\index-1.htm">Lua Scripting</a></li>
+                                                    <li><a href="..\..\..\api\isdio\index-1.htm">iSDIO</a></li>
+                                                    <li><a href="..\..\..\api\fw40003\index-1.htm">About FW 4.00.03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\resources\index-1.htm">Developer Resources</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\books\index-1.htm">Books</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\about\events\index-1.htm">Events</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="fourth-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                                        <ul class="dropdown-menu" aria-labelledby="fourth-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\support\index-1.htm">Support</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\forum\index-1.htm">Developer Forum</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\faq\index-1.htm">FAQ</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\iot-hub\index-1.htm">About FlashAir IoT Hub service end</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\developers\index-1.htm">About FlashAir Developers site closure</a>
+                                            </li>                
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!-- main-menu end -->
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- main-navigation end -->
+                </div>
+                <!-- header-second end -->
+
+            </div>
+            <div class="col-auto hidden-md-down">
+                <!-- header dropdown buttons -->
+                <div class="header-dropdown-buttons">
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                            <li>
+                                <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse" target="_blank">
+                                    <div class="form-group has-feedback">
+                                        <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                        <input type="hidden" name="ie" value="UTF-8">
+                                        <input type="text" name="q" size="31" class="form-control">
+                                        <input type="submit" name="sa" value="Search">
+                                    </div>
+                                </form>
+                                <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- header dropdown buttons end -->
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+    <!-- Google Analytics Tracking Code -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-498925-24', 'auto');
+        ga('send', 'pageview');
+    </script>
+</header>
+		</div>
+		<!-- header-container end -->
+
+		<!-- main-container start -->
+		<!-- ================ -->
+		<section class="main-container">
+
+			<div class="container">
+				<div class="row">
+
+					<!-- main start -->
+					<!-- ================ -->
+					<div class="main col-lg-9 order-lg-2 pb-5">
+
+						<!-- page-title start -->
+						<!-- ================ -->
+						<h1 class="page-title">
+							Connecting from FlashAir to Amazon AWS 2 (Execution)</h1>
+						<p class="small text-muted">Latest update: October 2018</p>
+						<!-- page-title end -->
+
+						<p class="mt-5">
+							<strong>In this tutorial we will explain how to send the data saved in FlashAir directly to AWS via the
+								Internet. Please see <a href="..\7\index-1.htm">here</a> for preparation.</strong>
+						</p>
+
+						<ul>
+							<li>
+								<a href="#aws">AWS settings</a>
+							</li>
+							<li>
+								<a href="#flashair">FlashAir settings</a>
+							</li>
+							<li>
+								<a href="#file">About files to save</a>
+							</li>
+							<li>
+								<a href="#result">Execution result</a>
+							</li>
+							<li>
+								<a href="#practicaluse">Practical use</a>
+							</li>
+							<li>
+								<a href="#conclusion">Conclusion</a>
+							</li>
+							<li>
+								<a href="#samplecode">Sample code</a>
+							</li>
+						</ul>
+
+						<h2 id="aws" class="mt-1">AWS settings</h2>
+						<div class="separator-2"></div>
+						<p>Using the AWS account creation page, create a bucket and upload the image from FlashAir Let's run. Most of
+							the settings in AWS are explained in detail on the official website, so this tutorial will be summarized
+							briefly.</p>
+						<p>If you have already created an account and uploaded from another application in S3, please proceed to the <a href="#flashair">FlashAir
+								setting</a> section.</p>
+
+						<h3>Create an AWS account</h3>
+						<p>Create an account from: <a href="https://portal.aws.amazon.com/billing/signup#/start" target="_blank">creating
+								an AWS account <i class="fa fa-external-link"></i></a>.</p>
+						<p>Create account by filling out your contact information, credit card information registration, account
+							authentication,
+							AWS support plan selection. <br>
+							Please set up <a href="https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html" target="_blank">AWS
+								security authentication information
+								<i class="fa fa-external-link"></i></a> etc. as necessary.</p>
+
+						<h3 id="backet">Create a bucket in S3</h3>
+						<p>Log in to <a href="https://aws.amazon.com/s3/" target="_blank">Amazon S3 <i class="fa fa-external-link"></i></a>
+							and select "Get started with Amazon S3". Proceed as instructed on the screen.</p>
+						<p>Click the "Create bucket" button.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\advanced_tutorial_08_01-en-1.png">
+						</div>
+						<p>Create a bucket from the dialog. Enter an arbitrary bucket name and region, and click the "Next" button.</p>
+						<ul class="list-unstyled offset-2">
+							<li>Example
+								<ul>
+									<li>flashair-bkt</li>
+									<li>Asia Pacific (Tokyo)</li>
+								</ul>
+							</li>
+						</ul>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block w-75" src="..\..\..\..\..\images\tutorials\advanced_tutorial_08_02-en-1.png">
+						</div>
+						<p>Get the access key and secret key necessary for uploading the file to S3.<br>Click the account name from the
+							AWS menu bar and click "My Security Credentials".</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\advanced_tutorial_08_03-en-1.png">
+						</div>
+						<p>Please refer to <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html" target="_blank">Managing Access Keys for IAM Users <i class="fa fa-external-link"></i></a> and obtain access
+							key and secret key. Please be careful about handling this information and do not share it with others.</p>
+						<p>Now S3 is ready.</p>
+
+						<h2 id="flashair" class="mt-1">FlashAir settings</h2>
+						<div class="separator-2"></div>
+						<p>Set up FlashAir. Set FlashAir to station mode and use it as a wireless LAN slave. For details of station mode,
+							please refer to the <a href="..\1\index-1.htm">using Station Mode</a> tutorial.</p>
+						<h3>CONFIG setting</h3>
+						<p>
+							To edit CONFIG, open <code>/SD_WLAN/CONFIG</code> with an editor (any is fine) and edit the above parameters.
+							Since this
+							folder is a hidden folder, let's use a tool that can handle hidden folders.
+							<br> (
+							<code>/Volumes/(volume label name)/SD_WLAN/CONFIG</code> for Mac)
+						</p>
+						<p>You need to change the following three parameters in CONFIG. In parentheses are the corresponding parameter
+							names of
+							<a href="..\..\..\..\..\ja\documents\api\config\index-1.htm">CONFIG</a>.
+							<br>If the parameter does not exist, add a new line. The order of parameters does not matter.
+						</p>
+						<dl class="list-icons">
+							<dt>
+								<i class="fa fa-pencil pr-10"></i>Action mode (APPMODE)</dt>
+							<dd>Specify
+								<code>5</code> for the parameter and change to station operation in infrastructure mode.</dd>
+							<dt>
+								<i class="fa fa-pencil pr-10"></i>Wireless LAN SSID (APPSSID)</dt>
+							<dd>Specify the SSID of the wireless LAN to be connected.</dd>
+							<dt>
+								<i class="fa fa-pencil pr-10"></i>Wireless LAN network password (APPNETWORKKEY)</dt>
+							<dd>Specify the network key of the wireless LAN to be connected.</dd>
+						</dl>
+						<p>After editing, for example, it should look like this:</p>
+						<pre>APPMODE=5
+APPNAME=flashair
+APPSSID=FOOSSID
+APPNETWORKKEY=password0123
+CIPATH=/DCIM/100__TSB/FA000001.JPG
+VERSION=F15DBW3BW4.00.03
+CID=02544d535730384708c00b7d7800d201
+PRODUCT=FlashAir
+VENDOR=TOSHIBA
+MASTERCODE=18002d4ff0a2
+LOCK=1
+</pre>
+
+						<h3>File installation and setting</h3>
+						<p>Download the <a href="#samplecode">sample code</a> at the bottom of the page and expand it in the root folder
+							of FlashAir.</p>
+						<p>Open <code>s3-put.lua</code> with a text editor.<br>
+							The 3-6th line should be overwritten with the correct region, bucket name at the time of bucket creation, access
+							key acquired
+							by <a href="#backet">creating a bucket in S3</a>, secret key.</p>
+						<h4><em>s3-put.lua</em></h4>
+						<pre class="prettyprint linenums lang-lua"><code>local s3Util = require("s3-util")
+
+local REGION = "ap-northeast-1"					--Region name
+local ACCESS_KEY = "AKIAIXXXXXXXXXXXXXXX"			--Access key
+local SECRET_KEY = "/id3EXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX+"	--Secret key
+local BACKET = "flashair-bkt"					--Bucket name</code></pre>
+
+						<h2 id="file" class="mt-1">About Saving Files</h2>
+						<div class="separator-2"></div>
+						<ul>
+							<li>DATA folder<br>The folder in which to store the file to upload.</li>
+							<li><a href="#s3-exec">s3-exec.lua</a><br>If a file created after the date saved in the <code>sendtime.dat</code>
+								file is found in the DATA folder, it will pass the file path and file name to the S3Put class of the<code>s3-put.lua</code>
+								file . It checks in the folder every 10 seconds.</li>
+							<li><a href="#s3-put">s3-put.lua</a><br>Upload the file to S3 bucket.</li>
+							<li>s3-util.lua<br>A utility class. Calculate and acquire current time, hash value, etc.</li>
+							<li>sendtime.dat<br>Save the current date after searching the file with <code>s3-exec.lua</code>.<br>
+								<span class="badge badge-warning">Caution</span> If the file is not uploaded, enter <code>1</code> in the file
+								(initialize the file search date and time), overwrite the file, save the file again in the DATA folder, and
+								copy it.</li>
+						</ul>
+						<p>Let's see how the sample program works.</p>
+
+						<h3 id="s3-exec">s3-exec.lua</h3>
+						<pre class="prettyprint linenums:3 lang-lua"><code>local s3Put = require("s3-put")
+
+local dir = "/DATA"</code></pre>
+						<ul>
+							<li>Line 3<br>Include s3-put.lua.</li>
+							<li>Line 5<br>Specify the storage folder of the file to be uploaded. To change, please modify <code>"/DATA"</code>
+								to an arbitrary location.</li>
+						</ul>
+						<pre class="prettyprint linenums:8 lang-lua"><code>function readSendTime()
+    local sendtime = 0
+    local file = io.open(timefile, "r")
+    if file ~= nil then
+        sendtime = file:read()
+        file.close()
+    else
+	debug("file == nil")
+    end
+    if sendtime == nil then
+	debug("sendtime == nil")
+        sendtime = 0
+    end 
+    debug("r = " .. sendtime)
+    return sendtime
+end</code></pre>
+						<p>Read contents of sendtime.dat file and return contents.</p>
+						<pre class="prettyprint linenums:25 lang-lua"><code>function writeSendTime(sendtime)
+    local file = io.open(timefile, "w+")
+    if file ~= nil then
+        file:write(sendtime)
+        file:close()
+        debug("w = " .. sendtime)
+    end
+end</code></pre>
+						<p>Write the date and time of file search in the sendtime.dat file.</p>
+						<pre class="prettyprint linenums:34 lang-lua"><code>function getFilePath(sendtime)
+	local filepath, filename = nil
+	local result, filelist, sendtime = fa.search("file", dir, sendtime)
+	if result == 1 or filelist ~= nil then
+		filepath = string.match(filelist, "(.-),")
+		if filepath ~= nil then
+			filename = string.match(filepath, "[^/]*$")
+		end
+	end
+	return filepath, filename, sendtime 
+end</code></pre>
+						<p>In <a href="..\..\..\api\lua\index-1.htm#search">fa.search</a>, retrieve and return the oldest file (the newest file
+							after the specified date and time) of the file whose sendtime and update date matches the argument sendtime or
+							argument sendtime.</p>
+
+						<pre class="prettyprint linenums:46 lang-lua"><code>function execute()
+    local temptime = readSendTime()
+    if temptime == 0 then
+        print("temptime == 0")
+        return
+    end
+    local sendtime = tonumber(readSendTime()) + 1
+    local filepath, filename, time = getFilePath(sendtime)
+    if filepath == nil then
+        return
+    end
+    writeSendTime(time)
+    debug("filepath = " .. filepath .. ", filename = " .. filename)
+    local s3 = s3Put:new(filepath, filename)
+    s3:put()
+end</code></pre>
+						<ul>
+							<li>Line 47<br>Read the sendtime.dat file. If the date and time can not be acquired, it ends.</li>
+							<li>Lines 52-53<br>Searches for files after 0.5 seconds of the date and time stored in sendtime.dat.</li>
+							<li>Line 57<br>If the corresponding file is found, write update date of the file in sendtime.dat.</li>
+							<li>Line 59<br>Pass the file path and file name to the S3Put class.</li>
+						</ul>
+						<pre class="prettyprint linenums:63 lang-lua"><code>function debug(msg)
+	--print(msg)
+end</code></pre>
+						<p>Display debug messages. Please delete the comment if necessary.</p>
+						<pre class="prettyprint linenums:67 lang-lua"><code>while(1) do
+	execute()
+	sleep(10000)
+	collectgarbage("collect")
+end</code></pre>
+						<p>Use <a href="..\..\..\..\..\ja\documents\api\lua\index-1.htm#sleep">sleep</a> to search files every 10 seconds.</p>
+						<h3 id="s3-put">s3-put.lua</h3>
+						<pre class="prettyprint linenums lang-lua"><code>local s3Util = require("s3-util")</code></pre>
+						<p>Include s3-util.lua.</p>
+						<pre class="prettyprint linenums:8 lang-lua"><code>local S3Put = {}
+
+S3Put.new = function(self, fpath, fname)
+	local this = {}
+	
+	local SERVICE = "s3"
+	local METHOD = "PUT"
+	local PAYLOAD_HASH = "UNSIGNED-PAYLOAD"
+	local ALGORITHM = "AWS4-HMAC-SHA256"
+	local CONTENT_TYPE = "image/jpeg"
+
+	local util = s3Util:new()
+	
+	local filepath = fpath
+	local filename = fname
+	local nowtime = util:currentTime()
+	local date = os.date('!%Y%m%d', nowtime)
+	local datetime = os.date('!%Y%m%dT%H%M00Z', nowtime)
+
+	local dataPath = "/" .. filename
+	local host = SERVICE .. "-" .. REGION .. ".amazonaws.com"
+	local canonicalURI = "/" .. BACKET .. dataPath
+	local endpoint = "https://" .. host
+	local canonicalQuery = ""
+	local signedHeader = "content-type;host;x-amz-content-sha256;x-amz-date"
+	local credentialScope = date .. "/" .. REGION .. "/" .. SERVICE .. "/" .. "aws4_request"
+			
+	function this:getSignatureKey()
+		local kDate = util:sha256Hmac("AWS4" .. SECRET_KEY, date)
+		debug("kDate=" .. kDate)
+		kDate = util:hex2Bytes(kDate)
+		local kRegion = util:sha256Hmac(kDate, REGION)
+		debug("kRegion=" .. kRegion)
+		kRegion = util:hex2Bytes(kRegion)
+		local kService = util:sha256Hmac(kRegion, SERVICE)
+		debug("kService=" .. kService)
+		kService = util:hex2Bytes(kService)
+		local kSigning = util:sha256Hmac(kService, "aws4_request")
+		debug("kSigning=" .. kSigning)
+		kSigning = util:hex2Bytes(kSigning)
+		return kSigning
+	end
+
+	function this:getStringToSign()
+		local canonicalHeader = "content-type:" .. CONTENT_TYPE .. "\n" .. "host:" .. host .. "\n" .. "x-amz-content-sha256:" .. PAYLOAD_HASH .. "\n" .. "x-amz-date:" .. datetime .. "\n"
+		local canonicalRequest = METHOD .. "\n" .. canonicalURI .. "\n" .. canonicalQuery .. "\n" .. canonicalHeader .. "\n" .. signedHeader .. "\n" .. PAYLOAD_HASH
+		debug("canonicalRequest=" .. canonicalRequest)
+		local stringToSign = ALGORITHM .. "\n" .. datetime .. "\n" .. credentialScope .. "\n" .. util:sha256(canonicalRequest)
+		debug("----stringToSign----")
+		debug(stringToSign)
+		debug("----------")
+		return stringToSign
+	end
+
+	function this:getAuthorizationHeader()
+		local signingKey = this:getSignatureKey()
+		local signingSign = this:getStringToSign()
+		local signature = util:sha256Hmac(signingKey, signingSign)
+		local authorizationHeader = ALGORITHM .. " " .. "Credential=" .. ACCESS_KEY .. "/" .. credentialScope .. ", " .. "SignedHeaders=" .. signedHeader .. ", " .. "Signature=" .. signature
+		debug("----authorizationHeader----")
+		debug(authorizationHeader)
+		debug("----------")
+		return authorizationHeader
+	end
+
+	function this:put()
+		local filesize = lfs.attributes(filepath, "size")
+		local headers = {["content-type"]=CONTENT_TYPE, ["content-length"]=filesize, ["x-amz-date"]=datetime, ["x-amz-content-sha256"]=PAYLOAD_HASH, ["Authorization"]=this:getAuthorizationHeader()}
+		local requestURL = endpoint .. canonicalURI
+		local body, code, header = fa.request{
+			url=requestURL,
+			method="PUT",
+			headers=headers,
+			file=filepath,
+			body='&lt;!--WLANSDFILE--&gt;',
+			bufsize=1460*10,
+		}
+
+		debug("resultCode=" .. code)
+		debug("headers=" ..  cjson.encode(header))
+		debug("body=" .. body)
+	end 
+	return this
+end</code></pre>
+						<p>Define the S3 Put class.</p>
+						<ul>
+							<li>Lines 35-49<br>Create a key to encrypt the signature from secret key, region etc. For details of the
+								signature key, please click <a href="https://docs.aws.amazon.com/general/latest/gr/sigv4-create-string-to-sign.html" target="_blank">here <i class="fa fa-external-link"></i></a>.</li>
+							<li>Lines 51-60<br>Create a canonical request. For details of regular request, please click <a href="https://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html" target="_blank">here <i class="fa fa-external-link"></i></a>.</li>
+							<li>Lines 62-71<br>Create a signature string of <strong>Signature Version 4</strong> with a signature key and
+								canonical request and create a canonical header.</li>
+							<li>Lines 73-89<br>Send the request to the AWS API using <a href="..\..\..\api\lua\index-1.htm#request">fa.request</a>.</li>
+						</ul>
+
+						<h2 id="result" class="mt-1">Execution result</h2>
+						<div class="separator-2"></div>
+						<p>After <a href="#flashair">setting up FlashAir</a>, plug in FlashAir and reflect the fix.</p>
+						<div class="alert alert-warning">
+							After writing, please be sure to re-recognize the SD memory card host device by unplugging the card and
+							reinserting it.<br>
+							When the OS on the host side of the SD memory card such as a PC caches the contents of the SD memory card, the
+							OS can not recognize the change.
+							Therefore, if you change simultaneously from SD memory card host equipment and Lua or CGI, FAT inconsistency may
+							occur.
+						</div>
+						<p>Execute <code>http://flashair/s3-exec.lua</code> from the browser.</p>
+						<p>Create or copy a file in the DATA folder.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\advanced_tutorial_08_04-1.png">
+						</div>
+						<p>Confirm that the upload was done.<br>Click the bucket name created in "<a href="#aws">Creating bucket in S3</a>".</p>
+						<p>It was confirmed that the file in the DATA folder was uploaded.</p>
+						<div class="m-3">
+							<img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\advanced_tutorial_08_05-en-1.png">
+						</div>
+
+						<h2 id="practicaluse" class="mt-1">Practical use</h2>
+						<div class="separator-2"></div>
+						<p>By using Lambda, Rekognition and QuickSight described in the <a href="..\7\index-1.htm#overall">Preparation
+								section</a>, you can process, visualize, and share acquired data.</p>
+						<p> I used Rekognition to analyze and find the subject's age, gender, existence of smile etc. from a face picture
+							photographed
+							with a moving body detection camera, and visualized with QuickSight.</p>
+						<p>When a file is added to S3 in Lambda, create a function to call Rekognition 's face recognition processing.
+							For how to create a function, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/tutorial-scheduled-events-create-function.html" target="_blank">Create a Lambda Function <i class="fa fa-external-link"></i></a>.<br>
+							Prepare a bucket to store the analysis result in S3 beforehand. After acquiring Rekognition's analysis
+							processing, prepare a function to store the analysis result in analysis bucket in S3.</p>
+						<p>In QuickSight, you can create graphs using the data of the analysis bucket created above. For instructions on
+							using QuickSight, see <a href="https://docs.aws.amazon.com/quicksight/latest/user/welcome.html" target="_blank">What
+								Is Amazon QuickSight? <i class="fa fa-external-link"></i></a>.</p>
+						<div class="row">
+							<figure class="col-lg-6 figure">
+								<div class="overlay-container">
+									<img class="img-thumbnail" src="..\..\..\..\..\images\tutorials\advanced_tutorial_08_06-en-1.png">
+									<a class="overlay-link popup-img img-thumbnail" href="..\..\..\..\..\images\tutorials\advanced_tutorial_08_06-en-1.png">
+										<i class="fa fa-search-plus"></i>
+									</a>
+								</div>
+								<figcaption class="figure-caption text-center">Lambda</figcaption>
+							</figure>
+							<figure class="col-lg-6 figure">
+								<div class="overlay-container">
+									<img class="img-thumbnail" src="..\..\..\..\..\images\tutorials\advanced_tutorial_08_07-1.png">
+									<a class="overlay-link popup-img img-thumbnail" href="..\..\..\..\..\images\tutorials\advanced_tutorial_08_07-1.png">
+										<i class="fa fa-search-plus"></i>
+									</a>
+								</div>
+								<figcaption class="figure-caption text-center">QuickSight</figcaption>
+							</figure>
+						</div>
+
+						<h2 id="conclusion" class="mt-1">Conclusion</h2>
+						<div class="separator-2"></div>
+						<p>Although I explained how to connect directly to AWS from a Lua script on a FlashAir device twice, it is also
+							possible for AWS's side to perform various computing processes difficult with simply using a FlashAir alone.</p>
+						<p>If you are already using a device with an SD card slot, you can quickly build an IoT system as long as you
+							have a WiFi environment.</p>
+
+						<dl>
+							<dt><a href="https://iot-hub.flashair-developers.com/" target="_blank">FlashAir IoT Hub <i class="fa fa-external-link"></i></a></dt>
+							<dd>If compute processing is unnecessary, FlashAir IoT Hub is useful when only accumulating data, or if you want
+								to link with SNS or other web service. You can perform visualization of the cloud management of photos and
+								measured values and IFTTT linking with just a simple setting. Please see <a href="https://iot-hub.flashair-developers.com/" target="_blank">here <i class="fa fa-external-link"></i></a> for the detail.</dd>
+						</dl>
+
+						<h2 id="samplecode" class="mt-1">Sample code</h2>
+						<div class="separator-2"></div>
+						<p>
+							<a class="btn btn-primary" href="..\..\..\..\..\files\samplecode\advanced\advanced_tutorial_08-1.zip" onclick="_gaq.push(['_trackEvent', 'Sample Code Download', 'advanced_tutorial_02.zip', 'ja', true]);">
+								<i class="fa fa-download pr-10"></i> advanced_tutorial_08.zip </a> (4KB)</p>
+						<p>
+							<small>All sample code on this page is licensed under
+								<a href="..\..\..\license\index-1.htm" target="_blank">BSD 2-Clause License</a></small>
+						</p>
+
+						<!-- Social Buttons -->
+						<div class="clearfix">
+	<ul class="social-links float-right">
+		<li class="twitter">
+			<!--Tweet Button-->
+			<a href="https://twitter.com/share" class="twitter-share-button" {count}="" data-via="FlashAirDev" data-related="FlashAirDev">Tweet</a>
+			<script>
+				! function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0],
+						p = /^http:/.test(d.location) ? 'http' : 'https';
+					if (!d.getElementById(id)) {
+						js = d.createElement(s);
+						js.id = id;
+						js.src = p + '://platform.twitter.com/widgets.js';
+						fjs.parentNode.insertBefore(js, fjs);
+					}
+				}(document, 'script', 'twitter-wjs');
+			</script>
+		</li>
+		<li class="facebook">
+			<!--Facebook Like Button-->
+			<div id="fb-root"></div>
+			<script>
+				(function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+			<div class="fb-like" data-href="https://www.flashair-developers.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+		</li>		
+	</ul>
+</div>
+
+						<!-- pagination start -->
+						<nav aria-label="Page navigation">
+							<ul class="pagination justify-content-between">
+								<li>
+									<a class="btn radius-50 page-link badge-pill" href="..\7\index-1.htm" aria-label="Previous">
+										<i class="fa fa-chevron-left pr-10"></i>
+										Connecting from FlashAir to Amazon AWS 1 (Preparation)
+									</a>
+								</li>
+								<li>
+									<a class="btn radius-50 page-link badge-pill" href="..\index-1.htm" aria-label="Next">
+										Back to Content List
+										<i class="fa fa-chevron-right pl-10"></i>
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<!-- pagination end -->
+
+						<!-- Amazon bottom link -->
+						<div class="col-12">
+	<!--Amazon search result for tablet-->
+	<div class="amazon-widget-bottom mx-auto d-none d-md-block d-lg-none">
+		<!--
+<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=12&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="300" height="250" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" width="320" height="250" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+
+	<!--Amazon search result for smartphone-->
+	<div class="amazon-widget-mobile mx-auto d-md-none">
+		<!--Image-->
+		<!--
+	<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20" alt="TOSHIBA FlashAir SD card 8GB SD-WB008G"><img src="http://ws.assoc-amazon.com/widgets/q?_encoding=UTF8&ASIN=B009RGP7HY&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=flasdeve-20" style="vertical-align:middle;"/></a><br>
+-->
+		<!--Text-->
+		<!--
+<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20">Find TOSHIBA FlashAir SD card 8GB SD-WB008G on Amazon.com</a><img src="http://www.assoc-amazon.com/e/ir?t=flasdeve-20&l=as2&o=1&a=B009RGP7HY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+</div>
+					</div>
+					<!-- main end -->
+
+					<!-- sidebar start -->
+					<!-- ================ -->
+					<aside class="col-lg-3 col-xl-3 order-lg-1">
+						<div class="sidebar">
+  <div class="block clearfix">
+    <nav>
+      <ul class="nav flex-column">
+        <li class="nav-item"> <a class="nav-link" href="..\1\index-1.htm">Using
+          Station Mode </a>
+        </li>
+        <li class="nav-item"> <a class="nav-link" href="..\2\index-1.htm">
+          Uploading to FlashAir
+          </a>
+        </li>
+        <li class="nav-item"> <a class="nav-link" href="..\3\index-1.htm">
+          Using Internet Pass-Thru Mode
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\4\index-1.htm">
+          Wireless Sensor data Monitoring with FlashAir
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\5\index-1.htm">
+          Using multiple FlashAirs to be connected to same wireless LAN
+          </a>
+        </li>
+        <li class="nav-item"> <a class="nav-link" href="..\6\index-1.htm">
+          Reload FlashAir
+          </a>
+        </li>
+        <li class="nav-item"> <a class="nav-link" href="..\7\index-1.htm">
+          Connecting from FlashAir to <br class="d-none d-md-block">Amazon AWS 1 (Preparation)
+          </a>
+        </li>
+
+        <li class="nav-item active"> <a class="nav-link active" href="index-1.htm">
+          Connecting from FlashAir to <br class="d-none d-md-block">Amazon AWS 2 (Execution)
+          </a>
+        </li>
+
+        <li>
+          <br>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\index-1.htm">
+            Back to Content List
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<!-- Amazon side link -->
+<!--Amazon search result for desktop-->
+<div class="amazon-widget-side d-none d-lg-block">
+	<!--
+	<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=14&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></iframe>
+	-->
+	<div class="amazon-content" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></div>
+</div>
+					</aside>
+					<!-- sidebar end -->
+				</div>
+			</div>
+		</section>
+		<!-- main-container end -->
+
+		<!-- footer start -->
+		<!-- ================ -->
+		<!-- footer start -->
+<!-- ================ -->
+<footer id="footer" class="clearfix ">
+
+  <!-- .footer start -->
+  <!-- ================ -->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">
+                <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2-1.png"> FlashAir&trade; Developers</h2>
+              <div class="separator-2"></div>
+              <p>
+                  A technical information website for developers of Toshiba FlashAir apps or services. FlashAir Developers is operated by Fixstars in cooperation with Toshiba Memory Corporation. To learn more about Fixstars, visit
+                <a target="_blank" href="http://www.fixstars.com">www.fixstars.com
+                  <i class="fa fa-external-link"></i>
+                </a>. ?FlashAir is a trademark of Toshiba Memory Corporation.
+              </p>
+              <ul class="social-links circle animated-effect-1" style="margin-bottom: 10px">
+                <li class="facebook">
+                  <a href="https://www.facebook.com/FlashAir-Developers-115819238627364/" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="twitter">
+                  <a href="https://twitter.com/FlashAirDev/" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+              <ul class="list-unstyled list-inline m-0">
+                <li class="list-inline-item"><a href="..\..\..\..\terms-of-use\index-1.htm">Terms of Use</a></li>
+                <li class="list-inline-item">|</li>
+                <li class="list-inline-item"><a href="..\..\..\..\privacypolicy\index-1.htm">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Twitter</h2>
+              <div class="separator-2"></div>
+              <div id="twitterWidget">
+                <a class="twitter-timeline" data-theme="light" href="https://twitter.com/FlashAirDev" data-widget-id="344743426811641856" height="230" data-chrome="nofooter noheader noborders transparent">Latest News</a>
+                <script>
+                  ! function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                      p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                      js = d.createElement(s);
+                      js.id = id;
+                      js.src = p + "://platform.twitter.com/widgets.js";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }
+                  }(document, "script", "twitter-wjs");
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Sitemap</h2>
+              <div class="separator-2"></div>
+              <nav>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\discover\overview\index-1.htm">What's FlashAir?
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\resources\index-1.htm">Developer Resources
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\index-1.htm">Tutorials
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\api\index-1.htm">API Guide
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\support\index-1.htm">Support
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\support\forum\index-1.htm">Developer Forum
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir IoTHub <i class="fa fa-external-link"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .footer end -->
+
+  <!-- .subfooter start -->
+  <!-- ================ -->
+  <div class="subfooter">
+    <div class="container">
+      <div class="subfooter-inner">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center">Copyright &copy; 2019 FlashAir Developers. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .subfooter end -->
+
+  <div id="overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 ml-auto text-white">
+          <p class="mt-3">If you write software or change the settings which are described on this site to your FlashAir device which was purchased at a mass retailer or online shop, it will not be eligible for a free replacement under the warranty policy. Please acknowledge and carry out development at your own risk.
+          </p>
+        </div>
+        <div class="col-md-2 row">
+          <div class="align-self-center">
+          <button class="btn btn-default" id="btn-agree">Accept</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- footer end -->
+
+<!-- JavaScript files placed at the end of the document so the pages load faster -->
+<!-- ================================================== -->
+<!-- Jquery and Bootstap core js files -->
+<script src="..\..\..\..\..\js\jquery.min-1.js"></script>
+<script src="..\..\..\..\..\js\bootstrap.bundle.min-1.js"></script>
+<!-- jQuery Revolution Slider  -->
+<script src="..\..\..\..\..\js\jquery.themepunch.tools.min-1.js"></script>
+<script src="..\..\..\..\..\js\jquery.themepunch.revolution.min.js imagesloaded.pkgd.min.js.pagespeed.jc.cG4Ou2l09T-1.js"></script><script>eval(mod_pagespeed_faLzhRoycV);</script>
+<!-- Isotope javascript -->
+<script>eval(mod_pagespeed_e7p3yiKri5);</script>
+<script src="..\..\..\..\..\js\isotope.pkgd.min.js jquery.magnific-popup.min.js jquery.waypoints.min.js sticky.min.js jquery.countTo.js.pagespeed.jc.cWqBgip635-1.js"></script><script>eval(mod_pagespeed_EzjKnImtZK);</script>
+<!-- Magnific Popup javascript -->
+<script>eval(mod_pagespeed_hr4XVzGccf);</script>
+<!-- Appear javascript -->
+<script>eval(mod_pagespeed_zhicDWZgIJ);</script>
+<script>eval(mod_pagespeed_MTpYywWOfL);</script>
+<!-- Count To javascript -->
+<script>eval(mod_pagespeed_dmh3ejQ5o0);</script>
+<!-- Slick carousel javascript -->
+<script src="..\..\..\..\..\js\slick.min.js pace.min.js template.js jquery.cookie.js custom.js jquery.matchHeight.js.pagespeed.jc.Y3630FlbPX-1.js"></script><script>eval(mod_pagespeed_s1mKdTeuWx);</script>
+<!-- Pace javascript -->
+<script>eval(mod_pagespeed_Zs67JgCVyk);</script>
+<!-- Initialization of Plugins -->
+<script>eval(mod_pagespeed_BIPkzwMbEw);</script>
+<!-- Custom Scripts -->
+<script>eval(mod_pagespeed_uSq_SD1Gz5);</script>
+<script>eval(mod_pagespeed_mqKjjurRp4);</script>
+<script>eval(mod_pagespeed_TteNs$c3Zl);</script>
+<script>
+  $(function () {
+    $('.matchHeight').matchHeight();
+  });
+</script>
+<script src="..\..\..\..\..\js\script.js prettify.js lang-lua.js lang-css.js.pagespeed.jc.ECF3Z77mjV-1.js"></script><script>eval(mod_pagespeed_SrZ0Yqg7MZ);</script>
+<script>eval(mod_pagespeed_RSPiDhly$4);</script>
+<script>eval(mod_pagespeed_0pGoVUEAt9);</script>
+<script>eval(mod_pagespeed_IrbA2eGHA$);</script>
+<script>
+  ! function ($) {
+    $(function () {
+      PR.prettyPrint()
+    })
+  }(window.jQuery)
+</script>
+		<!-- footer end -->
+	</div>
+	<!-- page wrapper end -->
+</body>
+
+</html>

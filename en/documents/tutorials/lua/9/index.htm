@@ -1,0 +1,958 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<!-- %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"} -->
+
+<!--Google Apps verification-->
+
+<title>FlashAir Developers - Uploading to Google Drive with Lua</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta property="fb:admins" content="100006082240886">
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@FlashAirDev">
+<meta property="fb:admins" content="115819238627364">
+<meta property="og:site_name" content="FlashAir Developers">
+<meta property="og:image" content="https://flashair-developers.com/images/assets/ogp.png">
+<meta property="og:url" content="https://flashair-developers.com/en/documents/tutorials/lua/9/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FlashAir Developers - Uploading to Google Drive with Lua">
+
+<link href="..\..\..\..\..\images\flashair_favicon.ico" rel="shortcut icon">
+<link href="..\..\..\..\..\images\apple-touch-icon-152x152-precomposed.png" rel="apple-touch-icon-precomposed" sizes="152x152">
+<link href="..\..\..\..\..\images\apple-touch-icon-120x120-precomposed.png" rel="apple-touch-icon-precomposed" sizes="120x120">
+<link href="..\..\..\..\..\images\apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="..\..\..\..\..\images\apple-touch-icon-76x76-precomposed.png" rel="apple-touch-icon-precomposed" sizes="76x76">
+<link href="..\..\..\..\..\images\apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="..\..\..\..\..\images\apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon-precomposed" sizes="57x57">
+<!-- Web Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+<!-- Bootstrap core CSS -->
+<link href="..\..\..\..\..\css\bootstrap.css" rel="stylesheet">
+
+<!-- Font Awesome CSS -->
+<link href="..\..\..\..\..\css\fonts\font-awesome\css\font-awesome.css" rel="stylesheet">
+
+<!-- Plugins -->
+<link href="..\..\..\..\..\css\magnific-popup.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\settings.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\layers.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\navigation.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\animations.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\slick.css" rel="stylesheet">
+
+<!-- The Project's core CSS file -->
+<!-- Use css/rtl_style.css for RTL version -->
+<link href="..\..\..\..\..\css\style.css" rel="stylesheet">
+<!-- The Project's Typography CSS file, includes used fonts -->
+<!-- Used font for body: Roboto -->
+<!-- Used font for headings: Raleway -->
+<!-- Use css/rtl_typography-default.css for RTL version -->
+<link href="..\..\..\..\..\css\typography-default.css" rel="stylesheet">
+<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer) -->
+<link href="..\..\..\..\..\css\light_blue.css" rel="stylesheet">
+
+<!-- Custom css -->
+<link href="..\..\..\..\..\css\custom.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\prettify.css" rel="stylesheet">
+<!--[if lt IE 9]>
+	<link href="/css/bootstrap-ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+  <meta name="keywords" content="FlashAir, Lua, app, application, WevDev, HTTP, FTP">
+  <meta name="description" content="Tutorials for Lua application. FlashAir is a SD card with embedded wireless LAN produced by Toshiba Memory Corp..">
+  <meta property="og:description" content="Tutorials for Lua application. FlashAir is a SD card with embedded wireless LAN produced by Toshiba Memory Corp..">
+</head>
+
+<body class=" ">
+
+  <!-- scrollToTop -->
+  <!-- ================ -->
+  <div class="scrollToTop circle">
+    <i class="fa fa-angle-up"></i>
+  </div>
+
+  <!-- page wrapper start -->
+  <!-- ================ -->
+  <div class="page-wrapper">
+    <!-- header-container start -->
+    <div class="header-container">
+      <!-- header-top start -->
+<!-- classes:  -->
+<!-- "dark": dark version of header top e.g. class="header-top dark" -->
+<!-- "colored": colored version of header top e.g. class="header-top colored" -->
+<!-- ================ -->
+<div class="header-top dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-lg-10">
+                <div class="header-top-first clearfix">
+                    <ul class="list-inline float-right">
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\index.htm" id="go-to-japanese">Japanese</a>&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            English&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\..\zh\index.htm" id="go-to-chinese">Chinese</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-2">
+                <!-- header-top-second start -->
+                <!-- ================ -->
+                <div id="header-top-second" class="clearfix">
+                    <!-- header top dropdowns start -->
+                    <!-- ================ -->
+                    <div class="header-top-dropdown text-right">
+                        <div class="btn-group">
+                            <a href="..\..\..\..\member\index.htm" class="btn btn-default btn-sm">
+                                <i class="fa fa-user pr-2"></i> MyAccount</a>
+                        </div>
+                    </div>
+                    <!--  header top dropdowns end -->
+                </div>
+                <!-- header-top-second end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header-top end -->
+<!-- header start -->
+<!-- classes:  -->
+<!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+<!-- "fixed-desktop": enables fixed navigation only for desktop devices e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "fixed-all": enables fixed navigation only for all devices desktop and mobile e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+<!-- "centered": mandatory class for the centered logo layout -->
+<!-- ================ -->
+<header class="header fixed fixed-desktop clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-auto hidden-md-down pl-3">
+                <!-- header-first start -->
+                <!-- ================ -->
+                <div class="header-first clearfix">
+
+                    <!-- logo -->
+                    <div id="logo" class="logo">
+                        <a href="..\..\..\..\index.htm">
+                            <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2.png">
+                            &nbsp;FlashAir&trade; Developers
+                        </a>
+                    </div>
+
+                </div>
+                <!-- header-first end -->
+
+            </div>
+            <div class="col-lg-7 ml-lg-auto">
+
+                <!-- header-second start -->
+                <!-- ================ -->
+                <div class="header-second clearfix">
+
+                    <!-- main-navigation start -->
+                    <!-- classes: -->
+                    <!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+                    <!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+                    <!-- ================ -->
+                    <div class="main-navigation main-navigation--mega-menu  animated">
+                        <nav class="navbar navbar-expand-lg navbar-light p-0">
+                            <div class="navbar-brand clearfix hidden-lg-up">
+
+                                <!-- logo -->
+                                <div id="logo-mobile" class="logo">
+                                    <a href="..\..\..\..\index.htm">
+                                        <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2.png">
+                                        &nbsp;FlashAir&trade; Developers
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- header dropdown buttons -->
+                            <div class="header-dropdown-buttons hidden-lg-up p-0 ml-auto mr-3">
+                                <div class="btn-group">
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                                        <li>
+                                            <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse">
+                                                <div class="form-group has-feedback">
+                                                    <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                                    <input type="hidden" name="ie" value="UTF-8">
+                                                    <input type="text" name="q" size="31" class="form-control">
+                                                    <input type="submit" name="sa" value="Search">
+                                                </div>
+                                            </form>
+                                            <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- header dropdown buttons end -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                <!-- main-menu -->
+                                <ul class="navbar-nav ml-xl-auto">
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="first-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Discover</a>
+                                        <ul class="dropdown-menu" aria-labelledby="first-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\discover\overview\index.htm">What's FlashAir?</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\overview\w04\index.htm">Fourth generation FlashAir W-04</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\gettingstarted\index.htm">Getting Started</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\beginners\index.htm">Beginners Guide with FlashAir
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\usage\index.htm">Get started with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\app\index.htm">Overview of FlashAir Application
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\device\index.htm">Overview of using Devices with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir
+                                                    IoT Hub
+                                                    <i class="fa fa-external-link"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="second-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Application</a>
+                                        <ul class="dropdown-menu" aria-labelledby="second-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\application\iot\index.htm">Application to IoT</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\devices\index.htm">Using with Devices</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\workflow\index.htm">Improve efficiency of operations</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\share-documents\index.htm">Sharing Documents</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\users\index.htm">User's Projects</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\showcase\index.htm">App Showcase</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown active"> <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+                                        <ul class="dropdown-menu" aria-labelledby="third-dropdown">
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\..\ios\index.htm">iOS</a></li>
+                                                    <li><a href="..\..\android\index.htm">Android</a></li>
+                                                    <li><a href="..\..\web\index.htm">Web browser</a></li>
+                                                    <li><a href="..\..\advanced\index.htm">Advanced</a></li>
+                                                    <li><a href="..\..\isdio\index.htm">iSDIO</a></li>
+                                                    <li><a href="..\index.htm">Lua</a></li>
+                                                    <li><a href="..\..\users\index.htm">User's Tutorials</a></li>
+                                                    <li><a href="..\..\iot-hub\index.htm">FlashAir IoT Hub</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">API Guide</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\..\..\api\commandcgi\index.htm">command.cgi</a></li>
+                                                    <li><a href="..\..\..\api\configcgi\index.htm">config.cgi</a></li>
+                                                    <li><a href="..\..\..\api\thumbnailcgi\index.htm">thumbnail.cgi</a></li>
+                                                    <li><a href="..\..\..\api\uploadcgi\index.htm">upload.cgi</a></li>
+                                                    <li><a href="..\..\..\api\config\index.htm">CONFIG</a></li>
+                                                    <li><a href="..\..\..\api\utility\index.htm">Browser Utility</a></li>
+                                                    <li><a href="..\..\..\api\lua\index.htm">Lua Scripting</a></li>
+                                                    <li><a href="..\..\..\api\isdio\index.htm">iSDIO</a></li>
+                                                    <li><a href="..\..\..\api\fw40003\index.htm">About FW 4.00.03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\resources\index.htm">Developer Resources</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\books\index.htm">Books</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\about\events\index.htm">Events</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="fourth-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                                        <ul class="dropdown-menu" aria-labelledby="fourth-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\support\index.htm">Support</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\forum\index.htm">Developer Forum</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\faq\index.htm">FAQ</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\iot-hub\index.htm">About FlashAir IoT Hub service end</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\developers\index.htm">About FlashAir Developers site closure</a>
+                                            </li>                
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!-- main-menu end -->
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- main-navigation end -->
+                </div>
+                <!-- header-second end -->
+
+            </div>
+            <div class="col-auto hidden-md-down">
+                <!-- header dropdown buttons -->
+                <div class="header-dropdown-buttons">
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                            <li>
+                                <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse" target="_blank">
+                                    <div class="form-group has-feedback">
+                                        <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                        <input type="hidden" name="ie" value="UTF-8">
+                                        <input type="text" name="q" size="31" class="form-control">
+                                        <input type="submit" name="sa" value="Search">
+                                    </div>
+                                </form>
+                                <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- header dropdown buttons end -->
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+    <!-- Google Analytics Tracking Code -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-498925-24', 'auto');
+        ga('send', 'pageview');
+    </script>
+</header>
+    </div>
+    <!-- header-container end -->
+
+    <!-- main-container start -->
+    <!-- ================ -->
+    <section class="main-container">
+
+      <div class="container">
+        <div class="row">
+
+          <!-- main start -->
+          <!-- ================ -->
+          <div class="main col-lg-9 order-lg-2 pb-5">
+
+            <!-- page-title start -->
+            <!-- ================ -->
+            <h1 class="page-title">
+              Uploading to Google Drive with Lua</h1>
+            <p class="small text-muted">Latest update: June 2016</p>
+            <!-- page-title end -->
+
+            <p class="mt-5">
+              <strong>This article is reprinted with permission of Fixstars Solutions Inc.
+                <br> Reprinted source:
+                <a href="http://www.fixstars.com/en/news/?p=451" target="_blank">http://www.fixstars.com/en/news/?p=451
+                  <i class="fa fa-external-link"></i>
+                </a>
+              </strong></p>
+            <img src="..\..\..\..\..\images\assets\flashair_frontpage05.png" alt="flashair_frontpage05">
+
+            <h2 id="_introduction" class="mt-1">Introduction</h2>
+            <div class="separator-2"></div>
+            <p>In this example, we&#8217;re going to show you how to upload an image to Google Drive using LUA, and
+              Google&#8217;s
+              device API. The idea is for it to be run from something with limited input capabilities, such as
+              <a href="https://www.flashair-developers.com/">Toshiba&#8217;s "FlashAir" SD card</a>. Unfortunately
+              we&#8217;ll still need a device with full input capabilities
+              to set everything up, but once the setup is complete you&#8217;re left with a headless system that can
+              upload
+              indefinitely.
+            </p>
+
+            <h2 id="_steps" class="mt-1">Steps</h2>
+            <div class="separator-2"></div>
+            <h3>1. Setting up the Project in Google</h3>
+            <p>The first step is to create a project in Google&#8217;s
+              <a href="https://console.developers.google.com/">API Console
+                <i class="fa fa-external-link"></i>
+              </a>. Once this is done, enable the Google Drive API and SDK.</p>
+            <p>Next, go to the "Credentials" section in your project and select "OAuth client ID" for Create
+              credentials. Set
+              any of the product name in the consent screen, then select "Other" for application type.</p>
+
+            <h3>2. Authorizing Our Device</h3>
+            <p>Now that that&#8217;s setup, we need to authorize our device with Google which is a two-step process.
+              First we
+              need to send a post request to "accounts.google.com/o/oauth2/device/code". Set the content type to
+              "application/x-www-form-urlencoded",
+              with two fields client_id (the Client ID we generated above, under "Client ID for native application"),
+              and
+              scope (which should be set to "https://docs.google.com/feeds"). You can use several tools to accomplish
+              this
+              - but the chrome extension "postman" makes it super easy.</p>
+            <p>Example:</p>
+            <pre class="prettyprint nocode"><code>POST /o/oauth2/device/code HTTP/1.1
+Host: accounts.google.com
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+client_id={Your client ID}
+scope=http://docs.google.com/feeds/
+</code></pre>
+            <p>NOTE: Google tells you to use "https://www.googleapis.com/auth/drive" for scope, but this will return a
+              "Invalid_scope:
+              Not authorized to request the scope". Using /feeds/ instead will grant us the Google Drive authorization
+              we
+              need.
+            </p>
+            <p>Now for part two! The response will contain a user_code, and a verification_url. Navigate to that url
+              (it&#8217;s
+              probably https://www.google.com/device) then enter the user_code. Hold on the device code too!
+            </p>
+            <p>Example Response:</p>
+            <pre class="prettyprint nocode"><code>&quot;device_code&quot;: {Device code},
+&quot;user_code&quot;: {Your user code},
+&quot;verification_url&quot;: &quot;https://www.google.com/device&quot;,
+&quot;expires_in&quot;: 1800,
+&quot;interval&quot;: 5
+</code></pre>
+            <h3>3. Getting a Permanent Refresh Token</h3>
+            <p>Now that everything&#8217;s properly authorized by Google, we still need to get a refresh token that our
+              app
+              is going to use. We&#8217;re going to use that to get yet another token, the temporary "auth" token,
+              which
+              will actually let us upload to Google Drive. There are a lot of tokens. To get the refresh token, you
+              send
+              a post like the following (line breaks added for readability):</p>
+            <pre class="prettyprint nocode"><code>POST /o/oauth2/token HTTP/1.1
+Host: accounts.google.com
+Cache-Control: no-cache
+Content-Type: application/x-www-form-urlencoded
+
+client_id={Your full client ID}&amp;amp;
+client_secret={Your client secret}&amp;amp;
+code={Your device code]&amp;amp;
+grant_type=http%3A%2F%2Foauth.net%2Fgrant_type%2Fdevice%2F1.0
+</code></pre>
+            <p>The grant type is actually "http://oauth.net/grant_type/device/1.0" however it gets switched to
+              %&#8217;s.</p>
+            <p>You should receive something that looks like:</p>
+            <pre class="prettyprint nocode"><code>&quot;access_token&quot;: {Your access token here},
+&quot;token_type&quot;: &quot;Bearer&quot;,
+&quot;expires_in&quot;: 3600,
+&quot;refresh_token&quot;: {Your refresh token here}</code></pre>
+            <p>Finally, we can start scripting our headless upload! The main token we really need is the refresh_token.
+              The
+              access_token will work for a short time, but it will expire. With the refresh token we can always get a
+              fresh
+              access code when we need to (which is pretty constantly, as the authorization doesn&#8217;t last long).
+            </p>
+            <h3>4. Required Lua Imports</h3>
+            <p>The only two Lua library imports which will be used are ssl.https and JSON which is a stand alone file
+              which
+              can be found at http://regex.info/blog/lua/json</p>
+            <p>Example code:</p>
+            <pre class="prettyprint lang-lua"><code>local https = require 'ssl.https'
+local JSON = require 'JSON'
+</code></pre>
+            <p>We will follow these by creating local variables containing all the necessary information.</p>
+            <p>Example code:</p>
+            <pre class="prettyprint lang-lua"><code>-- Basic account info
+local client_id = "{Your full client ID}"
+local client_secret = "{Your client secret}"
+local refresh_token = "{Your refresh token}"
+-- For refresh
+local scope = &quot;https://docs.google.com/feeds&quot;
+local response_type = &quot;code&quot;
+local access_type = &quot;offline&quot;
+</code></pre>
+            <h3>5. Using the Refresh Token to Re-authenticate</h3>
+            <p>Before we can upload anything, chances are we&#8217;re going to need to re-authenticate with the server,
+              so lets
+              put together a getAuth() method first. In our method we will set the message to be sent, find it&#8217;s
+              length
+              (as this is a required parameter), then make the https request. The response will arrive as an "Array"
+              but
+              it&#8217;s actually all one big string for the first and sole value as Lua can&#8217;t natively decode
+              JSON.
+              Conveniently we imported the JSON library earlier, so we can use that to parse it into a table and
+              retrieve
+              our new access token.</p>
+            <p>Example function:</p>
+            <pre class="prettyprint lang-lua"><code>local function getAuth()
+
+  -- Set our message
+  local mes=&quot;client_id=&quot;..client_id
+  mes=mes..&quot;&amp;amp;client_secret=&quot;..client_secret
+  mes=mes..&quot;&amp;amp;refresh_token=&quot;..refresh_token
+  mes=mes..&quot;&amp;amp;grant_type=refresh_token&quot;
+
+  local length = string.len(mes)
+  print(&quot;Sending: [&quot;..mes..&quot;]&quot;)
+  print &quot;\n&quot;
+  b, c, h = fa.request{
+    url = &quot;https://accounts.google.com/o/oauth2/token&quot;,
+    headers = {
+        [&quot;Content-Type&quot;] = &quot;application/x-www-form-urlencoded&quot;,
+        [&quot;Content-Length&quot;] = length,
+    },
+    method = &quot;POST&quot;,
+    body=mes,
+  }
+
+  local tempTable = {}
+
+  tempTable = cjson.decode(b)
+
+  access_token = tempTable[&quot;access_token&quot;]
+end
+</code></pre>
+            <h3>6.The Lua Function that Does the Upload</h3>
+            <p>Now that we have a new access token, we&#8217;re ready to upload! We&#8217;ll do this with another https
+              post
+              request using ssl.https. We just need to give it an image file, set our authorization code, and
+              we&#8217;re
+              done.
+            </p>
+            <p>Example:</p>
+            <pre class="prettyprint lang-lua"><code>local function uploadTest(token)
+  filePath=&quot;testfile.jpg&quot;
+  local fileSize = lfs.attributes(filePath,&quot;size&quot;)
+  b, c, h = fa.request{
+    url = &quot;https://www.googleapis.com/upload/drive/v2/files&quot;,
+    headers = {
+      [&quot;Content-Type&quot;] = &quot;image/jpeg&quot;,
+      [&quot;Content-Length&quot;] = fileSize, -- calculate file size
+      [&quot;authorization&quot;] = &quot;Bearer &quot;..token,
+      [&quot;uploadType&quot;]=&quot;media&quot;
+    },
+    method = &quot;POST&quot;,
+    --NOTE: You probably want to set your own file here,
+    --or maybe even pass it as a parameter!
+    file=filePath
+  }
+
+end
+</code></pre>
+            <p>If you&#8217;ve been following our examples up until this point, combining them in the order presented
+              and running
+              the two functions using the following code at the bottom of the file will result in an uploaded file up
+              to
+              your Google drive (see accounts.google.com.).</p>
+            <p>Final code to run the functions:</p>
+            <pre class="prettyprint lang-lua"><code>getAuth()
+uploadTest(access_token)
+</code></pre>
+
+            <!-- Social Buttons -->
+            <div class="clearfix">
+	<ul class="social-links float-right">
+		<li class="twitter">
+			<!--Tweet Button-->
+			<a href="https://twitter.com/share" class="twitter-share-button" {count}="" data-via="FlashAirDev" data-related="FlashAirDev">Tweet</a>
+			<script>
+				! function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0],
+						p = /^http:/.test(d.location) ? 'http' : 'https';
+					if (!d.getElementById(id)) {
+						js = d.createElement(s);
+						js.id = id;
+						js.src = p + '://platform.twitter.com/widgets.js';
+						fjs.parentNode.insertBefore(js, fjs);
+					}
+				}(document, 'script', 'twitter-wjs');
+			</script>
+		</li>
+		<li class="facebook">
+			<!--Facebook Like Button-->
+			<div id="fb-root"></div>
+			<script>
+				(function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+			<div class="fb-like" data-href="https://www.flashair-developers.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+		</li>		
+	</ul>
+</div>
+
+            <!-- pagination start -->
+            <nav aria-label="Page navigation">
+              <ul class="pagination justify-content-between">
+                <li>
+                  <a class="btn radius-50 page-link badge-pill" href="..\8\index.htm" aria-label="Previous">
+                    <i class="fa fa-chevron-left pr-10"></i>
+                    Creating a Web interface with Lua
+                  </a>
+                </li>
+                <li>
+                  <a class="btn radius-50 page-link badge-pill" href="..\10\index.htm" aria-label="Next">
+                    Compile Lua script into bytecode
+                    <i class="fa fa-chevron-right pl-10"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- pagination end -->
+
+            <!-- Amazon bottom link -->
+            <div class="col-12">
+	<!--Amazon search result for tablet-->
+	<div class="amazon-widget-bottom mx-auto d-none d-md-block d-lg-none">
+		<!--
+<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=12&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="300" height="250" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" width="320" height="250" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+
+	<!--Amazon search result for smartphone-->
+	<div class="amazon-widget-mobile mx-auto d-md-none">
+		<!--Image-->
+		<!--
+	<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20" alt="TOSHIBA FlashAir SD card 8GB SD-WB008G"><img src="http://ws.assoc-amazon.com/widgets/q?_encoding=UTF8&ASIN=B009RGP7HY&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=flasdeve-20" style="vertical-align:middle;"/></a><br>
+-->
+		<!--Text-->
+		<!--
+<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20">Find TOSHIBA FlashAir SD card 8GB SD-WB008G on Amazon.com</a><img src="http://www.assoc-amazon.com/e/ir?t=flasdeve-20&l=as2&o=1&a=B009RGP7HY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+</div>
+
+          </div>
+          <!-- main end -->
+
+          <!-- sidebar start -->
+          <!-- ================ -->
+          <aside class="col-lg-3 col-xl-3 order-lg-1">
+            <div class="sidebar">
+  <div class="block clearfix">
+    <nav>
+      <ul class="nav flex-column">
+        <li class="nav-item"> <a class="nav-link" href="..\1\index.htm">
+          An introduction to Lua on FlashAir
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\2\index.htm">
+          Running Lua on your FlashAir!
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\3\index.htm">
+          Downloading a file via HTTP
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\4\index.htm">
+          Uploading a file with FTP
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\5\index.htm">
+          Uploading to Facebook
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\6\index.htm">
+          Uploading a file to Dropbox,<br class="d-none d-md-block"> with OAUTH2
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\7\index.htm">
+          WiFi configuration
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\8\index.htm">
+          Creating a Web interface with Lua
+          </a>
+        </li>
+
+        <li class="nav-item active"> <a class="nav-link active" href="index.htm">
+          Uploading to Google Drive with Lua
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\10\index.htm">
+          Compile Lua script into bytecode
+          </a>
+        </li>
+        <li>
+          <br>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\index.htm">
+            Back to Content List
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<!-- Amazon side link -->
+<!--Amazon search result for desktop-->
+<div class="amazon-widget-side d-none d-lg-block">
+	<!--
+	<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=14&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></iframe>
+	-->
+	<div class="amazon-content" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></div>
+</div>
+          </aside>
+          <!-- sidebar end -->
+
+        </div>
+      </div>
+    </section>
+    <!-- main-container end -->
+
+    <!-- footer start -->
+    <!-- ================ -->
+    <!-- footer start -->
+<!-- ================ -->
+<footer id="footer" class="clearfix ">
+
+  <!-- .footer start -->
+  <!-- ================ -->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">
+                <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2.png"> FlashAir&trade; Developers</h2>
+              <div class="separator-2"></div>
+              <p>
+                  A technical information website for developers of Toshiba FlashAir apps or services. FlashAir Developers is operated by Fixstars in cooperation with Toshiba Memory Corporation. To learn more about Fixstars, visit
+                <a target="_blank" href="http://www.fixstars.com">www.fixstars.com
+                  <i class="fa fa-external-link"></i>
+                </a>. ?FlashAir is a trademark of Toshiba Memory Corporation.
+              </p>
+              <ul class="social-links circle animated-effect-1" style="margin-bottom: 10px">
+                <li class="facebook">
+                  <a href="https://www.facebook.com/FlashAir-Developers-115819238627364/" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="twitter">
+                  <a href="https://twitter.com/FlashAirDev/" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+              <ul class="list-unstyled list-inline m-0">
+                <li class="list-inline-item"><a href="..\..\..\..\terms-of-use\index.htm">Terms of Use</a></li>
+                <li class="list-inline-item">|</li>
+                <li class="list-inline-item"><a href="..\..\..\..\privacypolicy\index.htm">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Twitter</h2>
+              <div class="separator-2"></div>
+              <div id="twitterWidget">
+                <a class="twitter-timeline" data-theme="light" href="https://twitter.com/FlashAirDev" data-widget-id="344743426811641856" height="230" data-chrome="nofooter noheader noborders transparent">Latest News</a>
+                <script>
+                  ! function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                      p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                      js = d.createElement(s);
+                      js.id = id;
+                      js.src = p + "://platform.twitter.com/widgets.js";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }
+                  }(document, "script", "twitter-wjs");
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Sitemap</h2>
+              <div class="separator-2"></div>
+              <nav>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\discover\overview\index.htm">What's FlashAir?
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\resources\index.htm">Developer Resources
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\index.htm">Tutorials
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\api\index.htm">API Guide
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\support\index.htm">Support
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\support\forum\index.htm">Developer Forum
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir IoTHub <i class="fa fa-external-link"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .footer end -->
+
+  <!-- .subfooter start -->
+  <!-- ================ -->
+  <div class="subfooter">
+    <div class="container">
+      <div class="subfooter-inner">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center">Copyright &copy; 2019 FlashAir Developers. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .subfooter end -->
+
+  <div id="overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 ml-auto text-white">
+          <p class="mt-3">If you write software or change the settings which are described on this site to your FlashAir device which was purchased at a mass retailer or online shop, it will not be eligible for a free replacement under the warranty policy. Please acknowledge and carry out development at your own risk.
+          </p>
+        </div>
+        <div class="col-md-2 row">
+          <div class="align-self-center">
+          <button class="btn btn-default" id="btn-agree">Accept</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- footer end -->
+
+<!-- JavaScript files placed at the end of the document so the pages load faster -->
+<!-- ================================================== -->
+<!-- Jquery and Bootstap core js files -->
+<script src="..\..\..\..\..\js\jquery.min.js"></script>
+<script src="..\..\..\..\..\js\bootstrap.bundle.min.js"></script>
+<!-- jQuery Revolution Slider  -->
+<script src="..\..\..\..\..\js\jquery.themepunch.tools.min.js"></script>
+<script src="..\..\..\..\..\js\jquery.themepunch.revolution.min.js imagesloaded.pkgd.min.js.pagespeed.jc.cG4Ou2l09T.js"></script><script>eval(mod_pagespeed_faLzhRoycV);</script>
+<!-- Isotope javascript -->
+<script>eval(mod_pagespeed_e7p3yiKri5);</script>
+<script src="..\..\..\..\..\js\isotope.pkgd.min.js jquery.magnific-popup.min.js jquery.waypoints.min.js sticky.min.js jquery.countTo.js.pagespeed.jc.cWqBgip635.js"></script><script>eval(mod_pagespeed_EzjKnImtZK);</script>
+<!-- Magnific Popup javascript -->
+<script>eval(mod_pagespeed_hr4XVzGccf);</script>
+<!-- Appear javascript -->
+<script>eval(mod_pagespeed_zhicDWZgIJ);</script>
+<script>eval(mod_pagespeed_MTpYywWOfL);</script>
+<!-- Count To javascript -->
+<script>eval(mod_pagespeed_dmh3ejQ5o0);</script>
+<!-- Slick carousel javascript -->
+<script src="..\..\..\..\..\js\slick.min.js pace.min.js template.js jquery.cookie.js custom.js jquery.matchHeight.js.pagespeed.jc.Y3630FlbPX.js"></script><script>eval(mod_pagespeed_s1mKdTeuWx);</script>
+<!-- Pace javascript -->
+<script>eval(mod_pagespeed_Zs67JgCVyk);</script>
+<!-- Initialization of Plugins -->
+<script>eval(mod_pagespeed_BIPkzwMbEw);</script>
+<!-- Custom Scripts -->
+<script>eval(mod_pagespeed_uSq_SD1Gz5);</script>
+<script>eval(mod_pagespeed_mqKjjurRp4);</script>
+<script>eval(mod_pagespeed_TteNs$c3Zl);</script>
+<script>
+  $(function () {
+    $('.matchHeight').matchHeight();
+  });
+</script>
+<script src="..\..\..\..\..\js\script.js prettify.js lang-lua.js lang-css.js.pagespeed.jc.ECF3Z77mjV.js"></script><script>eval(mod_pagespeed_SrZ0Yqg7MZ);</script>
+<script>eval(mod_pagespeed_RSPiDhly$4);</script>
+<script>eval(mod_pagespeed_0pGoVUEAt9);</script>
+<script>eval(mod_pagespeed_IrbA2eGHA$);</script>
+<script>
+  ! function ($) {
+    $(function () {
+      PR.prettyPrint()
+    })
+  }(window.jQuery)
+</script>
+    <!-- footer end -->
+  </div>
+  <!-- page wrapper end -->
+</body>
+
+</html>

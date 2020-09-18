@@ -1,0 +1,1798 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<!-- %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"} -->
+
+<!--Google Apps verification-->
+
+<title>FlashAir Developers - command.cgi</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta property="fb:admins" content="100006082240886">
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@FlashAirDev">
+<meta property="fb:admins" content="115819238627364">
+<meta property="og:site_name" content="FlashAir Developers">
+<meta property="og:image" content="https://flashair-developers.com/images/assets/ogp.png">
+<meta property="og:url" content="https://www.flashair-developers.com/en/documents/api/commandcgi/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FlashAir Developers - command.cgi">
+
+<link href="..\..\..\..\images\flashair_favicon-1.ico" rel="shortcut icon">
+<link href="..\..\..\..\images\apple-touch-icon-152x152-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="152x152">
+<link href="..\..\..\..\images\apple-touch-icon-120x120-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="120x120">
+<link href="..\..\..\..\images\apple-touch-icon-114x114-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="..\..\..\..\images\apple-touch-icon-76x76-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="76x76">
+<link href="..\..\..\..\images\apple-touch-icon-72x72-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="..\..\..\..\images\apple-touch-icon-57x57-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="57x57">
+<!-- Web Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+<!-- Bootstrap core CSS -->
+<link href="..\..\..\..\css\bootstrap-1.css" rel="stylesheet">
+
+<!-- Font Awesome CSS -->
+<link href="..\..\..\..\css\fonts\font-awesome\css\font-awesome-1.css" rel="stylesheet">
+
+<!-- Plugins -->
+<link href="..\..\..\..\css\magnific-popup-1.css" rel="stylesheet">
+<link href="..\..\..\..\css\settings-1.css" rel="stylesheet">
+<link href="..\..\..\..\css\layers-1.css" rel="stylesheet">
+<link href="..\..\..\..\css\navigation-1.css" rel="stylesheet">
+<link href="..\..\..\..\css\animations-1.css" rel="stylesheet">
+<link href="..\..\..\..\css\slick-1.css" rel="stylesheet">
+
+<!-- The Project's core CSS file -->
+<!-- Use css/rtl_style.css for RTL version -->
+<link href="..\..\..\..\css\style-1.css" rel="stylesheet">
+<!-- The Project's Typography CSS file, includes used fonts -->
+<!-- Used font for body: Roboto -->
+<!-- Used font for headings: Raleway -->
+<!-- Use css/rtl_typography-default.css for RTL version -->
+<link href="..\..\..\..\css\typography-default-1.css" rel="stylesheet">
+<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer) -->
+<link href="..\..\..\..\css\light_blue-1.css" rel="stylesheet">
+
+<!-- Custom css -->
+<link href="..\..\..\..\css\custom-1.css" rel="stylesheet">
+<link href="..\..\..\..\css\prettify-1.css" rel="stylesheet">
+<!--[if lt IE 9]>
+	<link href="/css/bootstrap-ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+  <meta name="keywords" content="FlashAir, SD card, api, command">
+  <meta name="description" content="command.cgi allows external devices such as smartphones and PCs to get and edit information in the FlashAir via Wireless LAN. FlashAir is an SD card with embedded Wireless LAN produced by Toshiba Memory Corp..">
+  <meta property="og:description" content="command.cgi allows external devices such as smartphones and PCs to get and edit information in the FlashAir via Wireless LAN. FlashAir is an SD card with embedded Wireless LAN produced by Toshiba Memory Corp..">
+</head>
+
+<body class=" ">
+
+  <!-- scrollToTop -->
+  <!-- ================ -->
+  <div class="scrollToTop circle">
+    <i class="fa fa-angle-up"></i>
+  </div>
+
+  <!-- page wrapper start -->
+  <!-- ================ -->
+  <div class="page-wrapper">
+    <!-- header-container start -->
+    <div class="header-container">
+      <!-- header-top start -->
+<!-- classes:  -->
+<!-- "dark": dark version of header top e.g. class="header-top dark" -->
+<!-- "colored": colored version of header top e.g. class="header-top colored" -->
+<!-- ================ -->
+<div class="header-top dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-lg-10">
+                <div class="header-top-first clearfix">
+                    <ul class="list-inline float-right">
+                        <li class="list-inline-item">
+                            <a href="..\..\..\index-1.htm" id="go-to-japanese">Japanese</a>&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            English&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\zh\index-1.htm" id="go-to-chinese">Chinese</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-2">
+                <!-- header-top-second start -->
+                <!-- ================ -->
+                <div id="header-top-second" class="clearfix">
+                    <!-- header top dropdowns start -->
+                    <!-- ================ -->
+                    <div class="header-top-dropdown text-right">
+                        <div class="btn-group">
+                            <a href="..\..\..\member\index-1.htm" class="btn btn-default btn-sm">
+                                <i class="fa fa-user pr-2"></i> MyAccount</a>
+                        </div>
+                    </div>
+                    <!--  header top dropdowns end -->
+                </div>
+                <!-- header-top-second end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header-top end -->
+<!-- header start -->
+<!-- classes:  -->
+<!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+<!-- "fixed-desktop": enables fixed navigation only for desktop devices e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "fixed-all": enables fixed navigation only for all devices desktop and mobile e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+<!-- "centered": mandatory class for the centered logo layout -->
+<!-- ================ -->
+<header class="header fixed fixed-desktop clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-auto hidden-md-down pl-3">
+                <!-- header-first start -->
+                <!-- ================ -->
+                <div class="header-first clearfix">
+
+                    <!-- logo -->
+                    <div id="logo" class="logo">
+                        <a href="..\..\..\index-1.htm">
+                            <img alt="FlashAir logo" src="..\..\..\..\images\assets\flashairLogo_official_small2-1.png">
+                            &nbsp;FlashAir&trade; Developers
+                        </a>
+                    </div>
+
+                </div>
+                <!-- header-first end -->
+
+            </div>
+            <div class="col-lg-7 ml-lg-auto">
+
+                <!-- header-second start -->
+                <!-- ================ -->
+                <div class="header-second clearfix">
+
+                    <!-- main-navigation start -->
+                    <!-- classes: -->
+                    <!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+                    <!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+                    <!-- ================ -->
+                    <div class="main-navigation main-navigation--mega-menu  animated">
+                        <nav class="navbar navbar-expand-lg navbar-light p-0">
+                            <div class="navbar-brand clearfix hidden-lg-up">
+
+                                <!-- logo -->
+                                <div id="logo-mobile" class="logo">
+                                    <a href="..\..\..\index-1.htm">
+                                        <img alt="FlashAir logo" src="..\..\..\..\images\assets\flashairLogo_official_small2-1.png">
+                                        &nbsp;FlashAir&trade; Developers
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- header dropdown buttons -->
+                            <div class="header-dropdown-buttons hidden-lg-up p-0 ml-auto mr-3">
+                                <div class="btn-group">
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                                        <li>
+                                            <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse">
+                                                <div class="form-group has-feedback">
+                                                    <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                                    <input type="hidden" name="ie" value="UTF-8">
+                                                    <input type="text" name="q" size="31" class="form-control">
+                                                    <input type="submit" name="sa" value="Search">
+                                                </div>
+                                            </form>
+                                            <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- header dropdown buttons end -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                <!-- main-menu -->
+                                <ul class="navbar-nav ml-xl-auto">
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="first-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Discover</a>
+                                        <ul class="dropdown-menu" aria-labelledby="first-dropdown">
+                                            <li>
+                                                <a href="..\..\..\discover\overview\index-1.htm">What's FlashAir?</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\discover\overview\w04\index-1.htm">Fourth generation FlashAir W-04</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\discover\gettingstarted\index-1.htm">Getting Started</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\discover\beginners\index-1.htm">Beginners Guide with FlashAir
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\discover\usage\index-1.htm">Get started with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\discover\app\index-1.htm">Overview of FlashAir Application
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\discover\device\index-1.htm">Overview of using Devices with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir
+                                                    IoT Hub
+                                                    <i class="fa fa-external-link"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="second-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Application</a>
+                                        <ul class="dropdown-menu" aria-labelledby="second-dropdown">
+                                            <li>
+                                                <a href="..\..\..\application\iot\index-1.htm">Application to IoT</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\application\devices\index-1.htm">Using with Devices</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\application\workflow\index-1.htm">Improve efficiency of operations</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\application\share-documents\index-1.htm">Sharing Documents</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\application\users\index-1.htm">User's Projects</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\application\showcase\index-1.htm">App Showcase</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown active"> <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+                                        <ul class="dropdown-menu" aria-labelledby="third-dropdown">
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\..\tutorials\ios\index-1.htm">iOS</a></li>
+                                                    <li><a href="..\..\tutorials\android\index-1.htm">Android</a></li>
+                                                    <li><a href="..\..\tutorials\web\index-1.htm">Web browser</a></li>
+                                                    <li><a href="..\..\tutorials\advanced\index-1.htm">Advanced</a></li>
+                                                    <li><a href="..\..\tutorials\isdio\index-1.htm">iSDIO</a></li>
+                                                    <li><a href="..\..\tutorials\lua\index-1.htm">Lua</a></li>
+                                                    <li><a href="..\..\tutorials\users\index-1.htm">User's Tutorials</a></li>
+                                                    <li><a href="..\..\tutorials\iot-hub\index-1.htm">FlashAir IoT Hub</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">API Guide</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="index-1.htm">command.cgi</a></li>
+                                                    <li><a href="..\configcgi\index-1.htm">config.cgi</a></li>
+                                                    <li><a href="..\thumbnailcgi\index-1.htm">thumbnail.cgi</a></li>
+                                                    <li><a href="..\uploadcgi\index-1.htm">upload.cgi</a></li>
+                                                    <li><a href="..\config\index-1.htm">CONFIG</a></li>
+                                                    <li><a href="..\utility\index-1.htm">Browser Utility</a></li>
+                                                    <li><a href="..\lua\index-1.htm">Lua Scripting</a></li>
+                                                    <li><a href="..\isdio\index-1.htm">iSDIO</a></li>
+                                                    <li><a href="..\fw40003\index-1.htm">About FW 4.00.03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\resources\index-1.htm">Developer Resources</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\books\index-1.htm">Books</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\about\events\index-1.htm">Events</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="fourth-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                                        <ul class="dropdown-menu" aria-labelledby="fourth-dropdown">
+                                            <li>
+                                                <a href="..\..\..\support\index-1.htm">Support</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\support\forum\index-1.htm">Developer Forum</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\support\faq\index-1.htm">FAQ</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\support\iot-hub\index-1.htm">About FlashAir IoT Hub service end</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\support\developers\index-1.htm">About FlashAir Developers site closure</a>
+                                            </li>                
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!-- main-menu end -->
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- main-navigation end -->
+                </div>
+                <!-- header-second end -->
+
+            </div>
+            <div class="col-auto hidden-md-down">
+                <!-- header dropdown buttons -->
+                <div class="header-dropdown-buttons">
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                            <li>
+                                <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse" target="_blank">
+                                    <div class="form-group has-feedback">
+                                        <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                        <input type="hidden" name="ie" value="UTF-8">
+                                        <input type="text" name="q" size="31" class="form-control">
+                                        <input type="submit" name="sa" value="Search">
+                                    </div>
+                                </form>
+                                <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- header dropdown buttons end -->
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+    <!-- Google Analytics Tracking Code -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-498925-24', 'auto');
+        ga('send', 'pageview');
+    </script>
+</header>
+    </div>
+    <!-- header-container end -->
+
+    <!-- main-container start -->
+    <!-- ================ -->
+    <section class="main-container">
+
+      <div class="container">
+        <div class="row ml-2 mr-2">
+
+          <!-- main start -->
+          <!-- ================ -->
+          <div class="main col-lg-9 order-lg-2 pb-5">
+
+            <!-- page-title start -->
+            <!-- ================ -->
+            <h1 class="page-title">
+              command.cgi
+            </h1>
+            <p class="small text-muted">Last update: April 2015</p>
+            <!-- page-title end -->
+
+            <p class="mt-5">
+              command.cgi allows external devices such as smartphones and PCs to get and edit information in the
+              FlashAir via Wireless
+              LAN.
+            </p>
+            <p>
+              command.cgi uses the
+              <a href="http://en.wikipedia.org/wiki/Common_Gateway_Interface" target="_blank">CGI (Common Gateway
+                Interface)
+                <i class="fa fa-external-link"></i>
+              </a> system, so that external devices may execute the command while connected to the FlashAir by sending
+              an HTTP
+              GET request to:
+              <code>http://flashair/command.cgi?&lt;parameter&gt;</code>
+            </p>
+            <p>
+              The following is a list of operations available using command.cgi:
+            </p>
+
+            <table class="table table-bordered table-hover">
+              <tr>
+                <th>Function</th>
+                <th>Parameter Example</th>
+                <th>Firmware Version</th>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#100">Get file list</a>
+                </td>
+                <td>
+                  <code>op=100&amp;DIR=/DCIM</code>
+                </td>
+                <td>1.00.00+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#101">Get the number of files</a>
+                </td>
+                <td>
+                  <code>op=101&amp;DIR=/DCIM</code>
+                </td>
+                <td>1.00.00+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#102">Get update status</a>
+                </td>
+                <td>
+                  <code>op=102</code>
+                </td>
+                <td>1.00.00+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#104">Get SSID</a>
+                </td>
+                <td>
+                  <code>op=104</code>
+                </td>
+                <td>1.00.00+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#105">Get network password</a>
+                </td>
+                <td>
+                  <code>op=105</code>
+                </td>
+                <td>1.00.00+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#106">Get MAC address</a>
+                </td>
+                <td>
+                  <code>op=106</code>
+                </td>
+                <td>1.00.00+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#107">Get browser language</a>
+                </td>
+                <td>
+                  <code>op=107</code>
+                </td>
+                <td>1.00.00+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#108">Get the firmware version</a>
+                </td>
+                <td>
+                  <code>op=108</code>
+                </td>
+                <td>1.00.00+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#109">Get the control image</a>
+                </td>
+                <td>
+                  <code>op=109</code>
+                </td>
+                <td>2.00.00+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#110">Get Wireless LAN mode</a>
+                </td>
+                <td>
+                  <code>op=110</code>
+                </td>
+                <td>2.00.00+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#111">Get Wireless LAN timeout length</a>
+                </td>
+                <td>
+                  <code>op=111</code>
+                </td>
+                <td>2.00.00+</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <a href="#117">Get application unique information</a>
+                </td>
+                <td>
+                  <code>op=117</code>
+                </td>
+                <td>2.00.00+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#118">Get Upload parameters</a>
+                </td>
+                <td>
+                  <code>op=118</code>
+                </td>
+                <td>2.00.02+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#120">Get CID</a>
+                </td>
+                <td>
+                  <code>op=120</code>
+                </td>
+                <td>1.00.03+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#121">Get time stamp of write event</a>
+                </td>
+                <td>
+                  <code>op=121</code>
+                </td>
+                <td>2.00.02+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#130">Get data from shared memory</a>
+                </td>
+                <td>
+                  <code>op=130&amp;ADDR=0&amp;LEN=8</code>
+                </td>
+                <td>2.00.00+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#131">Set data to shared memory</a>
+                </td>
+                <td>
+                  <code>op=131&amp;ADDR=0&amp;LEN=8&amp;DATA=0123ABCD</code>
+                </td>
+                <td>2.00.00+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#140">Get the number of empty sectors</a>
+                </td>
+                <td>
+                  <code>op=140</code>
+                </td>
+                <td>1.00.03+</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <a href="#190">Control SD Interface as user I/O</a>
+                </td>
+                <td>
+                  <code>op=190&amp;CTRL=0x1f&amp;DATA=0x1f</code>
+                </td>
+                <td>2.00.03+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#200">Enable Photo Share mode</a>
+                </td>
+                <td>
+                  <code>op=200&amp;DIR=/DCIM/100__TSB&amp;DATE=17153</code>
+                </td>
+                <td>2.00.00+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#201">Disable Photo Share mode</a>
+                </td>
+                <td>
+                  <code>op=201</code>
+                </td>
+                <td>2.00.00+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#202">Get Photo Share mode status</a>
+                </td>
+                <td>
+                  <code>op=202</code>
+                </td>
+                <td>2.00.00+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#203">Get SSID for Photo Share mode</a>
+                </td>
+                <td>
+                  <code>op=203</code>
+                </td>
+                <td>2.00.00+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#220">Get FlashAir Drive(WebDAV) information</a>
+                </td>
+                <td>
+                  <code>op=220</code>
+                </td>
+                <td>3.00.00+</td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#221">Get timezone</a>
+                </td>
+                <td>
+                  <code>op=221</code>
+                </td>
+                <td>3.00.00+</td>
+              </tr>
+            </table>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="100">
+                  Get file list
+                  <p class="small">(op=100)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Returns a list of files in a specified directory.
+              </p>
+
+              <h3>Parameter:</h3>
+              <p>
+                <code>DIR</code>
+              </p>
+              <p>
+                Path to the directory
+              </p>
+
+              <h3>Request example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=100&DIR=/DCIM</code>
+              </p>
+
+              <p>
+                Each row of the list is returned in the following format.
+              </p>
+              <pre class="prettyprint">
+&lt;directory&gt;, &lt;filename&gt;, &lt;size&gt;, &lt;attribute&gt;, &lt;date&gt;, &lt;time&gt;</pre>
+
+              <h3>Response example:</h3>
+              <pre class="prettyprint">
+<code>WLANSD_FILELIST
+/DCIM,100__TSB,0,16,9944,129
+/DCIM,0126_1.jpg,70408,32,17071,28040</code></pre>
+
+              <p>Please remind that file names may contain commas (
+                <code>,</code>) if you parse a response.
+                <br> If DIR=/ (root) is specified, directory name will be empty.
+              </p>
+
+              <dl>
+                <dt>
+                  <code>&lt;directory&gt;</code>
+                </dt>
+                <dd>File directory name</dd>
+                <dt>
+                  <code>&lt;filename&gt;</code>
+                </dt>
+                <dd>File name</dd>
+                <dt>
+                  <code>&lt;size&gt;</code>
+                </dt>
+                <dd>The size of the file in bytes (decimal form)</dd>
+                <dt>
+                  <code>&lt;attribute&gt;</code>
+                </dt>
+                <dd>The attributes of the file (decimal form)</dd>
+                <dt>
+                  <code>&lt;date&gt;</code>
+                </dt>
+                <dd>The date of the file (decimal form)</dd>
+                <dt>
+                  <code>&lt;time&gt;</code>
+                </dt>
+                <dd>The time of the file (decimal form)</dd>
+              </dl>
+
+              <p>
+                <code>Attribute</code> is specified in decimal 16-bit integer in the following formats:</p>
+              <dl>
+                <dt>Bit 5</dt>
+                <dd>Archive
+                </dd>
+                <dt>Bit 4</dt>
+                <dd>Directly
+                </dd>
+                <dt>Bit 3</dt>
+                <dd>Volume
+                </dd>
+                <dt>Bit 2</dt>
+                <dd>System file
+                </dd>
+                <dt>Bit 1</dt>
+                <dd>Hidden file
+                </dd>
+                <dt>Bit 0</dt>
+                <dd>Read only
+                </dd>
+              </dl>
+
+              <p>
+                <code>Date</code> is specified in decimal 16-bit integer in the following formats:</p>
+              <dl>
+                <dt>Bit 15-9</dt>
+                <dd>Year: Specify a value based on 0 as a 1980.
+                </dd>
+                <dt>Bit 8-5</dt>
+                <dd>Month: Specify a value from 1 to 12.
+                </dd>
+                <dt>Bit 4-0</dt>
+                <dd>Day: Specify a value from 1 to 31.
+                </dd>
+              </dl>
+
+              <p>
+                <code>Time</code> is specified in decimal 16-bit integer in the following formats:</p>
+              <dl>
+                <dt>Bit 15-11</dt>
+                <dd>Hour
+                </dd>
+                <dt>Bit 10-5</dt>
+                <dd>Minute
+                </dd>
+                <dt>Bit 4-0</dt>
+                <dd>Second / 2
+                </dd>
+              </dl>
+
+              <p>This operation is available in Firmware Versions 1.00.00+</p>
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="101">
+                  Get the number of files
+                  <p class="small">(op=101)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Returns the number of files in a specified directory.
+              </p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=101&DIR=/DCIM</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>2</code>
+              </p>
+              <p>This operation is available in Firmware Versions 1.00.00+</p>
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="102">
+                  Get update status
+                  <p class="small">(op=102)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Returns whether the FlashAir memory has been updated. Returns
+                <code>1</code> if memory has been updated,
+                <code>0</code> if not. Once this command is called, the status will be cleared.
+              </p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=102</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>1</code>
+              </p>
+              <p>This operation is available in Firmware Versions 1.00.00+</p>
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="104">
+                  Get SSID
+                  <p class="small">(op=104)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Returns the SSID of the FlashAir (32 character maximum)
+              </p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=104</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>flashair_e8e0b756a7fb</code>
+              </p>
+              <p>This operation is available in Firmware Versions 1.00.00+</p>
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="105">
+                  Get network password
+                  <p class="small">(op=105)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Returns the network key (63 character maximum) when the FlashAir is in AP mode. If the network key was
+                set on an SD host
+                device such as a cooperative digital camera, this command will not display the network password.
+              </p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=105</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>12345678</code>
+              </p>
+              <p>This operation is available in Firmware Versions 1.00.00+</p>
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="106">
+                  Get MAC address
+                  <p class="small">(op=106)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Returns the MAC address of the client that issued the request.
+              </p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=106</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>a41731f4d880</code>
+              </p>
+              <p>This operation is available in Firmware Versions 1.00.00+</p>
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="107">
+                  Get acceptable browser language
+                  <p class="small">(op=107)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Returns the Accept-Language parameter from your browser language settings.
+              </p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=107</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>Accept-Language: ja,en-US;q=0.8,en;q=0.6</code>
+              </p>
+              <p>This operation is available in Firmware Versions 1.00.00+</p>
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="108">
+                  Get the firmware version
+                  <p class="small">(op=108)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Returns the firmware version of the FlashAir card. Versions that start with
+                <strong>F24</strong> are type 1.00 for the W-01 card. Versions that start with
+                <strong>F19</strong> are type 2.00 for the W-02 card.
+              </p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=108</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>F19BAW3AW2.00.00</code>
+              </p>
+              <p>This operation is available in Firmware Versions 1.00.00+</p>
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="109">
+                  Get the control image
+                  <p class="small">(op=109)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>Get the full-path of the image to use as the wireless boot screen. The wireless boot screen is an
+                image file
+                that controls whether the Wireless LAN is ON or OFF when the Wireless LAN mode (APPMODE) is 0, 2, or 3.
+              </p>
+              <p>
+                To learn more about CIPATH, refer to the article regarding
+                <a href="/en/documents/api/config#CIPATH">CIPATH</a> in the CONFIG section.
+              </p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=109</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>/DCIM/100__TSB/FA000001.JPG</code>
+              </p>
+              <p>This operation is available in Firmware Versions 2.00.00+</p>
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="110">
+                  Get Wireless LAN mode
+                  <p class="small">(op=110)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Returns the current Wireless LAN mode (APPMODE). To learn more about APPMODE, refer to the article
+                regarding
+                <a href="/en/documents/api/config#APPMODE">APPMODE</a> in the CONFIG section.
+              </p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=110</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>4</code>
+              </p>
+              <p>This operation is available in Firmware Versions 2.00.00+</p>
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="111">
+                  Get the Wireless LAN timeout period
+                  <p class="small">(op=111)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>Returns the automatic time-out period (in milliseconds) after which the FlashAir will stop its
+                Wireless LAN
+                functionality if it is not being connected to. Available only when Wireless LAN mode is in Auto boot AP
+                mode.
+                To learn more about APPAUTOTIME, refer to the article regarding
+                <a href="/en/documents/api/config#APPMODE">APPAUTOTIME</a> in the CONFIG section.
+              </p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=111</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>300000</code>
+              </p>
+              <p>This operation is available in Firmware Versions 2.00.00+</p>
+            </section>
+            <section>
+              <div class="pt-5">
+                <h2 id="117">
+                  Get application specific information
+                  <p class="small">(op=117)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Get 16 characters uniquely used by the application. To learn more about APPINFO, refer to the article
+                regarding
+                <a href="/en/documents/api/config#APPINFO">APPINFO</a> in the CONFIG section.
+              </p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=117</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>0123ABCD4567EFGH</code>
+              </p>
+              <p>This operation is available in Firmware Versions 2.00.00+</p>
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="118">
+                  Get Upload parameters
+                  <p class="small">(op=118)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Get the parameters currently set for Uploading. To learn more about UPLOAD, refer to the article
+                regarding
+                <a href="/en/documents/api/config#UPLOAD">UPLOAD</a> in the CONFIG section.
+              </p>
+              <table class="table table-bordered table-hover">
+                <tr>
+                  <th>1</th>
+                  <td> Uploading is enabled.</td>
+                </tr>
+                <tr>
+                  <th>Other</th>
+                  <td> Uploading is disabled.</td>
+                </tr>
+              </table>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=118</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>1</code>
+              </p>
+              <p>This operation is available in Firmware Versions 2.00.02+</p>
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="120">
+                  Get card identifier
+                  <p class="small">(op=120)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Returns the CID designated by the SD specification. The CID is consists of 32 hexadecimal digits that
+                are unique to each
+                SD card.
+              </p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=120</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>02544d535730384708c00b78700d201</code>
+              </p>
+              <p>This operation is available in Firmware Versions 1.00.03+</p>
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="121">
+                  Get time stamp of write event
+                  <p class="small">(op=121)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Returns the internal time stamp of when a write event occurred. A Write event occurs, for example, when
+                you Drag & Drop a
+                file onto the FlashAir using Windows Explore. The time stamp indicates the number of milliseconds since
+                the
+                card has been running.
+              </p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=121</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>174428</code>
+              </p>
+              <p>This operation is available in Firmware Versions 2.00.02+</p>
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="130">
+                  Read data from shared memory
+                  <p class="small">(op=130)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Gets data from shared memory. It uses CMD48: Read Extension Register Single Block Command, a command
+                specified by the SD
+                standard.
+              </p>
+              <p>Returns
+                <code>SUCCESS</code> if the command succeeded. If not, it returns
+                <code>400 Bad Request</code>.</p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=130&amp;ADDR=0&amp;LEN=8</code>
+              </p>
+              <dl>
+                <dt>ADDR</dt>
+                <dd>Address.
+                  <code>0-511</code> or
+                  <code>0x0-0x1FF</code>.</dd>
+                <dt>LEN</dt>
+                <dd>Length.
+                  <code>0-512</code> or
+                  <code>0x0-0x200</code>.</dd>
+              </dl>
+              <h3>Response Example:</h3>
+              <p>
+                <code>0123ABCD</code>
+              </p>
+              <p>This operation is available in Firmware Versions 2.00.00+</p>
+
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="131">
+                  Write data to shared memory
+                  <p class="small">(op=131)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Writes data to shared memory. It uses CMD49: Write Extension Register Single Block Command, a command
+                specified by the SD
+                standard.
+              </p>
+              <p>Returns
+                <code>SUCCESS</code> if the command succeeded. If not, it returns
+                <code>400 Bad Request</code>.</p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=131&amp;ADDR=0&amp;LEN=8&amp;DATA=0123ABCD</code>
+              </p>
+
+              <dl>
+                <dt>ADDR</dt>
+                <dd>Address.
+                  <code>0-511</code> or
+                  <code>0x0-0x1FF</code>.</dd>
+                <dt>LEN</dt>
+                <dd>Length.
+                  <code>0-512</code> or
+                  <code>0x0-0x200</code>.</dd>
+                <dt>DATA</dt>
+                <dd>Data to be written. The length of the data must be equal to LEN.</dd>
+              </dl>
+              <p>This operation is available in Firmware Versions 2.00.00+</p>
+
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="140">
+                  Get the number of empty sectors
+                  <p class="small">(op=140)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Returns the number of empty sectors in the FlashAir in the format:
+                <strong>Number of empty sectors/Total number of sectors, Sector size (Byte)</strong>
+              </p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=140</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>13952920/15228928,512</code>
+              </p>
+              <p>
+                This example shows that of the card's 15228928 sector capacity, 13952920 sectors are unused. At 512
+                bytes per sector, this
+                means that 6.7GB of the total 7.26GB (8GB card) remains empty.
+              </p>
+              <p>This operation is available in Firmware Versions 1.00.03+</p>
+
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="190">
+                  Control SD Interface as user I/O
+                  <p class="small">(op=190)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>Control the I/O pins of the SD Interface as User I/O.</p>
+              <p>Prerequisites for using this feature is as follows:</p>
+              <ul>
+                <li>CONFIG file specifies
+                  <code>IFMODE=1</code>.</li>
+                <li>Host device does not perform SD Initialization.</li>
+              </ul>
+              <p>
+                To learn more about
+                <code>IFMODE</code>, refer to the article regarding
+                <a href="/en/documents/api/config#IFMODE">IFMODE</a> in the CONFIG section.
+              </p>
+
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=190&CTRL=01f&DATA=0x1f</code>
+              </p>
+              <dl>
+                <dt>
+                  <code>CTRL</code>
+                </dt>
+                <dd>Input or output.
+                  <br> Set
+                  <code>0</code> for the bits you want to read from, and Set
+                  <code>1</code> for the bits you want to write to.</dd>
+                <dt>
+                  <code>DATA</code>
+                </dt>
+                <dd>Sets the output.
+                  <br> Set
+                  <code>0</code> to output low, or set
+                  <code>1</code> to output high.</dd>
+              </dl>
+
+              <h4>Bit mappings</h4>
+              <ul>
+                <li>
+                  <b>CMD</b> : 0x01</li>
+                <li>
+                  <b>D0</b> : 0x02</li>
+                <li>
+                  <b>D1</b> : 0x04</li>
+                <li>
+                  <b>D2</b> : 0x08</li>
+                <li>
+                  <b>D3</b> : 0x10</li>
+              </ul>
+
+              <h3>Response Example:</h3>
+              <p>
+                <code>{"STATUS":"OK","CTRL":"0x1f","DATA":"0x1f"}</code>
+              </p>
+              <p>This operation is available in Firmware Versions 2.00.03+</p>
+
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="200">
+                  Enable Photo Share mode
+                  <p class="small">(op=200)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Enables Photo Share mode. Photo Share mode is used to limit access to data other than in the specified
+                directory or from
+                the specified date.
+                <br> When Photo Share mode is enabled, HTTP GET requests to directories specified by command.cgi are
+                ignored
+                and instead data from the directory and date specified by Photo Share mode are returned.</p>
+              <p>Returns
+                <code>OK</code> if command succeeded. If not, it returns
+                <code>400 Bad Request</code>
+              </p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=200&amp;DIR=/DCIM/100__TSB&amp;DATE=17153</code>
+              </p>
+              <p>For detail regarding parameters, refer to
+                <a href="#100">Get file list</a>.</p>
+              <p>This operation is available in Firmware Versions 2.00.00+</p>
+
+              <h3>Notice:</h3>
+              <p>If you use op=200 to enable photo sharing mode, the SSID and network security key will not be changed
+                from
+                the already set contents.
+              </p>
+
+              <p>To change the network security key, change the network security key using
+                <a href="..\configcgi\index-1.htm#APPNETWORKKEY">network security key setting</a> in config.cgi.
+              </p>
+              <p>To change the SSID, please change the SSID by using
+                <a href="..\configcgi\index-1.htm#APPSSID">SSID setting</a> in config.cgi.
+              </p>
+
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="201">
+                  Disable Photo Share mode
+                  <p class="small">(op=201)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Disables Photo Share mode. Photo Share mode is used to limit access to data other than that in the
+                specified directory or
+                of the specified date.
+              </p>
+              <p>Returns
+                <code>OK</code> if command succeeded. If not, it returns
+                <code>400 Bad Request</code>
+              </p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=201</code>
+              </p>
+              <p>This operation is available in Firmware Versions 2.00.00+</p>
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="202">
+                  Get Photo Share mode status
+                  <p class="small">(op=202)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Returns whether Photo Share mode is enabled or not.
+              </p>
+              <p>If Photo Share mode is enabled, it returns
+                <code>SHAREMODE</code>. If Photo Share mode is disabled, it returns
+                <code>NORMALMODE</code>.</p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=202</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>SHAREMODE</code>
+              </p>
+              <p>This operation is available in Firmware Versions 2.00.00+</p>
+            </section>
+
+            <section>
+              <div class="pt-5">
+                <h2 id="203">
+                  Get SSID for Photo Share mode
+                  <p class="small">(op=203)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Returns a special SSID used for Photo Share mode.
+              </p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=203</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>photoshare_e8e0b756a7fb</code>
+              </p>
+              <p>This operation is available in Firmware Versions 2.00.00+</p>
+            </section>
+            <section>
+              <div class="pt-5">
+                <h2 id="220">
+                  Get FlashAir Drive(WebDAV) information
+                  <p class="small">(op=220)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Returns whether FlashAir Drive is enabled or not.
+              </p>
+              <table class="table table-bordered table-hover">
+                <tr>
+                  <th>0</th>
+                  <td>Disable FlashAir Drive</td>
+                </tr>
+                <tr>
+                  <th>1</th>
+                  <td>Enable FlashAir Drive（read only）</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>Enable FlashAir Drive. Needs also
+                    <code>UPLOAD=1</code> to write files.</td>
+                </tr>
+              </table>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=220</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>1</code>
+              </p>
+
+              <p>This operation is available in Firmware Versions 3.00.00+</p>
+            </section>
+            <section>
+              <div class="pt-5">
+                <h2 id="221">
+                  Get timezone
+                  <p class="small">(op=221)</p>
+                </h2>
+                <div class="separator-2"></div>
+              </div>
+              <p>
+                Returns the timezone that will be used to convert from FAT file time to UTC time when FlashAir Drive is
+                run. The timezone
+                is stored in 15 minute increments, ranging from
+                <code>-48</code> to
+                <code>54</code>. For example UTC standard time is
+                <code>0</code>, and Japan time (which is 9 hours ahead), is
+                <code>36</code> (9(h)×4(15m)=36).
+                <br>
+              </p>
+              <h3>Request Example:</h3>
+              <p>
+                <code>http://flashair/command.cgi?op=221</code>
+              </p>
+              <h3>Response Example:</h3>
+              <p>
+                <code>36</code>
+              </p>
+
+              <p>This operation is available in Firmware Versions 3.00.00+</p>
+            </section>
+
+            <!-- Social Buttons -->
+            <div class="clearfix">
+	<ul class="social-links float-right">
+		<li class="twitter">
+			<!--Tweet Button-->
+			<a href="https://twitter.com/share" class="twitter-share-button" {count}="" data-via="FlashAirDev" data-related="FlashAirDev">Tweet</a>
+			<script>
+				! function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0],
+						p = /^http:/.test(d.location) ? 'http' : 'https';
+					if (!d.getElementById(id)) {
+						js = d.createElement(s);
+						js.id = id;
+						js.src = p + '://platform.twitter.com/widgets.js';
+						fjs.parentNode.insertBefore(js, fjs);
+					}
+				}(document, 'script', 'twitter-wjs');
+			</script>
+		</li>
+		<li class="facebook">
+			<!--Facebook Like Button-->
+			<div id="fb-root"></div>
+			<script>
+				(function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+			<div class="fb-like" data-href="https://www.flashair-developers.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+		</li>		
+	</ul>
+</div>
+
+            <!-- Amazon bottom link -->
+            <div class="col-12">
+	<!--Amazon search result for tablet-->
+	<div class="amazon-widget-bottom mx-auto d-none d-md-block d-lg-none">
+		<!--
+<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=12&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="300" height="250" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" width="320" height="250" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+
+	<!--Amazon search result for smartphone-->
+	<div class="amazon-widget-mobile mx-auto d-md-none">
+		<!--Image-->
+		<!--
+	<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20" alt="TOSHIBA FlashAir SD card 8GB SD-WB008G"><img src="http://ws.assoc-amazon.com/widgets/q?_encoding=UTF8&ASIN=B009RGP7HY&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=flasdeve-20" style="vertical-align:middle;"/></a><br>
+-->
+		<!--Text-->
+		<!--
+<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20">Find TOSHIBA FlashAir SD card 8GB SD-WB008G on Amazon.com</a><img src="http://www.assoc-amazon.com/e/ir?t=flasdeve-20&l=as2&o=1&a=B009RGP7HY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+</div>
+
+          </div>
+          <!-- main end -->
+
+          <!-- sidebar start -->
+          <!-- ================ -->
+          <aside class="col-lg-3 col-xl-3 order-lg-1">
+            <div class="sidebar">
+  <div class="block clearfix">
+    <nav>
+      <ul class="nav flex-column">
+        <li class="nav-item active">
+          <a class="nav-link active" href="index-1.htm">
+            command.cgi
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\configcgi\index-1.htm">
+            config.cgi
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\thumbnailcgi\index-1.htm">
+            thumbnail.cgi
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\uploadcgi\index-1.htm">
+            upload.cgi
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\config\index-1.htm">
+            CONFIG
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\utility\index-1.htm">
+            Browser Utility
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\lua\index-1.htm">
+            Lua Scripting
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\isdio\index-1.htm">
+            iSDIO
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\fw40003\index-1.htm">
+            About FW 4.00.03
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Amazon side link -->
+  <!--Amazon search result for desktop-->
+<div class="amazon-widget-side d-none d-lg-block">
+	<!--
+	<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=14&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></iframe>
+	-->
+	<div class="amazon-content" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></div>
+</div>
+          </div></aside>
+          <!-- sidebar end -->
+        </div>
+      </div>
+    </section>
+    <!-- main-container end -->
+
+    <!-- footer start -->
+    <!-- ================ -->
+    <!-- footer start -->
+<!-- ================ -->
+<footer id="footer" class="clearfix ">
+
+  <!-- .footer start -->
+  <!-- ================ -->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">
+                <img alt="FlashAir logo" src="..\..\..\..\images\assets\flashairLogo_official_small2-1.png"> FlashAir&trade; Developers</h2>
+              <div class="separator-2"></div>
+              <p>
+                  A technical information website for developers of Toshiba FlashAir apps or services. FlashAir Developers is operated by Fixstars in cooperation with Toshiba Memory Corporation. To learn more about Fixstars, visit
+                <a target="_blank" href="http://www.fixstars.com">www.fixstars.com
+                  <i class="fa fa-external-link"></i>
+                </a>. ?FlashAir is a trademark of Toshiba Memory Corporation.
+              </p>
+              <ul class="social-links circle animated-effect-1" style="margin-bottom: 10px">
+                <li class="facebook">
+                  <a href="https://www.facebook.com/FlashAir-Developers-115819238627364/" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="twitter">
+                  <a href="https://twitter.com/FlashAirDev/" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+              <ul class="list-unstyled list-inline m-0">
+                <li class="list-inline-item"><a href="..\..\..\terms-of-use\index-1.htm">Terms of Use</a></li>
+                <li class="list-inline-item">|</li>
+                <li class="list-inline-item"><a href="..\..\..\privacypolicy\index-1.htm">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Twitter</h2>
+              <div class="separator-2"></div>
+              <div id="twitterWidget">
+                <a class="twitter-timeline" data-theme="light" href="https://twitter.com/FlashAirDev" data-widget-id="344743426811641856" height="230" data-chrome="nofooter noheader noborders transparent">Latest News</a>
+                <script>
+                  ! function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                      p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                      js = d.createElement(s);
+                      js.id = id;
+                      js.src = p + "://platform.twitter.com/widgets.js";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }
+                  }(document, "script", "twitter-wjs");
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Sitemap</h2>
+              <div class="separator-2"></div>
+              <nav>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\discover\overview\index-1.htm">What's FlashAir?
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\resources\index-1.htm">Developer Resources
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\tutorials\index-1.htm">Tutorials
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\index-1.htm">API Guide
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\support\index-1.htm">Support
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\support\forum\index-1.htm">Developer Forum
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir IoTHub <i class="fa fa-external-link"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .footer end -->
+
+  <!-- .subfooter start -->
+  <!-- ================ -->
+  <div class="subfooter">
+    <div class="container">
+      <div class="subfooter-inner">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center">Copyright &copy; 2019 FlashAir Developers. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .subfooter end -->
+
+  <div id="overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 ml-auto text-white">
+          <p class="mt-3">If you write software or change the settings which are described on this site to your FlashAir device which was purchased at a mass retailer or online shop, it will not be eligible for a free replacement under the warranty policy. Please acknowledge and carry out development at your own risk.
+          </p>
+        </div>
+        <div class="col-md-2 row">
+          <div class="align-self-center">
+          <button class="btn btn-default" id="btn-agree">Accept</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- footer end -->
+
+<!-- JavaScript files placed at the end of the document so the pages load faster -->
+<!-- ================================================== -->
+<!-- Jquery and Bootstap core js files -->
+<script src="..\..\..\..\js\jquery.min-1.js"></script>
+<script src="..\..\..\..\js\bootstrap.bundle.min-1.js"></script>
+<!-- jQuery Revolution Slider  -->
+<script src="..\..\..\..\js\jquery.themepunch.tools.min-1.js"></script>
+<script src="..\..\..\..\js\jquery.themepunch.revolution.min.js imagesloaded.pkgd.min.js.pagespeed.jc.cG4Ou2l09T-1.js"></script><script>eval(mod_pagespeed_faLzhRoycV);</script>
+<!-- Isotope javascript -->
+<script>eval(mod_pagespeed_e7p3yiKri5);</script>
+<script src="..\..\..\..\js\isotope.pkgd.min.js jquery.magnific-popup.min.js jquery.waypoints.min.js sticky.min.js jquery.countTo.js.pagespeed.jc.cWqBgip635-1.js"></script><script>eval(mod_pagespeed_EzjKnImtZK);</script>
+<!-- Magnific Popup javascript -->
+<script>eval(mod_pagespeed_hr4XVzGccf);</script>
+<!-- Appear javascript -->
+<script>eval(mod_pagespeed_zhicDWZgIJ);</script>
+<script>eval(mod_pagespeed_MTpYywWOfL);</script>
+<!-- Count To javascript -->
+<script>eval(mod_pagespeed_dmh3ejQ5o0);</script>
+<!-- Slick carousel javascript -->
+<script src="..\..\..\..\js\slick.min.js pace.min.js template.js jquery.cookie.js custom.js jquery.matchHeight.js.pagespeed.jc.Y3630FlbPX-1.js"></script><script>eval(mod_pagespeed_s1mKdTeuWx);</script>
+<!-- Pace javascript -->
+<script>eval(mod_pagespeed_Zs67JgCVyk);</script>
+<!-- Initialization of Plugins -->
+<script>eval(mod_pagespeed_BIPkzwMbEw);</script>
+<!-- Custom Scripts -->
+<script>eval(mod_pagespeed_uSq_SD1Gz5);</script>
+<script>eval(mod_pagespeed_mqKjjurRp4);</script>
+<script>eval(mod_pagespeed_TteNs$c3Zl);</script>
+<script>
+  $(function () {
+    $('.matchHeight').matchHeight();
+  });
+</script>
+<script src="..\..\..\..\js\script.js prettify.js lang-lua.js lang-css.js.pagespeed.jc.ECF3Z77mjV-1.js"></script><script>eval(mod_pagespeed_SrZ0Yqg7MZ);</script>
+<script>eval(mod_pagespeed_RSPiDhly$4);</script>
+<script>eval(mod_pagespeed_0pGoVUEAt9);</script>
+<script>eval(mod_pagespeed_IrbA2eGHA$);</script>
+<script>
+  ! function ($) {
+    $(function () {
+      PR.prettyPrint()
+    })
+  }(window.jQuery)
+</script>
+    <!-- footer end -->
+  </div>
+  <!-- page wrapper end -->
+
+</body>
+
+</html>

@@ -1,0 +1,2537 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+<!-- %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"} -->
+
+<!--Google Apps verification-->
+
+<title>FlashAir Developers - CONFIG</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta property="fb:admins" content="100006082240886">
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@FlashAirDev">
+<meta property="fb:admins" content="115819238627364">
+<meta property="og:site_name" content="FlashAir Developers">
+<meta property="og:image" content="https://flashair-developers.com/images/assets/ogp.png">
+<meta property="og:url" content="https://www.flashair-developers.com/en/documents/api/config/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FlashAir Developers - CONFIG">
+
+<link href="..\..\..\..\images\flashair_favicon-1.ico" rel="shortcut icon">
+<link href="..\..\..\..\images\apple-touch-icon-152x152-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="152x152">
+<link href="..\..\..\..\images\apple-touch-icon-120x120-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="120x120">
+<link href="..\..\..\..\images\apple-touch-icon-114x114-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="..\..\..\..\images\apple-touch-icon-76x76-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="76x76">
+<link href="..\..\..\..\images\apple-touch-icon-72x72-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="..\..\..\..\images\apple-touch-icon-57x57-precomposed-1.png" rel="apple-touch-icon-precomposed" sizes="57x57">
+<!-- Web Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+<!-- Bootstrap core CSS -->
+<link href="..\..\..\..\css\bootstrap-1.css" rel="stylesheet">
+
+<!-- Font Awesome CSS -->
+<link href="..\..\..\..\css\fonts\font-awesome\css\font-awesome-1.css" rel="stylesheet">
+
+<!-- Plugins -->
+<link href="..\..\..\..\css\magnific-popup-1.css" rel="stylesheet">
+<link href="..\..\..\..\css\settings-1.css" rel="stylesheet">
+<link href="..\..\..\..\css\layers-1.css" rel="stylesheet">
+<link href="..\..\..\..\css\navigation-1.css" rel="stylesheet">
+<link href="..\..\..\..\css\animations-1.css" rel="stylesheet">
+<link href="..\..\..\..\css\slick-1.css" rel="stylesheet">
+
+<!-- The Project's core CSS file -->
+<!-- Use css/rtl_style.css for RTL version -->
+<link href="..\..\..\..\css\style-1.css" rel="stylesheet">
+<!-- The Project's Typography CSS file, includes used fonts -->
+<!-- Used font for body: Roboto -->
+<!-- Used font for headings: Raleway -->
+<!-- Use css/rtl_typography-default.css for RTL version -->
+<link href="..\..\..\..\css\typography-default-1.css" rel="stylesheet">
+<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer) -->
+<link href="..\..\..\..\css\light_blue-1.css" rel="stylesheet">
+
+<!-- Custom css -->
+<link href="..\..\..\..\css\custom-1.css" rel="stylesheet">
+<link href="..\..\..\..\css\prettify-1.css" rel="stylesheet">
+<!--[if lt IE 9]>
+	<link href="/css/bootstrap-ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+	<meta name="keywords" content="FlashAir, SD card, api, config">
+	<meta name="description" content="The FlashAir can be configured by modifying /SD_WLAN/CONFIG. FlashAir is an SD card with embedded Wireless LAN produced by Toshiba Memory Corp..">
+	<meta property="og:description" content="The FlashAir can be configured by modifying /SD_WLAN/CONFIG. FlashAir is an SD card with embedded Wireless LAN produced by Toshiba Memory Corp..">
+</head>
+
+<body class=" ">
+
+	<!-- scrollToTop -->
+	<!-- ================ -->
+	<div class="scrollToTop circle">
+		<i class="fa fa-angle-up"></i>
+	</div>
+
+	<!-- page wrapper start -->
+	<!-- ================ -->
+	<div class="page-wrapper">
+		<!-- header-container start -->
+		<div class="header-container">
+			<!-- header-top start -->
+<!-- classes:  -->
+<!-- "dark": dark version of header top e.g. class="header-top dark" -->
+<!-- "colored": colored version of header top e.g. class="header-top colored" -->
+<!-- ================ -->
+<div class="header-top dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-lg-10">
+                <div class="header-top-first clearfix">
+                    <ul class="list-inline float-right">
+                        <li class="list-inline-item">
+                            <a href="..\..\..\index-1.htm" id="go-to-japanese">Japanese</a>&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            English&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\zh\index-1.htm" id="go-to-chinese">Chinese</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-2">
+                <!-- header-top-second start -->
+                <!-- ================ -->
+                <div id="header-top-second" class="clearfix">
+                    <!-- header top dropdowns start -->
+                    <!-- ================ -->
+                    <div class="header-top-dropdown text-right">
+                        <div class="btn-group">
+                            <a href="..\..\..\member\index-1.htm" class="btn btn-default btn-sm">
+                                <i class="fa fa-user pr-2"></i> MyAccount</a>
+                        </div>
+                    </div>
+                    <!--  header top dropdowns end -->
+                </div>
+                <!-- header-top-second end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header-top end -->
+<!-- header start -->
+<!-- classes:  -->
+<!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+<!-- "fixed-desktop": enables fixed navigation only for desktop devices e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "fixed-all": enables fixed navigation only for all devices desktop and mobile e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+<!-- "centered": mandatory class for the centered logo layout -->
+<!-- ================ -->
+<header class="header fixed fixed-desktop clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-auto hidden-md-down pl-3">
+                <!-- header-first start -->
+                <!-- ================ -->
+                <div class="header-first clearfix">
+
+                    <!-- logo -->
+                    <div id="logo" class="logo">
+                        <a href="..\..\..\index-1.htm">
+                            <img alt="FlashAir logo" src="..\..\..\..\images\assets\flashairLogo_official_small2-1.png">
+                            &nbsp;FlashAir&trade; Developers
+                        </a>
+                    </div>
+
+                </div>
+                <!-- header-first end -->
+
+            </div>
+            <div class="col-lg-7 ml-lg-auto">
+
+                <!-- header-second start -->
+                <!-- ================ -->
+                <div class="header-second clearfix">
+
+                    <!-- main-navigation start -->
+                    <!-- classes: -->
+                    <!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+                    <!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+                    <!-- ================ -->
+                    <div class="main-navigation main-navigation--mega-menu  animated">
+                        <nav class="navbar navbar-expand-lg navbar-light p-0">
+                            <div class="navbar-brand clearfix hidden-lg-up">
+
+                                <!-- logo -->
+                                <div id="logo-mobile" class="logo">
+                                    <a href="..\..\..\index-1.htm">
+                                        <img alt="FlashAir logo" src="..\..\..\..\images\assets\flashairLogo_official_small2-1.png">
+                                        &nbsp;FlashAir&trade; Developers
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- header dropdown buttons -->
+                            <div class="header-dropdown-buttons hidden-lg-up p-0 ml-auto mr-3">
+                                <div class="btn-group">
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                                        <li>
+                                            <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse">
+                                                <div class="form-group has-feedback">
+                                                    <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                                    <input type="hidden" name="ie" value="UTF-8">
+                                                    <input type="text" name="q" size="31" class="form-control">
+                                                    <input type="submit" name="sa" value="Search">
+                                                </div>
+                                            </form>
+                                            <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- header dropdown buttons end -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                <!-- main-menu -->
+                                <ul class="navbar-nav ml-xl-auto">
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="first-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Discover</a>
+                                        <ul class="dropdown-menu" aria-labelledby="first-dropdown">
+                                            <li>
+                                                <a href="..\..\..\discover\overview\index-1.htm">What's FlashAir?</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\discover\overview\w04\index-1.htm">Fourth generation FlashAir W-04</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\discover\gettingstarted\index-1.htm">Getting Started</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\discover\beginners\index-1.htm">Beginners Guide with FlashAir
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\discover\usage\index-1.htm">Get started with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\discover\app\index-1.htm">Overview of FlashAir Application
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\discover\device\index-1.htm">Overview of using Devices with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir
+                                                    IoT Hub
+                                                    <i class="fa fa-external-link"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="second-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Application</a>
+                                        <ul class="dropdown-menu" aria-labelledby="second-dropdown">
+                                            <li>
+                                                <a href="..\..\..\application\iot\index-1.htm">Application to IoT</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\application\devices\index-1.htm">Using with Devices</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\application\workflow\index-1.htm">Improve efficiency of operations</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\application\share-documents\index-1.htm">Sharing Documents</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\application\users\index-1.htm">User's Projects</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\application\showcase\index-1.htm">App Showcase</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown active"> <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+                                        <ul class="dropdown-menu" aria-labelledby="third-dropdown">
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\..\tutorials\ios\index-1.htm">iOS</a></li>
+                                                    <li><a href="..\..\tutorials\android\index-1.htm">Android</a></li>
+                                                    <li><a href="..\..\tutorials\web\index-1.htm">Web browser</a></li>
+                                                    <li><a href="..\..\tutorials\advanced\index-1.htm">Advanced</a></li>
+                                                    <li><a href="..\..\tutorials\isdio\index-1.htm">iSDIO</a></li>
+                                                    <li><a href="..\..\tutorials\lua\index-1.htm">Lua</a></li>
+                                                    <li><a href="..\..\tutorials\users\index-1.htm">User's Tutorials</a></li>
+                                                    <li><a href="..\..\tutorials\iot-hub\index-1.htm">FlashAir IoT Hub</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">API Guide</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\commandcgi\index-1.htm">command.cgi</a></li>
+                                                    <li><a href="..\configcgi\index-1.htm">config.cgi</a></li>
+                                                    <li><a href="..\thumbnailcgi\index-1.htm">thumbnail.cgi</a></li>
+                                                    <li><a href="..\uploadcgi\index-1.htm">upload.cgi</a></li>
+                                                    <li><a href="index-1.htm">CONFIG</a></li>
+                                                    <li><a href="..\utility\index-1.htm">Browser Utility</a></li>
+                                                    <li><a href="..\lua\index-1.htm">Lua Scripting</a></li>
+                                                    <li><a href="..\isdio\index-1.htm">iSDIO</a></li>
+                                                    <li><a href="..\fw40003\index-1.htm">About FW 4.00.03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\resources\index-1.htm">Developer Resources</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\books\index-1.htm">Books</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\about\events\index-1.htm">Events</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="fourth-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                                        <ul class="dropdown-menu" aria-labelledby="fourth-dropdown">
+                                            <li>
+                                                <a href="..\..\..\support\index-1.htm">Support</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\support\forum\index-1.htm">Developer Forum</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\support\faq\index-1.htm">FAQ</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\support\iot-hub\index-1.htm">About FlashAir IoT Hub service end</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\support\developers\index-1.htm">About FlashAir Developers site closure</a>
+                                            </li>                
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!-- main-menu end -->
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- main-navigation end -->
+                </div>
+                <!-- header-second end -->
+
+            </div>
+            <div class="col-auto hidden-md-down">
+                <!-- header dropdown buttons -->
+                <div class="header-dropdown-buttons">
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                            <li>
+                                <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse" target="_blank">
+                                    <div class="form-group has-feedback">
+                                        <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                        <input type="hidden" name="ie" value="UTF-8">
+                                        <input type="text" name="q" size="31" class="form-control">
+                                        <input type="submit" name="sa" value="Search">
+                                    </div>
+                                </form>
+                                <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- header dropdown buttons end -->
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+    <!-- Google Analytics Tracking Code -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-498925-24', 'auto');
+        ga('send', 'pageview');
+    </script>
+</header>
+		</div>
+		<!-- header-container end -->
+
+		<!-- main-container start -->
+		<!-- ================ -->
+		<section class="main-container">
+
+			<div class="container">
+				<div class="row ml-2 mr-2">
+
+					<!-- main start -->
+					<!-- ================ -->
+					<div class="main col-lg-9 order-lg-2 pb-5">
+
+						<!-- page-title start -->
+						<!-- ================ -->
+						<h1 class="page-title">
+							CONFIG
+						</h1>
+						<p class="small text-muted">Last update: May 2018</p>
+						<!-- page-title end -->
+
+						<p class="mt-5">
+							The FlashAir can be controlled by changing
+							<code>/SD_WLAN/CONFIG</code>. To activate changed settings, you have to restart the FlashAir by removing and
+							re-inserting
+							it. There are hidden attributes attached to this directory, therefore you need tools to handle this hidden
+							folder.
+							Please note that any setting changes made by config.cgi may take some time to be reflected in the CONFIG file.
+							Restart
+							the FlashAir, then change the CONFIG file. Regarding how to write CONFIG, please see
+							<a href="#EXAMPLE"> CONFIG writing sample</a>.<br>
+							In addition, after ";" will be treated as comment out.
+						</p>
+
+						<ul>
+							<li>
+								<a href="#wlansd">WLANSD</a>
+							</li>
+							<li>
+								<a href="#vendor">Vendor</a>
+							</li>
+						</ul>
+
+						<h2 id="wlansd" class="mt-1">WLANSD</h2>
+						<div class="separator-2"></div>
+						<p>The following conditions allow us to controll Wireless LAN in common with iSDIO standard devices. For iSDIO
+							specifications,
+							please refer to
+							<a href="https://www.sdcard.org/downloads/pls/index.html" target="_blank"> SD Association
+								<i class="fa fa-external-link"></i>
+							</a> .</p>
+
+
+						<table class="table table-bordered table-hover">
+							<tr>
+								<th>Parameter</th>
+								<th>Description</th>
+								<th>Example</th>
+								<th>Firmware Version</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="#ID">ID</a>
+								</td>
+								<td>Card ID</td>
+								<td>
+									<code>ID=SMITH’S_CARD</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#DHCP_ENABLED">DHCP_Enabled</a>
+								</td>
+								<td>Enable DHCP Client</td>
+								<td>
+									<code>DHCP_Enabled=YES</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#IP_ADDRESS">IP_Address</a>
+								</td>
+								<td>IP Address</td>
+								<td>
+									<code>IP_Address=192.168.0.10</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#SUBNET_MASK">Subnet_Mask</a>
+								</td>
+								<td>Subnet Mask</td>
+								<td>
+									<code>Subnet_Mask=255.255.255.0</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#DEFAULT_GATEWAY">Default_Gateway</a>
+								</td>
+								<td>Default Gateway</td>
+								<td>
+									<code>Default_Gateway=192.168.0.1</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#PREFERRED_DNS_SERVER">Preferred_DNS_Server</a>
+								</td>
+								<td>Preferred DNS Server</td>
+								<td>
+									<code>Preferred_DNS_Server=192.168.0.1</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#ALTERNATE_DNS_SERVER">Alternate_DNS_Server</a>
+								</td>
+								<td>Alternate DNS Server</td>
+								<td>
+									<code>Alternate_DNS_Server=192.168.0.1</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#PROXY_SERVER_ENABLED">Proxy_Server_Enabled</a>
+								</td>
+								<td>Enable Proxy Server</td>
+								<td>
+									<code>Proxy_Server_Enabled=YES</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#PROXY_SERVER_NAME">Proxy_Server_Name</a>
+								</td>
+								<td>Proxy Server</td>
+								<td>
+									<code>Proxy_Server_Name=yourproxy.com</code>
+									<br>
+									<code>Proxy_Server_Name=123.123.0.1</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#PORT_NUMBER">Port_Number</a>
+								</td>
+								<td>Proxy Server Port Number</td>
+								<td>
+									<code>Port_Number=8080</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+
+						</table>
+
+						<h2 id="vendor" class="mt-1">Vendor</h2>
+						<div class="separator-2"></div>
+
+						<p>The following conditions allow us to controll spcific to the FlashAir.</p>
+						<table class="table table-bordered table-hover">
+							<tr>
+								<th>Parameter</th>
+								<th>Description</th>
+								<th>Example</th>
+								<th>Firmware Version</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="#APPAUTOTIME">APPAUTOTIME</a>
+								</td>
+								<td>Set connection time-out period</td>
+								<td>
+									<code>APPAUTOTIME=3000000</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#APPINFO">APPINFO</a>
+								</td>
+								<td>Application's unique information</td>
+								<td>
+									<code>APPINFO=0123ABCD4567EFGH</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#APPMODE">APPMODE</a>
+								</td>
+								<td>Wireless LAN mode</td>
+								<td>
+									<code>APPMODE=4</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#APPNAME">APPNAME</a>
+								</td>
+								<td>NETBIOS/Bonjour name</td>
+								<td>
+									<code>APPNAME=myflashair</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#APPNETWORKKEY">APPNETWORKKEY</a>
+								</td>
+								<td>Network security key</td>
+								<td>
+									<code>APPNETWORKKEY=12345678</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#APPSSID">APPSSID</a>
+								</td>
+								<td>SSID</td>
+								<td>
+									<code>APPSSID=flashair</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#BRGNETWORKKEY">BRGNETWORKKEY</a>
+								</td>
+								<td>Network security key for Internet pass-thru mode</td>
+								<td>
+									<code>BRGNETWORKKEY=12345678</code>
+								</td>
+								<td>2.00.02+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#BRGSSID">BRGSSID</a>
+								</td>
+								<td>SSID for Internet pass-thru mode</td>
+								<td>
+									<code>BRGSSID=myhomelan</code>
+								</td>
+								<td>2.00.02+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#CID">CID</a>
+								</td>
+								<td>Card ID</td>
+								<td>
+									<code>CID=02544d53573038470750002a0200c201</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#CIPATH">CIPATH</a>
+								</td>
+								<td>Wireless boot screen path</td>
+								<td>
+									<code>CIPATH=/DCIM/100__TSB/FA000001.jpg</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="badge badge-danger">New</span>
+									<a href="#COMMANDCGI">COMMANDCGI</a>
+								</td>
+								<td>设置command.cgi的有效操作码</td>
+								<td>
+									<code>COMMANDCGI=100-103</code>
+								</td>
+								<td>3.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#DELCGI">DELCGI</a>
+								</td>
+								<td>Disable CGI</td>
+								<td>
+									<code>DELCGI=/,/thumbnail.cgi</code>
+								</td>
+								<td>2.00.02+</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="badge badge-danger">New</span>
+									<a href="#DHCPC_RETRANS_MAX">DHCPC_RETRANS_MAX</a>
+								</td>
+								<td>DHCP client retransmission count</td>
+								<td>
+									<code>DHCPC_RETRANS_MAX=5</code>
+								</td>
+								<td>4.00.03+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#DNSMODE">DNSMODE</a>
+								</td>
+								<td>DNS operation mode</td>
+								<td>
+									<code>DNSMODE=1</code>
+								</td>
+								<td>2.00.02+</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="badge badge-danger">New</span>
+									<a href="#EAPCERT">EAPCERT</a>
+								</td>
+								<td>File path of TLS certificate</td>
+								<td>
+									<code>EAPCERT=/cert.pfx</code>
+								</td>
+								<td>4.00.03+</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="badge badge-danger">New</span>
+									<a href="#EAPPASSWORD">EAPPASSWORD</a>
+								</td>
+								<td>PEAP password or TLS secret key password</td>
+								<td>
+									<code>EAPPASSWORD=12345678</code>
+								</td>
+								<td>4.00.03+</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="badge badge-danger">New</span>
+									<a href="#EAPTYPE">EAPTYPE</a>
+								</td>
+								<td>Encryption standard</td>
+								<td>
+									<code>EAPTYPE=TLS</code>
+								</td>
+								<td>4.00.03+</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="badge badge-danger">New</span>
+									<a href="#EAPUSER">EAPUSER</a>
+								</td>
+								<td>User ID to use when EAPTYPE is specified</td>
+								<td>
+									<code>EAPUSER=SMITH</code>
+								</td>
+								<td>4.00.03+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#HTTPDBUFF">HTTPDBUFF</a>
+								</td>
+								<td>Memory size</td>
+								<td>
+									<code>HTTPDBUFF=2920</code>
+								</td>
+								<td>2.00.03+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#HTTPDMODE">HTTPDMODE</a>
+								</td>
+								<td>Authentication method</td>
+								<td>
+									<code>HTTPDMODE=1</code>
+								</td>
+								<td>1.00.04+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#HTTPDPASS">HTTPDPASS</a>
+								</td>
+								<td>Authentication password</td>
+								<td>
+									<code>HTTPDPASS=12345678</code>
+								</td>
+								<td>1.00.04+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#HTTPDUSER">HTTPDUSER</a>
+								</td>
+								<td>Authentication user name</td>
+								<td>
+									<code>HTTPDUSER=flashair</code>
+								</td>
+								<td>1.00.04+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#IFMODE">IFMODE</a>
+								</td>
+								<td>SD Interface User I/O enabled flag</td>
+								<td>
+									<code>IFMODE=1</code>
+								</td>
+								<td>2.00.03+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#LOCK">LOCK</a>
+								</td>
+								<td>Default configured flag</td>
+								<td>
+									<code>LOCK=1</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#LUA_RUN_SCRIPT">LUA_RUN_SCRIPT</a>
+								</td>
+								<td>Path to a Lua script to execute on boot</td>
+								<td>
+									<code>LUA_RUN_SCRIPT=/bootscript.lua</code>
+								</td>
+								<td>3.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#LUA_SD_EVENT">LUA_SD_EVENT</a>
+								</td>
+								<td>Path to a Lua script to execute on a write event</td>
+								<td>
+									<code>LUA_SD_EVENT=/writescript.lua</code>
+								</td>
+								<td>3.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#MASTERCODE">MASTERCODE</a>
+								</td>
+								<td>Mastercode</td>
+								<td>
+									<code>MASTERCODE=0123456789AB</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#NOISE_CANCEL">NOISE_CANCEL</a>
+								</td>
+								<td>Noise Cancel</td>
+								<td>
+									<code>NOISE_CANCEL=2</code>
+								</td>
+								<td>2.00.03+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#PRODUCT">PRODUCT</a>
+								</td>
+								<td>Product code</td>
+								<td>
+									<code>PRODUCT=FlashAir</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#REDIRECT">REDIRECT</a>
+								</td>
+								<td>HTTP redirect mode</td>
+								<td>
+									<code>REDIRECT=1</code>
+								</td>
+								<td>2.00.03+</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="badge badge-danger">New</span>
+									<a href="#STAMAC">STAMAC</a>
+								</td>
+								<td>Address filtering function in STA mode</td>
+								<td>
+									<code>STAMAC=40b395A0851a</code>
+								</td>
+								<td>2.00.02+</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="badge badge-danger">New</span>
+									<a href="#STANUM">STANUM</a>
+								</td>
+								<td>Number of connected devices restriction function in STA mode</td>
+								<td>
+									<code>STANUM=2</code>
+								</td>
+								<td>2.00.02+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#STA_RETRY_CT">STA_RETRY_CT</a>
+								</td>
+								<td>Number of connection retries in STA mode</td>
+								<td>
+									<code>STA_RETRY_CT=0</code>
+								</td>
+								<td>3.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#TIMEZONE">TIMEZONE</a>
+								</td>
+								<td>Timezone</td>
+								<td>
+									<code>TIMEZONE=36</code>
+								</td>
+								<td>3.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#UPDIR">UPDIR</a>
+								</td>
+								<td>Upload destination directory</td>
+								<td>
+									<code>UPDIR=/DCIM</code>
+								</td>
+								<td>2.00.03+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#UPLOAD">UPLOAD</a>
+								</td>
+								<td>Upload operation enabled flag</td>
+								<td>
+									<code>UPLOAD=1</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#VENDOR">VENDOR</a>
+								</td>
+								<td>Vendor code</td>
+								<td>
+									<code>VENDOR=TOSHIBA</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#VERSION">VERSION</a>
+								</td>
+								<td>Firmware version</td>
+								<td>
+									<code>VERSION=F24A6W3AW1.00.03</code>
+								</td>
+								<td>1.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#WEBDAV">WEBDAV</a>
+								</td>
+								<td>FlashAir Drive(WebDAV) enabled flag</td>
+								<td>
+									<code>WEBDAV=0</code>
+								</td>
+								<td>3.00.00+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#WLANAPMODE">WLANAPMODE</a>
+								</td>
+								<td>Wireless LAN Standard</td>
+								<td>
+									<code>WLANAPMODE=0x03</code>
+								</td>
+								<td>3.00.00+</td>
+							</tr>
+						</table>
+
+						<section>
+							<h2 id="EXAMPLE" class="mt-1">CONFIG writing sample</h2>
+							<div class="separator-2"></div>
+
+							<pre><code>[WLANSD]
+
+ID=SMITH’S_CARD
+DHCP_Enabled=YES
+IP_Address=
+Subnet_Mask=
+Default_Gateway=
+Preferred_DNS_Server=
+Alternate_DNS_Server=
+Proxy_Server_Enabled=YES
+Proxy_Server_Name=yourproxy.com
+Port_Number=8080
+
+[Vendor]
+
+CIPATH=/DCIM/100__TSB/FA000001.JPG
+APPMODE=4
+APPNETWORKKEY=********
+VERSION=FA9CAW3AW3.00.00
+CID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+PRODUCT=FlashAir
+VENDOR=TOSHIBA
+</code></pre>
+						</section>
+
+						<section>
+
+							<div class="pt-5">
+								<h2 id="ID">
+									Card ID
+									<p class="small">(ID)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Specifies card ID using ASCII 1 - 16 characters. Default is empty.</p>
+							<h4>Example:</h4>
+							<p>
+								<code>ID=SMITH’S_CARD</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="DHCP_ENABLED">
+									Enable DHCP Client
+									<p class="small">(DHCP_Enabled)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Sets whether to enable or disable DHCP client as follows.</p>
+							<table class="table table-bordered table-hover">
+								<tr>
+									<th>YES (Default)</th>
+									<td>Enable DHCP client</td>
+								</tr>
+								<tr>
+									<th>NO</th>
+									<td>Disable DHCP client</td>
+								</tr>
+							</table>
+							<h4>Example:</h4>
+
+							<p>
+								<code>DHCP_Enabled=YES</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="IP_ADDRESS">
+									IP Address
+									<p class="small">(IP_Address)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>When DHCP client is disabled, sets the IP Address. Default value is "0.0.0.0". When "DHCP_Enabled=YES",
+								values are
+								ignored.
+							</p>
+							<h4>Example:</h4>
+							<p>
+								<code>IP_Address=192.168.0.10</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="SUBNET_MASK">
+									Subnet Mask
+									<p class="small">(Subnet_Mask)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>When DHCP client is disabled, sets Subnet Mask. Default value is "0.0.0.0". When "DHCP_Enabled=YES", values
+								are ignored.</p>
+							<h4>Example:</h4>
+							<p>
+								<code>Subnet_Mask=255.255.255.0</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="DEFAULT_GATEWAY">
+									Default Gateway
+									<p class="small">(Default_Gateway)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>When DHCP client is disabled, sets the Default Gateway. Default value is "0.0.0.0". When "DHCP_Enabled=YES",
+								values
+								are ignored.</p>
+							<h4>Example:</h4>
+							<p>
+								<code>Default_Gateway=192.168.0.1</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="PREFERRED_DNS_SERVER">
+									Preferred DNS Server
+									<p class="small">(Preferred_DNS_Server)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>When DHCP client is disabled, sets the Preferred DNS Server. Default value is "0.0.0.0". When
+								"DHCP_Enabled=YES",
+								values are ignored.</p>
+							<h4>Example:</h4>
+							<p>
+								<code>Preferred_DNS_Server=192.168.0.1</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="ALTERNATE_DNS_SERVER">
+									Alternate DNS Server
+									<p class="small">(Alternate_DNS_Server)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>When DHCP client is disabled, sets the Alternate DNS Server. Default value is "0.0.0.0". When
+								"DHCP_Enabled=YES",
+								values are ignored.</p>
+							<h4>Example:</h4>
+							<p>
+								<code>Alternate_DNS_Server=192.168.0.1</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="PROXY_SERVER_ENABLED">
+									Enable Proxy Server
+									<p class="small">(Proxy_Server_Enabled)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Sets whether to enable or disable Proxy Server as follows.</p>
+							<table class="table table-bordered table-hover">
+								<tr>
+									<th>YES</th>
+									<td>Enable Proxy Server</td>
+								</tr>
+								<tr>
+									<th>NO (Default)</th>
+									<td>Disable Proxy Server</td>
+								</tr>
+							</table>
+							<h4>Example:</h4>
+							<p>
+								<code>Proxy_Server_Enabled=YES</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="PROXY_SERVER_NAME">
+									Proxy Server
+									<p class="small">(Proxy_Server_Name)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Sets the domain name or IP Address of Proxy Server. Default is empty. When "Proxy_Server_Enabled=NO", values
+								are ignored.</p>
+							<h4>Example:</h4>
+							<p>
+								<code>Proxy_Server_Name=yourproxy.com</code>
+								<br>
+								<code>Proxy_Server_Name=123.123.0.1</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="PORT_NUMBER">
+									Proxy Server Port Number
+									<p class="small">(Port_Number)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Sets the Port Number of Proxy Server. Default value is "8080". When "Proxy_Server_Enabled=NO", values are
+								ignored.</p>
+							<h4>Example:</h4>
+							<p>
+								<code>Port_Number=8080</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="APPAUTOTIME">
+									Set connection time-out period
+									<p class="small">(APPAUTOTIME)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								Sets the automatic time-out period for Wireless LAN functionality.
+							</p>
+							<p>
+								When the Wireless LAN mode is
+								<code>4</code>, the Wireless LAN functionality will stop if other devices are not connecting to the FlashAir
+								for the time
+								specified by this parameter.
+								<br> The available values are from
+								<code>60000</code> to
+								<code>4294967294</code>, with a default value of
+								<code>300000</code>. Time is measured in milliseconds.
+							</p>
+							<p>Specifies
+								<code>0</code> to disable the automatic time-out.
+								<br>
+								<strong>Note: </strong>
+								The card would stop ex. if the power supply to the card stops.</p>
+							<p>APPAUTOTIME is valid only when APPMODE is AP. There will be no timeout due to the time set in APPAUTOTIME
+								when APMODE
+								is STA or BRG.</p>
+							<h4>Example:</h4>
+							<p>
+								<code>APPAUTOTIME=3000000</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="APPINFO">
+									Application's unique information
+									<p class="small">(APPINFO)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								Saves information uniquely used by the application using 1 - 16 characters.
+							</p>
+							<h4>Example:</h4>
+							<p>
+								<code>APPINFO=0123ABCD4567EFGH</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="APPMODE">
+									Wireless LAN mode
+									<p class="small">(APPMODE)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								Sets the Wireless LAN mode. The following modes are available:
+							</p>
+
+							<table class="table table-bordered table-hover">
+								<tr>
+									<th>0</th>
+									<td>Start the wireless LAN function in manual start mode.
+										<br> Sets the Wireless LAN to AP mode.</td>
+								</tr>
+								<!--
+					<tr>
+						<th>1</th>
+						<td>Removes the write protection from the "Wireless LAN Boot Screen" image.<br />
+						 Sets the Wireless LAN to AP mode.</td>
+					</tr>
+					-->
+								<tr>
+									<th>2</th>
+									<td>Start the wireless LAN function in manual start mode.
+										<br> Sets the Wireless LAN to STA mode.</td>
+								</tr>
+								<tr>
+									<th>3</th>
+									<td>Start the wireless LAN function in manual start mode.
+										<br> Sets the Wireless LAN to "Internet pass-thru" mode.
+										<br> (FW 2.00.02+)</td>
+								</tr>
+								<tr>
+									<th>4</th>
+									<td>Start the wireless LAN function in auto start mode.
+										<br> Sets the Wireless LAN to AP mode.</td>
+								</tr>
+								<tr>
+									<th>5</th>
+									<td>Start the wireless LAN function in auto start mode.
+										<br> Sets the Wireless LAN to STA mode.</td>
+								</tr>
+								<tr>
+									<th>6</th>
+									<td>Start the wireless LAN function in auto start mode.
+										<br> Sets the Wireless LAN to "Internet pass-thru" mode.
+										<br> (FW 2.00.02+)</td>
+								</tr>
+								<tr>
+									<th>Other</th>
+									<td>Undefined behaviour.</td>
+								</tr>
+							</table>
+							<dl>
+								<dt>Manual start mode
+								</dt>
+								<dd>This mode is used to switch the ON / OFF of the wireless LAN function of FlashAir manually.
+									<br> You can activate the wireless LAN by turning off the image protection of the wireless LAN startup image
+									(/ DCIM
+									/ 100__TSB / FA000001.JPG) saved in FlashAir at the time of shipment, and deactivate the wireless LAN by
+									turning
+									on the image protection.
+									<br> Protection ON / OFF is performed mainly on the digital camera side.
+								</dd>
+
+								<dt>Auto start mode
+								</dt>
+								<dd>This mode automatically activates the wireless LAN function when the FlashAir inserted device turns on.
+								</dd>
+
+								<dt>AP mode
+								</dt>
+								<dd>
+									In AP mode (i.e. Access Point Mode), the FlashAir behaves like a normal wireless access point - although with
+									no direct internet
+									access
+									<br> The config file parameters
+									<code>APPSSID</code> and
+									<code>APPNETWORKKEY</code> set the SSID and Network Security Key respectively.
+									<br> The security mode is WPA2-AES.
+								</dd>
+
+								<dt>STA mode
+								</dt>
+								<dd>
+									In STA mode (ie. Station Mode), the FlashAir becomes a Wireless LAN client. This requires another device to
+									act as the access
+									point.
+									<br> The config file parameters
+									<code>APPSSID</code> and
+									<code>APPNETWORKKEY</code> set the SSID and Network Security Key respectively.
+									<br> Please refer to
+									<a href="..\..\tutorials\advanced\1\index-1.htm">Advanced Tutorials - Using Station Mode</a> for further
+									information.
+								</dd>
+
+								<dt>Internet pass-thru mode
+								</dt>
+								<dd>
+
+									In Internet pass-thru mode, the FlashAir becomes both a Wireless Access Point, and a Wireless LAN client.
+									<br> This allows you to connect to the internet while also connected to your FlashAir.
+									<br> If the card fails to connect to the second access point, only AP mode functionality will be enabled.
+									<br> The config file parameters
+									<code>APPSSID</code> and
+									<code>APPNETWORKKEY</code> set the SSID and Network Security Key respectively.
+									<br> The security mode is WPA2-AES.
+									<br> The config file parameters
+									<code>BRGSSID</code> and
+									<code>BRGNETWORKKEY</code> set the SSID and Network Security Key to use for the second access point.
+									<br> Please refer to
+									<a href="..\..\tutorials\advanced\3\index-1.htm">Advanced Tutorials - Using Internet Pass-Thru Mode</a> for more
+									information.
+								</dd>
+							</dl>
+
+							<h4>Example:</h4>
+							<p>
+								<code>APPMODE=4</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="APPNAME">
+									NETBIOS/Bonjour name
+									<p class="small">(APPNAME)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								Sets the name returned from NETBIOS or Bonjour in 15 characters.
+							</p>
+							<p>
+								If there is no setting in the CONFIG file, or there is no CONFIG file, the name becomes
+								<code>flashair</code>.
+							</p>
+							<h4>Example:</h4>
+							<p>
+								<code>APPNAME=myflashair</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="APPNETWORKKEY">
+									Network security key
+									<p class="small">(APPNETWORKKEY)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								Sets the network security key using 0 - 63 characters. To enable security functionality, at least 8 characters
+								are required.
+							</p>
+							<h4>Example:</h4>
+							<p>
+								<code>APPNETWORKKEY=12345678</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="APPSSID">
+									SSID
+									<p class="small">(APPSSID)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								Sets the Service Set Identifier (SSID) using 1 - 32 characters.
+							</p>
+							<p>
+								If this has not yet been set in the CONFIG file or if there is no CONFIG file, the SSID becomes
+								<code>flashair_&lt;MACADDRESS&gt;</code>.
+							</p>
+							<h4>Example:</h4>
+							<p>
+								<code>APPSSID=flashair</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="BRGNETWORKKEY">
+									Network security key for Internet pass-thru Mode
+									<p class="small">(BRGNETWORKKEY)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								Sets the network security key for Internet pass-thru mode using 0 - 63 characters.
+							</p>
+							<h4>Example:</h4>
+							<p>
+								<code>BRGNETWORKKEY=12345678</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="BRGSSID">
+									SSID for Internet pass-thru Mode
+									<p class="small">(BRGSSID)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								Sets the Service Set Identifier (SSID) for Internet pass-thru mode using 1 - 32 characters.
+							</p>
+							<h4>Example:</h4>
+							<p>
+								<code>BRGSSID=myhomelan</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="CID">
+									Card ID
+									<p class="small">(CID)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								CID is a Card Identifier specified by the SD standard. The identifier is a 32-digit hexadecimal number.
+							</p>
+							<h4>Example:</h4>
+							<p>
+								<code>CID=02544d53573038470750002a0200c201</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="CIPATH">
+									Wireless boot screen path
+									<p class="small">(CIPATH)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								Sets the full-path of the image to use as the wireless boot screen. The wireless boot screen is an image file
+								that controls
+								whether the Wireless LAN is ON or OFF when the Wireless LAN mode (
+								<a href="#APPMODE">APPMODE</a>) is
+								<code>0</code>,
+								<code>2</code>, or
+								<code>3</code>.
+							</p>
+							<h4>Example:</h4>
+							<p>
+								<code>CIPATH=/DCIM/100__TSB/FA000001.jpg</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="COMMANDCGI">
+									Sets the valid opcode of command.cgi
+									<p class="small">(COMMANDCGI)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Sets the valid opcode of command.cgi.</p>
+
+							<h4>Example:</h4>
+
+							<p>
+								<code>COMMANDCGI=100-103</code>
+							</p>
+
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="DELCGI">
+									Disable CGI
+									<p class="small">(DELCGI)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								Disables specified CGIs.
+							</p>
+							<h4>Parameters:</h4>
+							Specifies one or multiple values in the following list connecting with comma:
+							<table class="table table-bordered table-hover">
+								<tr>
+									<th>/</th>
+									<td>Disable file downloading operation.</td>
+								</tr>
+								<tr>
+									<th>/command.cgi</th>
+									<td>Disable command.cgi</td>
+								</tr>
+								<tr>
+									<th>/config.cgi</th>
+									<td>Disable config.cgi</td>
+								</tr>
+								<tr>
+									<th>/thumbnail.cgi</th>
+									<td>Disable thumbnail.cgi</td>
+								</tr>
+								<tr>
+									<th>/upload.cgi</th>
+									<td>Disable upload.cgi</td>
+								</tr>
+							</table>
+							<h4>Example:</h4>
+							<p>
+								<code>DELCGI=/,/thumbnail.cgi</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="DHCPC_RETRANS_MAX">
+									DHCP client retransmission count
+									<p class="small">(DHCPC_RETRANS_MAX)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Sets the number of DHCP client retransmissions. If 0 is specified, retransmit infinitely. The setting value
+								is
+								<code>0</code> to
+								<code>255</code>.</p>
+							<h4>Example:</h4>
+
+							<p>
+								<code>DHCPC_RETRANS_MAX=5</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="DNSMODE">
+									DNS operation mode
+									<p class="small">(DNSMODE)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Selects the DNS operation mode.</p>
+							<table class="table table-bordered table-hover">
+								<tr>
+									<th>0</th>
+									<td>Returns the FlashAir's IP Address only if the DNS request is done with the APPNAME or
+										<code>flashair</code> .</td>
+								</tr>
+								<tr>
+									<th>1 (Default)</th>
+									<td>resolves and returns the FlashAir's IP Address to DNS requests. For example, even if APPNAME is set to
+										'myflashair'
+										and accessing with http://flashair resolves to the card's IP address</td>
+								</tr>
+							</table>
+							<h4>Example:</h4>
+							<p>
+								<code>DNSMODE=1</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="EAPCERT">
+									File path of TLS certificate
+									<p class="small">(EAPCERT)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Sets the file path of the TLS certificate. Specifiable certificates are in .pfx or .p12 format.</p>
+							<h4>Example:</h4>
+
+							<p>
+								<code>EAPCERT=/cert.pfx</code>
+							</p>
+
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="EAPPASSWORD">
+									PEAP password or TLS secret key password
+									<p class="small">(EAPPASSWORD)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Set PEAP password or TLS secret key password.</p>
+							<h4>Example:</h4>
+
+							<p>
+								<code>EAPPASSWORD=12345678</code>
+							</p>
+
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="EAPTYPE">
+									Encryption standard
+									<p class="small">(EAPTYPE)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>If EAPTYPE is set when setting STA mode, it operates in 8021X mode (WPA2 Enterprise). The set value is
+								<code>PEAP</code> ,
+								<code>TLS</code> . If
+								<code>PEAP</code> is set, FlashAir tries connection using
+								<a href="#EAPUSER">EAPUSER</a> and
+								<a href="#EAPPASSWORD">EAPPASSWORD</a> parameters. If
+								<code>TLS</code> is specified, it connects using client certificate. At this time, specify the SSID of the
+								access point to be connected with
+								<a href="#APPSSID">APPSSID</a>.</p>
+							<h4>Example:</h4>
+							<p>
+								<code>EAPTYPE=TLS</code>
+							</p>
+							<h4>Setting Example:</h4>
+							<p>Wireless security settings</p>
+							<ul>
+								<li>Authentication method：WPA-EAP</li>
+								<li>WPA type：WPA2-EAP</li>
+								<li>Encryption method：AES
+									<ul>
+										<li>※Connection by IEEE802.1X/EAP is not available. </li>
+									</ul>
+								</li>
+							</ul>
+							<p>EAP-PEAP CONFIG setting</p>
+							<pre>EAPTYPE=PEAP
+EAPUSER=flashair 
+EAPPASSWORD=******** # Password set in user management</pre>
+							<p>EAP-TLS CONFIG setting</p>
+							<pre>EAPTYPE=TLS
+EAPCERT=/radius2.p12 # The certificate set in the RADIUS server also works.
+EAPPASSWORD=******** # Password set at certification creation
+EAPUSER=flashair</pre>
+
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="EAPUSER">
+									User ID to use when EAPTYPE is specified
+									<p class="small">(EAPUSER)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Sets the user ID to use when EAPTYPE is specified.</p>
+							<h4>Example:</h4>
+
+							<p>
+								<code>EAPUSER=SMITH</code>
+							</p>
+
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="HTTPDBUFF">
+									Memory size
+									<p class="small">(HTTPDBUFF)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>By reducing the amount of memory used in the HTTP server, you can increase the amount of memory used in Lua
+								script
+								execution. Note that in the case of reducing the memory of the HTTP server, the download throughput will
+								decrease.
+								The range of value is from
+								<code>2920</code> to
+								<code>23360</code>. Default value is
+								<code>23360</code>.</p>
+							<h4>Example:</h4>
+
+							<p>
+								<code>HTTPDBUFF=2920</code>
+							</p>
+
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="HTTPDMODE">
+									Authentication method
+									<p class="small">(HTTPDMODE)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Specifies authentication method used by built-in HTTP server. Specify one of the following values.</p>
+							<table class="table table-bordered table-hover">
+								<tr>
+									<th>0 (default)</th>
+									<td>No authentication</td>
+								</tr>
+								<tr>
+									<th>1</th>
+									<td>Basic access authentication</td>
+								</tr>
+								<tr>
+									<th>2</th>
+									<td>Digest access authentication</td>
+								</tr>
+							</table>
+							<h4>Example:</h4>
+
+							<p>
+								<code>HTTPDMODE=1</code>
+							</p>
+
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="HTTPDPASS">
+									Authentication password
+									<p class="small">(HTTPDPASS)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Specifies a password for Basic access authentication or a hash key for Digest access authentication.
+								<br>Digest authentication Realm is "Secret Zone".For Digest authentication, please write the following value in
+								32-digit
+								hexadecimal number.
+								<br>MD5(Username ":" "Secret Zone" ":" Password).</p>
+							<h4>Example（Basic access authentication）:</h4>
+
+							<p>
+								<code>HTTPDPASS=12345678</code>
+							</p>
+							<h4>Example（Digest access authentication）:</h4>
+							<p>Username：
+								<code>username</code>
+								<br> Password：
+								<code>password</code>
+								<br> In this case, calculate MD5("username:Secret Zone:password").
+								<br>
+								<code>HTTPDPASS=66643ffbf66badfe10b904134e6bd1dc</code>
+							</p>
+
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="HTTPDUSER">
+									Authentication user name
+									<p class="small">(HTTPDUSER)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Specifies a user name for Basic access authentication. This parameter is not used for Digest access
+								authentication.</p>
+							<h4>Example:</h4>
+
+							<p>
+								<code>HTTPDUSER=flashair</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="IFMODE">
+									SD Interface Enable Flag
+									<p class="small">(IFMODE)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p> Enables the usage of the SD Interface User I/O.
+								<br>
+							</p>
+							Please refer to
+							<a href="..\commandcgi\index-1.htm#190">command.cgi: Control SD Interface as user I/O</a> for more
+							information.
+
+							<table class="table table-bordered table-hover">
+								<tr>
+									<th>1</th>
+									<td>Enabled</td>
+								</tr>
+								<tr>
+									<th>Other (Default)</th>
+									<td>Disabled</td>
+								</tr>
+							</table>
+
+							<h4>Example:</h4>
+							<p>
+								<code>IFMODE=1</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="LOCK">
+									Default configured flag
+									<p class="small">(LOCK)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								This flag indicates whether the default configuration has been completed. If the default configuration is set,
+								the flag will
+								be set to
+								<code>1</code>. If the default configured flag does not exist, the SSID and network security setting screen
+								will be displayed
+								when the FlashAir is connected to a web browser. Please do not set this flag to any value other than
+								<code>1</code>.
+							</p>
+							<h4>Example:</h4>
+							<p>
+								<code>LOCK=1</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="LUA_RUN_SCRIPT">
+									Path to a Lua script to execute on boot
+									<p class="small">(LUA_RUN_SCRIPT)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								Sets the absolute path to a Lua script that will be executed on boot. The script will run 5 minutes after the
+								FlashAir boots.
+							</p>
+
+							<h4>Example:</h4>
+							<p>
+								<code>LUA_RUN_SCRIPT=/bootscript.lua</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="LUA_SD_EVENT">
+									Path to a Lua script to execute on a write event
+									<p class="small">(LUA_SD_EVENT)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								Sets the absolute path to a Lua script that will be executed on a write event. The script will run every time a
+								file is written
+								to the FlashAir. It is executed 0.5 seconds after writing the last data.
+							</p>
+
+							<h4>Example:</h4>
+
+							<p>
+								<code>LUA_SD_EVENT=/writescript.lua</code>
+							</p>
+
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="MASTERCODE">
+									Master code
+									<p class="small">(MASTERCODE)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								The master code is a 12-digit hexadecimal number which is used as a password to set the SSID (APPSSID) and
+								network security
+								key (APPNETWORKKEY). If the master code is not yet set, please set it via config.cgi before changing any
+								settings.
+							</p>
+							<h4>Example:</h4>
+							<p>
+								<code>MASTERCODE=0123456789AB</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="NOISE_CANCEL">
+									Noise Cancel
+									<p class="small">(NOISE_CANCEL)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								Improves connection at the cost of decreased range of the signal, which can be beneficiary in a noisy
+								environment.
+							</p>
+							<table class="table table-bordered table-hover">
+								<tr>
+									<th>2</th>
+									<td>Enable Noise Cancelling</td>
+								</tr>
+								<tr>
+									<th>Other (Default)</th>
+									<td>Disable Noise Cancelling</td>
+								</tr>
+							</table>
+							<h4>Example:</h4>
+							<p>
+								<code>NOISE_CANCEL=2</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="PRODUCT">
+									Product code
+									<p class="small">(PRODUCT)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								The product name of the FlashAir.
+							</p>
+							<h4>Example:</h4>
+							<p>
+								<code>PRODUCT=FlashAir</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="REDIRECT">
+									HTTP redirect mode
+									<p class="small">(REDIRECT)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Changes the HTTP redirect mode. The following modes are available:</p>
+							<table class="table table-bordered table-hover">
+								<tr>
+									<th>1 (Default)</th>
+									<td>Enable redirecting </td>
+								</tr>
+								<tr>
+									<th>0</th>
+									<td>Disable redirecting</td>
+								</tr>
+							</table>
+
+							<h4>Example:</h4>
+
+							<p>
+								<code>REDIRECT=1</code>
+							</p>
+
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="STAMAC">
+									Address filtering function in STA mode
+									<p class="small">(STAMAC)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Sets the address filtering function in STA mode. Up to seven can be registered when registering more than
+								one. In
+								that case, you need to list multiple lines of STAMAC.</p>
+
+							<h4>Example:</h4>
+
+							<p>
+								<code>STAMAC=40b395A0851a</code>
+							</p>
+
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="STANUM">
+									Limited number of connections in STA mode
+									<p class="small">(STANUM)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Sets the connection limit in STA mode. Up to seven units can be connected if not described.</p>
+
+							<h4>Example:</h4>
+
+							<p>
+								<code>STANUM=2</code>
+							</p>
+
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="STA_RETRY_CT">
+									Number of connection retried in STA mode
+									<p class="small">(STA_RETRY_CT)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								Sets how many times to retry connecting to a wireless LAN in STA mode.
+								<code>0</code>will retry indefinitely.
+							</p>
+
+							<h4>Example:</h4>
+
+							<p>
+								<code>STA_RETRY_CT=3</code>
+							</p>
+
+						</section>
+						<section>
+							<div class="pt-5">
+								<h2 id="TIMEZONE">
+									Timezone
+									<p class="small">(TIMEZONE)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								Sets the timezone that will be used to convert from FAT file time to UTC time when FlashAir Drive is run. The
+								timezone is
+								stored in 15 minute increments, ranging from
+								<code>-48</code> to
+								<code>54</code>. For example UTC standard time is
+								<code>0</code>, and Japan time (which is 9 hours ahead), is
+								<code>36</code> (9(h)×4(15m)=36).</p>
+							<h4>Example:</h4>
+
+							<p>
+								<code>TIMEZONE=36</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="UPDIR">
+									Upload destination directory
+									<p class="small">(UPDIR)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Specifies the directory to upload.</p>
+
+							<h4>Example:</h4>
+							<p>
+								<code>UPDIR=/DCIM</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="UPLOAD">
+									Upload operation enabled flag
+									<p class="small">(UPLOAD)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								Sets whether the upload operation is enabled or not using one of following values:
+							</p>
+							<table class="table table-bordered table-hover">
+								<tr>
+									<th>1</th>
+									<td>Upload operation enabled</td>
+								</tr>
+								<tr>
+									<th>Other (Default)</th>
+									<td>Upload operation disabled</td>
+								</tr>
+							</table>
+
+							<h4>Example:</h4>
+							<p>
+								<code>UPLOAD=1</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="VENDOR">
+									Vendor code
+									<p class="small">(VENDOR)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								The vendor name of the FlashAir.
+							</p>
+							<h4>Example:</h4>
+							<p>
+								<code>VENDOR=TOSHIBA</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="VERSION">
+									Firmware version
+									<p class="small">(VERSION)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>
+								The firmware version for the FlashAir
+							</p>
+							<h4>Example:</h4>
+							<p>
+								<code>VERSION=F24A6W3AW1.00.03</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="WEBDAV">
+									FlashAir Drive(WebDAV)
+									<p class="small">(WEBDAV)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Sets whether to enable or disable FlashAir Drive. The following modes are available:</p>
+
+							<table class="table table-bordered table-hover">
+								<tr>
+									<th>0</th>
+									<td>Disable FlashAir Drive</td>
+								</tr>
+								<tr>
+									<th>1</th>
+									<td>Enable FlashAir Drive（read only）</td>
+								</tr>
+								<tr>
+									<th>2</th>
+									<td>Enable FlashAir Drive（read / write）</td>
+								</tr>
+							</table>
+
+							<h4>Example:</h4>
+							<p>
+								<code>WEBDAV=0</code>
+							</p>
+						</section>
+
+						<section>
+							<div class="pt-5">
+								<h2 id="WLANAPMODE">
+									Wireless LAN Standard
+									<p class="small"> (WLANAPMODE)</p>
+								</h2>
+								<div class="separator-2"></div>
+							</div>
+							<p>Sets the Wireless LAN Standard as follows.</p>
+							<table class="table table-bordered table-hover">
+								<tr>
+									<th>0x01</th>
+									<td>802.11b</td>
+								</tr>
+								<tr>
+									<th>0x02</th>
+									<td>802.11g</td>
+								</tr>
+								<tr>
+									<th>0x03 (Default)</th>
+									<td>802.11bg</td>
+								</tr>
+								<tr>
+									<th>0x82</th>
+									<td>802.11ng</td>
+								</tr>
+							</table>
+							<h4>Example:</h4>
+							<p>
+								<code>WLANAPMODE=0x03</code>
+							</p>
+						</section>
+
+						<!-- Social Buttons -->
+						<div class="clearfix">
+	<ul class="social-links float-right">
+		<li class="twitter">
+			<!--Tweet Button-->
+			<a href="https://twitter.com/share" class="twitter-share-button" {count}="" data-via="FlashAirDev" data-related="FlashAirDev">Tweet</a>
+			<script>
+				! function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0],
+						p = /^http:/.test(d.location) ? 'http' : 'https';
+					if (!d.getElementById(id)) {
+						js = d.createElement(s);
+						js.id = id;
+						js.src = p + '://platform.twitter.com/widgets.js';
+						fjs.parentNode.insertBefore(js, fjs);
+					}
+				}(document, 'script', 'twitter-wjs');
+			</script>
+		</li>
+		<li class="facebook">
+			<!--Facebook Like Button-->
+			<div id="fb-root"></div>
+			<script>
+				(function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+			<div class="fb-like" data-href="https://www.flashair-developers.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+		</li>		
+	</ul>
+</div>
+
+						<!-- Amazon bottom link -->
+						<div class="col-12">
+	<!--Amazon search result for tablet-->
+	<div class="amazon-widget-bottom mx-auto d-none d-md-block d-lg-none">
+		<!--
+<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=12&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="300" height="250" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" width="320" height="250" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+
+	<!--Amazon search result for smartphone-->
+	<div class="amazon-widget-mobile mx-auto d-md-none">
+		<!--Image-->
+		<!--
+	<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20" alt="TOSHIBA FlashAir SD card 8GB SD-WB008G"><img src="http://ws.assoc-amazon.com/widgets/q?_encoding=UTF8&ASIN=B009RGP7HY&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=flasdeve-20" style="vertical-align:middle;"/></a><br>
+-->
+		<!--Text-->
+		<!--
+<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20">Find TOSHIBA FlashAir SD card 8GB SD-WB008G on Amazon.com</a><img src="http://www.assoc-amazon.com/e/ir?t=flasdeve-20&l=as2&o=1&a=B009RGP7HY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+</div>
+
+					</div>
+					<!-- main end -->
+
+					<!-- sidebar start -->
+					<!-- ================ -->
+					<aside class="col-lg-3 col-xl-3 order-lg-1">
+						<div class="sidebar">
+  <div class="block clearfix">
+    <nav>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="..\commandcgi\index-1.htm">
+            command.cgi
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\configcgi\index-1.htm">
+            config.cgi
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\thumbnailcgi\index-1.htm">
+            thumbnail.cgi
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\uploadcgi\index-1.htm">
+            upload.cgi
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link active" href="index-1.htm">
+            CONFIG
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\utility\index-1.htm">
+            Browser Utility
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\lua\index-1.htm">
+            Lua Scripting
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\isdio\index-1.htm">
+            iSDIO
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\fw40003\index-1.htm">
+            About FW 4.00.03
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Amazon side link -->
+  <!--Amazon search result for desktop-->
+<div class="amazon-widget-side d-none d-lg-block">
+	<!--
+	<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=14&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></iframe>
+	-->
+	<div class="amazon-content" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></div>
+</div>
+					</div></aside>
+					<!-- sidebar end -->
+				</div>
+			</div>
+		</section>
+		<!-- main-container end -->
+
+		<!-- footer start -->
+		<!-- ================ -->
+		<!-- footer start -->
+<!-- ================ -->
+<footer id="footer" class="clearfix ">
+
+  <!-- .footer start -->
+  <!-- ================ -->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">
+                <img alt="FlashAir logo" src="..\..\..\..\images\assets\flashairLogo_official_small2-1.png"> FlashAir&trade; Developers</h2>
+              <div class="separator-2"></div>
+              <p>
+                  A technical information website for developers of Toshiba FlashAir apps or services. FlashAir Developers is operated by Fixstars in cooperation with Toshiba Memory Corporation. To learn more about Fixstars, visit
+                <a target="_blank" href="http://www.fixstars.com">www.fixstars.com
+                  <i class="fa fa-external-link"></i>
+                </a>. ?FlashAir is a trademark of Toshiba Memory Corporation.
+              </p>
+              <ul class="social-links circle animated-effect-1" style="margin-bottom: 10px">
+                <li class="facebook">
+                  <a href="https://www.facebook.com/FlashAir-Developers-115819238627364/" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="twitter">
+                  <a href="https://twitter.com/FlashAirDev/" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+              <ul class="list-unstyled list-inline m-0">
+                <li class="list-inline-item"><a href="..\..\..\terms-of-use\index-1.htm">Terms of Use</a></li>
+                <li class="list-inline-item">|</li>
+                <li class="list-inline-item"><a href="..\..\..\privacypolicy\index-1.htm">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Twitter</h2>
+              <div class="separator-2"></div>
+              <div id="twitterWidget">
+                <a class="twitter-timeline" data-theme="light" href="https://twitter.com/FlashAirDev" data-widget-id="344743426811641856" height="230" data-chrome="nofooter noheader noborders transparent">Latest News</a>
+                <script>
+                  ! function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                      p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                      js = d.createElement(s);
+                      js.id = id;
+                      js.src = p + "://platform.twitter.com/widgets.js";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }
+                  }(document, "script", "twitter-wjs");
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Sitemap</h2>
+              <div class="separator-2"></div>
+              <nav>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\discover\overview\index-1.htm">What's FlashAir?
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\resources\index-1.htm">Developer Resources
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\tutorials\index-1.htm">Tutorials
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\index-1.htm">API Guide
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\support\index-1.htm">Support
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\support\forum\index-1.htm">Developer Forum
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir IoTHub <i class="fa fa-external-link"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .footer end -->
+
+  <!-- .subfooter start -->
+  <!-- ================ -->
+  <div class="subfooter">
+    <div class="container">
+      <div class="subfooter-inner">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center">Copyright &copy; 2019 FlashAir Developers. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .subfooter end -->
+
+  <div id="overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 ml-auto text-white">
+          <p class="mt-3">If you write software or change the settings which are described on this site to your FlashAir device which was purchased at a mass retailer or online shop, it will not be eligible for a free replacement under the warranty policy. Please acknowledge and carry out development at your own risk.
+          </p>
+        </div>
+        <div class="col-md-2 row">
+          <div class="align-self-center">
+          <button class="btn btn-default" id="btn-agree">Accept</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- footer end -->
+
+<!-- JavaScript files placed at the end of the document so the pages load faster -->
+<!-- ================================================== -->
+<!-- Jquery and Bootstap core js files -->
+<script src="..\..\..\..\js\jquery.min-1.js"></script>
+<script src="..\..\..\..\js\bootstrap.bundle.min-1.js"></script>
+<!-- jQuery Revolution Slider  -->
+<script src="..\..\..\..\js\jquery.themepunch.tools.min-1.js"></script>
+<script src="..\..\..\..\js\jquery.themepunch.revolution.min.js imagesloaded.pkgd.min.js.pagespeed.jc.cG4Ou2l09T-1.js"></script><script>eval(mod_pagespeed_faLzhRoycV);</script>
+<!-- Isotope javascript -->
+<script>eval(mod_pagespeed_e7p3yiKri5);</script>
+<script src="..\..\..\..\js\isotope.pkgd.min.js jquery.magnific-popup.min.js jquery.waypoints.min.js sticky.min.js jquery.countTo.js.pagespeed.jc.cWqBgip635-1.js"></script><script>eval(mod_pagespeed_EzjKnImtZK);</script>
+<!-- Magnific Popup javascript -->
+<script>eval(mod_pagespeed_hr4XVzGccf);</script>
+<!-- Appear javascript -->
+<script>eval(mod_pagespeed_zhicDWZgIJ);</script>
+<script>eval(mod_pagespeed_MTpYywWOfL);</script>
+<!-- Count To javascript -->
+<script>eval(mod_pagespeed_dmh3ejQ5o0);</script>
+<!-- Slick carousel javascript -->
+<script src="..\..\..\..\js\slick.min.js pace.min.js template.js jquery.cookie.js custom.js jquery.matchHeight.js.pagespeed.jc.Y3630FlbPX-1.js"></script><script>eval(mod_pagespeed_s1mKdTeuWx);</script>
+<!-- Pace javascript -->
+<script>eval(mod_pagespeed_Zs67JgCVyk);</script>
+<!-- Initialization of Plugins -->
+<script>eval(mod_pagespeed_BIPkzwMbEw);</script>
+<!-- Custom Scripts -->
+<script>eval(mod_pagespeed_uSq_SD1Gz5);</script>
+<script>eval(mod_pagespeed_mqKjjurRp4);</script>
+<script>eval(mod_pagespeed_TteNs$c3Zl);</script>
+<script>
+  $(function () {
+    $('.matchHeight').matchHeight();
+  });
+</script>
+<script src="..\..\..\..\js\script.js prettify.js lang-lua.js lang-css.js.pagespeed.jc.ECF3Z77mjV-1.js"></script><script>eval(mod_pagespeed_SrZ0Yqg7MZ);</script>
+<script>eval(mod_pagespeed_RSPiDhly$4);</script>
+<script>eval(mod_pagespeed_0pGoVUEAt9);</script>
+<script>eval(mod_pagespeed_IrbA2eGHA$);</script>
+<script>
+  ! function ($) {
+    $(function () {
+      PR.prettyPrint()
+    })
+  }(window.jQuery)
+</script>
+		<!-- footer end -->
+	</div>
+	<!-- page wrapper end -->
+
+</body>
+
+</html>

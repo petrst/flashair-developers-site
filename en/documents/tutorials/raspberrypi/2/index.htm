@@ -1,0 +1,2624 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<!-- %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"} -->
+
+<!--Google Apps verification-->
+
+<title>FlashAir Developers - API Reference</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta property="fb:admins" content="100006082240886">
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@FlashAirDev">
+<meta property="fb:admins" content="115819238627364">
+<meta property="og:site_name" content="FlashAir Developers">
+<meta property="og:image" content="https://flashair-developers.com/images/assets/ogp.png">
+<meta property="og:url" content="https://flashair-developers.com/en/documents/tutorials/raspberrypi/2/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FlashAir Developers - API Reference">
+
+<link href="..\..\..\..\..\images\flashair_favicon.ico" rel="shortcut icon">
+<link href="..\..\..\..\..\images\apple-touch-icon-152x152-precomposed.png" rel="apple-touch-icon-precomposed" sizes="152x152">
+<link href="..\..\..\..\..\images\apple-touch-icon-120x120-precomposed.png" rel="apple-touch-icon-precomposed" sizes="120x120">
+<link href="..\..\..\..\..\images\apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="..\..\..\..\..\images\apple-touch-icon-76x76-precomposed.png" rel="apple-touch-icon-precomposed" sizes="76x76">
+<link href="..\..\..\..\..\images\apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="..\..\..\..\..\images\apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon-precomposed" sizes="57x57">
+<!-- Web Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+<!-- Bootstrap core CSS -->
+<link href="..\..\..\..\..\css\bootstrap.css" rel="stylesheet">
+
+<!-- Font Awesome CSS -->
+<link href="..\..\..\..\..\css\fonts\font-awesome\css\font-awesome.css" rel="stylesheet">
+
+<!-- Plugins -->
+<link href="..\..\..\..\..\css\magnific-popup.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\settings.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\layers.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\navigation.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\animations.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\slick.css" rel="stylesheet">
+
+<!-- The Project's core CSS file -->
+<!-- Use css/rtl_style.css for RTL version -->
+<link href="..\..\..\..\..\css\style.css" rel="stylesheet">
+<!-- The Project's Typography CSS file, includes used fonts -->
+<!-- Used font for body: Roboto -->
+<!-- Used font for headings: Raleway -->
+<!-- Use css/rtl_typography-default.css for RTL version -->
+<link href="..\..\..\..\..\css\typography-default.css" rel="stylesheet">
+<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer) -->
+<link href="..\..\..\..\..\css\light_blue.css" rel="stylesheet">
+
+<!-- Custom css -->
+<link href="..\..\..\..\..\css\custom.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\prettify.css" rel="stylesheet">
+<!--[if lt IE 9]>
+	<link href="/css/bootstrap-ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+  <meta name="keywords" content="FlashAir, RaspberryPi">
+  <meta name="description" content="Tutorial on raspberry pie app using FlashAir. FlashAir is a SD card with embedded wireless LAN produced by Toshiba Memory Corp..">
+  <meta property="og:description" content="Tutorial on raspberry pie app using FlashAir. FlashAir is a SD card with embedded wireless LAN produced by Toshiba Memory Corp..">
+</head>
+
+<body class=" ">
+
+  <!-- scrollToTop -->
+  <!-- ================ -->
+  <div class="scrollToTop circle">
+    <i class="fa fa-angle-up"></i>
+  </div>
+
+  <!-- page wrapper start -->
+  <!-- ================ -->
+  <div class="page-wrapper">
+    <!-- header-container start -->
+    <div class="header-container">
+      <!-- header-top start -->
+<!-- classes:  -->
+<!-- "dark": dark version of header top e.g. class="header-top dark" -->
+<!-- "colored": colored version of header top e.g. class="header-top colored" -->
+<!-- ================ -->
+<div class="header-top dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-lg-10">
+                <div class="header-top-first clearfix">
+                    <ul class="list-inline float-right">
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\index.htm" id="go-to-japanese">Japanese</a>&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            English&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\..\zh\index.htm" id="go-to-chinese">Chinese</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-2">
+                <!-- header-top-second start -->
+                <!-- ================ -->
+                <div id="header-top-second" class="clearfix">
+                    <!-- header top dropdowns start -->
+                    <!-- ================ -->
+                    <div class="header-top-dropdown text-right">
+                        <div class="btn-group">
+                            <a href="..\..\..\..\member\index.htm" class="btn btn-default btn-sm">
+                                <i class="fa fa-user pr-2"></i> MyAccount</a>
+                        </div>
+                    </div>
+                    <!--  header top dropdowns end -->
+                </div>
+                <!-- header-top-second end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header-top end -->
+<!-- header start -->
+<!-- classes:  -->
+<!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+<!-- "fixed-desktop": enables fixed navigation only for desktop devices e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "fixed-all": enables fixed navigation only for all devices desktop and mobile e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+<!-- "centered": mandatory class for the centered logo layout -->
+<!-- ================ -->
+<header class="header fixed fixed-desktop clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-auto hidden-md-down pl-3">
+                <!-- header-first start -->
+                <!-- ================ -->
+                <div class="header-first clearfix">
+
+                    <!-- logo -->
+                    <div id="logo" class="logo">
+                        <a href="..\..\..\..\index.htm">
+                            <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2.png">
+                            &nbsp;FlashAir&trade; Developers
+                        </a>
+                    </div>
+
+                </div>
+                <!-- header-first end -->
+
+            </div>
+            <div class="col-lg-7 ml-lg-auto">
+
+                <!-- header-second start -->
+                <!-- ================ -->
+                <div class="header-second clearfix">
+
+                    <!-- main-navigation start -->
+                    <!-- classes: -->
+                    <!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+                    <!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+                    <!-- ================ -->
+                    <div class="main-navigation main-navigation--mega-menu  animated">
+                        <nav class="navbar navbar-expand-lg navbar-light p-0">
+                            <div class="navbar-brand clearfix hidden-lg-up">
+
+                                <!-- logo -->
+                                <div id="logo-mobile" class="logo">
+                                    <a href="..\..\..\..\index.htm">
+                                        <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2.png">
+                                        &nbsp;FlashAir&trade; Developers
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- header dropdown buttons -->
+                            <div class="header-dropdown-buttons hidden-lg-up p-0 ml-auto mr-3">
+                                <div class="btn-group">
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                                        <li>
+                                            <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse">
+                                                <div class="form-group has-feedback">
+                                                    <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                                    <input type="hidden" name="ie" value="UTF-8">
+                                                    <input type="text" name="q" size="31" class="form-control">
+                                                    <input type="submit" name="sa" value="Search">
+                                                </div>
+                                            </form>
+                                            <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- header dropdown buttons end -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                <!-- main-menu -->
+                                <ul class="navbar-nav ml-xl-auto">
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="first-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Discover</a>
+                                        <ul class="dropdown-menu" aria-labelledby="first-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\discover\overview\index.htm">What's FlashAir?</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\overview\w04\index.htm">Fourth generation FlashAir W-04</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\gettingstarted\index.htm">Getting Started</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\beginners\index.htm">Beginners Guide with FlashAir
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\usage\index.htm">Get started with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\app\index.htm">Overview of FlashAir Application
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\device\index.htm">Overview of using Devices with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir
+                                                    IoT Hub
+                                                    <i class="fa fa-external-link"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="second-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Application</a>
+                                        <ul class="dropdown-menu" aria-labelledby="second-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\application\iot\index.htm">Application to IoT</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\devices\index.htm">Using with Devices</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\workflow\index.htm">Improve efficiency of operations</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\share-documents\index.htm">Sharing Documents</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\users\index.htm">User's Projects</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\showcase\index.htm">App Showcase</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown active"> <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+                                        <ul class="dropdown-menu" aria-labelledby="third-dropdown">
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\..\ios\index.htm">iOS</a></li>
+                                                    <li><a href="..\..\android\index.htm">Android</a></li>
+                                                    <li><a href="..\..\web\index.htm">Web browser</a></li>
+                                                    <li><a href="..\..\advanced\index.htm">Advanced</a></li>
+                                                    <li><a href="..\..\isdio\index.htm">iSDIO</a></li>
+                                                    <li><a href="..\..\lua\index.htm">Lua</a></li>
+                                                    <li><a href="..\..\users\index.htm">User's Tutorials</a></li>
+                                                    <li><a href="..\..\iot-hub\index.htm">FlashAir IoT Hub</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">API Guide</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\..\..\api\commandcgi\index.htm">command.cgi</a></li>
+                                                    <li><a href="..\..\..\api\configcgi\index.htm">config.cgi</a></li>
+                                                    <li><a href="..\..\..\api\thumbnailcgi\index.htm">thumbnail.cgi</a></li>
+                                                    <li><a href="..\..\..\api\uploadcgi\index.htm">upload.cgi</a></li>
+                                                    <li><a href="..\..\..\api\config\index.htm">CONFIG</a></li>
+                                                    <li><a href="..\..\..\api\utility\index.htm">Browser Utility</a></li>
+                                                    <li><a href="..\..\..\api\lua\index.htm">Lua Scripting</a></li>
+                                                    <li><a href="..\..\..\api\isdio\index.htm">iSDIO</a></li>
+                                                    <li><a href="..\..\..\api\fw40003\index.htm">About FW 4.00.03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\resources\index.htm">Developer Resources</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\books\index.htm">Books</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\about\events\index.htm">Events</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="fourth-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                                        <ul class="dropdown-menu" aria-labelledby="fourth-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\support\index.htm">Support</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\forum\index.htm">Developer Forum</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\faq\index.htm">FAQ</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\iot-hub\index.htm">About FlashAir IoT Hub service end</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\developers\index.htm">About FlashAir Developers site closure</a>
+                                            </li>                
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!-- main-menu end -->
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- main-navigation end -->
+                </div>
+                <!-- header-second end -->
+
+            </div>
+            <div class="col-auto hidden-md-down">
+                <!-- header dropdown buttons -->
+                <div class="header-dropdown-buttons">
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                            <li>
+                                <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse" target="_blank">
+                                    <div class="form-group has-feedback">
+                                        <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                        <input type="hidden" name="ie" value="UTF-8">
+                                        <input type="text" name="q" size="31" class="form-control">
+                                        <input type="submit" name="sa" value="Search">
+                                    </div>
+                                </form>
+                                <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- header dropdown buttons end -->
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+    <!-- Google Analytics Tracking Code -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-498925-24', 'auto');
+        ga('send', 'pageview');
+    </script>
+</header>
+    </div>
+    <!-- header-container end -->
+
+    <!-- main-container start -->
+    <!-- ================ -->
+    <section class="main-container">
+
+      <div class="container">
+        <div class="row">
+
+          <!-- main start -->
+          <!-- ================ -->
+          <div class="main col-lg-9 order-lg-2 pb-5">
+
+            <!-- page-title start -->
+            <!-- ================ -->
+            <h1 class="page-title">
+              API Reference</h1>
+            <p class="small text-muted">Latest update: September 2018</p>
+            <!-- page-title end -->
+
+            <h3 class="mt-5">WLAN APIs</h3>
+            <table class="table table-bordered table-hover">
+              <tr>
+                <th>Command ID</th>
+                <th>Command name</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td>0x0001</td>
+                <td><a href="#iSDIO_WLAN_Scan">iSDIO_WLAN_Scan</a></td>
+                <td>Search for connectable wireless LAN.</td>
+              </tr>
+              <tr>
+                <td>0x0002</td>
+                <td><a href="#iSDIO_WLAN_Connect">iSDIO_WLAN_Connect</a></td>
+                <td>Wireless LAN connection as a station.</td>
+              </tr>
+              <tr>
+                <td>0x0003</td>
+                <td><a href="#iSDIO_WLAN_Establish">iSDIO_WLAN_Establish</a></td>
+                <td>Establishment of wireless LAN connection as access point.</td>
+              </tr>
+              <tr>
+                <td>0x0005</td>
+                <td><a href="#iSDIO_WLAN_StartWPS">iSDIO_WLAN_StartWPS</a></td>
+                <td>Start of wireless LAN connection setup by WPS as station.</td>
+              </tr>
+              <tr>
+                <td>0x0007</td>
+                <td><a href="#iSDIO_WLAN_Disconnect">iSDIO_WLAN_Disconnect</a></td>
+                <td>Disconnect the wireless LAN.</td>
+              </tr>
+            </table>
+
+            <h3>Common APIs</h3>
+            <table class="table table-bordered table-hover">
+              <tr>
+                <th>Command ID</th>
+                <th>Command name</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td>0x0011</td>
+                <td><a href="#iSDIO_WLAN_SetCurrentTime">iSDIO_WLAN_SetCurrentTime</a></td>
+                <td>Set the date and time of FlashAir.</td>
+              </tr>
+              <tr>
+                <td>0x0015</td>
+                <td><a href="#iSDIO_WLAN_SetChannel">iSDIO_WLAN_SetChannel</a></td>
+                <td>Set the channel number of the access point.</td>
+              </tr>
+            </table>
+
+            <h3>Server Upload APIs</h3>
+            <table class="table table-bordered table-hover">
+              <tr>
+                <th>Command name</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td><a href="#iSDIO_WLAN_Request">iSDIO_WLAN_Request</a></td>
+                <td>Sending each HTTP message.</td>
+              </tr>
+            </table>
+
+            <h3>Original APIs</h3>
+            <table class="table table-bordered table-hover">
+              <tr>
+                <th>Command ID</th>
+                <th>Command name</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td>0xE200</td>
+                <td><a href="#iSDIO_WLAN_Bridge">iSDIO_WLAN_Bridge</a></td>
+                <td>Start bridge mode.</td>
+              </tr>
+              <tr>
+                <td>0xE201</td>
+                <td><a href="#iSDIO_WLAN_BridgeGetByRegister">iSDIO_WLAN_BridgeGetByRegister</a></td>
+                <td>Get bridge mode information.</td>
+              </tr>
+            </table>
+
+            <h3>Other APIs</h3>
+            <table class="table table-bordered table-hover">
+              <tr>
+                <th>Command name</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td><a href="#iSDIO_WLAN_GetSSIDs">iSDIO_WLAN_GetSSIDs</a></td>
+                <td>Get the number of access points.</td>
+              </tr>
+              <tr>
+                <td><a href="#iSDIO_WLAN_GetSSID">iSDIO_WLAN_GetSSID</a></td>
+                <td>Get the access point name.</td>
+              </tr>
+              <tr>
+                <td><a href="#iSDIO_WLAN_GetStatusData">iSDIO_WLAN_GetStatusData</a></td>
+                <td>Obtain output data of Status Register.</td>
+              </tr>
+              <tr>
+                <td><a href="#iSDIO_WLAN_GetResponseData">iSDIO_WLAN_GetResponseData</a></td>
+                <td>Response Data Register Port output data is obtained.</td>
+              </tr>
+              <tr>
+                <td><a href="#iSDIO_WLAN_GetVersion">iSDIO_WLAN_GetVersion</a></td>
+                <td>Get version information.</td>
+              </tr>
+              <tr>
+                <td><a href="#iSDIO_WLAN_SetWaitResponseTime">iSDIO_WLAN_SetWaitResponseTime</a></td>
+                <td>Response Changes the wait timeout value.</td>
+              </tr>
+              <tr>
+                <td><a href="#iSDIO_WLAN_Check_WLANConnect">iSDIO_WLAN_Check_WLANConnect</a></td>
+                <td>Check the WLAN connection.</td>
+              </tr>
+              <tr>
+                <td><a href="#iSDIO_WLAN_Check_WLAN">iSDIO_WLAN_Check_WLAN</a></td>
+                <td>Check the WLAN On / Off status.</td>
+              </tr>
+              <tr>
+                <td><a href="#iSDIO_WLAN_Get_WLAN_Status">iSDIO_WLAN_Get_WLAN_Status</a></td>
+                <td>Get "WLAN" data of Status Register.</td>
+              </tr>
+            </table>
+
+            <h3>Shared memory</h3>
+            <table class="table table-bordered table-hover">
+              <tr>
+                <th>Command name</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td><a href="#iSDIO_WLAN_ReadSharedMemory">iSDIO_WLAN_ReadSharedMemory</a></td>
+                <td>Load Shared Memory.</td>
+              </tr>
+              <tr>
+                <td><a href="#iSDIO_WLAN_WriteSharedMemory">iSDIO_WLAN_WriteSharedMemory</a></td>
+                <td>Write to Shared Memory.</td>
+              </tr>
+              <tr>
+                <td><a href="#iSDIO_WLAN_GetFlashAirVersion">iSDIO_WLAN_GetFlashAirVersion</a></td>
+                <td>Confirm the version and capacity of FlashAir from CID.</td>
+              </tr>
+            </table>
+
+            <section class="mb-5 mt-5">
+              <h2 id="iSDIO_WLAN_Scan">iSDIO_WLAN_Scan</h2>
+              <div class="separator-2"></div>
+              <p>Search for connectable wireless LAN. It is necessary to acquire the response by searching the result.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_Scan(
+        iSDIO_INFO_t                *info,
+        uint32_t                    seq_id
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in] *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[in] seq_id</dt>
+                  <dd>
+                    iSDIO command sequence ID
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>Other</dt>
+                  <dd>
+                    Error occurred
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Command ID</h3>
+                <p>0x0001</p>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_Connect">iSDIO_WLAN_Connect</h2>
+              <div class="separator-2"></div>
+              <p>Connect the wireless LAN with the SSID and network key of the access point specified as a station.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_Connect(
+        iSDIO_INFO_t                *info,
+        uint32_t                    seq_id,
+        uint8_t                     *ssid,
+        uint16_t                    ssid_size,
+        uint8_t                     *ntwk_key,
+        uint32_t                    ntwk_key_size
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in] *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[in] seq_id</dt>
+                  <dd>
+                    iSDIO command sequence ID
+                  </dd>
+                  <dt>[in] *ssid</dt>
+                  <dd>
+                    SSID of connection destination access point (maximum 32 bytes)
+                  </dd>
+                  <dt>[in] ssid_size</dt>
+                  <dd>
+                    Number of bytes of the SSID of the connected access point
+                  </dd>
+                  <dt>[in] *ntwk_key</dt>
+                  <dd>
+                    Network key (maximum 64 bytes)
+                  </dd>
+                  <dt>[in] ntwk_key_size</dt>
+                  <dd>
+                    Number of bytes of network key (no encryption in case of 0)
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>E_iSDIO_INVALID_PARAM</dt>
+                  <dd>
+                    Illegal parameters
+                  </dd>
+                  <dt>E_iSDIO_CMD_BUF_OVERFLOW</dt>
+                  <dd>
+                    Command buffer shortage
+                  </dd>
+                  <dt>E_iSDIO_TIMEOUT</dt>
+                  <dd>
+                    Timeout occurrence
+                  </dd>
+                  <dt>E_iSDIO_DEVICE_ERROR</dt>
+                  <dd>
+                    Device error
+                  </dd>
+                  <dt>E_iSDIO_UNKNOWN_ERROR</dt>
+                  <dd>
+                    Unknown error
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Command ID</h3>
+                <p>0x0002</p>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_Establish">iSDIO_WLAN_Establish</h2>
+              <div class="separator-2"></div>
+              <p>Establish wireless LAN connection with SSID and network key of access point designated as access
+                point.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_Establish(
+        iSDIO_INFO_t                *info,
+        uint32_t                    seq_id,
+        uint8_t                     *ssid,
+        uint16_t                    ssid_size,
+        uint8_t                     *ntwk_key,
+        uint32_t                    ntwk_key_size,
+        iSDIO_WLAN_EcnMode_t        encMode
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in] *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[in] seq_id</dt>
+                  <dd>
+                    iSDIO command sequence ID
+                  </dd>
+                  <dt>[in] *ssid</dt>
+                  <dd>
+                    SSID of connection destination access point (maximum 32 bytes)
+                  </dd>
+                  <dt>[in] ssid_size</dt>
+                  <dd>
+                    Number of bytes of the SSID of the connected access point
+                  </dd>
+                  <dt>[in] *ntwk_key</dt>
+                  <dd>
+                    Network key (maximum 64 bytes)
+                  </dd>
+                  <dt>[in] ntwk_key_size</dt>
+                  <dd>
+                    Number of bytes of network key (no encryption in case of 0)
+                  </dd>
+                  <dt>[in] encMod</dt>
+                  <dd>
+                    Encryption mode
+                    <dl class="ml-3">
+                      <dt>iSDIO_WLAN_ENCMODE_NO_ENCRYPTION = 0x00</dt>
+                      <dd>No encryption</dd>
+                      <dt>iSDIO_WLAN_ENCMODE_OPEN_SYSTEM_AND_WEP = 0x01</dt>
+                      <dd>Open System and WEP</dd>
+                      <dt>iSDIO_WLAN_ENCMODE_SHARED_KEY_AND_WEP = 0x02</dt>
+                      <dd>Shared Key and WEP</dd>
+                      <dt>iSDIO_WLAN_ENCMODE_WPA_PSK_AND_TKIP = 0x03</dt>
+                      <dd>WPA-PSK and TKIP</dd>
+                      <dt>iSDIO_WLAN_ENCMODE_WPA_PSK_AND_AES = 0x04</dt>
+                      <dd>WPA-PSK and AES</dd>
+                      <dt>iSDIO_WLAN_ENCMODE_WPA2_PSK_AND_TKIP = 0x05</dt>
+                      <dd>WPA2-PSK and TKIP</dd>
+                      <dt>iSDIO_WLAN_ENCMODE_WPA2_PSK_AND_AES = 0x06</dt>
+                      <dd>WPA2-PSK and AES</dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>E_iSDIO_INVALID_PARAM</dt>
+                  <dd>
+                    Illegal parameters
+                  </dd>
+                  <dt>E_iSDIO_CMD_BUF_OVERFLOW</dt>
+                  <dd>
+                    Command buffer shortage
+                  </dd>
+                  <dt>E_iSDIO_TIMEOUT</dt>
+                  <dd>
+                    Timeout occurrence
+                  </dd>
+                  <dt>E_iSDIO_DEVICE_ERROR</dt>
+                  <dd>
+                    Device error
+                  </dd>
+                  <dt>E_iSDIO_UNKNOWN_ERROR</dt>
+                  <dd>
+                    Unknown error
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Command ID</h3>
+                <p>0x0003</p>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_StartWPS">iSDIO_WLAN_StartWPS</h2>
+              <div class="separator-2"></div>
+              <p>As a station, start wireless LAN connection setup by WPS.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_StartWPS(
+        iSDIO_INFO_t                *info,
+        uint32_t                    seq_id,
+        uint8_t                     *ssid,
+        uint16_t                    ssid_size,
+        iSDIO_WLAN_WPSMode_t        wpsMode,
+        uint8_t                     *pin,
+        uint32_t                    pin_size
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in] *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[in] seq_id</dt>
+                  <dd>
+                    iSDIO command sequence ID
+                  </dd>
+                  <dt>[in] *ssid</dt>
+                  <dd>
+                    SSID of connection destination access point (maximum 32 bytes)
+                  </dd>
+                  <dt>[in] ssid_size</dt>
+                  <dd>
+                    Number of bytes of the SSID of the connected access point
+                  </dd>
+                  <dt>[in] wpsMode</dt>
+                  <dd>
+                    WPS mode
+                    <dl class="ml-3">
+                      <dt>iSDIO_WLAN_WPSMODE_WITH_PIN = 0x01</dt>
+                      <dd>WPS with PIN</dd>
+                      <dt>iSDIO_WLAN_WPSMODE_WITH_PBC = 0x02</dt>
+                      <dd>WPS with PBX</dd>
+                    </dl>
+                  </dd>
+                  <dt>[in] *pin</dt>
+                  <dd>
+                    PIN code (maximum byte)
+                  </dd>
+                  <dt>[in] pin_size</dt>
+                  <dd>
+                    Number of bytes in PIN code
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>E_iSDIO_INVALID_PARAM</dt>
+                  <dd>
+                    Illegal parameters
+                  </dd>
+                  <dt>E_iSDIO_CMD_BUF_OVERFLOW</dt>
+                  <dd>
+                    Command buffer shortage
+                  </dd>
+                  <dt>E_iSDIO_TIMEOUT</dt>
+                  <dd>
+                    Timeout occurrence
+                  </dd>
+                  <dt>E_iSDIO_DEVICE_ERROR</dt>
+                  <dd>
+                    Device error
+                  </dd>
+                  <dt>E_iSDIO_UNKNOWN_ERROR</dt>
+                  <dd>
+                    Unknown error
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Command ID</h3>
+                <p>0x0005</p>
+              </section>
+              <section>
+                <h3>important point</h3>
+                <p>When specifying iSDIO_WLAN_WPSMODE_WITH_PBC with wpsMode, specify NULL for ssid, pin, <code>0</code>
+                  for ssid_size and pin_size.</p>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_Disconnect">iSDIO_WLAN_Disconnect </h2>
+              <div class="separator-2"></div>
+              <p>Disconnect the wireless LAN.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_Disconnect(
+        iSDIO_INFO_t                *info,
+        uint32_t                    seq_id
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in] *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[in] seq_id</dt>
+                  <dd>
+                    iSDIO command sequence ID
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>Other</dt>
+                  <dd>
+                    Error occurred
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Command ID</h3>
+                <p>0x0007</p>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_SetCurrentTime">iSDIO_WLAN_SetCurrentTime</h2>
+              <div class="separator-2"></div>
+              <p>Set the date and time of FlashAir.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_SetCurrentTime(
+        iSDIO_INFO_t                *info,
+        uint32_t                    seq_id,
+        iSDIO_WLAN_Date_t           currentDate,
+        iSDIO_WLAN_Time_t           currentTime
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in] *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[in] seq_id</dt>
+                  <dd>
+                    iSDIO command sequence ID
+                  </dd>
+                  <dt>[in] currentDate</dt>
+                  <dd>
+                    date
+                    <pre class="prettyprint"><code>typedef struct iSDIO_WLAN_Date_s {
+  uint16_t day:5;   //!&lt; day
+  uint16_t month:4; //!&lt; month
+  uint16_t year:7;  //!&lt; year (elapsed year since 1980)
+} iSDIO_WLAN_Date_t;</code></pre>
+                  </dd>
+                  <dt>[in] currentTime</dt>
+                  <dd>
+                    <p>time</p>
+                    <pre class="prettyprint"><code>typedef struct iSDIO_WLAN_Time_s {
+  uint16_t second:5;  //!&lt; second
+  uint16_t minute:6;  //!&lt; minute
+  uint16_t hour:5;    //!&lt; hour
+} iSDIO_WLAN_Time_t;</code></pre>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>Other</dt>
+                  <dd>
+                    Error occurred
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Command ID</h3>
+                <p>0x0011</p>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_SetChannel">iSDIO_WLAN_SetChannel</h2>
+              <div class="separator-2"></div>
+              <p>Set the access point's channel number. If FlashAir does not support some channels, this command will
+                be rejected.<br>
+                You need to check Capability Register "Channel Support".<br>
+                See iSDIO Capability Register for Wireless LAN.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_SetChannel(
+        iSDIO_INFO_t                *info,
+        uint32_t                    seq_id,
+        uint8_t                     ch
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in] *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[in] seq_id</dt>
+                  <dd>
+                    iSDIO command sequence ID
+                  </dd>
+                  <dt>[in] ch</dt>
+                  <dd>
+                    Channel number
+                    <dl class="ml-3">
+                      <dt>0x00</dt>
+                      <dd>Automatic</dd>
+                      <dt>0x01</dt>
+                      <dd>Channel 1</dd>
+                      <dt style="font-weight: 400">
+                        <p>...</p>
+                      </dt>
+                      <dt>0x0E</dt>
+                      <dd>Channel 14</dd>
+                      <dt>0x24</dt>
+                      <dd>Channel 36</dd>
+                      <dt style="font-weight: 400">
+                        <p>...</p>
+                      </dt>
+                      <dt>0xA1</dt>
+                      <dd>Channel 161</dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>Other</dt>
+                  <dd>
+                    Error occurred
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Command ID</h3>
+                <p>0x0015</p>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_Request">iSDIO_WLAN_Request</h2>
+              <div class="separator-2"></div>
+              <p>Each HTTP message is transmitted according to the specified parameters.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_Request(
+        iSDIO_INFO_t                *info,
+        uint32_t                    seq_id,
+        iSDIO_WLAN_httpType_t       host_type,
+        uint8_t                     *hostname,
+        uint32_t                    hostname_size,
+        iSDIO_WLAN_MessageType_t    msg_type,
+        uint8_t                     *message,
+        uint32_t                    message_size,
+        uint8_t                     *apnd_filename,
+        uint32_t                    apnd_filename_size,
+        iSDIO_WLAN_HeaderRemoval_t  headerRemoval
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in] *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[in] seq_id</dt>
+                  <dd>
+                    iSDIO command sequence ID
+                  </dd>
+                  <dt>[in] host_type</dt>
+                  <dd>
+                    Host Type
+                    <dl>
+                      <dt>HTTP communication</dt>
+                      <dd>iSDIO_WLAN_HTTP(0x00)</dd>
+                      <dt>HTTPS communication</dt>
+                      <dd>iSDIO_WLAN_HTTPSSL</dd>
+                    </dl>
+                  </dd>
+                  <dt>[in] *hostname</dt>
+                  <dd>
+                    hostname<br>
+                    When host_type is HTTP communication, it means the host name to which HTTP response message is sent
+                    and HTTP response message is received.<br>
+                    The port number is <code>80</code>, unless a proxy server is used.<br>
+                    When host_type is HTTPS communication, it is the same as HTTP communication, except that it
+                    requests an HTTP message via SSL.<br>
+                    The port number is <code>443</code>, unless a proxy server is used.
+                  </dd>
+                  <dt>[in] hostname_size</dt>
+                  <dd>
+                    Byte number of host name
+                  </dd>
+                  <dt>[in] msg_type</dt>
+                  <dd>
+                    Message type
+                    <dl class="ml-3">
+                      <dt>Read from register</dt>
+                      <dd>iSDIO_WLAN_MSG_REGISTER(0x00)</dd>
+                      <dt>Read from file</dt>
+                      <dd>iSDIO_WLAN_MSG_FILE(0x01)</dd>
+                    </dl>
+                  </dd>
+                  <dt>[in] *message</dt>
+                  <dd>
+                    Message (file name)<br>
+                    It means an HTTP request message consisting of an HTTP request line, an HTTP message header, and an
+                    HTTP message body.<br>
+                    Since the storage destination of the message is obtained from the register or file, specify the
+                    storage location with msg_type.<br>
+                    In the case of register specification, specify the storage destination address, and in case of file
+                    specification, specify the file storage destination path and file name.
+                  </dd>
+                  <dt>[in] message_size</dt>
+                  <dd>
+                    Number of bytes of message (file name)
+                  </dd>
+                  <dt>[in] *apnd_filename</dt>
+                  <dd>
+                    Attachment name
+                  </dd>
+                  <dt>[in] apnd_filename_size</dt>
+                  <dd>
+                    Number of bytes of the attached file name
+                  </dd>
+                  <dt>[in] headerRemoval</dt>
+                  <dd>
+                    Header additional information
+                    <dl class="ml-3">
+                      <dt>With HTTP header</dt>
+                      <dd>iSDIO_WLAN_WITH_HEADER(0x00)</dd>
+                      <dt>No HTTP header</dt>
+                      <dd>iSDIO_WLAN_ONLY_BODY(0x01)</dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>Other</dt>
+                  <dd>
+                    Error occurred
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Remarks</h3>
+                <p>Each HTTP message is transmitted according to the specified parameters. Only the following
+                  combinations are valid for parameters.</p>
+                <h4>Send HTTP message read from register</h4>
+                <p>(For processing details see <a href="..\..\..\api\isdio\reference\upload\index.htm#SendHTTPMessageByRegister">iSDIO_WLAN_SendHTTPMessageByRegister</a>)</p>
+                <table class="table table-bordered table-hover">
+                  <tr>
+                    <th class="w-25">host_type</th>
+                    <td>iSDIO_WLAN_HTTP</td>
+                  </tr>
+                  <tr>
+                    <th>*hostname</th>
+                    <td>Start address of the buffer in which the host name is stored</td>
+                  </tr>
+                  <tr>
+                    <th>hostname_size</th>
+                    <td>Data length of host name</td>
+                  </tr>
+                  <tr>
+                    <th>msg_type</th>
+                    <td>iSDIO_WLAN_MSG_REGISTER</td>
+                  </tr>
+                  <tr>
+                    <th>*message</th>
+                    <td>Start address of buffer in which message is stored</td>
+                  </tr>
+                  <tr>
+                    <th>message_size</th>
+                    <td>Message data length</td>
+                  </tr>
+                  <tr>
+                    <th>*apnd_filename</th>
+                    <td>NULL</td>
+                  </tr>
+                  <tr>
+                    <th>apnd_filename_size</th>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th>headerRemoval</th>
+                    <td>No setting required</td>
+                  </tr>
+                </table>
+                <h4>Send HTTP message read from register with file</h4>
+                <p>(For processing details see <a href="..\..\..\api\isdio\reference\upload\index.htm#SendHTTPFileByRegister">iSDIO_WLAN_SendHTTPFileByRegister</a>)</p>
+                <table class="table table-bordered table-hover">
+                  <tr>
+                    <th class="w-25">host_type</th>
+                    <td>iSDIO_WLAN_HTTP</td>
+                  </tr>
+                  <tr>
+                    <th>*hostname</th>
+                    <td>Start address of the buffer in which the host name is stored</td>
+                  </tr>
+                  <tr>
+                    <th>hostname_size</th>
+                    <td>Data length of host name</td>
+                  </tr>
+                  <tr>
+                    <th>msg_type</th>
+                    <td>iSDIO_WLAN_MSG_REGISTER</td>
+                  </tr>
+                  <tr>
+                    <th>*message</th>
+                    <td>Start address of buffer in which message is stored</td>
+                  </tr>
+                  <tr>
+                    <th>message_size</th>
+                    <td>Message data length</td>
+                  </tr>
+                  <tr>
+                    <th>*apnd_filename</th>
+                    <td>Path of file to send to server</td>
+                  </tr>
+                  <tr>
+                    <th>apnd_filename_size</th>
+                    <td>Data length of apnd_filename</td>
+                  </tr>
+                  <tr>
+                    <th>headerRemoval</th>
+                    <td>No setting required</td>
+                  </tr>
+                </table>
+                <h4>Sending an HTTP message read from the register with SSL</h4>
+                <p>(For processing details see <a href="..\..\..\api\isdio\reference\upload\index.htm#SendHTTPSSLMessageByRegister">iSDIO_WLAN_SendHTTPSSLMessageByRegister</a>)</p>
+                <table class="table table-bordered table-hover">
+                  <tr>
+                    <th class="w-25">host_type</th>
+                    <td>iSDIO_WLAN_HTTPSSL</td>
+                  </tr>
+                  <tr>
+                    <th>*hostname</th>
+                    <td>Start address of the buffer in which the host name is stored</td>
+                  </tr>
+                  <tr>
+                    <th>hostname_size</th>
+                    <td>Data length of host name</td>
+                  </tr>
+                  <tr>
+                    <th>msg_type</th>
+                    <td>iSDIO_WLAN_MSG_REGISTER</td>
+                  </tr>
+                  <tr>
+                    <th>*message</th>
+                    <td>Start address of buffer in which message is stored</td>
+                  </tr>
+                  <tr>
+                    <th>message_size</th>
+                    <td>Message data length</td>
+                  </tr>
+                  <tr>
+                    <th>*apnd_filename</th>
+                    <td>NULL</td>
+                  </tr>
+                  <tr>
+                    <th>apnd_filename_size</th>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th>headerRemoval</th>
+                    <td>No setting required</td>
+                  </tr>
+                </table>
+                <h4>Sending an HTTP message read from register with file with SSL</h4>
+                <p>(For processing details see <a href="..\..\..\api\isdio\reference\upload\index.htm#SendHTTPSSLFileByRegister">iSDIO_WLAN_SendHTTPSSLFileByRegister</a>)</p>
+                <table class="table table-bordered table-hover">
+                  <tr>
+                    <th class="w-25">host_type</th>
+                    <td>iSDIO_WLAN_HTTPSSL</td>
+                  </tr>
+                  <tr>
+                    <th>*hostname</th>
+                    <td>Start address of the buffer in which the host name is stored</td>
+                  </tr>
+                  <tr>
+                    <th>hostname_size</th>
+                    <td>Data length of host name</td>
+                  </tr>
+                  <tr>
+                    <th>msg_type</th>
+                    <td>iSDIO_WLAN_MSG_REGISTER</td>
+                  </tr>
+                  <tr>
+                    <th>*message</th>
+                    <td>Start address of buffer in which message is stored</td>
+                  </tr>
+                  <tr>
+                    <th>message_size</th>
+                    <td>Message data length</td>
+                  </tr>
+                  <tr>
+                    <th>*apnd_filename</th>
+                    <td>Path of file to send to server</td>
+                  </tr>
+                  <tr>
+                    <th>apnd_filename_size</th>
+                    <td>Data length of apnd_filename</td>
+                  </tr>
+                  <tr>
+                    <th>headerRemoval</th>
+                    <td>No setting required</td>
+                  </tr>
+                </table>
+                <h4>Send HTTP message read from file</h4>
+                <p>(For processing details see <a href="..\..\..\api\isdio\reference\upload\index.htm#SendHTTPMessageByFile">iSDIO_WLAN_SendHTTPMessageByFile</a>)</p>
+                <table class="table table-bordered table-hover">
+                  <tr>
+                    <th class="w-25">host_type</th>
+                    <td>iSDIO_WLAN_HTTP</td>
+                  </tr>
+                  <tr>
+                    <th>*hostname</th>
+                    <td>Start address of the buffer in which the host name is stored</td>
+                  </tr>
+                  <tr>
+                    <th>hostname_size</th>
+                    <td>Data length of host name</td>
+                  </tr>
+                  <tr>
+                    <th>msg_type</th>
+                    <td>iSDIO_WLAN_MSG_FILE</td>
+                  </tr>
+                  <tr>
+                    <th>*message</th>
+                    <td>Path of outgoing message file</td>
+                  </tr>
+                  <tr>
+                    <th>message_size</th>
+                    <td>Data length of path</td>
+                  </tr>
+                  <tr>
+                    <th>*apnd_filename</th>
+                    <td>NULL</td>
+                  </tr>
+                  <tr>
+                    <th>apnd_filename_size</th>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th>headerRemoval</th>
+                    <td>iSDIO_WLAN_WITH_HEADER or iSDIO_WLAN_ONLY_BODY</td>
+                  </tr>
+                </table>
+                <h4>Send an HTTP message read from a file with a file</h4>
+                <p>(For processing details see <a href="..\..\..\api\isdio\reference\upload\index.htm#SendHTTPFileByFile">iSDIO_WLAN_SendHTTPFileByFile</a>)</p>
+                <table class="table table-bordered table-hover">
+                  <tr>
+                    <th class="w-25">host_type</th>
+                    <td>iSDIO_WLAN_HTTP</td>
+                  </tr>
+                  <tr>
+                    <th>*hostname</th>
+                    <td>Start address of the buffer in which the host name is stored</td>
+                  </tr>
+                  <tr>
+                    <th>hostname_size</th>
+                    <td>Data length of host name</td>
+                  </tr>
+                  <tr>
+                    <th>msg_type</th>
+                    <td>iSDIO_WLAN_MSG_FILE</td>
+                  </tr>
+                  <tr>
+                    <th>*message</th>
+                    <td>Path of outgoing message file</td>
+                  </tr>
+                  <tr>
+                    <th>message_size</th>
+                    <td>Data length of path</td>
+                  </tr>
+                  <tr>
+                    <th>*apnd_filename</th>
+                    <td>Path of file to send to server</td>
+                  </tr>
+                  <tr>
+                    <th>apnd_filename_size</th>
+                    <td>Data length of apnd_filename</td>
+                  </tr>
+                  <tr>
+                    <th>headerRemoval</th>
+                    <td>iSDIO_WLAN_WITH_HEADER or iSDIO_WLAN_ONLY_BODY</td>
+                  </tr>
+                </table>
+                <h4>Sending an HTTP message read from a file with SSL</h4>
+                <p>(For processing details see <a href="..\..\..\api\isdio\reference\upload\index.htm#SendHTTPSSLMessageByFile">iSDIO_WLAN_SendHTTPSSLMessageByFile</a>)</p>
+                <table class="table table-bordered table-hover">
+                  <tr>
+                    <th class="w-25">host_type</th>
+                    <td>iSDIO_WLAN_HTTPSSL</td>
+                  </tr>
+                  <tr>
+                    <th>*hostname</th>
+                    <td>Start address of the buffer in which the host name is stored</td>
+                  </tr>
+                  <tr>
+                    <th>hostname_size</th>
+                    <td>Data length of host name</td>
+                  </tr>
+                  <tr>
+                    <th>msg_type</th>
+                    <td>iSDIO_WLAN_MSG_FILE</td>
+                  </tr>
+                  <tr>
+                    <th>*message</th>
+                    <td>Start address of buffer in which message is stored</td>
+                  </tr>
+                  <tr>
+                    <th>message_size</th>
+                    <td>Data length of path</td>
+                  </tr>
+                  <tr>
+                    <th>*apnd_filename</th>
+                    <td>NULL</td>
+                  </tr>
+                  <tr>
+                    <th>apnd_filename_size</th>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th>headerRemoval</th>
+                    <td>iSDIO_WLAN_WITH_HEADER or iSDIO_WLAN_ONLY_BODY</td>
+                  </tr>
+                </table>
+                <h4>Sending with HTTP with HTTP message read from file with SSL</h4>
+                <p>(For processing details see <a href="..\..\..\api\isdio\reference\upload\index.htm#SendHTTPSSLFileByFile">iSDIO_WLAN_SendHTTPSSLFileByFile</a>)</p>
+                <table class="table table-bordered table-hover">
+                  <tr>
+                    <th class="w-25">host_type</th>
+                    <td>iSDIO_WLAN_HTTPSSL</td>
+                  </tr>
+                  <tr>
+                    <th>*hostname</th>
+                    <td>Start address of the buffer in which the host name is stored</td>
+                  </tr>
+                  <tr>
+                    <th>hostname_size</th>
+                    <td>Data length of host name</td>
+                  </tr>
+                  <tr>
+                    <th>msg_type</th>
+                    <td>iSDIO_WLAN_MSG_FILE</td>
+                  </tr>
+                  <tr>
+                    <th>*message</th>
+                    <td>Start address of buffer in which message is stored</td>
+                  </tr>
+                  <tr>
+                    <th>message_size</th>
+                    <td>Data length of path</td>
+                  </tr>
+                  <tr>
+                    <th>*apnd_filename</th>
+                    <td>Path of file to send to server</td>
+                  </tr>
+                  <tr>
+                    <th>apnd_filename_size</th>
+                    <td>Data length of apnd_filename</td>
+                  </tr>
+                  <tr>
+                    <th>headerRemoval</th>
+                    <td>iSDIO_WLAN_WITH_HEADER or iSDIO_WLAN_ONLY_BODY</td>
+                  </tr>
+                </table>
+              </section>
+              <section>
+                <h3>Notes</h3>
+                <p>In the case of SSL, it is recommended to set root authentication with iSDIO_WLAN_SetCertificate or
+                  iSDIO_WLAN_SetCertificateByFile before executing this API.<br>
+                  If you execute this API without setting root authentication, FlashAir executes the command without
+                  authenticating the server certificate by root authentication.</p>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_Bridge">iSDIO_WLAN_Bridge</h2>
+              <div class="separator-2"></div>
+              <p>Start bridge mode.<br>
+                Connect to the STA specified by brgssid, and then start the AP using apssid.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_Bridge(
+        iSDIO_INFO_t                *info,
+        uint32_t                    seq_id,
+        uint8_t                     *apssid,
+        uint8_t                     *apnetworkKey,
+        iSDIO_WLAN_EcnMode_t        encMode,
+        uint8_t                     *brgssid,
+        uint8_t                     *brgnetworkKey
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in] *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[in] seq_id</dt>
+                  <dd>
+                    iSDIO command sequence ID
+                  </dd>
+                  <dt>[in] *apssid</dt>
+                  <dd>
+                    SSID for connecting from AirNet (maximum 32 bytes)
+                  </dd>
+                  <dt>[in] *apnetworkKey</dt>
+                  <dd>
+                    Network key for connecting from AirNet (maximum 64 bytes)
+                  </dd>
+                  <dt>[in] encMode</dt>
+                  <dd>
+                    Cipher mode<br>
+                    In bridge mode, the setting values are as follows.
+                    <ul class="list-unstyled ml-3">
+                      <li>iSDIO_WLAN_ENCMODE_WPA_PSK_AND_TKIP(0x03)</li>
+                      <li>iSDIO_WLAN_ENCMODE_WPA2_PSK_AND_AES(0x06)</li>
+                    </ul>
+                  </dd>
+                  <dt>[in] *brgssid</dt>
+                  <dd>
+                    SSID for connecting to TopNet (maximum 32 bytes)
+                  </dd>
+                  <dt>[in] *brgnetworkKey</dt>
+                  <dd>
+                    Network key for connecting to TopNet (maximum 64 bytes)
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>E_iSDIO_INVALID_PARAM</dt>
+                  <dd>
+                    Illegal parameters
+                  </dd>
+                  <dt>E_iSDIO_CMD_BUF_OVERFLOW</dt>
+                  <dd>
+                    Command buffer shortage
+                  </dd>
+                  <dt>E_iSDIO_TIMEOUT</dt>
+                  <dd>
+                    Timeout occurrence
+                  </dd>
+                  <dt>E_iSDIO_DEVICE_ERROR</dt>
+                  <dd>
+                    Device error
+                  </dd>
+                  <dt>E_iSDIO_UNKNOWN_ERROR</dt>
+                  <dd>
+                    Unknown error
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Command ID</h3>
+                <p>0xE200</p>
+              </section>
+              <section>
+                <h3>Notes</h3>
+                <p>Bridge can not be executed unless it is in disconnected state.<br>
+                  If FlashAir is connected to another device, first execute iSDIO_WLAN_Disconnect.<br>
+                  Please execute after 6 seconds to execute Bridge again after disconnecting.</p>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_BridgeGetByRegister">iSDIO_WLAN_BridgeGetByRegister</h2>
+              <div class="separator-2"></div>
+              <p>Get bridge mode information. The acquired bridge mode information is set in the output data of
+                Response Data Register Port.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_BridgeGetByRegister(
+        iSDIO_INFO_t                *info,
+        uint32_t                    seq_id
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in] *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[in] seq_id</dt>
+                  <dd>
+                    iSDIO command sequence ID
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>Other</dt>
+                  <dd>
+                    Error occurred
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Command ID</h3>
+                <p>0xE201</p>
+              </section>
+              <section>
+                <h3>Remarks</h3>
+                <p>The structure of the bridge mode information is as follows.</p>
+                <pre class="prettyprint"><code>typedef struct iSDIO_WLAN_BridgeListItem_s {
+        uint32_t    status;
+        uint8_t     appssid[32+4];
+        uint8_t     appnetworkKey[64+4];
+        uint8_t     ipaddr[4];
+        uint8_t     subnetMask[4];
+        uint8_t     defGateWay[4];
+        uint8_t     prefDnsServer[4];
+        uint8_t     altDnsServer[4];
+        uint8_t     brgssid[32+4];
+        uint8_t     brgnetworkKey[64+4];
+        uint8_t     brgIpaddr[4];
+        uint8_t     brgsunetMask[4];
+        uint8_t     brgdefGateWay[4];
+        uint8_t     brgprefDnsServer[4];
+        uint8_t     brgaltDnsServer[4];
+} iSDIO_WLAN_BridgeListItem_t;</code></pre>
+              </section>
+              <section>
+                <h3>Notes</h3>
+                <p>This API is for outputting bridge mode information to Response Data Register Port.<br>
+                  In order to actually obtain bridge mode information, it is necessary to read Response Data Register
+                  Port.</p>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_GetSSIDs">iSDIO_WLAN_GetSSIDs</h2>
+              <div class="separator-2"></div>
+              <p>Get the number of access points scanned.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_GetSSIDs(
+        iSDIO_INFO_t                *info,
+        uint8_t                     *num
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in] *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[out] *num</dt>
+                  <dd>
+                    Number of access points<br>The number of access points when iSDIO_WLAN_Scan is executed is
+                    acquired.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Notes</h3>
+                <p>It must be executed after acquiring the response of iSDIO_WLAN_Scan.<br>
+                  The number of access points can not be acquired correctly even if it is executed in other conditions.</p>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_GetSSID">iSDIO_WLAN_GetSSID</h2>
+              <div class="separator-2"></div>
+              <p>Acquire the access point name corresponding to the scanned specified number.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_GetSSID(
+        iSDIO_INFO_t                *info,
+        uint8_t                     number,
+        uint8_t                     *ssid
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in] *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[in] number</dt>
+                  <dd>
+                    Designated number (valid range is 0 to (Max - 1))<br>
+                    If the specified number is exceeded, the return value is Illegal parameters.
+                  </dd>
+                  <dt>[out] *ssid</dt>
+                  <dd>
+                    Start address of the buffer that stores the access point name<br>
+                    Since the SSID is a maximum of 32 bytes, prepare a buffer of at least 32 bytes.<br>
+                    The access point name with the specified number when iSDIO_WLAN_Scan is executed is acquired.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>Other</dt>
+                  <dd>
+                    Error occurred
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Notes</h3>
+                <p>It must be executed after acquiring the response of iSDIO_WLAN_Scan.<br>
+                  The number of access points can not be acquired correctly even if it is executed in other conditions.</p>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_GetStatusData">iSDIO_WLAN_GetStatusData</h2>
+              <div class="separator-2"></div>
+              <p>Obtain output data of Status Register. The current Status Register information is stored at the
+                address specified by Argumentgetbuf.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_GetStatusData(
+        iSDIO_INFO_t                *info,
+        uint8_t                     *getbuf
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in] *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[out] *getbuf</dt>
+                  <dd>
+                    Acquisition buffer pointer<br>
+                    A 512-byte buffer is required to store the output data of Status Register.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>Other</dt>
+                  <dd>
+                    Error occurred
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_GetResponseData">iSDIO_WLAN_GetResponseData</h2>
+              <div class="separator-2"></div>
+              <p>Response Data Register Port output data is obtained. The information of the current Response Data
+                Register Port is stored at the address specified by Argumentgetbuf.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_GetResponseData(
+        iSDIO_INFO_t                *info,
+        uint8_t                     *getbuf
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in]
+                    *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[out]
+                    *getbuf</dt>
+                  <dd>
+                    Acquisition buffer pointer<br>
+                    A 512-byte buffer is required to store the output data of Response Data Register Port.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>Other</dt>
+                  <dd>
+                    Error occurred
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_GetVersion">iSDIO_WLAN_GetVersion</h2>
+              <div class="separator-2"></div>
+              <p>Read the version information (0x005f0 - 0x005ff) stored in the Status Register.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_GetVersion(
+        iSDIO_INFO_t                *info,
+        uint8_t                     *getbuf
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in]
+                    *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[out]
+                    *getbuf</dt>
+                  <dd>
+                    Acquisition buffer pointer<br>
+                    A 16-byte buffer is required to store the version information.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>Other</dt>
+                  <dd>
+                    Error occurred
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_SetWaitResponseTime">iSDIO_WLAN_SetWaitResponseTime</h2>
+              <div class="separator-2"></div>
+              <p>Response Changes the wait timeout value. Set the timeout value in ms.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>void iSDIO_WLAN_SetWaitResponseTime(
+        uint32_t                     time
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in]
+                    time</dt>
+                  <dd>
+                    Response wait timeout value (ms)
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <p>None</p>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_Check_WLANConnect">iSDIO_WLAN_Check_WLANConnect</h2>
+              <div class="separator-2"></div>
+              <p>Check the WLAN connection. The connection status is judged by Connected of 0506h (bit 7) of Status
+                Register.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_Check_WLANConnect(
+        iSDIO_INFO_t                *info,
+        iSDIO_WLAN_Connect_t        *connect
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in]
+                    *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[out]
+                    connect</dt>
+                  <dd>
+                    Connection Status
+                    <dl class="ml-3">
+                      <dt>WLAN connection state</dt>
+                      <dd>iSDIO_WLAN_CONNECTED(0x01)</dd>
+                      <dt>WLAN unconnected state</dt>
+                      <dd>iSDIO_WLAN_NO_CONNECTION(0x00)</dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>Other</dt>
+                  <dd>
+                    Error occurred
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_Check_WLAN">iSDIO_WLAN_Check_WLAN</h2>
+              <div class="separator-2"></div>
+              <p>Check the WLAN On / Off status. The connection status is determined by Infra-Direct 0506h (bit 6-5) of
+                Status Register.<br>
+                ※00:OFF、01/10:ON
+              </p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_Check_WLAN(
+        iSDIO_INFO_t                *info,
+        iSDIO_WLAN_OnOFF_t          *onoff
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in]
+                    *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[out]
+                    *onoff</dt>
+                  <dd>
+                    Wireless LAN operation state
+                    <dl class="ml-3">
+                      <dt>WLAN
+                        On</dt>
+                      <dd>iSDIO_WLAN_ON(0x01)</dd>
+                      <dt>WLAN
+                        OFF</dt>
+                      <dd>iSDIO_WLAN_OFF(0x00)</dd>
+                    </dl>
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>Other</dt>
+                  <dd>
+                    Error occurred
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_Get_WLAN_Status">iSDIO_WLAN_Get_WLAN_Status</h2>
+              <div class="separator-2"></div>
+              <p>Get "WLAN" data of Status Register. Get 0506h of Status Register for WLAN information.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_Get_WLAN_Status(
+        iSDIO_INFO_t                *info,
+        uint8_t                     *param
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in]
+                    *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[out]
+                    *param</dt>
+                  <dd>
+                    WLAN data<br>
+                    A 1-byte buffer is required to store WLAN information of Status Register.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>Other</dt>
+                  <dd>
+                    Error occurred
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_ReadSharedMemory">iSDIO_WLAN_ReadSharedMemory</h2>
+              <div class="separator-2"></div>
+              <p>It reads data from Shared Memory.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_ReadSharedMemory(
+        iSDIO_INFO_t                *info,
+        uint32_t                    addr,
+        uint32_t                    len,
+        uint8_t                     buf
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in]
+                    *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[in]
+                    addr</dt>
+                  <dd>
+                    Read address (0 to 2047)
+                  </dd>
+                  <dt>[in]
+                    len</dt>
+                  <dd>
+                    Data length (1 to 2048) byte
+                  </dd>
+                  <dt>[out]
+                    buf</dt>
+                  <dd>
+                    Read data
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>Other</dt>
+                  <dd>
+                    Error occurred
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_WriteSharedMemory">iSDIO_WLAN_WriteSharedMemory</h2>
+              <div class="separator-2"></div>
+              <p>Write data to Shared Memory.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_WriteSharedMemory(
+        iSDIO_INFO_t                *info,
+        uint32_t                    addr,
+        uint32_t                    len,
+        uint8_t                     buf
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in]
+                    *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[in]
+                    addr</dt>
+                  <dd>
+                    Write address (0 to 2047)
+                  </dd>
+                  <dt>[in]
+                    len</dt>
+                  <dd>
+                    Data length (1 to 2048) byte
+                  </dd>
+                  <dt>[in]
+                    buf</dt>
+                  <dd>
+                    Write data
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>Other</dt>
+                  <dd>
+                    Error occurred
+                  </dd>
+                </dl>
+              </section>
+            </section>
+            <section class="mb-5">
+              <h2 id="iSDIO_WLAN_GetFlashAirVersion">iSDIO_WLAN_GetFlashAirVersion</h2>
+              <div class="separator-2"></div>
+              <p>Confirm the version and capacity of FlashAir from CID.</p>
+              <section>
+                <h3>Format</h3>
+                <pre class="prettyprint"><code>int32_t iSDIO_WLAN_GetFlashAirVersion(
+        iSDIO_INFO_t                *info,
+        uint8_t                     cardver,
+        uint16_t                    cardsize
+)</code></pre>
+              </section>
+              <section>
+                <h3>Argument</h3>
+                <dl>
+                  <dt>[in]
+                    *info</dt>
+                  <dd>
+                    Pointer to iSDIO card control information
+                  </dd>
+                  <dt>[out]
+                    cardver</dt>
+                  <dd>
+                    Card version
+                  </dd>
+                  <dt>[out]
+                    cardsize</dt>
+                  <dd>
+                    Card capacity
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Return value</h3>
+                <dl>
+                  <dt>E_iSDIO_OK</dt>
+                  <dd>
+                    Successful completion
+                  </dd>
+                  <dt>Other</dt>
+                  <dd>
+                    Error occurred
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Remarks</h3>
+                <p>The relationship between cardver, cardsize and version and capacity of FlashAir is as follows.</p>
+                <table class="table table-bordered table-hover">
+                  <tr>
+                    <th>cardver</th>
+                    <th>cardsize</th>
+                    <th>Version and capacity</th>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>FlashAir
+                      W02
+                      8G</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>16</td>
+                    <td>FlashAir
+                      W02
+                      16G</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>32</td>
+                    <td>FlashAir
+                      W02
+                      32G</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>FlashAir
+                      W03
+                      8G</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>16</td>
+                    <td>FlashAir
+                      W03
+                      16G</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>32</td>
+                    <td>FlashAir
+                      W03
+                      32G</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>16</td>
+                    <td>FlashAir
+                      W04
+                      16G</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>32</td>
+                    <td>FlashAir
+                      W04
+                      32G</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>64</td>
+                    <td>FlashAir
+                      W04
+                      64G</td>
+                  </tr>
+                  <tr>
+                    <td>255</td>
+                    <td>Other than 0</td>
+                    <td>Flash version of cardsize in version unknown</td>
+                  </tr>
+                  <tr>
+                    <td>255</td>
+                    <td>0</td>
+                    <td>Version, FlashAir of unknown capacity</td>
+                  </tr>
+                  <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>Not FlashAir</td>
+                  </tr>
+                </table>
+              </section>
+              <section>
+                <h3>Caution</h3>
+                <p>This function is available when the SD card slot is 1 slot system file and the device file is
+                  located in / dev / mmcblk 0.</p>
+              </section>
+            </section>
+
+            <!-- Social Buttons -->
+            <div class="clearfix">
+	<ul class="social-links float-right">
+		<li class="twitter">
+			<!--Tweet Button-->
+			<a href="https://twitter.com/share" class="twitter-share-button" {count}="" data-via="FlashAirDev" data-related="FlashAirDev">Tweet</a>
+			<script>
+				! function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0],
+						p = /^http:/.test(d.location) ? 'http' : 'https';
+					if (!d.getElementById(id)) {
+						js = d.createElement(s);
+						js.id = id;
+						js.src = p + '://platform.twitter.com/widgets.js';
+						fjs.parentNode.insertBefore(js, fjs);
+					}
+				}(document, 'script', 'twitter-wjs');
+			</script>
+		</li>
+		<li class="facebook">
+			<!--Facebook Like Button-->
+			<div id="fb-root"></div>
+			<script>
+				(function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+			<div class="fb-like" data-href="https://www.flashair-developers.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+		</li>		
+	</ul>
+</div>
+
+            <!-- pagination start -->
+            <nav aria-label="Page navigation">
+              <ul class="pagination justify-content-between">
+                <li>
+                  <a class="btn radius-50 page-link badge-pill" href="..\1\index.htm" aria-label="Previous">
+                    <i class="fa fa-chevron-left pr-10"></i>
+                    Setting Internet Pass-Thru Mode
+                  </a>
+                </li>
+                <li>
+                  <a class="btn radius-50 page-link badge-pill" href="..\..\isdio\index.htm" aria-label="Next">
+                    Back to Content List
+                    <i class="fa fa-chevron-right pl-10"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- pagination end -->
+
+            <!-- Amazon bottom link -->
+            <div class="col-12">
+	<!--Amazon search result for tablet-->
+	<div class="amazon-widget-bottom mx-auto d-none d-md-block d-lg-none">
+		<!--
+<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=12&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="300" height="250" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" width="320" height="250" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+
+	<!--Amazon search result for smartphone-->
+	<div class="amazon-widget-mobile mx-auto d-md-none">
+		<!--Image-->
+		<!--
+	<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20" alt="TOSHIBA FlashAir SD card 8GB SD-WB008G"><img src="http://ws.assoc-amazon.com/widgets/q?_encoding=UTF8&ASIN=B009RGP7HY&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=flasdeve-20" style="vertical-align:middle;"/></a><br>
+-->
+		<!--Text-->
+		<!--
+<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20">Find TOSHIBA FlashAir SD card 8GB SD-WB008G on Amazon.com</a><img src="http://www.assoc-amazon.com/e/ir?t=flasdeve-20&l=as2&o=1&a=B009RGP7HY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+</div>
+
+          </div>
+          <!-- main end -->
+
+          <!-- sidebar start -->
+          <!-- ================ -->
+          <aside class="col-lg-3 col-xl-3 order-lg-1">
+            <div class="sidebar">
+  <div class="block clearfix">
+    <nav>
+      <ul class="nav flex-column">
+        <li>
+          <h3>Tutorials for Arduino software development</h3>
+        </li>
+        <li class="nav-item"> <a class="nav-link" href="..\..\arduino\1\index.htm">
+          Controlling FlashAir with Arduino
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\..\arduino\2\index.htm">
+          Creating the iSDIO extension command
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\..\arduino\3\index.htm">
+          Reading card status
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\..\arduino\4\index.htm">
+          Starting in AP mode
+          </a>
+        </li>
+
+
+        <li class="nav-item"> <a class="nav-link" href="..\..\arduino\5\index.htm">
+          Starting in STA mode
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\..\arduino\6\index.htm">
+          Retieving a Web page
+          </a>
+        </li>
+        <li>
+          <h3>Tutorials for Raspberry pi app development</h3>
+        </li>
+        <li class="nav-item"> <a class="nav-link" href="..\1\index.htm">Setting
+          Internet Pass-Thru Mode</a>
+        </li>
+        <li class="nav-item active"> <a class="nav-link active" href="index.htm">API Reference</a>
+        </li>
+        <li>
+          <br>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\..\isdio\index.htm">
+            Back to Content List
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<!-- Amazon side link -->
+<!--Amazon search result for desktop-->
+<div class="amazon-widget-side d-none d-lg-block">
+	<!--
+	<iframe src="http://rcm-jp.amazon.co.jp/e/cm?t=flashjapan0a-22&o=9&p=14&l=st1&mode=electronics-jp&search=%E6%9D%B1%E8%8A%9D%20FlashAir&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></iframe>
+	-->
+	<div class="amazon-content" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; font-size: 14px;" scrolling="no">
+        <script type="text/javascript">amazon_ad_tag ="flashjapan0a-22"; amazon_ad_width ="160"; amazon_ad_height ="600"; amazon_ad_link_target ="new"; amazon_ad_price ="retail"; amazon_ad_discount ="remove"; amazon_ad_exclude ="マンガ;インクカートリッジ;ポイントコード;transcend;モンスターハンター"; amazon_ad_include ="flashair;arduino;lua;iot;ソフトウェア"; amazon_ad_categories ="e"; </script><script src="//ir-jp.amazon-adsystem.com/s/ads.js"></script>
+    </div>
+    
+</div>
+
+
+          </aside>
+          <!-- sidebar end -->
+        </div>
+      </div>
+    </section>
+    <!-- main-container end -->
+
+    <!-- footer start -->
+    <!-- ================ -->
+    <!-- footer start -->
+<!-- ================ -->
+<footer id="footer" class="clearfix ">
+
+  <!-- .footer start -->
+  <!-- ================ -->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">
+                <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2.png"> FlashAir&trade; Developers</h2>
+              <div class="separator-2"></div>
+              <p>
+                  A technical information website for developers of Toshiba FlashAir apps or services. FlashAir Developers is operated by Fixstars in cooperation with Toshiba Memory Corporation. To learn more about Fixstars, visit
+                <a target="_blank" href="http://www.fixstars.com">www.fixstars.com
+                  <i class="fa fa-external-link"></i>
+                </a>. ?FlashAir is a trademark of Toshiba Memory Corporation.
+              </p>
+              <ul class="social-links circle animated-effect-1" style="margin-bottom: 10px">
+                <li class="facebook">
+                  <a href="https://www.facebook.com/FlashAir-Developers-115819238627364/" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="twitter">
+                  <a href="https://twitter.com/FlashAirDev/" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+              <ul class="list-unstyled list-inline m-0">
+                <li class="list-inline-item"><a href="..\..\..\..\terms-of-use\index.htm">Terms of Use</a></li>
+                <li class="list-inline-item">|</li>
+                <li class="list-inline-item"><a href="..\..\..\..\privacypolicy\index.htm">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Twitter</h2>
+              <div class="separator-2"></div>
+              <div id="twitterWidget">
+                <a class="twitter-timeline" data-theme="light" href="https://twitter.com/FlashAirDev" data-widget-id="344743426811641856" height="230" data-chrome="nofooter noheader noborders transparent">Latest News</a>
+                <script>
+                  ! function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                      p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                      js = d.createElement(s);
+                      js.id = id;
+                      js.src = p + "://platform.twitter.com/widgets.js";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }
+                  }(document, "script", "twitter-wjs");
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Sitemap</h2>
+              <div class="separator-2"></div>
+              <nav>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\discover\overview\index.htm">What's FlashAir?
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\resources\index.htm">Developer Resources
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\index.htm">Tutorials
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\api\index.htm">API Guide
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\support\index.htm">Support
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\support\forum\index.htm">Developer Forum
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir IoTHub <i class="fa fa-external-link"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .footer end -->
+
+  <!-- .subfooter start -->
+  <!-- ================ -->
+  <div class="subfooter">
+    <div class="container">
+      <div class="subfooter-inner">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center">Copyright &copy; 2019 FlashAir Developers. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .subfooter end -->
+
+  <div id="overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 ml-auto text-white">
+          <p class="mt-3">If you write software or change the settings which are described on this site to your FlashAir device which was purchased at a mass retailer or online shop, it will not be eligible for a free replacement under the warranty policy. Please acknowledge and carry out development at your own risk.
+          </p>
+        </div>
+        <div class="col-md-2 row">
+          <div class="align-self-center">
+          <button class="btn btn-default" id="btn-agree">Accept</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- footer end -->
+
+<!-- JavaScript files placed at the end of the document so the pages load faster -->
+<!-- ================================================== -->
+<!-- Jquery and Bootstap core js files -->
+<script src="..\..\..\..\..\js\jquery.min.js"></script>
+<script src="..\..\..\..\..\js\bootstrap.bundle.min.js"></script>
+<!-- jQuery Revolution Slider  -->
+<script src="..\..\..\..\..\js\jquery.themepunch.tools.min.js"></script>
+<script src="..\..\..\..\..\js\jquery.themepunch.revolution.min.js imagesloaded.pkgd.min.js.pagespeed.jc.cG4Ou2l09T.js"></script><script>eval(mod_pagespeed_faLzhRoycV);</script>
+<!-- Isotope javascript -->
+<script>eval(mod_pagespeed_e7p3yiKri5);</script>
+<script src="..\..\..\..\..\js\isotope.pkgd.min.js jquery.magnific-popup.min.js jquery.waypoints.min.js sticky.min.js jquery.countTo.js.pagespeed.jc.cWqBgip635.js"></script><script>eval(mod_pagespeed_EzjKnImtZK);</script>
+<!-- Magnific Popup javascript -->
+<script>eval(mod_pagespeed_hr4XVzGccf);</script>
+<!-- Appear javascript -->
+<script>eval(mod_pagespeed_zhicDWZgIJ);</script>
+<script>eval(mod_pagespeed_MTpYywWOfL);</script>
+<!-- Count To javascript -->
+<script>eval(mod_pagespeed_dmh3ejQ5o0);</script>
+<!-- Slick carousel javascript -->
+<script src="..\..\..\..\..\js\slick.min.js pace.min.js template.js jquery.cookie.js custom.js jquery.matchHeight.js.pagespeed.jc.Y3630FlbPX.js"></script><script>eval(mod_pagespeed_s1mKdTeuWx);</script>
+<!-- Pace javascript -->
+<script>eval(mod_pagespeed_Zs67JgCVyk);</script>
+<!-- Initialization of Plugins -->
+<script>eval(mod_pagespeed_BIPkzwMbEw);</script>
+<!-- Custom Scripts -->
+<script>eval(mod_pagespeed_uSq_SD1Gz5);</script>
+<script>eval(mod_pagespeed_mqKjjurRp4);</script>
+<script>eval(mod_pagespeed_TteNs$c3Zl);</script>
+<script>
+  $(function () {
+    $('.matchHeight').matchHeight();
+  });
+</script>
+<script src="..\..\..\..\..\js\script.js prettify.js lang-lua.js lang-css.js.pagespeed.jc.ECF3Z77mjV.js"></script><script>eval(mod_pagespeed_SrZ0Yqg7MZ);</script>
+<script>eval(mod_pagespeed_RSPiDhly$4);</script>
+<script>eval(mod_pagespeed_0pGoVUEAt9);</script>
+<script>eval(mod_pagespeed_IrbA2eGHA$);</script>
+<script>
+  ! function ($) {
+    $(function () {
+      PR.prettyPrint()
+    })
+  }(window.jQuery)
+</script>
+    <!-- footer end -->
+  </div>
+  <!-- page wrapper end -->
+</body>
+
+</html>

@@ -1,0 +1,1233 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+<!-- %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"} -->
+
+<!--Google Apps verification-->
+
+<title>FlashAir Developers - Downloading Content</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta property="fb:admins" content="100006082240886">
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@FlashAirDev">
+<meta property="fb:admins" content="115819238627364">
+<meta property="og:site_name" content="FlashAir Developers">
+<meta property="og:image" content="https://flashair-developers.com/images/assets/ogp.png">
+<meta property="og:url" content="https://flashair-developers.com/en/documents/tutorials/ios/3/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FlashAir Developers - Downloading Content">
+
+<link href="..\..\..\..\..\images\flashair_favicon.ico" rel="shortcut icon">
+<link href="..\..\..\..\..\images\apple-touch-icon-152x152-precomposed.png" rel="apple-touch-icon-precomposed" sizes="152x152">
+<link href="..\..\..\..\..\images\apple-touch-icon-120x120-precomposed.png" rel="apple-touch-icon-precomposed" sizes="120x120">
+<link href="..\..\..\..\..\images\apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="..\..\..\..\..\images\apple-touch-icon-76x76-precomposed.png" rel="apple-touch-icon-precomposed" sizes="76x76">
+<link href="..\..\..\..\..\images\apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="..\..\..\..\..\images\apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon-precomposed" sizes="57x57">
+<!-- Web Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+<!-- Bootstrap core CSS -->
+<link href="..\..\..\..\..\css\bootstrap.css" rel="stylesheet">
+
+<!-- Font Awesome CSS -->
+<link href="..\..\..\..\..\css\fonts\font-awesome\css\font-awesome.css" rel="stylesheet">
+
+<!-- Plugins -->
+<link href="..\..\..\..\..\css\magnific-popup.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\settings.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\layers.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\navigation.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\animations.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\slick.css" rel="stylesheet">
+
+<!-- The Project's core CSS file -->
+<!-- Use css/rtl_style.css for RTL version -->
+<link href="..\..\..\..\..\css\style.css" rel="stylesheet">
+<!-- The Project's Typography CSS file, includes used fonts -->
+<!-- Used font for body: Roboto -->
+<!-- Used font for headings: Raleway -->
+<!-- Use css/rtl_typography-default.css for RTL version -->
+<link href="..\..\..\..\..\css\typography-default.css" rel="stylesheet">
+<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer) -->
+<link href="..\..\..\..\..\css\light_blue.css" rel="stylesheet">
+
+<!-- Custom css -->
+<link href="..\..\..\..\..\css\custom.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\prettify.css" rel="stylesheet">
+<!--[if lt IE 9]>
+	<link href="/css/bootstrap-ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <meta name="keywords" content="FlashAir, iOS, app, application, WevDev">
+    <meta name="description" content="Tutorials for iOS application. FlashAir is a SD card with embedded wireless LAN produced by Toshiba Memory Corp..">
+    <meta property="og:description" content="Tutorials for iOS application. FlashAir is a SD card with embedded wireless LAN produced by Toshiba Memory Corp..">
+</head>
+
+<body class=" ">
+
+    <!-- scrollToTop -->
+    <!-- ================ -->
+    <div class="scrollToTop circle">
+        <i class="fa fa-angle-up"></i>
+    </div>
+
+    <!-- page wrapper start -->
+    <!-- ================ -->
+    <div class="page-wrapper">
+        <!-- header-container start -->
+        <div class="header-container">
+            <!-- header-top start -->
+<!-- classes:  -->
+<!-- "dark": dark version of header top e.g. class="header-top dark" -->
+<!-- "colored": colored version of header top e.g. class="header-top colored" -->
+<!-- ================ -->
+<div class="header-top dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-lg-10">
+                <div class="header-top-first clearfix">
+                    <ul class="list-inline float-right">
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\index.htm" id="go-to-japanese">Japanese</a>&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            English&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\..\zh\index.htm" id="go-to-chinese">Chinese</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-2">
+                <!-- header-top-second start -->
+                <!-- ================ -->
+                <div id="header-top-second" class="clearfix">
+                    <!-- header top dropdowns start -->
+                    <!-- ================ -->
+                    <div class="header-top-dropdown text-right">
+                        <div class="btn-group">
+                            <a href="..\..\..\..\member\index.htm" class="btn btn-default btn-sm">
+                                <i class="fa fa-user pr-2"></i> MyAccount</a>
+                        </div>
+                    </div>
+                    <!--  header top dropdowns end -->
+                </div>
+                <!-- header-top-second end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header-top end -->
+<!-- header start -->
+<!-- classes:  -->
+<!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+<!-- "fixed-desktop": enables fixed navigation only for desktop devices e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "fixed-all": enables fixed navigation only for all devices desktop and mobile e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+<!-- "centered": mandatory class for the centered logo layout -->
+<!-- ================ -->
+<header class="header fixed fixed-desktop clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-auto hidden-md-down pl-3">
+                <!-- header-first start -->
+                <!-- ================ -->
+                <div class="header-first clearfix">
+
+                    <!-- logo -->
+                    <div id="logo" class="logo">
+                        <a href="..\..\..\..\index.htm">
+                            <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2.png">
+                            &nbsp;FlashAir&trade; Developers
+                        </a>
+                    </div>
+
+                </div>
+                <!-- header-first end -->
+
+            </div>
+            <div class="col-lg-7 ml-lg-auto">
+
+                <!-- header-second start -->
+                <!-- ================ -->
+                <div class="header-second clearfix">
+
+                    <!-- main-navigation start -->
+                    <!-- classes: -->
+                    <!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+                    <!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+                    <!-- ================ -->
+                    <div class="main-navigation main-navigation--mega-menu  animated">
+                        <nav class="navbar navbar-expand-lg navbar-light p-0">
+                            <div class="navbar-brand clearfix hidden-lg-up">
+
+                                <!-- logo -->
+                                <div id="logo-mobile" class="logo">
+                                    <a href="..\..\..\..\index.htm">
+                                        <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2.png">
+                                        &nbsp;FlashAir&trade; Developers
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- header dropdown buttons -->
+                            <div class="header-dropdown-buttons hidden-lg-up p-0 ml-auto mr-3">
+                                <div class="btn-group">
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                                        <li>
+                                            <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse">
+                                                <div class="form-group has-feedback">
+                                                    <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                                    <input type="hidden" name="ie" value="UTF-8">
+                                                    <input type="text" name="q" size="31" class="form-control">
+                                                    <input type="submit" name="sa" value="Search">
+                                                </div>
+                                            </form>
+                                            <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- header dropdown buttons end -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                <!-- main-menu -->
+                                <ul class="navbar-nav ml-xl-auto">
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="first-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Discover</a>
+                                        <ul class="dropdown-menu" aria-labelledby="first-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\discover\overview\index.htm">What's FlashAir?</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\overview\w04\index.htm">Fourth generation FlashAir W-04</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\gettingstarted\index.htm">Getting Started</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\beginners\index.htm">Beginners Guide with FlashAir
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\usage\index.htm">Get started with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\app\index.htm">Overview of FlashAir Application
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\device\index.htm">Overview of using Devices with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir
+                                                    IoT Hub
+                                                    <i class="fa fa-external-link"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="second-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Application</a>
+                                        <ul class="dropdown-menu" aria-labelledby="second-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\application\iot\index.htm">Application to IoT</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\devices\index.htm">Using with Devices</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\workflow\index.htm">Improve efficiency of operations</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\share-documents\index.htm">Sharing Documents</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\users\index.htm">User's Projects</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\showcase\index.htm">App Showcase</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown active"> <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+                                        <ul class="dropdown-menu" aria-labelledby="third-dropdown">
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\index.htm">iOS</a></li>
+                                                    <li><a href="..\..\android\index.htm">Android</a></li>
+                                                    <li><a href="..\..\web\index.htm">Web browser</a></li>
+                                                    <li><a href="..\..\advanced\index.htm">Advanced</a></li>
+                                                    <li><a href="..\..\isdio\index.htm">iSDIO</a></li>
+                                                    <li><a href="..\..\lua\index.htm">Lua</a></li>
+                                                    <li><a href="..\..\users\index.htm">User's Tutorials</a></li>
+                                                    <li><a href="..\..\iot-hub\index.htm">FlashAir IoT Hub</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">API Guide</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\..\..\api\commandcgi\index.htm">command.cgi</a></li>
+                                                    <li><a href="..\..\..\api\configcgi\index.htm">config.cgi</a></li>
+                                                    <li><a href="..\..\..\api\thumbnailcgi\index.htm">thumbnail.cgi</a></li>
+                                                    <li><a href="..\..\..\api\uploadcgi\index.htm">upload.cgi</a></li>
+                                                    <li><a href="..\..\..\api\config\index.htm">CONFIG</a></li>
+                                                    <li><a href="..\..\..\api\utility\index.htm">Browser Utility</a></li>
+                                                    <li><a href="..\..\..\api\lua\index.htm">Lua Scripting</a></li>
+                                                    <li><a href="..\..\..\api\isdio\index.htm">iSDIO</a></li>
+                                                    <li><a href="..\..\..\api\fw40003\index.htm">About FW 4.00.03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\resources\index.htm">Developer Resources</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\books\index.htm">Books</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\about\events\index.htm">Events</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="fourth-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                                        <ul class="dropdown-menu" aria-labelledby="fourth-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\support\index.htm">Support</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\forum\index.htm">Developer Forum</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\faq\index.htm">FAQ</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\iot-hub\index.htm">About FlashAir IoT Hub service end</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\developers\index.htm">About FlashAir Developers site closure</a>
+                                            </li>                
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!-- main-menu end -->
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- main-navigation end -->
+                </div>
+                <!-- header-second end -->
+
+            </div>
+            <div class="col-auto hidden-md-down">
+                <!-- header dropdown buttons -->
+                <div class="header-dropdown-buttons">
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                            <li>
+                                <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse" target="_blank">
+                                    <div class="form-group has-feedback">
+                                        <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                        <input type="hidden" name="ie" value="UTF-8">
+                                        <input type="text" name="q" size="31" class="form-control">
+                                        <input type="submit" name="sa" value="Search">
+                                    </div>
+                                </form>
+                                <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- header dropdown buttons end -->
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+    <!-- Google Analytics Tracking Code -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-498925-24', 'auto');
+        ga('send', 'pageview');
+    </script>
+</header>
+        </div>
+        <!-- header-container end -->
+
+        <!-- main-container start -->
+        <!-- ================ -->
+        <section class="main-container">
+
+            <div class="container">
+                <div class="row">
+
+                    <!-- main start -->
+                    <!-- ================ -->
+                    <div class="main col-lg-9 order-lg-2 pb-5">
+
+                        <!-- page-title start -->
+                        <!-- ================ -->
+                        <h1 class="page-title">
+                            Downloading Content</h1>
+                        <p class="small text-muted">Latest update: June 2013</p>
+                        <!-- page-title end -->
+
+                        <p class="mt-5">
+                            <strong>In this tutorial, we will show you how to download content from your FlashAir
+                                device. We will
+                                take the information from the content list that we created using
+                                <a href="..\..\..\api\commandcgi\index.htm">command.cgi</a> and make an application that
+                                downloads and displays a selected image file.</strong>
+                        </p>
+
+                        <p>This tutorial follows
+                            <a href="..\2\index.htm">iOS Tutorial 2: Getting A List of Contents</a> in
+                            the FlashAir iOS app tutorial series.
+                            <br> Let's try making this app.</p>
+
+                        <h2>Creating the Screen Layout</h2>
+                        <div class="separator-2"></div>
+
+                        <p>Here is the screen layout that we would like to create:</p>
+
+                        <div class="m-3">
+                            <img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\ios_tutorial_03_1.png" alt="image shows the screen layout for this app">
+                        </div>
+
+                        <p>Once the application is launched, the list should display the contents of the current folder
+                            in the
+                            TableView block, the number of files in the labelCount block and the name of the directory
+                            to
+                            the labelDirectory block. </p>
+
+                        <p>We will add the following elements:</p>
+
+                        <h3>Content List Screen</h3>
+
+                        <ul>
+                            <li>Round Rect Button (
+                                <code>UIButton</code>)
+                                <br>
+                                <ul>
+                                    <li>back: Moves you up one directory</li>
+                                </ul>
+                            </li>
+                            <li>Label (
+                                <code>UILabel</code>)
+                                <br>
+                                <ul>
+                                    <li>labelCount: Shows the number of files in the current folder</li>
+                                    <li>labelDirectory: Shows the current folder in the path</li>
+                                </ul>
+                            </li>
+                            <li>Table View (
+                                <code>UITableView</code>)
+                                <br>
+                                <ul>
+                                    <li>A contents list</li>
+                                </ul>
+                            </li>
+                            <li>Table View Cell (
+                                <code>UITableViewCell</code>)
+                                <br>
+                                <ul>
+                                    <li>Individual cell content of the list</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h3>Image Display Screen</h3>
+
+                        <ul>
+                            <li>View Controller (
+                                <code>UIViewController</code>) </li>
+                            <li>Image View (
+                                <code>UIImageView</code>)
+                                <br>
+                                <ul>
+                                    <li>Shows the image file</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h3>Other</h3>
+
+                        <ul>
+                            <li>Navigation Controller (
+                                <code>UINavigationController</code>)
+                                <br>
+                                <ul>
+                                    <li>Used to move between showing image files on the display screen and the file
+                                        contents
+                                        on the list screen </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <p>We will create a content list that looks like this:</p>
+
+                        <div class="m-3">
+                            <img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\ios_tutorial_03_2.png" alt="images shows the format of the content list">
+                        </div>
+
+                        <p>If a folder name in the list is tapped, we will show the contents of that folder.
+                            <br> If "back" is tapped, we will move one element up the path and display the contents
+                            of that folder.
+                            <br> If an image file in the list is tapped, we will display the image like this: </p>
+
+                        <div class="m-3">
+                            <img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\ios_tutorial_03_3.png" alt="image shows how image files should be displayed">
+                        </div>
+
+                        <h2>Writing Code</h2>
+                        <div class="separator-2"></div>
+
+                        <h3>Displaying Image Files</h3>
+
+                        <p>Image files are displayed using a ViewController. The ViewController is set in the class:</p>
+
+                        <ul>
+                            <li>FSImageViewController </li>
+                        </ul>
+
+                        <p>An image file can be acquired without using CGI commands if you specify the file path
+                            directly (in
+                            a browser or file explorer). To get data from the image file, we will use the variable
+                            <a href="https://developer.apple.com/documentation/foundation/nsdata#//apple_ref/occ/clm/NSData/dataWithContentsOfURL:" target="_blank">NSData dataWithContentsOfURL
+                                <i class="fa fa-external-link"></i>
+                            </a>. This function will return the data object. </p>
+
+                        <h4>
+                            <em>FSImageViewController.h</em>
+                        </h4>
+
+                        <pre class="prettyprint linenums"><code>@interface FSImageViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic) NSString *fileInfo;
+@end
+</code></pre>
+
+                        <ul>
+                            <li>Line 3:
+                                <br>
+                                <code>fileInfo</code>: is a property of View Controller that stores the content list
+                                file information
+                            </li>
+                        </ul>
+
+                        <h4>
+                            <em>FSImageViewController.m</em>
+                        </h4>
+
+                        <pre class="prettyprint linenums"><code>- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    // Do any additional setup after loading the view.
+    // Make a file path
+    NSString *dir = 
+        [[self.fileInfo componentsSeparatedByString:@","] objectAtIndex:0];
+    NSString *filename = 
+        [[self.fileInfo componentsSeparatedByString:@","] objectAtIndex:1];
+    NSString *filePath = 
+        [[dir stringByAppendingString:@"/"] stringByAppendingString:filename];
+    // Run                    
+    NSURL *url = 
+        [NSURL URLWithString:[NSString stringWithFormat:@"http://flashair/%@", filePath]];
+    // Get image data
+    if(nil == url)return;
+    NSData *img_data = [NSData dataWithContentsOfURL:url];
+    UIImage *img = [[UIImage alloc] initWithData:img_data];
+    // Display results
+    self.imageView.image = img;
+
+}
+</code></pre>
+
+                        <ul>
+                            <li>Lines 7-12:
+                                <br> We create the path to the file by using the information that was retrieved from
+                                the content
+                                list`s View Controller. </li>
+                            <li>Lines 14-15:
+                                <br> We set the URL to make the request. </li>
+                            <li>Lines 17-19:
+                                <br> Retrieves the image data from the URL and creates the image. </li>
+                            <li>Line 21:
+                                <br> We have set the image data we acquired to the Image View.</li>
+                        </ul>
+
+                        <h3>Display the Content List</h3>
+
+                        <p>To get the content list, we use
+                            <code>command.cgi</code> with
+                            <code>op=100</code> and
+                            <code>op=101</code>.
+                            <br> For information on how to get the contents list, please see
+                            <a href="..\2\index.htm">iOS Tutorial 2: Getting a Content List</a>.
+                            <br> We will set the results of the cgi command to a Table View.</p>
+
+                        <h4>
+                            <em>FSViewController.h</em>
+                        </h4>
+
+                        <pre class="prettyprint linenums"><code>#import &lt;UIKit/UIKit.h&gt;
+#import "FSImageViewController.h"
+
+@interface FSViewController : UIViewController{
+@private
+    NSArray  *files;
+    NSString *count;
+    NSString *rowdata;
+}
+@property (strong, nonatomic) IBOutlet UILabel *labelCount;
+@property (strong, nonatomic) IBOutlet UILabel *labelDirectory;
+@property (strong, nonatomic) IBOutlet UITableView *tableViewFileList;
+- (IBAction)buttonPush:(id)sender;
+- (void)getFileList:(NSString*)path;
+@end
+</code></pre>
+
+                        <ul>
+                            <li>Line 2:
+                                <br> We need to import
+                                <code>FSImageViewController.h</code> so that when you click an item in the list, the
+                                <code>rowdata</code> property of
+                                <code>FSViewController</code> will be sent to the
+                                <code>ImageViewController</code> that fetches and displays the image. (The value of
+                                <code>rowdata</code> is stored in
+                                <code>fileInfo</code>.)</li>
+                            <li>Lines 6-8:
+                                <br>
+                                <code>files</code>,
+                                <code>count</code>： store the results from
+                                <code>command.cgi</code> with
+                                <code>op=100</code> and
+                                <code>op=101</code> respectively.
+                                <br>
+                                <code>rowdata</code>: manages the file information for the selected rows</li>
+                        </ul>
+
+                        <h4>
+                            <em>FSViewController.m</em> content list acquisition</h4>
+
+                        <pre class="prettyprint linenums"><code>- (void)getFileList:(NSString *)path{
+
+    NSError *error = nil;
+
+    // Get file list
+    // Make url
+    NSURL *url100 = [NSURL URLWithString:[@"http://flashair/command.cgi?op=100&amp;DIR=" 
+                                                            stringByAppendingString: path]];
+    // Run cgi
+    NSString *dirStr = [NSString stringWithContentsOfURL:url100 
+                                                encoding:NSUTF8StringEncoding error:&amp;error];
+    if ([error.domain isEqualToString:NSCocoaErrorDomain]){
+        NSLog(@"error100 %@\n",error);
+        return;
+    }
+    files = [dirStr componentsSeparatedByString:@"\n"];
+
+    // Get the number of files
+    // Make url
+    NSURL *url101 = [NSURL URLWithString:[@"http://flashair/command.cgi?op=101&amp;DIR=" 
+                                                            stringByAppendingString: path]];
+    // Run cgi
+    NSString *cntStr = [NSString stringWithContentsOfURL:url101 
+                                                encoding:NSUTF8StringEncoding error:&amp;error];
+    if ([error.domain isEqualToString:NSCocoaErrorDomain]) {
+        NSLog(@"error101 %@\n",error);
+        return;
+    }
+    count = cntStr;
+
+    // Display results
+    self.labelCount.text = [@"Items Found:" stringByAppendingString:cntStr];
+    if(![path isEqualToString:@"/"]){
+        self.labelDirectory.text = [path stringByAppendingString:@"/" ];
+    }else{
+        self.labelDirectory.text = @"/";
+    }
+
+}
+</code></pre>
+
+                        <ul>
+                            <li>Lines 7-16:
+                                <br> We run
+                                <code>command.cgi</code> with
+                                <code>op=100</code> and set the results to the appropriate variables.</li>
+                            <li>Lines 20-29:
+                                <br> We run
+                                <code>command.cgi</code> with
+                                <code>op=101</code> and set the results to the appropriate variables. </li>
+                            <li>Lines 32-37:
+                                <br> We set the results to
+                                <code>labelDirectory</code>
+                            </li>
+                        </ul>
+
+                        <h4>
+                            <em>FSViewController.m</em> (1) sets default columns and rows for the tableView</h4>
+
+                        <pre class="prettyprint linenums"><code>- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.    
+    return [count intValue];
+}
+</code></pre>
+
+                        <ul>
+                            <li>Lines 4, 10:
+                                <br> We set the number of cells we will have in the Table View. </li>
+                        </ul>
+
+                        <h4>
+                            <em>FSViewController.m</em> (2) sets the text for the tableView</h4>
+
+                        <pre class="prettyprint linenums"><code>- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier 
+                                                                    forIndexPath:indexPath];
+
+    // Configure the cell...
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
+                                                            reuseIdentifier:CellIdentifier];
+    }
+
+    NSString *filename = [[[files objectAtIndex:indexPath.row + 1] 
+                                        componentsSeparatedByString:@","] objectAtIndex:1];
+    unsigned char attribute = [[[[files objectAtIndex:indexPath.row + 1] 
+                                componentsSeparatedByString:@","] objectAtIndex:3] intValue];
+
+    // If it is folder
+    if ((attribute &amp; 0x10) != 0) {
+        filename = [filename stringByAppendingString:@"/" ];
+    }else{
+        NSArray *name_array = [filename componentsSeparatedByString:@"."];
+        NSString *ext = [[name_array objectAtIndex:[name_array count]-1] lowercaseString];
+        if (!([ext isEqualToString:@"jpg"] || [ext isEqualToString:@"jpeg"] ||
+              [ext isEqualToString:@"png"] || [ext isEqualToString:@"jpe"])) {
+            [cell setUserInteractionEnabled:NO];
+        }
+    }
+    cell.textLabel.text = filename;
+
+    return cell;
+}
+</code></pre>
+
+                        <ul>
+                            <li>Lines 3-11:
+                                <br> Get the cell we wish to process.</li>
+                            <li>Lines 13-28:
+                                <br> Get the file name and attributes of a file. Each file will be checked for type
+                                and skipped
+                                accordingly (if it is not in JPEG format).</li>
+                            <li>Line 29:
+                                <br>
+                                <code>textLabel</code>: stores the name of the retrieved file. </li>
+                        </ul>
+
+                        <h3>Setting Up the Content List's Behavior</h3>
+
+                        <p>We will set up the touch behavior of the content list. We will set behaviors for when the
+                            user taps
+                            the back button or an image file or directory in the content list. </p>
+
+                        <div class="m-3">
+                            <img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\ios_tutorial_03_5.png" alt="this image shows the content list">
+                        </div>
+
+                        <p>These are the operations we are running when the list is tapped: </p>
+
+                        <h4>
+                            <em>FSViewController.m</em> tableView behavior</h4>
+
+                        <pre class="prettyprint linenums"><code>- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Navigation logic may go here. Create and push another view controller.    
+    rowdata = [files objectAtIndex:indexPath.row + 1];
+    NSString *dir = [[rowdata componentsSeparatedByString:@","] objectAtIndex:0];
+    NSString *filename = [[rowdata componentsSeparatedByString:@","] objectAtIndex:1];
+    NSString *filePath = [[dir stringByAppendingString:@"/"] stringByAppendingString:filename];
+
+    // If it is folder
+    if(([[[rowdata componentsSeparatedByString:@","] objectAtIndex:3] intValue] &amp; 0x10) != 0){
+        [self getFileList:filePath];
+        [self.tableViewFileList reloadData];
+    }else{
+        [self performSegueWithIdentifier:@"imageView" sender:self];
+    }
+
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Give next View the Data
+    if ([segue.identifier isEqualToString:@"imageView"]) {
+        FSImageViewController *iamgeViewController = segue.destinationViewController;
+        iamgeViewController.fileInfo = rowdata;
+    }
+}
+</code></pre>
+
+                        <ul>
+                            <li>Lines 4-15:
+                                <br> If a folder is selected, we will again call
+                                <code>command.cgi</code> to get the contents of the directory that was selected. We set
+                                this to
+                                a Table View as well. </li>
+                            <li>Lines 24-26:
+                                <br> We pass the information for the items selected to the View Controller. </li>
+                        </ul>
+
+                        <p>Above, we have set the behavior of the back button.</p>
+
+                        <h4>
+                            <em>FSViewController.m</em> behavior when pushing a button</h4>
+
+                        <pre class="prettyprint linenums"><code>- (IBAction)buttonPush:(id)sender {
+    NSString *path = [self.labelDirectory.text 
+                                substringToIndex:[self.labelDirectory.text length] - 1];
+    NSRange found = [path rangeOfString:@"/" options:NSBackwardsSearch];
+
+    if(found.location != NSNotFound){
+        if (found.location == 0) {
+            path = @"/";
+        }else{
+            path = [path substringToIndex:found.location];
+        }
+    }else{
+        path = @"/";       
+    }
+
+    // Reload tableview  
+    [self getFileList:path];
+    [self.tableViewFileList reloadData];
+}
+</code></pre>
+
+                        <ul>
+                            <li>Lines 1-14:
+                                <br> We create the destination path of the folder we would like to return to. </li>
+                            <li>Lines 17-18:
+                                <br> Based on the path we created in lines 1-14, we will call
+                                <code>command.cgi</code> again on this path to show the contents list. We set this to a
+                                Table View.</li>
+                        </ul>
+
+                        <h2>Result</h2>
+                        <div class="separator-2"></div>
+
+                        <p>Once we have completed writing the program, we will check to see if it works. If we tap
+                            "IMG_2340.JPG"
+                            in the content list shown above (in the example Table View screenshot earlier in this
+                            tutorial),
+                            we should see that image file displayed like this: </p>
+
+                        <div class="m-3">
+                            <img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\ios_tutorial_03_6.png" alt="this image shows the image view">
+                        </div>
+
+                        <p>You have now completed the tutorial on downloading content.</p>
+
+                        <h2>Sample Code</h2>
+                        <div class="separator-2"></div>
+
+                        <p>
+                            <a class="btn btn-primary" href="..\..\..\..\..\files\samplecode\ios\ios_tutorial_03.zip" onclick="_gaq.push(['_trackEvent', 'Sample Code Download', 'ios_tutorial_03.zip', 'en', true]);">
+                                <i class="fa fa-download pr-10"></i> ios_tutorial_03.zip</a> (25KB)</p>
+
+                        <p>
+                            <p class="small">All sample code on this page is licensed under
+                                <a href="..\..\..\license\index.htm" target="_blank">BSD 2-Clause License</a>
+                            </p>
+                        
+
+                        <!-- Social Buttons -->
+                        <div class="clearfix">
+	<ul class="social-links float-right">
+		<li class="twitter">
+			<!--Tweet Button-->
+			<a href="https://twitter.com/share" class="twitter-share-button" {count}="" data-via="FlashAirDev" data-related="FlashAirDev">Tweet</a>
+			<script>
+				! function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0],
+						p = /^http:/.test(d.location) ? 'http' : 'https';
+					if (!d.getElementById(id)) {
+						js = d.createElement(s);
+						js.id = id;
+						js.src = p + '://platform.twitter.com/widgets.js';
+						fjs.parentNode.insertBefore(js, fjs);
+					}
+				}(document, 'script', 'twitter-wjs');
+			</script>
+		</li>
+		<li class="facebook">
+			<!--Facebook Like Button-->
+			<div id="fb-root"></div>
+			<script>
+				(function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+			<div class="fb-like" data-href="https://www.flashair-developers.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+		</li>		
+	</ul>
+</div>
+
+                        <!-- pagination start -->
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-between">
+                                <li>
+                                    <a class="btn radius-50 page-link badge-pill" href="..\2\index.htm" aria-label="Previous">
+                                        <i class="fa fa-chevron-left pr-10"></i>
+                                        Getting A List of Contents
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="btn radius-50 page-link badge-pill" href="..\4\index.htm" aria-label="Next">
+                                        Displaying Image Thumbnails
+                                        <i class="fa fa-chevron-right pl-10"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- pagination end -->
+
+                        <!-- Amazon bottom link -->
+                        <div class="col-12">
+	<!--Amazon search result for tablet-->
+	<div class="amazon-widget-bottom mx-auto d-none d-md-block d-lg-none">
+		<!--
+<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=12&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="300" height="250" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" width="320" height="250" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+
+	<!--Amazon search result for smartphone-->
+	<div class="amazon-widget-mobile mx-auto d-md-none">
+		<!--Image-->
+		<!--
+	<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20" alt="TOSHIBA FlashAir SD card 8GB SD-WB008G"><img src="http://ws.assoc-amazon.com/widgets/q?_encoding=UTF8&ASIN=B009RGP7HY&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=flasdeve-20" style="vertical-align:middle;"/></a><br>
+-->
+		<!--Text-->
+		<!--
+<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20">Find TOSHIBA FlashAir SD card 8GB SD-WB008G on Amazon.com</a><img src="http://www.assoc-amazon.com/e/ir?t=flasdeve-20&l=as2&o=1&a=B009RGP7HY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+</div>
+
+                    </div>
+                    <!-- main end -->
+
+                    <!-- sidebar start -->
+                    <!-- ================ -->
+                    <aside class="col-lg-3 col-xl-3 order-lg-1">
+                        <div class="sidebar">
+  <div class="block clearfix">
+    <nav>
+      <ul class="nav flex-column">
+        <li class="nav-item"> <a class="nav-link" href="..\1\index.htm">
+          Overview of FlashAir for iOS app development
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\2\index.htm">
+          Getting A List of Contents
+          </a>
+        </li>
+
+        <li class="nav-item active"> <a class="nav-link active" href="index.htm">
+          Downloading Content
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\4\index.htm">
+          Displaying Image Thumbnails
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\5\index.htm">
+          Auto-Refreshing Content List
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\6\index.htm">
+          Changing SSID and Network Password
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\7\index.htm">
+          Uploading to FlashAir
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\8\index.htm">
+          Photo Share
+          </a>
+        </li>
+        <li>
+          <br>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\index.htm">
+            Back to Content List
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Amazon side link -->
+  <!--Amazon search result for desktop-->
+<div class="amazon-widget-side d-none d-lg-block">
+	<!--
+	<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=14&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></iframe>
+	-->
+	<div class="amazon-content" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></div>
+</div>
+                    </div></aside>
+                    <!-- sidebar end -->
+
+                </div>
+            </div>
+        </section>
+        <!-- main-container end -->
+
+        <!-- footer start -->
+        <!-- ================ -->
+        <!-- footer start -->
+<!-- ================ -->
+<footer id="footer" class="clearfix ">
+
+  <!-- .footer start -->
+  <!-- ================ -->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">
+                <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2.png"> FlashAir&trade; Developers</h2>
+              <div class="separator-2"></div>
+              <p>
+                  A technical information website for developers of Toshiba FlashAir apps or services. FlashAir Developers is operated by Fixstars in cooperation with Toshiba Memory Corporation. To learn more about Fixstars, visit
+                <a target="_blank" href="http://www.fixstars.com">www.fixstars.com
+                  <i class="fa fa-external-link"></i>
+                </a>. ?FlashAir is a trademark of Toshiba Memory Corporation.
+              </p>
+              <ul class="social-links circle animated-effect-1" style="margin-bottom: 10px">
+                <li class="facebook">
+                  <a href="https://www.facebook.com/FlashAir-Developers-115819238627364/" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="twitter">
+                  <a href="https://twitter.com/FlashAirDev/" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+              <ul class="list-unstyled list-inline m-0">
+                <li class="list-inline-item"><a href="..\..\..\..\terms-of-use\index.htm">Terms of Use</a></li>
+                <li class="list-inline-item">|</li>
+                <li class="list-inline-item"><a href="..\..\..\..\privacypolicy\index.htm">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Twitter</h2>
+              <div class="separator-2"></div>
+              <div id="twitterWidget">
+                <a class="twitter-timeline" data-theme="light" href="https://twitter.com/FlashAirDev" data-widget-id="344743426811641856" height="230" data-chrome="nofooter noheader noborders transparent">Latest News</a>
+                <script>
+                  ! function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                      p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                      js = d.createElement(s);
+                      js.id = id;
+                      js.src = p + "://platform.twitter.com/widgets.js";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }
+                  }(document, "script", "twitter-wjs");
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Sitemap</h2>
+              <div class="separator-2"></div>
+              <nav>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\discover\overview\index.htm">What's FlashAir?
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\resources\index.htm">Developer Resources
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\index.htm">Tutorials
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\api\index.htm">API Guide
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\support\index.htm">Support
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\support\forum\index.htm">Developer Forum
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir IoTHub <i class="fa fa-external-link"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .footer end -->
+
+  <!-- .subfooter start -->
+  <!-- ================ -->
+  <div class="subfooter">
+    <div class="container">
+      <div class="subfooter-inner">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center">Copyright &copy; 2019 FlashAir Developers. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .subfooter end -->
+
+  <div id="overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 ml-auto text-white">
+          <p class="mt-3">If you write software or change the settings which are described on this site to your FlashAir device which was purchased at a mass retailer or online shop, it will not be eligible for a free replacement under the warranty policy. Please acknowledge and carry out development at your own risk.
+          </p>
+        </div>
+        <div class="col-md-2 row">
+          <div class="align-self-center">
+          <button class="btn btn-default" id="btn-agree">Accept</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- footer end -->
+
+<!-- JavaScript files placed at the end of the document so the pages load faster -->
+<!-- ================================================== -->
+<!-- Jquery and Bootstap core js files -->
+<script src="..\..\..\..\..\js\jquery.min.js"></script>
+<script src="..\..\..\..\..\js\bootstrap.bundle.min.js"></script>
+<!-- jQuery Revolution Slider  -->
+<script src="..\..\..\..\..\js\jquery.themepunch.tools.min.js"></script>
+<script src="..\..\..\..\..\js\jquery.themepunch.revolution.min.js imagesloaded.pkgd.min.js.pagespeed.jc.cG4Ou2l09T.js"></script><script>eval(mod_pagespeed_faLzhRoycV);</script>
+<!-- Isotope javascript -->
+<script>eval(mod_pagespeed_e7p3yiKri5);</script>
+<script src="..\..\..\..\..\js\isotope.pkgd.min.js jquery.magnific-popup.min.js jquery.waypoints.min.js sticky.min.js jquery.countTo.js.pagespeed.jc.cWqBgip635.js"></script><script>eval(mod_pagespeed_EzjKnImtZK);</script>
+<!-- Magnific Popup javascript -->
+<script>eval(mod_pagespeed_hr4XVzGccf);</script>
+<!-- Appear javascript -->
+<script>eval(mod_pagespeed_zhicDWZgIJ);</script>
+<script>eval(mod_pagespeed_MTpYywWOfL);</script>
+<!-- Count To javascript -->
+<script>eval(mod_pagespeed_dmh3ejQ5o0);</script>
+<!-- Slick carousel javascript -->
+<script src="..\..\..\..\..\js\slick.min.js pace.min.js template.js jquery.cookie.js custom.js jquery.matchHeight.js.pagespeed.jc.Y3630FlbPX.js"></script><script>eval(mod_pagespeed_s1mKdTeuWx);</script>
+<!-- Pace javascript -->
+<script>eval(mod_pagespeed_Zs67JgCVyk);</script>
+<!-- Initialization of Plugins -->
+<script>eval(mod_pagespeed_BIPkzwMbEw);</script>
+<!-- Custom Scripts -->
+<script>eval(mod_pagespeed_uSq_SD1Gz5);</script>
+<script>eval(mod_pagespeed_mqKjjurRp4);</script>
+<script>eval(mod_pagespeed_TteNs$c3Zl);</script>
+<script>
+  $(function () {
+    $('.matchHeight').matchHeight();
+  });
+</script>
+<script src="..\..\..\..\..\js\script.js prettify.js lang-lua.js lang-css.js.pagespeed.jc.ECF3Z77mjV.js"></script><script>eval(mod_pagespeed_SrZ0Yqg7MZ);</script>
+<script>eval(mod_pagespeed_RSPiDhly$4);</script>
+<script>eval(mod_pagespeed_0pGoVUEAt9);</script>
+<script>eval(mod_pagespeed_IrbA2eGHA$);</script>
+<script>
+  ! function ($) {
+    $(function () {
+      PR.prettyPrint()
+    })
+  }(window.jQuery)
+</script>
+        <!-- footer end -->
+    </div>
+    <!-- page wrapper end -->
+</body>
+
+</html>

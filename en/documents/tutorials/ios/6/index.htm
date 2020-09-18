@@ -1,0 +1,1186 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+<!-- %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"} -->
+
+<!--Google Apps verification-->
+
+<title>FlashAir Developers - Changing SSID and Network Password</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta property="fb:admins" content="100006082240886">
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@FlashAirDev">
+<meta property="fb:admins" content="115819238627364">
+<meta property="og:site_name" content="FlashAir Developers">
+<meta property="og:image" content="https://flashair-developers.com/images/assets/ogp.png">
+<meta property="og:url" content="https://flashair-developers.com/en/documents/tutorials/ios/6/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FlashAir Developers - Changing SSID and Network Password">
+
+<link href="..\..\..\..\..\images\flashair_favicon.ico" rel="shortcut icon">
+<link href="..\..\..\..\..\images\apple-touch-icon-152x152-precomposed.png" rel="apple-touch-icon-precomposed" sizes="152x152">
+<link href="..\..\..\..\..\images\apple-touch-icon-120x120-precomposed.png" rel="apple-touch-icon-precomposed" sizes="120x120">
+<link href="..\..\..\..\..\images\apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="..\..\..\..\..\images\apple-touch-icon-76x76-precomposed.png" rel="apple-touch-icon-precomposed" sizes="76x76">
+<link href="..\..\..\..\..\images\apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="..\..\..\..\..\images\apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon-precomposed" sizes="57x57">
+<!-- Web Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+<!-- Bootstrap core CSS -->
+<link href="..\..\..\..\..\css\bootstrap.css" rel="stylesheet">
+
+<!-- Font Awesome CSS -->
+<link href="..\..\..\..\..\css\fonts\font-awesome\css\font-awesome.css" rel="stylesheet">
+
+<!-- Plugins -->
+<link href="..\..\..\..\..\css\magnific-popup.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\settings.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\layers.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\navigation.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\animations.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\slick.css" rel="stylesheet">
+
+<!-- The Project's core CSS file -->
+<!-- Use css/rtl_style.css for RTL version -->
+<link href="..\..\..\..\..\css\style.css" rel="stylesheet">
+<!-- The Project's Typography CSS file, includes used fonts -->
+<!-- Used font for body: Roboto -->
+<!-- Used font for headings: Raleway -->
+<!-- Use css/rtl_typography-default.css for RTL version -->
+<link href="..\..\..\..\..\css\typography-default.css" rel="stylesheet">
+<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer) -->
+<link href="..\..\..\..\..\css\light_blue.css" rel="stylesheet">
+
+<!-- Custom css -->
+<link href="..\..\..\..\..\css\custom.css" rel="stylesheet">
+<link href="..\..\..\..\..\css\prettify.css" rel="stylesheet">
+<!--[if lt IE 9]>
+	<link href="/css/bootstrap-ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <meta name="keywords" content="FlashAir, iOS, app, application, WevDev">
+    <meta name="description" content="Tutorials for iOS application. FlashAir is a SD card with embedded wireless LAN produced by Toshiba Memory Corp..">
+    <meta property="og:description" content="Tutorials for iOS application. FlashAir is a SD card with embedded wireless LAN produced by Toshiba Memory Corp..">
+</head>
+
+<body class=" ">
+
+    <!-- scrollToTop -->
+    <!-- ================ -->
+    <div class="scrollToTop circle">
+        <i class="fa fa-angle-up"></i>
+    </div>
+
+    <!-- page wrapper start -->
+    <!-- ================ -->
+    <div class="page-wrapper">
+        <!-- header-container start -->
+        <div class="header-container">
+            <!-- header-top start -->
+<!-- classes:  -->
+<!-- "dark": dark version of header top e.g. class="header-top dark" -->
+<!-- "colored": colored version of header top e.g. class="header-top colored" -->
+<!-- ================ -->
+<div class="header-top dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-lg-10">
+                <div class="header-top-first clearfix">
+                    <ul class="list-inline float-right">
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\index.htm" id="go-to-japanese">Japanese</a>&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            English&nbsp;&nbsp;&nbsp;/</li>
+                        <li class="list-inline-item">
+                            <a href="..\..\..\..\..\zh\index.htm" id="go-to-chinese">Chinese</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-2">
+                <!-- header-top-second start -->
+                <!-- ================ -->
+                <div id="header-top-second" class="clearfix">
+                    <!-- header top dropdowns start -->
+                    <!-- ================ -->
+                    <div class="header-top-dropdown text-right">
+                        <div class="btn-group">
+                            <a href="..\..\..\..\member\index.htm" class="btn btn-default btn-sm">
+                                <i class="fa fa-user pr-2"></i> MyAccount</a>
+                        </div>
+                    </div>
+                    <!--  header top dropdowns end -->
+                </div>
+                <!-- header-top-second end -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header-top end -->
+<!-- header start -->
+<!-- classes:  -->
+<!-- "fixed": enables fixed navigation mode (sticky menu) e.g. class="header fixed clearfix" -->
+<!-- "fixed-desktop": enables fixed navigation only for desktop devices e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "fixed-all": enables fixed navigation only for all devices desktop and mobile e.g. class="header fixed fixed-desktop clearfix" -->
+<!-- "dark": dark version of header e.g. class="header dark clearfix" -->
+<!-- "centered": mandatory class for the centered logo layout -->
+<!-- ================ -->
+<header class="header fixed fixed-desktop clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-auto hidden-md-down pl-3">
+                <!-- header-first start -->
+                <!-- ================ -->
+                <div class="header-first clearfix">
+
+                    <!-- logo -->
+                    <div id="logo" class="logo">
+                        <a href="..\..\..\..\index.htm">
+                            <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2.png">
+                            &nbsp;FlashAir&trade; Developers
+                        </a>
+                    </div>
+
+                </div>
+                <!-- header-first end -->
+
+            </div>
+            <div class="col-lg-7 ml-lg-auto">
+
+                <!-- header-second start -->
+                <!-- ================ -->
+                <div class="header-second clearfix">
+
+                    <!-- main-navigation start -->
+                    <!-- classes: -->
+                    <!-- "onclick": Makes the dropdowns open on click, this the default bootstrap behavior e.g. class="main-navigation onclick" -->
+                    <!-- "animated": Enables animations on dropdowns opening e.g. class="main-navigation animated" -->
+                    <!-- ================ -->
+                    <div class="main-navigation main-navigation--mega-menu  animated">
+                        <nav class="navbar navbar-expand-lg navbar-light p-0">
+                            <div class="navbar-brand clearfix hidden-lg-up">
+
+                                <!-- logo -->
+                                <div id="logo-mobile" class="logo">
+                                    <a href="..\..\..\..\index.htm">
+                                        <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2.png">
+                                        &nbsp;FlashAir&trade; Developers
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- header dropdown buttons -->
+                            <div class="header-dropdown-buttons hidden-lg-up p-0 ml-auto mr-3">
+                                <div class="btn-group">
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                                        <li>
+                                            <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse">
+                                                <div class="form-group has-feedback">
+                                                    <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                                    <input type="hidden" name="ie" value="UTF-8">
+                                                    <input type="text" name="q" size="31" class="form-control">
+                                                    <input type="submit" name="sa" value="Search">
+                                                </div>
+                                            </form>
+                                            <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- header dropdown buttons end -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                <!-- main-menu -->
+                                <ul class="navbar-nav ml-xl-auto">
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="first-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Discover</a>
+                                        <ul class="dropdown-menu" aria-labelledby="first-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\discover\overview\index.htm">What's FlashAir?</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\overview\w04\index.htm">Fourth generation FlashAir W-04</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\gettingstarted\index.htm">Getting Started</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\beginners\index.htm">Beginners Guide with FlashAir
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\usage\index.htm">Get started with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\app\index.htm">Overview of FlashAir Application
+                                                    Development</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\discover\device\index.htm">Overview of using Devices with FlashAir</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir
+                                                    IoT Hub
+                                                    <i class="fa fa-external-link"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="second-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Application</a>
+                                        <ul class="dropdown-menu" aria-labelledby="second-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\application\iot\index.htm">Application to IoT</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\devices\index.htm">Using with Devices</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\workflow\index.htm">Improve efficiency of operations</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\share-documents\index.htm">Sharing Documents</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\users\index.htm">User's Projects</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\application\showcase\index.htm">App Showcase</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown active"> <a href="#" class="nav-link dropdown-toggle" id="third-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+                                        <ul class="dropdown-menu" aria-labelledby="third-dropdown">
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tutorials</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\index.htm">iOS</a></li>
+                                                    <li><a href="..\..\android\index.htm">Android</a></li>
+                                                    <li><a href="..\..\web\index.htm">Web browser</a></li>
+                                                    <li><a href="..\..\advanced\index.htm">Advanced</a></li>
+                                                    <li><a href="..\..\isdio\index.htm">iSDIO</a></li>
+                                                    <li><a href="..\..\lua\index.htm">Lua</a></li>
+                                                    <li><a href="..\..\users\index.htm">User's Tutorials</a></li>
+                                                    <li><a href="..\..\iot-hub\index.htm">FlashAir IoT Hub</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown ">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">API Guide</a>
+                                                <ul class="dropdown-menu to-left">
+                                                    <li><a href="..\..\..\api\commandcgi\index.htm">command.cgi</a></li>
+                                                    <li><a href="..\..\..\api\configcgi\index.htm">config.cgi</a></li>
+                                                    <li><a href="..\..\..\api\thumbnailcgi\index.htm">thumbnail.cgi</a></li>
+                                                    <li><a href="..\..\..\api\uploadcgi\index.htm">upload.cgi</a></li>
+                                                    <li><a href="..\..\..\api\config\index.htm">CONFIG</a></li>
+                                                    <li><a href="..\..\..\api\utility\index.htm">Browser Utility</a></li>
+                                                    <li><a href="..\..\..\api\lua\index.htm">Lua Scripting</a></li>
+                                                    <li><a href="..\..\..\api\isdio\index.htm">iSDIO</a></li>
+                                                    <li><a href="..\..\..\api\fw40003\index.htm">About FW 4.00.03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\resources\index.htm">Developer Resources</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\books\index.htm">Books</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\about\events\index.htm">Events</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown"> <a href="#" class="nav-link dropdown-toggle" id="fourth-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                                        <ul class="dropdown-menu" aria-labelledby="fourth-dropdown">
+                                            <li>
+                                                <a href="..\..\..\..\support\index.htm">Support</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\forum\index.htm">Developer Forum</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\faq\index.htm">FAQ</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\iot-hub\index.htm">About FlashAir IoT Hub service end</a>
+                                            </li>
+                                            <li>
+                                                <a href="..\..\..\..\support\developers\index.htm">About FlashAir Developers site closure</a>
+                                            </li>                
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!-- main-menu end -->
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- main-navigation end -->
+                </div>
+                <!-- header-second end -->
+
+            </div>
+            <div class="col-auto hidden-md-down">
+                <!-- header dropdown buttons -->
+                <div class="header-dropdown-buttons">
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
+                            <li>
+                                <form role="search" class="search-box margin-clear" id="cse-search-box" action="http://google.com/cse" target="_blank">
+                                    <div class="form-group has-feedback">
+                                        <input type="hidden" name="cx" value="015318272157664795635:6mtpckrtgrq">
+                                        <input type="hidden" name="ie" value="UTF-8">
+                                        <input type="text" name="q" size="31" class="form-control">
+                                        <input type="submit" name="sa" value="Search">
+                                    </div>
+                                </form>
+                                <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=ja"></script>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- header dropdown buttons end -->
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+    <!-- Google Analytics Tracking Code -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-498925-24', 'auto');
+        ga('send', 'pageview');
+    </script>
+</header>
+        </div>
+        <!-- header-container end -->
+
+        <!-- main-container start -->
+        <!-- ================ -->
+        <section class="main-container">
+
+            <div class="container">
+                <div class="row">
+
+                    <!-- main start -->
+                    <!-- ================ -->
+                    <div class="main col-lg-9 order-lg-2 pb-5">
+
+                        <!-- page-title start -->
+                        <!-- ================ -->
+                        <h1 class="page-title">
+                            Changing SSID and Network Password</h1>
+                        <p class="small text-muted">Latest update: July 2013</p>
+                        <!-- page-title end -->
+
+                        <p class="mt-5">
+                            <strong>In this tutorial, we will show you how to view and change your FlashAir SSID and
+                                network password
+                                using
+                                <a href="..\..\..\api\configcgi\index.htm">config.cgi</a>. We will use the
+                                <a href="..\..\..\api\configcgi\index.htm#APPSSID">set SSID operation</a> to set a new SSID
+                                and the
+                                <a href="..\..\..\api\configcgi\index.htm#APPNETWORKKEY">set network security key operation</a>
+                                to set the new password.
+                                <br> Additionally, since we are displaying the current SSID and password, we will
+                                need to use
+                                <a href="/en/documents/api/commandcgi">command.cgi</a>. We will use
+                                <a href="..\..\..\api\commandcgi\index.htm#104">Get SSID</a> and
+                                <a href="..\..\..\api\commandcgi\index.htm#105">Get network password</a> to fetch the
+                                current SSID and password respectively.</strong>
+                        </p>
+
+                        <h2>Creating the Screen Layout</h2>
+                        <div class="separator-2"></div>
+
+                        <p>This is what the screen layout of the application should look like: </p>
+
+                        <div class="m-3">
+                            <img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\ios_tutorial_06_1.png" alt="this image shows the storyboard view of the screen layout for the entire app">
+                        </div>
+
+                        <p>When the Get button is tapped, the app displays the current SSID in the labelSSID block and
+                            the current
+                            password in the labelPassword block.
+                            <br> When the Set button is tapped, the app will segue to the View Controller of the
+                            registration
+                            screen where the new SSID and password can be entered. Once the user is finished filling
+                            out
+                            the text fields, the Done button can be tapped to submit the set operations to the
+                            FlashAir.</p>
+
+                        <p>
+                            <span class="badge badge-danger">Warning:</span> In order to set a new SSID or network
+                            password on your FlashAir device, you will
+                            need the MASTERCODE for your FlashAir device. This can be found by inserting your FlashAir
+                            into
+                            a PC or Mac and opening the CONFIG file of the FlashAir device. The CONFIG file is found in
+                            the
+                            "/SD_WLAN/" directory of the FlashAir device and should be opened in a text editor. You can
+                            check
+                            the Mastercode only when you finished FlashAir initial setting. There are hidden attributes
+                            attached
+                            to this directory, therefore we will use tools to handle this hidden folder. </p>
+
+                        <p>We will add the following layout elements: </p>
+
+                        <h3>Display Screen</h3>
+
+                        <ul>
+                            <li>UIButton (
+                                <code>UIButton</code>)
+                                <br>
+                                <ul>
+                                    <li>Get: Gets the current SSID and password</li>
+                                    <li>Set: Shows the screen where you can set a new SSID and password</li>
+                                </ul>
+                            </li>
+                            <li>Label (
+                                <code>UILabel</code>)
+                                <br>
+                                <ul>
+                                    <li>labelSSID: Where the current SSID will display (after pressing the Get button)</li>
+                                    <li>labelPassword: Where the current password will display (after pressing the Get
+                                        button)</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h3>Registration Screen</h3>
+
+                        <ul>
+                            <li>UIButton (
+                                <code>UIButton</code>)
+                                <br>
+                                <ul>
+                                    <li>Done: Submits your new SSID and password to the FlashAir</li>
+                                </ul>
+                            </li>
+                            <li>Text View (
+                                <code>UITextField</code>)
+                                <br>
+                                <ul>
+                                    <li>textMASTERCODE: Enter the current MASTERCODE here</li>
+                                    <li>textSSID: Enter a new SSID here</li>
+                                    <li>textPassword1: Enter a new password here</li>
+                                    <li>textPassword2: Type the new password again to avoid typos</li>
+                                </ul>
+                            </li>
+                            <li>View Controller (
+                                <code>UIViewController</code>) </li>
+                            <li>Scroll View (
+                                <code>UIScrollView</code>)
+                                <br>
+                                <ul>
+                                    <li>Allows the user to see the input field while the keyboard is displayed on the
+                                        screen</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h3>Other Elements</h3>
+
+                        <ul>
+                            <li>Navigation Controller (
+                                <code>UINavigationController</code>)
+                                <br>
+                                <ul>
+                                    <li>Used to return to the display screen from the registration screen </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <p>The display screen looks like this: </p>
+
+                        <div class="m-3">
+                            <img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\ios_tutorial_06_2.png" alt="this image shows the display screen">
+                        </div>
+
+                        <p>This is the screen that appears when the Set button is tapped. We will implement this class
+                            later
+                            in the tutorial.</p>
+
+                        <ul>
+                            <li>FSSetViewController </li>
+                        </ul>
+
+                        <div class="m-3">
+                            <img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\ios_tutorial_06_3.png" alt="this image shows the registration screen">
+                        </div>
+
+                        <h2>Writing Code</h2>
+                        <div class="separator-2"></div>
+
+                        <h3>Getting SSID and password</h3>
+
+                        <p>To get the current SSID and password, we use
+                            <code>command.cgi</code> with
+                            <code>op=104</code> and
+                            <code>op=105</code>. We will use
+                            <a href="https://developer.apple.com/documentation/foundation/nsstring#//apple_ref/occ/clm/NSString/stringWithContentsOfURL:encoding:error:" target="_blank">NSString stringWithContentsOfURL
+                                <i class="fa fa-external-link"></i>
+                            </a> to execute the CGI command. This
+                            <code>NSString</code> function will allow us to get the information at the specified URL in
+                            UTF-8 encoding
+                            and will return any error data in an
+                            <code>NSError</code> object. </p>
+
+                        <h4>
+                            <em>FSViewController.h</em>
+                        </h4>
+
+                        <pre class="prettyprint linenums"><code>@interface FSViewController : UIViewController
+- (IBAction)buttonGetPush:(id)sender;
+@property (strong, nonatomic) IBOutlet UILabel *labelSSID;
+@property (strong, nonatomic) IBOutlet UILabel *labelPassword;
+@end
+</code></pre>
+
+                        <h4>
+                            <em>FSViewController.m</em>
+                        </h4>
+
+                        <pre class="prettyprint linenums"><code>- (IBAction)buttonGetPush:(id)sender {
+
+    NSError *error = nil;
+    // Get SSID
+    // Make url
+    NSURL *url104 = [NSURL URLWithString:@"http://flashair/command.cgi?op=104"];
+    // Run cgi
+    NSString *SSIDStr = [NSString stringWithContentsOfURL:url104 
+                                            encoding:NSUTF8StringEncoding error:&amp;error];
+    if ([error.domain isEqualToString:NSCocoaErrorDomain]) {
+        UIAlertView *alert = [ [UIAlertView alloc] initWithTitle:self.title
+                                 message:@"op=104 Failed \n check access point" delegate:nil
+                                 cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert show];
+        NSLog(@"error104 %@\n",error);
+        return;
+    }
+
+    // Get Password
+    // Make url
+    NSURL *url105 = [NSURL URLWithString:@"http://flashair/command.cgi?op=105"];
+    // Run cgi
+    NSString *passwordStr = [NSString stringWithContentsOfURL:url105 
+                                                encoding:NSUTF8StringEncoding error:&amp;error];
+    if ([error.domain isEqualToString:NSCocoaErrorDomain]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:self.title
+                                message:@"op=105 Failed \n check access point" delegate:nil
+                                          cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert show];
+        NSLog(@"error105 %@\n",error);
+        return;
+    }
+    self.labelSSID.text = SSIDStr;
+    self.labelPassword.text = passwordStr;
+
+}
+</code></pre>
+
+                        <p>The above function implements the action done by the app after the user presses the Get
+                            button -
+                            which is fetching the SSID and network password for the FlashAir.</p>
+
+                        <ul>
+                            <li>Line 6:
+                                <br> We set the URL used to retrieve the current SSID. We set
+                                <code>op=104</code> for the CGI command. </li>
+                            <li>Lines 8-9:
+                                <br> We execute the CGI command and encode the returned characters. We specify UTF-8
+                                encoding
+                                using
+                                <code>encoding:NSUTF8StringEncoding</code>. </li>
+                            <li>Line 21:
+                                <br> We set the URL used to fetch the current password. WE set
+                                <code>op=104</code> for the CGI command. </li>
+                            <li>Lines 23-24:
+                                <br> We execute the CGI command and encode the returned characters. We specify UTF-8
+                                encoding
+                                using
+                                <code>encoding:NSUTF8StringEncoding</code>. </li>
+                            <li>Lines 33-34:
+                                <br> We set
+                                <code>labelSSID</code> and
+                                <code>labelPassword</code> to display the string values of the fetched SSID and network
+                                password.</li>
+                        </ul>
+
+                        <h3>Setting the SSID and Password</h3>
+
+                        <p>To get the SSID and network password, we will use
+                            <code>config.cgi</code> with
+                            <code>MASTERCODE</code>,
+                            <code>APPSSID</code>, and
+                            <code>APPNETWORKKEY</code> as parameters. We will use
+                            <a href="https://developer.apple.com/documentation/foundation/nsstring#//apple_ref/occ/clm/NSString/stringWithContentsOfURL:encoding:error:" target="_blank">NSString stringWithContentsOfURL
+                                <i class="fa fa-external-link"></i>
+                            </a> again to execute the CGI command. </p>
+
+                        <h4>
+                            <em>FSSetViewController.h</em>
+                        </h4>
+
+                        <pre class="prettyprint linenums"><code>@interface FSSetViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITextField *textMASTERCODE;
+@property (strong, nonatomic) IBOutlet UITextField *textSSID;
+@property (strong, nonatomic) IBOutlet UITextField *textPassword1;
+@property (strong, nonatomic) IBOutlet UITextField *textPassword2;
+- (IBAction)buttonDonePush:(id)sender;
+@end
+</code></pre>
+
+                        <h4>
+                            <em>FSSetViewController.m</em>
+                        </h4>
+
+                        <pre class="prettyprint linenums"><code>- (IBAction)buttonDonePush:(id)sender {
+
+    NSError *error = nil;
+    // Check
+    NSCharacterSet *charSet = [NSCharacterSet whitespaceAndNewlineCharacterSet];    
+    // MASTERCODE
+    NSString *mastercodeText = [self.textMASTERCODE.text 
+                                                stringByTrimmingCharactersInSet:charSet];
+    if ([mastercodeText isEqualToString:@""]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:self.title
+                                                message:@"Enter MASTERCODE" delegate:nil
+                                      cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert show];
+        return;
+    }
+    // SSID
+    NSString *ssidText = [self.textSSID.text stringByTrimmingCharactersInSet:charSet];
+    if ([ssidText isEqualToString:@""]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:self.title
+                                                message:@"Enter SSID" delegate:nil
+                                      cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert show];
+        return;
+    }
+    // password
+    NSString *password1Text = [self.textPassword1.text 
+                                                stringByTrimmingCharactersInSet:charSet];
+    NSString *password2Text = [self.textPassword2.text 
+                                                stringByTrimmingCharactersInSet:charSet];
+    if ([password1Text isEqualToString:@""] || [password2Text isEqualToString:@""]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:self.title
+                                                message:@"Enter password" delegate:nil
+                                      cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert show];
+        return;
+    }else if(![password1Text isEqualToString:password2Text]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:self.title
+                                                message:@"Password mismatch!" delegate:nil
+                                      cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert show];
+        return;
+    }
+
+    // Set SSID and password
+    // Make url
+    NSString *urlStr = [@"http://flashair/config.cgi?MASTERCODE=" 
+                                                    stringByAppendingString:mastercodeText];
+    urlStr = [urlStr stringByAppendingString:@"&amp;APPNETWORKKEY="];
+    urlStr = [urlStr stringByAppendingString:password1Text];
+    urlStr = [urlStr stringByAppendingString:@"&amp;APPSSID="];
+    urlStr = [urlStr stringByAppendingString:ssidText];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    // Run cgi
+    NSString *rtnStr =[NSString stringWithContentsOfURL:url 
+                                                encoding:NSUTF8StringEncoding error:&amp;error];
+    if ([error.domain isEqualToString:NSCocoaErrorDomain]){
+        NSLog(@"config.cgi %@\n",error);
+        return;
+    }else{
+        if([rtnStr isEqualToString:@"ERROR"]){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:self.title
+                                  message:@"config.cgi failed" delegate:nil
+                                  cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            [alert show];
+            return;
+        }
+    }
+
+    // Close this View
+    [self.navigationController popToRootViewControllerAnimated:YES];
+
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField*)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+</code></pre>
+
+                        <p>We have now set the behavior of the new SSID and password entry screen and the Done button.
+                            Once
+                            the text field input has been checked, we will submit the new SSID and password. </p>
+
+                        <ul>
+                            <li>Lines 5-42:
+                                <br> Check the input in the text fields. If the input is not valid (does not pass the
+                                checks
+                                that we have set up), then an alert will show on the screen and the user will have to
+                                correct
+                                the input. </li>
+                            <li>Lines 46-52:
+                                <br> We set up the URL for the cgi command:
+                                <code>config.cgi?MASTERCODE=&lt;yourMastercode&gt;&amp;APPNETWORKKEY=&lt;yourNewSSID&gt;&amp;APPSSID=&lt;yourNewPassword&gt;</code>
+                            </li>
+                            <li>Lines 54-55:
+                                <br> The CGI is executed. The returned string is encoded in UTF-8 since we have
+                                specified
+                                <code>encoding:NSUTF8StringEncoding</code>.</li>
+                            <li>Line 70:
+                                <br> If the registration is successful, we will return to the first screen. </li>
+                            <li>Line 74-77:
+                                <br> This function sets the text field so that if "Done" is tapped on the input
+                                keyboard, the
+                                keyboard will close.</li>
+                        </ul>
+
+                        <h2>Result</h2>
+                        <div class="separator-2"></div>
+
+                        <p>Once we finish writing the program, we will check to see if it works.
+                            <br> First, we will try tapping the Get button. </p>
+
+                        <p>The SSID and password of the FlashAir have been displayed: </p>
+
+                        <div class="m-3">
+                            <img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\ios_tutorial_06_4.png" alt="this image shows the Get screen with the password and SSID displayed">
+                        </div>
+
+                        <p>Next, we will tap the Set button. In order to set a new SSID and password, we will need the
+                            MASTERCODE
+                            (discussed earlier in the tutorial). Check the CONFIG file of the FlashAir device for this
+                            value:
+                        </p>
+
+                        <div class="m-3">
+                            <img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\ios_tutorial_06_5.png" alt="this image shows the MASTERCODE in the CONFIG file">
+                        </div>
+
+                        <p>Now I will enter the MASTERCODE, new SSID, and new password in their appropriate text
+                            fields. </p>
+
+                        <p>
+                            <span class="badge badge-danger">Warning:</span> Please be sure to remember the new SSID
+                            and password that you entered.
+                            <br> Remember, you will need to set a network security password. None of the fields can
+                            be left blank.
+                            <br> After you tap done, the SSID and password of the FlashAir have been changed.
+                            Therefore, your
+                            current Wireless LAN connection to the FlashAir is invalid and you will be disconnected
+                            from
+                            the FlashAir. </p>
+
+                        <div class="m-3">
+                            <img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\ios_tutorial_06_6.png" alt="this image shows the Set screen with all text fields filled">
+                        </div>
+
+                        <p>Now I will press the Done button on the bottom of the screen.
+                            <br> Since you have changed the SSID and password, you will need to reconnect to the new
+                            SSID before
+                            you can use the FlashAir's Wireless LAN functionality again.
+                            <br> Since our command was successful, we have been returned to the Get screen. After
+                            connecting
+                            to the new SSID in our Wireless LAN settings, we will press the Get button. </p>
+
+                        <p>The screen will now display our new SSID and network password: </p>
+
+                        <div class="m-3">
+                            <img class="img-thumbnail mx-auto d-block" src="..\..\..\..\..\images\tutorials\ios_tutorial_06_7.png" alt="this image shows the Get screen with the changed SSID and password">
+                        </div>
+
+                        <p>You have now completed the tutorial on getting and setting your SSID and network password.</p>
+
+                        <h2>Sample Code</h2>
+                        <div class="separator-2"></div>
+
+                        <p>
+                            <a class="btn btn-primary" href="..\..\..\..\..\files\samplecode\ios\ios_tutorial_06.zip" onclick="_gaq.push(['_trackEvent', 'Sample Code Download', 'ios_tutorial_06.zip', 'en', true]);">
+                                <i class="fa fa-download pr-10"></i> ios_tutorial_06.zip </a> (25KB)</p>
+
+                        <p>
+                            <p class="small">All sample code on this page is licensed under
+                                <a href="..\..\..\license\index.htm" target="_blank">BSD 2-Clause License</a>
+                            </p>
+                        
+
+                        <!-- Social Buttons -->
+                        <div class="clearfix">
+	<ul class="social-links float-right">
+		<li class="twitter">
+			<!--Tweet Button-->
+			<a href="https://twitter.com/share" class="twitter-share-button" {count}="" data-via="FlashAirDev" data-related="FlashAirDev">Tweet</a>
+			<script>
+				! function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0],
+						p = /^http:/.test(d.location) ? 'http' : 'https';
+					if (!d.getElementById(id)) {
+						js = d.createElement(s);
+						js.id = id;
+						js.src = p + '://platform.twitter.com/widgets.js';
+						fjs.parentNode.insertBefore(js, fjs);
+					}
+				}(document, 'script', 'twitter-wjs');
+			</script>
+		</li>
+		<li class="facebook">
+			<!--Facebook Like Button-->
+			<div id="fb-root"></div>
+			<script>
+				(function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+			<div class="fb-like" data-href="https://www.flashair-developers.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+		</li>		
+	</ul>
+</div>
+
+                        <!-- pagination start -->
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-between">
+                                <li>
+                                    <a class="btn radius-50 page-link badge-pill" href="..\5\index.htm" aria-label="Previous">
+                                        <i class="fa fa-chevron-left pr-10"></i>
+                                        Auto-Refreshing Content List
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="btn radius-50 page-link badge-pill" href="..\7\index.htm" aria-label="Next">
+                                        Uploading to FlashAir
+                                        <i class="fa fa-chevron-right pl-10"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- pagination end -->
+
+                        <!-- Amazon bottom link -->
+                        <div class="col-12">
+	<!--Amazon search result for tablet-->
+	<div class="amazon-widget-bottom mx-auto d-none d-md-block d-lg-none">
+		<!--
+<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=12&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="300" height="250" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" width="320" height="250" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+
+	<!--Amazon search result for smartphone-->
+	<div class="amazon-widget-mobile mx-auto d-md-none">
+		<!--Image-->
+		<!--
+	<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20" alt="TOSHIBA FlashAir SD card 8GB SD-WB008G"><img src="http://ws.assoc-amazon.com/widgets/q?_encoding=UTF8&ASIN=B009RGP7HY&Format=_SL110_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=flasdeve-20" style="vertical-align:middle;"/></a><br>
+-->
+		<!--Text-->
+		<!--
+<a href="http://www.amazon.com/gp/product/B009RGP7HY/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B009RGP7HY&linkCode=as2&tag=flasdeve-20">Find TOSHIBA FlashAir SD card 8GB SD-WB008G on Amazon.com</a><img src="http://www.assoc-amazon.com/e/ir?t=flasdeve-20&l=as2&o=1&a=B009RGP7HY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+-->
+		<div class="amazon-content" marginwidth="0" marginheight="0" border="0" frameborder="0" style="border: none;" scrolling="no"></div>
+	</div>
+</div>
+
+                    </div>
+                    <!-- main end -->
+
+                    <!-- sidebar start -->
+                    <!-- ================ -->
+                    <aside class="col-lg-3 col-xl-3 order-lg-1">
+                        <div class="sidebar">
+  <div class="block clearfix">
+    <nav>
+      <ul class="nav flex-column">
+        <li class="nav-item"> <a class="nav-link" href="..\1\index.htm">
+          Overview of FlashAir for iOS app development
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\2\index.htm">
+          Getting A List of Contents
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\3\index.htm">
+          Downloading Content
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\4\index.htm">
+          Displaying Image Thumbnails
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\5\index.htm">
+          Auto-Refreshing Content List
+          </a>
+        </li>
+
+        <li class="nav-item active"> <a class="nav-link active" href="index.htm">
+          Changing SSID and Network Password
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\7\index.htm">
+          Uploading to FlashAir
+          </a>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="..\8\index.htm">
+          Photo Share
+          </a>
+        </li>
+        <li>
+          <br>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="..\index.htm">
+            Back to Content List
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Amazon side link -->
+  <!--Amazon search result for desktop-->
+<div class="amazon-widget-side d-none d-lg-block">
+	<!--
+	<iframe src="http://rcm.amazon.com/e/cm?t=flasdeve-20&o=1&p=14&l=st1&mode=photo&search=toshiba%20flashair&fc1=333333&lt1=_blank&lc1=009BDD&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></iframe>
+	-->
+	<div class="amazon-content" marginwidth="0" marginheight="0" width="160" height="600" border="0" frameborder="0" style="border: medium none; float: right; font-size: 14px;" scrolling="no"></div>
+</div>
+                    </div></aside>
+                    <!-- sidebar end -->
+
+                </div>
+            </div>
+        </section>
+        <!-- main-container end -->
+
+        <!-- footer start -->
+        <!-- ================ -->
+        <!-- footer start -->
+<!-- ================ -->
+<footer id="footer" class="clearfix ">
+
+  <!-- .footer start -->
+  <!-- ================ -->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">
+                <img alt="FlashAir logo" src="..\..\..\..\..\images\assets\flashairLogo_official_small2.png"> FlashAir&trade; Developers</h2>
+              <div class="separator-2"></div>
+              <p>
+                  A technical information website for developers of Toshiba FlashAir apps or services. FlashAir Developers is operated by Fixstars in cooperation with Toshiba Memory Corporation. To learn more about Fixstars, visit
+                <a target="_blank" href="http://www.fixstars.com">www.fixstars.com
+                  <i class="fa fa-external-link"></i>
+                </a>. ?FlashAir is a trademark of Toshiba Memory Corporation.
+              </p>
+              <ul class="social-links circle animated-effect-1" style="margin-bottom: 10px">
+                <li class="facebook">
+                  <a href="https://www.facebook.com/FlashAir-Developers-115819238627364/" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="twitter">
+                  <a href="https://twitter.com/FlashAirDev/" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+              <ul class="list-unstyled list-inline m-0">
+                <li class="list-inline-item"><a href="..\..\..\..\terms-of-use\index.htm">Terms of Use</a></li>
+                <li class="list-inline-item">|</li>
+                <li class="list-inline-item"><a href="..\..\..\..\privacypolicy\index.htm">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Twitter</h2>
+              <div class="separator-2"></div>
+              <div id="twitterWidget">
+                <a class="twitter-timeline" data-theme="light" href="https://twitter.com/FlashAirDev" data-widget-id="344743426811641856" height="230" data-chrome="nofooter noheader noborders transparent">Latest News</a>
+                <script>
+                  ! function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                      p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                      js = d.createElement(s);
+                      js.id = id;
+                      js.src = p + "://platform.twitter.com/widgets.js";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }
+                  }(document, "script", "twitter-wjs");
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-content">
+              <h2 class="title">Sitemap</h2>
+              <div class="separator-2"></div>
+              <nav>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\discover\overview\index.htm">What's FlashAir?
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\resources\index.htm">Developer Resources
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\index.htm">Tutorials
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\api\index.htm">API Guide
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\support\index.htm">Support
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="..\..\..\..\support\forum\index.htm">Developer Forum
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://iot-hub.flashair-developers.com/en/" target="_blank">FlashAir IoTHub <i class="fa fa-external-link"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .footer end -->
+
+  <!-- .subfooter start -->
+  <!-- ================ -->
+  <div class="subfooter">
+    <div class="container">
+      <div class="subfooter-inner">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center">Copyright &copy; 2019 FlashAir Developers. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .subfooter end -->
+
+  <div id="overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 ml-auto text-white">
+          <p class="mt-3">If you write software or change the settings which are described on this site to your FlashAir device which was purchased at a mass retailer or online shop, it will not be eligible for a free replacement under the warranty policy. Please acknowledge and carry out development at your own risk.
+          </p>
+        </div>
+        <div class="col-md-2 row">
+          <div class="align-self-center">
+          <button class="btn btn-default" id="btn-agree">Accept</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- footer end -->
+
+<!-- JavaScript files placed at the end of the document so the pages load faster -->
+<!-- ================================================== -->
+<!-- Jquery and Bootstap core js files -->
+<script src="..\..\..\..\..\js\jquery.min.js"></script>
+<script src="..\..\..\..\..\js\bootstrap.bundle.min.js"></script>
+<!-- jQuery Revolution Slider  -->
+<script src="..\..\..\..\..\js\jquery.themepunch.tools.min.js"></script>
+<script src="..\..\..\..\..\js\jquery.themepunch.revolution.min.js imagesloaded.pkgd.min.js.pagespeed.jc.cG4Ou2l09T.js"></script><script>eval(mod_pagespeed_faLzhRoycV);</script>
+<!-- Isotope javascript -->
+<script>eval(mod_pagespeed_e7p3yiKri5);</script>
+<script src="..\..\..\..\..\js\isotope.pkgd.min.js jquery.magnific-popup.min.js jquery.waypoints.min.js sticky.min.js jquery.countTo.js.pagespeed.jc.cWqBgip635.js"></script><script>eval(mod_pagespeed_EzjKnImtZK);</script>
+<!-- Magnific Popup javascript -->
+<script>eval(mod_pagespeed_hr4XVzGccf);</script>
+<!-- Appear javascript -->
+<script>eval(mod_pagespeed_zhicDWZgIJ);</script>
+<script>eval(mod_pagespeed_MTpYywWOfL);</script>
+<!-- Count To javascript -->
+<script>eval(mod_pagespeed_dmh3ejQ5o0);</script>
+<!-- Slick carousel javascript -->
+<script src="..\..\..\..\..\js\slick.min.js pace.min.js template.js jquery.cookie.js custom.js jquery.matchHeight.js.pagespeed.jc.Y3630FlbPX.js"></script><script>eval(mod_pagespeed_s1mKdTeuWx);</script>
+<!-- Pace javascript -->
+<script>eval(mod_pagespeed_Zs67JgCVyk);</script>
+<!-- Initialization of Plugins -->
+<script>eval(mod_pagespeed_BIPkzwMbEw);</script>
+<!-- Custom Scripts -->
+<script>eval(mod_pagespeed_uSq_SD1Gz5);</script>
+<script>eval(mod_pagespeed_mqKjjurRp4);</script>
+<script>eval(mod_pagespeed_TteNs$c3Zl);</script>
+<script>
+  $(function () {
+    $('.matchHeight').matchHeight();
+  });
+</script>
+<script src="..\..\..\..\..\js\script.js prettify.js lang-lua.js lang-css.js.pagespeed.jc.ECF3Z77mjV.js"></script><script>eval(mod_pagespeed_SrZ0Yqg7MZ);</script>
+<script>eval(mod_pagespeed_RSPiDhly$4);</script>
+<script>eval(mod_pagespeed_0pGoVUEAt9);</script>
+<script>eval(mod_pagespeed_IrbA2eGHA$);</script>
+<script>
+  ! function ($) {
+    $(function () {
+      PR.prettyPrint()
+    })
+  }(window.jQuery)
+</script>
+        <!-- footer end -->
+    </div>
+    <!-- page wrapper end -->
+</body>
+
+</html>
